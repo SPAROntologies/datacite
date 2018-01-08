@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N458ccd0c44d847b28b6e22ced1529fdc">
+    <owl:allValuesFrom rdf:nodeID="N4821f36987cc4148b736a4c577ec15e7"/>
+    <owl:onProperty rdf:nodeID="N6c14efdd17204458a874e1720c932a51"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4821f36987cc4148b736a4c577ec15e7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasIdentifier"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/AgentIndetifierScheme">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+    <rdfs:subClassOf rdf:nodeID="N7f14930746434f5cb3f252ebba09d12b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The identifier scheme used to identify an agent. Individual schemes are defines as members of its sub-classes.</rdfs:comment>
+    <rdfs:label xml:lang="en">agent identifier scheme</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2e5a250047b24cb3a14211b82274faeb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/datacite/FunderIdentifierScheme"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/viaf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The Virtual International Authority File is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC).  It contains information about many topics including personal names.</rdfs:comment>
+    <rdfs:label xml:lang="en">viaf</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</fabio:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/local-resource-identifier-scheme">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:label xml:lang="en">local resource identifier scheme</rdfs:label>
+    <rdfs:comment xml:lang="en">A resource identifier scheme that provides local resource identifiers that are unique in their local environment and understood by the person submitting the metadata.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/orcid">
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://orcid.org/</fabio:hasURL>
+    <rdfs:label xml:lang="en">orcid</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">Open Researcher and Contributor Identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/AgentIdentifier">
+    <rdfs:label xml:lang="en">agent identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">An identifier that uniquely identities an individual agent, belonging to a particular identifier scheme specified by an individual within the class datacite:AgentIdentifierScheme (or any of its subclasses).</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N63185f95166041b686fba11c7a626c64"/>
+    <owl:disjointWith rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/OrganizationIdentifier">
+    <rdfs:comment xml:lang="en">An identifier that uniquely identities an individual organization, belonging to a particular identifier scheme such as ISNI specified by an individual within the class datacite:OrganizationIdentifierScheme.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="Nc877e71e5ada408c9401ca905554edff"/>
+    <rdfs:label xml:lang="en">organization identifier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/other">
+    <rdfs:label xml:lang="en">other</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">A catch-all description type required by the DataCite Metadata Schema to characterize description types that are not abstracts, series information or tables of content.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/DescriptionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/usesIdentifierScheme">
+    <rdfs:comment xml:lang="en">An object property permitting specification of the identifier scheme used to provide the identifier for an entity – either a funder, a person or a resource – defined as an individual of the class datacite:IdentifierScheme.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+    <rdfs:label xml:lang="en">uses identifier scheme</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/spar/datacite/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/nii">
+    <rdfs:comment xml:lang="en">National Individual Identifier scheme.</rdfs:comment>
+    <rdfs:label xml:lang="en">nii</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/isbn">
+    <rdfs:label xml:lang="en">isbn</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.isbn-international.org/</fabio:hasURL>
+    <rdfs:comment xml:lang="en">International Standard Book Number</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/Identifier">
+    <rdfs:label xml:lang="en">identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N7b3c1c8ba5874c47b8bff500c7f32d8f"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2010/06/literalreification/Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N97e3b701f93b428092c5a7250d8248a6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/researcherid">
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.researcherid.com/</fabio:hasURL>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">researcherid</rdfs:label>
+    <rdfs:comment xml:lang="en">ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/pii">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Publisher_Item_Identifier"/>
+    <rdfs:comment xml:lang="en">Pulisher Item Identifier scheme.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:label xml:lang="en">pii</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/methods">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">methods</rdfs:label>
+    <rdfs:label rdf:resource="http://purl.org/spar/deo/Methods"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/DescriptionType"/>
+    <rdfs:comment xml:lang="en">A description in a research paper documenting the specialized methods used in the work described.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/sici">
+    <rdfs:comment xml:lang="en">Serial Item and Contribution Identifier</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:label xml:lang="en">sici</rdfs:label>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Serial_Item_and_Contribution_Identifier</fabio:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/lissn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">lissn</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.issn.org/</fabio:hasURL>
+    <rdfs:comment xml:lang="en">Linking International Standard Serial Number</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/hasDescriptionType">
+    <rdfs:range rdf:resource="http://purl.org/spar/datacite/DescriptionType"/>
+    <rdfs:domain rdf:nodeID="N458ccd0c44d847b28b6e22ced1529fdc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">An object property permitting specification of the type of description used to describe a resource, defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract, SeriesInformation, TableOfContent and Other.</rdfs:comment>
+    <rdfs:label xml:lang="en">has description type</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/spar">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/MetadataScheme"/>
+    <rdfs:comment xml:lang="en">The Semantic Publishing and Referencing Ontologies, a.k.a. SPAR Ontologies, form a suite of orthogonal and complementary OWL 2 DL ontology modules for the creation of comprehensive machine-readable RDF metadata for every aspect of semantic publishing and referencing: document description, bibliographic resource identifiers, types of citations and related contexts, bibliographic references, document parts and status, agents' roles and contributions, bibliometric data and workflow processes.</rdfs:comment>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.sparontologies.net</fabio:hasURL>
+    <rdfs:label xml:lang="en">SPAR Ontologies</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/PersonalIdentifierScheme">
+    <rdfs:label xml:lang="en">personal identifier scheme</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIndetifierScheme"/>
+    <rdfs:subClassOf rdf:nodeID="N3fa6b14bb0e84f4395d24d10f399a6ff"/>
+    <rdfs:comment xml:lang="en">The identifier scheme used to identify a person.  Individual schemes are defines as members of this class.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/issn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.issn.org/</fabio:hasURL>
+    <rdfs:label xml:lang="en">issn</rdfs:label>
+    <rdfs:comment xml:lang="en">International Standard Serial Number</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/purl">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">Persistent Uniform Resource Locator</rdfs:comment>
+    <rdfs:label xml:lang="en">purl</rdfs:label>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/</fabio:hasURL>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/uri">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc3986</fabio:hasURL>
+    <rdfs:label xml:lang="en">uri</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uniform Resource Identifier</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/arxiv">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:label xml:lang="en">arxiv</rdfs:label>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://arxiv.org/</fabio:hasURL>
+    <rdfs:comment xml:lang="en">Identifier for ArXiv (http://arxiv.org/), a open access repository of preprints, having the format arXiv:1207.2147.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nec213d90b1804123b79fdac427a0fe01">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N63185f95166041b686fba11c7a626c64">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/datacite/AgentIdentifier"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N74361f41226b4f12a383e85513e04bda">
+    <owl:onProperty rdf:nodeID="N88b9e0fa1ffb401ba40b71f0c67594ad"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/FunderIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/nihmsid">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:label xml:lang="en">nihmsid</rdfs:label>
+    <rdfs:comment xml:lang="en">NIH Manuscript Submission Identifier</rdfs:comment>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://nexus.od.nih.gov/all/2009/09/01/nih-public-access-update-clarifying-use-of-the-nih-manuscript-submission-id-nihmsid/</fabio:hasURL>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3fa6b14bb0e84f4395d24d10f399a6ff">
+    <owl:onProperty rdf:nodeID="Ndb97135bc00348fb94d3b7f4d31162e4"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/PersonalIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/eissn">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.issn.org/</fabio:hasURL>
+    <rdfs:label xml:lang="en">eissn</rdfs:label>
+    <rdfs:comment xml:lang="en">Electronic International Standard Serial Number</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/usesMetadataScheme">
+    <rdfs:comment xml:lang="en">The link between a metadata document and the scheme followed for creating metadata.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/spar/datacite/MetadataScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">uses metadata scheme</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7b3c1c8ba5874c47b8bff500c7f32d8f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:nodeID="Nadadcd224b174f3eb5e90a93e7f1dee3"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/ark">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://confluence.ucop.edu/display/Curation/ARK</fabio:hasURL>
+    <rdfs:label xml:lang="en">ark</rdfs:label>
+    <rdfs:comment xml:lang="en">Archival Resource Key.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/doi">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">Digital Object Identier.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.doi.org/</fabio:hasURL>
+    <rdfs:label xml:lang="en">doi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/jst">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">Japanese Science and Technology Agency identifier scheme</rdfs:comment>
+    <rdfs:label xml:lang="en">jst</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/national-insurance-number">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">United Kingdom National Insurance Number scheme.</rdfs:comment>
+    <rdfs:label xml:lang="en">national insurance number</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite">
+    <dc:date>2016-01-21</dc:date>
+    <owl:versionIRI rdf:resource="http://purl.org/spar/datacite/2016-01-21"/>
+    <dc:contributor>Egbert Gramsbergen</dc:contributor>
+    <dc:title xml:lang="en">The DataCite Ontology</dc:title>
+    <dc:contributor>Amy J. Barton</dc:contributor>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment xml:lang="en">The DataCite Ontology (DataCite) is an ontology that enables the metadata properties of the DataCite Metadata Schema Specification (i.e., a list of metadata properties for the accurate and consistent identification of a resource for citation and retrieval purposes) to be described in RDF.
+
+**URL:** http://purl.org/spar/datacite
+
+**Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
+
+**Contributors:** [Amy J. Barton](https://orcid.org/0000-0002-2184-3723), [Egbert Gramsbergen](https://www.linkedin.com/in/egbertgramsbergen/), [Jan Ashton](https://www.bl.uk/people/experts/janet-ashton), [Marie-Christine Jacquemot](https://orcid.org/0000-0002-6316-1472)
+
+**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+**Website:** http://www.sparontologies.net/ontologies/datacite</rdfs:comment>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
+    <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
+    <dc:description rdf:resource="http://purl.org/spar/datacite/datacite.png"/>
+    <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  
+
+This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.</dc:description>
+    <owl:imports rdf:resource="http://purl.org/co"/>
+    <owl:priorVersion rdf:resource="http://svn.code.sf.net/p/sempublishing/code/DataCite/2014-05-21-datacite-0_6_4_1.owl"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://www.essepuntato.it/2010/06/literalreification"/>
+    <dc:contributor>Marie-Christine Jacquemot</dc:contributor>
+    <dc:contributor>Jan Ashton</dc:contributor>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f14930746434f5cb3f252ebba09d12b">
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/AgentIdentifier"/>
+    <owl:onProperty rdf:nodeID="N1056389c211e42a78d85d2fcddd2b1bc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/ResourceIdentifier">
+    <rdfs:subClassOf rdf:nodeID="Nec213d90b1804123b79fdac427a0fe01"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/Identifier"/>
+    <rdfs:label xml:lang="en">resource identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">An identifier that is used to uniquely identifies a resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/OrganizationIdentifierScheme">
+    <rdfs:subClassOf rdf:nodeID="N0eb79acae4134ff59a9e7be376948eb1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">organization identifier scheme</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIndetifierScheme"/>
+    <rdfs:comment xml:lang="en">The identifier scheme used to identify an organization. Individual schemes are defines as members of this class.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0eb79acae4134ff59a9e7be376948eb1">
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/OrganizationIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:nodeID="Neacdca18101c473ab2fa39522fc65384"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/handle">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:label xml:lang="en">handle</rdfs:label>
+    <rdfs:comment xml:lang="en">The Handle system</rdfs:comment>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.handle.net/</fabio:hasURL>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd7fbc9061a1848d59f93e63080b1c71e">
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasIdentifier"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/ean13">
+    <rdfs:comment xml:lang="en">International Article Number</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/EAN13"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">ean13</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.gs1.org/</fabio:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1056389c211e42a78d85d2fcddd2b1bc">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/table-of-content">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/DescriptionType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">table of content</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/doco/TableOfContents"/>
+    <rdfs:comment xml:lang="en">A table of content giving information about the content of a resource, appearing before the body text.  Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/abstract">
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/fabio/Abstract"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/DescriptionType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">A brief summary of a textual work, appearing at the beginning of the work and designed to act as the point-of-entry that will help the reader quickly to obtain an overview of the work's contents.</rdfs:comment>
+    <rdfs:label xml:lang="en">abstract</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/hasIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:comment xml:lang="en">An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource).</rdfs:comment>
+    <rdfs:label xml:lang="en">has identifier</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/spar/datacite/Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/urn">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">Uniform Resource Name.</rdfs:comment>
+    <rdfs:label xml:lang="en">urn</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://datatracker.ietf.org/wg/urn/charter/</fabio:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/hasDescription">
+    <rdfs:label xml:lang="en">has description</rdfs:label>
+    <rdfs:comment xml:lang="en">An object property permitting specification of an entity used to describe a resource.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:nodeID="Na289b77481e64769b971ed6c8f752cf2"/>
+    <rdfs:domain rdf:nodeID="Nca5bc8f9c4174926a2c63fd6b3806a44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nadadcd224b174f3eb5e90a93e7f1dee3">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/hasIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/upc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:label xml:lang="en">upc</rdfs:label>
+    <rdfs:comment xml:lang="en">Universal Product Code</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/PrimaryResourceIdentifier">
+    <rdfs:comment xml:lang="en">An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record.  Within the DataCite metadata record, a Digital Object Identifier is the only permitted primary resource identifier scheme, specified by the individual datacite:doi, that is a member of the class datacite:ResourceIdentifierScheme.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N30bd5d7a4de34328b992ade11e9a9c85"/>
+    <rdfs:label xml:lang="en">primary resource identifier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/bibcode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">bibcode</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">It is the Astrophysics Data System bibliographic codes, a standardized 19 character identifier according to the syntax "yyyyjjjjjvvvvmppppa".</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nca5bc8f9c4174926a2c63fd6b3806a44">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasIdentifier"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/ResourceIdentifierScheme">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+    <rdfs:label xml:lang="en">resource identifier scheme</rdfs:label>
+    <rdfs:comment xml:lang="en">The identifier scheme used to identify a resource.  Individual schemes are defines as members of this class.  For DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N413d4f9a81124a82bcb8d04997e22375"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/dia">
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.surf.nl/en/themas/openonderzoek/infrastructuur/Pages/digitalauthoridentifierdai.aspx</fabio:hasURL>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">The Digital Author Identification system assigns a unique number to all authors in the Netherlands research system.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">dia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/AlternateResourceIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">alternate resource identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">An identifier other than a DOI that is used as an alternative identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record, belonging to a particular scheme such as ISBN specified by an individual that is a member of the class datacite:ResourceIdentifierScheme. </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+    <owl:disjointWith rdf:resource="http://purl.org/spar/datacite/PrimaryResourceIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/lsid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">Life Science Identifier</rdfs:comment>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ibm.com/developerworks/opensource/library/os-lsidbp/</fabio:hasURL>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:label xml:lang="en">lsid</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/PersonalIdentifier">
+    <rdfs:subClassOf rdf:nodeID="N18cbac5b50384a8d85ab4d19a29104e2"/>
+    <rdfs:comment xml:lang="en">An identifier that uniquely identities an individual person, belonging to a particular identifier scheme such as ORCID specified by an individual within the class datacite:PersonalIdentifierScheme.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifier"/>
+    <rdfs:label xml:lang="en">personal identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfd12637cb1d24152bb4af830f30c5627">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasIdentifier"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/local-funder-identifier-scheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">A funder identifier scheme that provides local funder identifiers that are unique in their local environment and understood by the person submitting the metadata.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/FunderIdentifierScheme"/>
+    <rdfs:label xml:lang="en">local funder identifier scheme</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/infouri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">Info URI scheme</rdfs:comment>
+    <rdfs:label xml:lang="en">infouri</rdfs:label>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://info-uri.info/registry/docs/misc/faq.html</fabio:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/MetadataScheme">
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/citesAsMetadataDocument"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">metadata scheme</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/fabio/MetadataDocument"/>
+    <rdfs:comment xml:lang="en">The class that describe metadata schemes used for creating a metadata document referring to a certain resource. 
+
+Neither a class for metadata documents nor a property linking a resource to its metadata document are not explicitly defined in this ontology. However, we recommend to use the class fabio:MetadataDocument (from http://purl.org/spar/fabio) and cito:citesAsMetadataDocument (from http://purl.org/spar/cito) for providing such descriptions. An example of use of such entities is shown as follows:
+
+    :my-resource
+        cito:citesAsMetadataDocument :my-resource-metadata .
+    :my-resource-metadata a fabio:MetadataDocument ;
+        datacite:usesMetadataScheme datacite:spar .
+
+In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not included in this ontology as well) for defining the actual URL of a certain metadata scheme.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/openid">
+    <rdfs:comment xml:lang="en">OpenID is an open standard that describes how users can be authenticated in a decentralized manner, eliminating the need for centralized registration services. </rdfs:comment>
+    <rdfs:label xml:lang="en">openid</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://openid.net/foundation/</fabio:hasURL>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nee518a21dcfe46a8895c627959e525be">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/series-information">
+    <rdfs:label xml:lang="en">series information</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/DescriptionType"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/fabio/BookSeries"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">Used to charactierize a description of a resource that is part of a series.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/fabio/Periodical"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/pmcid">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">PubMed Central Identifier</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ncbi.nlm.nih.gov/pmc/</fabio:hasURL>
+    <rdfs:label xml:lang="en">pmcid</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/url">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">url</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">Uniform Resource Locator.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/IdentifierScheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The identifier scheme used to identify an entity such as a funding agency, a person or a resource. Individual schemes are defines as members of this class.</rdfs:comment>
+    <rdfs:label xml:lang="en">identifier scheme</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N97e3b701f93b428092c5a7250d8248a6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onClass rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc877e71e5ada408c9401ca905554edff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/datacite/OrganizationIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/FunderIdentifierScheme">
+    <rdfs:label xml:lang="en">funder identifier scheme</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIndetifierScheme"/>
+    <rdfs:comment xml:lang="en">The identifier scheme used to identify a funding agency. Individual schemes are defines as members of this class. At present, the only individual of this class is datacite:fundref.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N74361f41226b4f12a383e85513e04bda"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/istc">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">istc</rdfs:label>
+    <rdfs:comment xml:lang="en">International Standard Text Code</rdfs:comment>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.istc-international.org/html/</fabio:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/FunderIdentifier">
+    <rdfs:comment xml:lang="en">An identifier that uniquely identities a funding agency, belonging to a particular scheme such as FundRef specified by an individual within the class datacite:FunderIdentifierScheme.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N2e5a250047b24cb3a14211b82274faeb"/>
+    <rdfs:label xml:lang="en">funder identifier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na289b77481e64769b971ed6c8f752cf2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasDescriptionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/DescriptionType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">This class permits classification of the type of description given to a resource described by the DataCite Metadata schema.  Individual members of the class conform to the five values allowed in the DataCite controlled list, namely: 
+
+* abstract;
+* methods;
+* series-information;
+* table-of-content;
+* other.</rdfs:comment>
+    <rdfs:label xml:lang="en">description type</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N18cbac5b50384a8d85ab4d19a29104e2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/hasCreatorList">
+    <rdfs:comment xml:lang="en">This property allows one to specify the list of the creators of a certain resource.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/co/List"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="Nd7fbc9061a1848d59f93e63080b1c71e"/>
+    <rdfs:label xml:lang="en">has creator list</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/fundref">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/FunderIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.crossref.org/fundref/index.html</fabio:hasURL>
+    <rdfs:label xml:lang="en">fundref</rdfs:label>
+    <rdfs:comment xml:lang="en">FundRef is a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research. </rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf766660600e14634b41aca467a4388c9">
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/FunderIdentifier"/>
+    <rdf:rest rdf:nodeID="N7e2d2709e21844cda4016658b9076a8c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#priorVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/isni">
+    <rdfs:comment xml:lang="en">International Standard Name Identifier scheme.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/OrganizationIdentifierScheme"/>
+    <rdfs:label xml:lang="en">isni</rdfs:label>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.isni.org/</fabio:hasURL>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/pmid">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">PubMed Identifier</rdfs:comment>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ncbi.nlm.nih.gov/pubmed/</fabio:hasURL>
+    <rdfs:label xml:lang="en">pmid</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/hasGeneralResourceType">
+    <rdfs:comment xml:lang="en">An object property permitting specification of the general type of a resource, defined from the DataCite controlled list, namely: 
+
+* dcmitype:MovingImage;
+* dcmitype:Collection;
+* dcmitype:Dataset;
+* dcmitype:Event;
+* dcmitype:dcmitype:StillImage;
+* dcmitype:InteractiveResource;
+* fabio:Model;
+* dcmitype:PhysicalObject;
+* dcmitype:Service;
+* dcmitype:Software;
+* dcmitype:Sound;
+* dcmitype:Text;
+* fabio:Workflow;
+* frbr:Endeavour.
+
+All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms (dcmitype: http://purl.org/dc/dcmitype/), FaBiO (fabio: http://purl.org/spar/fabio/), and FRBR (frbr: http://purl.org/vocab/frbr/core#).</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type"/>
+    <rdfs:domain rdf:nodeID="Nfd12637cb1d24152bb4af830f30c5627"/>
+    <rdfs:label xml:lang="en">has general resource type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N413d4f9a81124a82bcb8d04997e22375">
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:nodeID="N48a35185e8004ab39e040079c9be3da2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/local-organization-identifier-scheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">An organization identifier scheme that provides local organization identifiers that are unique in their local environment and understood by the person submitting the metadata.</rdfs:comment>
+    <rdfs:label xml:lang="en">local organization identifier scheme</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/OrganizationIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/social-security-number">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">United States of America social security number scheme</rdfs:comment>
+    <rdfs:label xml:lang="en">social security number</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neacdca18101c473ab2fa39522fc65384">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/local-personal-identifier-scheme">
+    <rdfs:label xml:lang="en">local personal identifier scheme</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">A personal identifier scheme that provides local personal identifiers that are unique in their local environment and understood by the person submitting the metadata.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2010/06/literalreification/Literal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7e2d2709e21844cda4016658b9076a8c">
+    <rdf:rest rdf:nodeID="Nee518a21dcfe46a8895c627959e525be"/>
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/PersonalIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c14efdd17204458a874e1720c932a51">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/hasDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N30bd5d7a4de34328b992ade11e9a9c85">
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+    <owl:hasValue rdf:resource="http://purl.org/spar/datacite/doi"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/fabio/hasURL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N48a35185e8004ab39e040079c9be3da2">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/type">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndb97135bc00348fb94d3b7f4d31162e4">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N88b9e0fa1ffb401ba40b71f0c67594ad">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3a48ca59b5bb4986804a0457fed2d317">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="Nf766660600e14634b41aca467a4388c9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>
