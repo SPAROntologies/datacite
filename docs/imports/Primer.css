@@ -8,6 +8,7 @@ div.syntaxmenu {
   margin: 1em; 
 }
 
+
 @media print {
    div.syntaxmenu { display:none; }
 }
