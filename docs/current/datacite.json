@@ -6,48 +6,40 @@
     ]
   },
   {
-    "@id": "_:N347019485e9e4482ba62479702ad5897",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8282a6f13361442ab82d692a87748295",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "_:N1c6b491e918643bd9c6fe0d582fd01ed"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
-      }
-    ]
-  },
-  {
     "@id": "http://purl.org/dc/elements/1.1/date",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
+    "@id": "_:N602c1a0b0c3c448a9d6059e085ae47aa",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasDescription"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4947c90ef0964540af1d4730991dd3c9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasIdentifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/spar/datacite/sici",
     "@type": [
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -69,51 +61,27 @@
     ]
   },
   {
-    "@id": "http://purl.org/spar/datacite/istc",
+    "@id": "http://purl.org/spar/datacite/infouri",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "http://www.istc-international.org/html/"
+        "@value": "http://info-uri.info/registry/docs/misc/faq.html"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "International Standard Text Code"
+        "@value": "Info URI scheme"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "istc"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1c6b491e918643bd9c6fe0d582fd01ed",
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
-      }
-    ]
-  },
-  {
-    "@id": "_:N74763b62476042bab994bdffcdec430f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/datacite/hasIdentifier"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+        "@value": "infouri"
       }
     ]
   },
@@ -139,8 +107,8 @@
   {
     "@id": "http://purl.org/spar/datacite/ean13",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -167,65 +135,9 @@
     ]
   },
   {
-    "@id": "http://purl.org/spar/datacite/viaf",
+    "@id": "http://www.w3.org/2002/07/owl#priorVersion",
     "@type": [
-      "http://purl.org/spar/datacite/PersonalIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
-    ],
-    "http://purl.org/spar/fabio/hasURL": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "http://viaf.org/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "The Virtual International Authority File is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC).  It contains information about many topics including personal names."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "viaf"
-      }
-    ]
-  },
-  {
-    "@id": "_:Neddca0ff188b4fa08eda1f464b69fb4b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-    ],
-    "http://www.w3.org/2002/07/owl#members": [
-      {
-        "@list": [
-          {
-            "@id": "http://purl.org/spar/datacite/FunderIdentifier"
-          },
-          {
-            "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
-          },
-          {
-            "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N0d19754de6c24d42b23bb6762b76412d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/datacite/hasIdentifier"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
-      }
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -253,15 +165,39 @@
     ]
   },
   {
-    "@id": "_:N22d78e85efb04966a0d230ca7030cab7",
-    "http://www.w3.org/2002/07/owl#inverseOf": [
+    "@id": "_:Na33a054b79d44bfeb8cf134791b0e321",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://purl.org/spar/datacite/hasIdentifier"
+        "@id": "_:N2eae6cea48974268a21e34e201c1141b"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/OrganizationIdentifier"
       }
     ]
   },
   {
-    "@id": "_:N5954138b14f14e22a80c6855e302d555",
+    "@id": "_:Ne3cd8f17e05d4843a056bf63702b3f00",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc59538e96e414d178eceb3ae8787bf75",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -277,27 +213,43 @@
     ]
   },
   {
-    "@id": "_:Na334910d50d44bf894fb5575a13d799b",
+    "@id": "http://purl.org/spar/datacite/viaf",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
     ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
+    "http://purl.org/spar/fabio/hasURL": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "http://viaf.org/"
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@id": "_:N22d78e85efb04966a0d230ca7030cab7"
+        "@language": "en",
+        "@value": "The Virtual International Authority File is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC).  It contains information about many topics including personal names."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "viaf"
+      }
+    ]
+  },
+  {
+    "@id": "_:N99e855c068d04261b5d2449b4df6eeb1",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
       }
     ]
   },
   {
     "@id": "http://purl.org/spar/datacite/local-resource-identifier-scheme",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -334,15 +286,15 @@
         "@id": "http://purl.org/spar/datacite/AgentIdentifier"
       },
       {
-        "@id": "_:Nb8b553b725564c029ddade640865f691"
+        "@id": "_:Nfad3e7523a9b4673aff53c975237c6fb"
       }
     ]
   },
   {
     "@id": "http://purl.org/spar/datacite/spar",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/MetadataScheme"
+      "http://purl.org/spar/datacite/MetadataScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -364,10 +316,35 @@
     ]
   },
   {
+    "@id": "http://purl.org/spar/datacite/dia",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "http://www.surf.nl/en/themas/openonderzoek/infrastructuur/Pages/digitalauthoridentifierdai.aspx"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Digital Author Identification system assigns a unique number to all authors in the Netherlands research system."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "dia"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/spar/datacite/nihmsid",
     "@type": [
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -435,10 +412,26 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N8d1cf6a39ea74ed284de3b301982459f"
+        "@id": "_:N319cb96eef6b40cbac7d4e741b5a6179"
       },
       {
         "@id": "http://purl.org/spar/datacite/IdentifierScheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc9be64da6ee647f68f1d01100caf28f6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/OrganizationIdentifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
       }
     ]
   },
@@ -455,7 +448,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Na1551339ca164d23a260b9f1ead9b7b5"
+        "@id": "_:N4947c90ef0964540af1d4730991dd3c9"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -489,10 +482,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://purl.org/spar/datacite/IdentifierScheme"
+        "@id": "_:Ndd91c15458b545b3867776ccef851906"
       },
       {
-        "@id": "_:Nad181108490b4b3ca1774055af6c8915"
+        "@id": "http://purl.org/spar/datacite/IdentifierScheme"
       }
     ]
   },
@@ -529,8 +522,8 @@
   {
     "@id": "http://purl.org/spar/datacite/methods",
     "@type": [
-      "http://purl.org/spar/datacite/DescriptionType",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/DescriptionType"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -540,11 +533,11 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@language": "en",
-        "@value": "methods"
+        "@id": "http://purl.org/spar/deo/Methods"
       },
       {
-        "@id": "http://purl.org/spar/deo/Methods"
+        "@language": "en",
+        "@value": "methods"
       }
     ]
   },
@@ -599,6 +592,22 @@
     ]
   },
   {
+    "@id": "_:Nf33027e68bae41c3a163a3d6f6837544",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Nd1eb6f90911d49dd9c38990d08964aba"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:N602c1a0b0c3c448a9d6059e085ae47aa"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/spar/datacite/DescriptionType",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -622,9 +631,19 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/elements/1.1/description",
+    "@id": "_:N65cd077512b34f6d9aba49e58542dfa1",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#hasValue": [
+      {
+        "@id": "http://purl.org/spar/datacite/doi"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
     ]
   },
   {
@@ -654,28 +673,31 @@
     ]
   },
   {
-    "@id": "http://purl.org/spar/datacite/isni",
+    "@id": "http://purl.org/spar/datacite/Identifier",
     "@type": [
-      "http://purl.org/spar/datacite/OrganizationIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
-    ],
-    "http://purl.org/spar/fabio/hasURL": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "http://www.isni.org/"
-      }
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "International Standard Name Identifier scheme."
+        "@value": "An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "isni"
+        "@value": "identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N4b337eb863734bf89dce3ba52c5d0bba"
+      },
+      {
+        "@id": "_:N9224488397fc4c4ba367d8c66848944b"
+      },
+      {
+        "@id": "http://www.essepuntato.it/2010/06/literalreification/Literal"
       }
     ]
   },
@@ -705,28 +727,27 @@
     ]
   },
   {
-    "@id": "http://purl.org/spar/datacite/OrganizationIdentifierScheme",
+    "@id": "http://purl.org/spar/datacite/researcherid",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "http://www.researcherid.com/"
+      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The identifier scheme used to identify an organization. Individual schemes are defines as members of this class."
+        "@value": "ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "organization identifier scheme"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N8a16c8bdf3534d9f86efd9b6bc8253dd"
-      },
-      {
-        "@id": "http://purl.org/spar/datacite/AgentIndetifierScheme"
+        "@value": "researcherid"
       }
     ]
   },
@@ -749,10 +770,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://purl.org/spar/datacite/Identifier"
+        "@id": "_:N307a8e3f76b14fcfa9d57badf773d54e"
       },
       {
-        "@id": "_:N317d7de3a76f40b08b330ee72fe56e49"
+        "@id": "http://purl.org/spar/datacite/Identifier"
       }
     ]
   },
@@ -763,25 +784,45 @@
     ]
   },
   {
-    "@id": "_:N2eb2b99cfd154ae0ad6155b61d9c9425",
+    "@id": "http://purl.org/dc/elements/1.1/creator",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/OrganizationIdentifier"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "_:N9b1afaf1d40a4cb988cd15cadb9a4ac4",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
       {
         "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
       }
     ]
   },
   {
-    "@id": "http://purl.org/dc/elements/1.1/creator",
+    "@id": "http://purl.org/spar/datacite/hasDescription",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An object property permitting specification of an entity used to describe a resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nb329bec2f495418aa32b043cc71cddfb"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has description"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nf48619724ca649aea11291091bcf2d1d"
+      }
     ]
   },
   {
@@ -828,6 +869,22 @@
     ]
   },
   {
+    "@id": "_:Nb329bec2f495418aa32b043cc71cddfb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasIdentifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/spar/datacite/jst",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
@@ -843,6 +900,31 @@
       {
         "@language": "en",
         "@value": "jst"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/datacite/lissn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "http://www.issn.org/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Linking International Standard Serial Number"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "lissn"
       }
     ]
   },
@@ -868,8 +950,8 @@
   {
     "@id": "http://purl.org/spar/datacite/national-insurance-number",
     "@type": [
-      "http://purl.org/spar/datacite/PersonalIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -903,10 +985,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+        "@id": "_:N65cd077512b34f6d9aba49e58542dfa1"
       },
       {
-        "@id": "_:N53c51648d95f4b60bec2e608040e662d"
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
       }
     ]
   },
@@ -914,14 +996,6 @@
     "@id": "http://purl.org/spar/fabio/hasURL",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ]
-  },
-  {
-    "@id": "_:N5001ecc6d9484bbb88e351a8c8a5dddb",
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/datacite/hasDescription"
-      }
     ]
   },
   {
@@ -948,6 +1022,23 @@
     ]
   },
   {
+    "@id": "_:Nf48619724ca649aea11291091bcf2d1d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasDescriptionType"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/spar/datacite/other",
     "@type": [
       "http://purl.org/spar/datacite/DescriptionType",
@@ -967,7 +1058,7 @@
     ]
   },
   {
-    "@id": "http://purl.org/spar/datacite/infouri",
+    "@id": "http://purl.org/spar/datacite/istc",
     "@type": [
       "http://purl.org/spar/datacite/ResourceIdentifierScheme",
       "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -975,19 +1066,19 @@
     "http://purl.org/spar/fabio/hasURL": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "http://info-uri.info/registry/docs/misc/faq.html"
+        "@value": "http://www.istc-international.org/html/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Info URI scheme"
+        "@value": "International Standard Text Code"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "infouri"
+        "@value": "istc"
       }
     ]
   },
@@ -1003,6 +1094,12 @@
         "@value": "The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net)."
       }
     ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://w3id.org/oc/oci"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
@@ -1014,77 +1111,22 @@
         "@language": "en",
         "@value": "oci"
       }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://w3id.org/oc/oci"
-      }
     ]
   },
   {
-    "@id": "http://purl.org/spar/datacite/OrganizationIdentifier",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "An identifier that uniquely identities an individual organization, belonging to a particular identifier scheme such as ISNI specified by an individual within the class datacite:OrganizationIdentifierScheme."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "organization identifier"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N2eb2b99cfd154ae0ad6155b61d9c9425"
-      },
-      {
-        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
-      }
-    ]
-  },
-  {
-    "@id": "_:N262c1384e29449e39e3f2f2fde0f530c",
+    "@id": "_:N9224488397fc4c4ba367d8c66848944b",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2002/07/owl#cardinality": [
       {
-        "@id": "_:N0d19754de6c24d42b23bb6762b76412d"
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "_:N5001ecc6d9484bbb88e351a8c8a5dddb"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/datacite/lissn",
-    "@type": [
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
-    ],
-    "http://purl.org/spar/fabio/hasURL": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "http://www.issn.org/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Linking International Standard Serial Number"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "lissn"
+        "@id": "_:N5bbdfb86bb6143a68566532365914e05"
       }
     ]
   },
@@ -1110,8 +1152,8 @@
   {
     "@id": "http://purl.org/spar/datacite/handle",
     "@type": [
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -1135,8 +1177,8 @@
   {
     "@id": "http://purl.org/spar/datacite/bibcode",
     "@type": [
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1152,65 +1194,39 @@
     ]
   },
   {
-    "@id": "_:Nad181108490b4b3ca1774055af6c8915",
+    "@id": "_:Nfad3e7523a9b4673aff53c975237c6fb",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/FunderIdentifierScheme"
+      }
+    ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "_:Nb1c5e03d3d8148a79468bb3c0604dc32"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
       }
     ]
   },
   {
-    "@id": "http://purl.org/spar/datacite/hasDescription",
+    "@id": "_:Nee9ed78741f14934973a59560672f45b",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2002/07/owl#members": [
       {
-        "@language": "en",
-        "@value": "An object property permitting specification of an entity used to describe a resource."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N74763b62476042bab994bdffcdec430f"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has description"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N9ea64e70d2924512b9f863bbf5b33c6f"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/datacite/local-personal-identifier-scheme",
-    "@type": [
-      "http://purl.org/spar/datacite/PersonalIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A personal identifier scheme that provides local personal identifiers that are unique in their local environment and understood by the person submitting the metadata."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "local personal identifier scheme"
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/datacite/FunderIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+          }
+        ]
       }
     ]
   },
@@ -1221,16 +1237,70 @@
     ]
   },
   {
+    "@id": "_:N307a8e3f76b14fcfa9d57badf773d54e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4b337eb863734bf89dce3ba52c5d0bba",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "http://purl.org/spar/datacite/IdentifierScheme"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/dc/elements/1.1/contributor",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
+    "@id": "_:N2f6a06b08bdb4dcfab5e667e4a5ec0db",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:N99e855c068d04261b5d2449b4df6eeb1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/spar/datacite/orcid",
     "@type": [
-      "http://purl.org/spar/datacite/PersonalIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -1258,32 +1328,16 @@
     ]
   },
   {
-    "@id": "_:N0df565a10ce848b48396b578cc847b8e",
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ndddf1f954ac84a8b9955dfc9c3f567d3",
+    "@id": "_:N58a58f03b07441bf830e4962d062f4cd",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N186ec356c11642f7b88e6e0bcbc0d554"
+        "@id": "http://purl.org/spar/datacite/PersonalIdentifierScheme"
       }
     ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/FunderIdentifier"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb1c5e03d3d8148a79468bb3c0604dc32",
-    "http://www.w3.org/2002/07/owl#inverseOf": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
       }
@@ -1315,22 +1369,6 @@
     ]
   },
   {
-    "@id": "_:N4df5f60f50d2404186d25bf211762dc3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/PersonalIdentifierScheme"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
-      }
-    ]
-  },
-  {
     "@id": "http://purl.org/spar/datacite",
     "@type": [
       "http://www.w3.org/2002/07/owl#Ontology"
@@ -1340,21 +1378,21 @@
         "@value": "Amy J. Barton"
       },
       {
+        "@value": "Egbert Gramsbergen"
+      },
+      {
         "@value": "Marie-Christine Jacquemot"
       },
       {
         "@value": "Jan Ashton"
-      },
-      {
-        "@value": "Egbert Gramsbergen"
       }
     ],
     "http://purl.org/dc/elements/1.1/creator": [
       {
-        "@value": "Silvio Peroni"
+        "@value": "David Shotton"
       },
       {
-        "@value": "David Shotton"
+        "@value": "Silvio Peroni"
       }
     ],
     "http://purl.org/dc/elements/1.1/date": [
@@ -1364,11 +1402,11 @@
     ],
     "http://purl.org/dc/elements/1.1/description": [
       {
-        "@language": "en",
-        "@value": "The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  \n\nThis version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF."
+        "@id": "http://purl.org/spar/datacite/datacite.png"
       },
       {
-        "@id": "http://purl.org/spar/datacite/datacite.png"
+        "@language": "en",
+        "@value": "The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  \n\nThis version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF."
       }
     ],
     "http://purl.org/dc/elements/1.1/rights": [
@@ -1416,8 +1454,8 @@
   {
     "@id": "http://purl.org/spar/datacite/isbn",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -1441,8 +1479,8 @@
   {
     "@id": "http://purl.org/spar/datacite/abstract",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/DescriptionType"
+      "http://purl.org/spar/datacite/DescriptionType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1459,43 +1497,6 @@
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
         "@id": "http://purl.org/spar/fabio/Abstract"
-      }
-    ]
-  },
-  {
-    "@id": "_:N87c0a8b28cd848c8b2bb04081aeac2e0",
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/datacite/Identifier",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "identifier"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.essepuntato.it/2010/06/literalreification/Literal"
-      },
-      {
-        "@id": "_:N46a170689ee045eaa8fb82898481e0a3"
-      },
-      {
-        "@id": "_:Na334910d50d44bf894fb5575a13d799b"
       }
     ]
   },
@@ -1519,18 +1520,44 @@
     ]
   },
   {
-    "@id": "_:N317d7de3a76f40b08b330ee72fe56e49",
+    "@id": "http://purl.org/spar/datacite/isni",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme",
+      "http://purl.org/spar/datacite/OrganizationIdentifierScheme"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "http://www.isni.org/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "International Standard Name Identifier scheme."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isni"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd1eb6f90911d49dd9c38990d08964aba",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/ResourceIdentifierScheme"
-      }
-    ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+        "@id": "http://purl.org/spar/datacite/hasIdentifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
       }
     ]
   },
@@ -1547,7 +1574,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N262c1384e29449e39e3f2f2fde0f530c"
+        "@id": "_:Nf33027e68bae41c3a163a3d6f6837544"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1570,8 +1597,8 @@
   {
     "@id": "http://purl.org/spar/datacite/series-information",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/DescriptionType"
+      "http://purl.org/spar/datacite/DescriptionType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1597,8 +1624,8 @@
   {
     "@id": "http://purl.org/spar/datacite/social-security-number",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1610,23 +1637,6 @@
       {
         "@language": "en",
         "@value": "social security number"
-      }
-    ]
-  },
-  {
-    "@id": "_:N9ea64e70d2924512b9f863bbf5b33c6f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/datacite/hasDescriptionType"
       }
     ]
   },
@@ -1702,7 +1712,7 @@
         "@id": "http://purl.org/spar/datacite/AgentIdentifier"
       },
       {
-        "@id": "_:N4df5f60f50d2404186d25bf211762dc3"
+        "@id": "_:N58a58f03b07441bf830e4962d062f4cd"
       }
     ]
   },
@@ -1737,8 +1747,8 @@
   {
     "@id": "http://purl.org/spar/datacite/uri",
     "@type": [
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -1755,28 +1765,6 @@
       {
         "@language": "en",
         "@value": "uri"
-      }
-    ]
-  },
-  {
-    "@id": "_:N46a170689ee045eaa8fb82898481e0a3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://purl.org/spar/datacite/IdentifierScheme"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
       }
     ]
   },
@@ -1799,10 +1787,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N347019485e9e4482ba62479702ad5897"
+        "@id": "http://purl.org/spar/datacite/Identifier"
       },
       {
-        "@id": "http://purl.org/spar/datacite/Identifier"
+        "@id": "_:Ne3cd8f17e05d4843a056bf63702b3f00"
       }
     ],
     "http://www.w3.org/2002/07/owl#disjointWith": [
@@ -1812,9 +1800,35 @@
     ]
   },
   {
-    "@id": "http://www.essepuntato.it/2010/06/literalreification/Literal",
+    "@id": "http://purl.org/spar/datacite/table-of-content",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://purl.org/spar/datacite/DescriptionType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A table of content giving information about the content of a resource, appearing before the body text.  Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "table of content"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://purl.org/spar/doco/TableOfContents"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2eae6cea48974268a21e34e201c1141b",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
     ]
   },
   {
@@ -1837,34 +1851,24 @@
     ]
   },
   {
-    "@id": "http://purl.org/spar/datacite/table-of-content",
+    "@id": "http://www.essepuntato.it/2010/06/literalreification/Literal",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/DescriptionType"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "_:N5bbdfb86bb6143a68566532365914e05",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@language": "en",
-        "@value": "A table of content giving information about the content of a resource, appearing before the body text.  Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "table of content"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "http://purl.org/spar/doco/TableOfContents"
+        "@id": "http://purl.org/spar/datacite/hasIdentifier"
       }
     ]
   },
   {
     "@id": "http://purl.org/spar/datacite/ark",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -1886,6 +1890,14 @@
     ]
   },
   {
+    "@id": "_:N5bb9cd5bdd054bdcbdcc6b3a2854b32b",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
+    ]
+  },
+  {
     "@id": "http://purl.org/spar/datacite/hasGeneralResourceType",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -1898,7 +1910,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N5954138b14f14e22a80c6855e302d555"
+        "@id": "_:Nc59538e96e414d178eceb3ae8787bf75"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1940,29 +1952,7 @@
         "@id": "http://purl.org/spar/datacite/AgentIndetifierScheme"
       },
       {
-        "@id": "_:N8282a6f13361442ab82d692a87748295"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2002/07/owl#priorVersion",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "_:N8d1cf6a39ea74ed284de3b301982459f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "_:N87c0a8b28cd848c8b2bb04081aeac2e0"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+        "@id": "_:N2f6a06b08bdb4dcfab5e667e4a5ec0db"
       }
     ]
   },
@@ -1973,43 +1963,28 @@
     ]
   },
   {
-    "@id": "http://purl.org/spar/datacite/researcherid",
+    "@id": "http://purl.org/spar/datacite/OrganizationIdentifierScheme",
     "@type": [
-      "http://purl.org/spar/datacite/PersonalIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
-    ],
-    "http://purl.org/spar/fabio/hasURL": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "http://www.researcherid.com/"
-      }
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters."
+        "@value": "The identifier scheme used to identify an organization. Individual schemes are defines as members of this class."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "researcherid"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8a16c8bdf3534d9f86efd9b6bc8253dd",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "_:N0df565a10ce848b48396b578cc847b8e"
+        "@value": "organization identifier scheme"
       }
     ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://purl.org/spar/datacite/OrganizationIdentifier"
+        "@id": "http://purl.org/spar/datacite/AgentIndetifierScheme"
+      },
+      {
+        "@id": "_:Na33a054b79d44bfeb8cf134791b0e321"
       }
     ]
   },
@@ -2032,34 +2007,18 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:Ndddf1f954ac84a8b9955dfc9c3f567d3"
+        "@id": "http://purl.org/spar/datacite/AgentIndetifierScheme"
       },
       {
-        "@id": "http://purl.org/spar/datacite/AgentIndetifierScheme"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na1551339ca164d23a260b9f1ead9b7b5",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/datacite/hasIdentifier"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+        "@id": "_:N272df7a436e2401ebd2ffe8b37175df8"
       }
     ]
   },
   {
     "@id": "http://purl.org/spar/datacite/pmcid",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -2081,51 +2040,71 @@
     ]
   },
   {
-    "@id": "_:Nb8b553b725564c029ddade640865f691",
+    "@id": "http://purl.org/spar/datacite/OrganizationIdentifier",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/FunderIdentifierScheme"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
-      }
-    ]
-  },
-  {
-    "@id": "_:N186ec356c11642f7b88e6e0bcbc0d554",
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/spar/datacite/dia",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
-    ],
-    "http://purl.org/spar/fabio/hasURL": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "http://www.surf.nl/en/themas/openonderzoek/infrastructuur/Pages/digitalauthoridentifierdai.aspx"
-      }
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "The Digital Author Identification system assigns a unique number to all authors in the Netherlands research system."
+        "@value": "An identifier that uniquely identities an individual organization, belonging to a particular identifier scheme such as ISNI specified by an individual within the class datacite:OrganizationIdentifierScheme."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "dia"
+        "@value": "organization identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Nc9be64da6ee647f68f1d01100caf28f6"
+      },
+      {
+        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/spar/datacite/local-personal-identifier-scheme",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A personal identifier scheme that provides local personal identifiers that are unique in their local environment and understood by the person submitting the metadata."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "local personal identifier scheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:N272df7a436e2401ebd2ffe8b37175df8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:N8ebacb5d376e41109d29f4c854a8ed29"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/FunderIdentifier"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8ebacb5d376e41109d29f4c854a8ed29",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
       }
     ]
   },
@@ -2138,8 +2117,8 @@
   {
     "@id": "http://purl.org/spar/datacite/eissn",
     "@type": [
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -2163,8 +2142,8 @@
   {
     "@id": "http://purl.org/spar/datacite/lsid",
     "@type": [
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {
@@ -2211,25 +2190,47 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+    "@id": "_:Ndd91c15458b545b3867776ccef851906",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:N9b1afaf1d40a4cb988cd15cadb9a4ac4"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/description",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "_:N53c51648d95f4b60bec2e608040e662d",
+    "@id": "_:N319cb96eef6b40cbac7d4e741b5a6179",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#hasValue": [
-      {
-        "@id": "http://purl.org/spar/datacite/doi"
-      }
-    ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+        "@id": "_:N5bb9cd5bdd054bdcbdcc6b3a2854b32b"
       }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   }
 ]

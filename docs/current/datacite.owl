@@ -43,9 +43,9 @@ This version of the DataCite Ontology has been completely revised and significan
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
         <dc:contributor>Jan Ashton</dc:contributor>
         <dc:contributor>Egbert Gramsbergen</dc:contributor>
-        <dc:description rdf:resource="http://purl.org/spar/datacite/datacite.png"/>
         <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2016-01-21"/>
         <dc:contributor>Marie-Christine Jacquemot</dc:contributor>
+        <dc:description rdf:resource="datacite.png"/>
     </owl:Ontology>
     
 
@@ -888,10 +888,10 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/oci">
         <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/oc/oci</fabio:hasURL>
         <dc:description xml:lang="en">The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net).</dc:description>
         <rdfs:comment xml:lang="en">Open Citation Identifier.</rdfs:comment>
         <rdfs:label xml:lang="en">oci</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://w3id.org/oc/oci"/>
     </owl:NamedIndividual>
     
 

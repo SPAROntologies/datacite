@@ -245,8 +245,8 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "oci"@en ;
     dc:description "The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net)."@en ;
-    rdfs:comment "Open Citation Identifier."@en ;
-    rdfs:seeAlso <https://w3id.org/oc/oci> .
+    fabio:hasURL "https://w3id.org/oc/oci"^^xsd:anyURI ;
+    rdfs:comment "Open Citation Identifier."@en .
 
 :openid a :PersonalIdentifierScheme,
         owl:NamedIndividual ;
