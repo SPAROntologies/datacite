@@ -52,7 +52,7 @@ This version of the DataCite Ontology has been completely revised and significan
 
 **Website:** http://www.sparontologies.net/ontologies/datacite"""@en ;
     owl:imports <http://purl.org/co>,
-        <http://www.essepuntato.it/2010/06/literalreification> ;
+        <http://purl.org/spar/literal> ;
     owl:priorVersion <http://purl.org/spar/datacite/2016-01-21> ;
     owl:versionIRI <http://purl.org/spar/datacite/2018-01-20> ;
     owl:versionInfo "1.0.1"^^xsd:string .

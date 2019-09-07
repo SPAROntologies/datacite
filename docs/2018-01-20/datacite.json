@@ -1432,7 +1432,7 @@
         "@id": "http://purl.org/co"
       },
       {
-        "@id": "http://www.essepuntato.it/2010/06/literalreification"
+        "@id": "http://purl.org/spar/literal"
       }
     ],
     "http://www.w3.org/2002/07/owl#priorVersion": [

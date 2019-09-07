@@ -486,7 +486,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
     <owl:imports rdf:resource="http://purl.org/co"/>
     <dc:contributor>Egbert Gramsbergen</dc:contributor>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0.1</owl:versionInfo>
-    <owl:imports rdf:resource="http://www.essepuntato.it/2010/06/literalreification"/>
+    <owl:imports rdf:resource="http://purl.org/spar/literal"/>
     <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  
 
 This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.</dc:description>
