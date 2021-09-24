@@ -17,15 +17,15 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owlapi="http://www.semanticweb.org/owlapi#">
     <owl:Ontology rdf:about="http://purl.org/spar/datacite">
-        <owl:versionIRI rdf:resource="http://purl.org/spar/datacite/2018-01-20"/>
-        <owl:imports rdf:resource="http://purl.org/spar/literal"/>
+        <owl:versionIRI rdf:resource="http://purl.org/spar/datacite/2021-09-24"/>
         <owl:imports rdf:resource="http://purl.org/co"/>
+        <owl:imports rdf:resource="http://purl.org/spar/literal"/>
         <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  
 
 This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.</dc:description>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0.1</owl:versionInfo>
+        <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2018-01-20"/>
         <dc:title xml:lang="en">The DataCite Ontology</dc:title>
         <rdfs:comment xml:lang="en">The DataCite Ontology (DataCite) is an ontology that enables the metadata properties of the DataCite Metadata Schema Specification (i.e., a list of metadata properties for the accurate and consistent identification of a resource for citation and retrieval purposes) to be described in RDF.
 
@@ -38,14 +38,14 @@ This version of the DataCite Ontology has been completely revised and significan
 **License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 **Website:** http://www.sparontologies.net/ontologies/datacite</rdfs:comment>
-        <dc:date>2018-01-20</dc:date>
         <dc:contributor>Amy J. Barton</dc:contributor>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1</owl:versionInfo>
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
         <dc:contributor>Jan Ashton</dc:contributor>
         <dc:contributor>Egbert Gramsbergen</dc:contributor>
-        <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2016-01-21"/>
+        <dc:description rdf:resource="http://purl.org/spar/datacite/datacite.png"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-09-24</dc:date>
         <dc:contributor>Marie-Christine Jacquemot</dc:contributor>
-        <dc:description rdf:resource="datacite.png"/>
     </owl:Ontology>
     
 
@@ -318,9 +318,9 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
     
 
 
-    <!-- http://purl.org/spar/datacite/AgentIndetifierScheme -->
+    <!-- http://purl.org/spar/datacite/AgentIdentifierScheme -->
 
-    <owl:Class rdf:about="http://purl.org/spar/datacite/AgentIndetifierScheme">
+    <owl:Class rdf:about="http://purl.org/spar/datacite/AgentIdentifierScheme">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -384,7 +384,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
     <!-- http://purl.org/spar/datacite/FunderIdentifierScheme -->
 
     <owl:Class rdf:about="http://purl.org/spar/datacite/FunderIdentifierScheme">
-        <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIndetifierScheme"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -476,7 +476,7 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     <!-- http://purl.org/spar/datacite/OrganizationIdentifierScheme -->
 
     <owl:Class rdf:about="http://purl.org/spar/datacite/OrganizationIdentifierScheme">
-        <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIndetifierScheme"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -512,7 +512,7 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     <!-- http://purl.org/spar/datacite/PersonalIdentifierScheme -->
 
     <owl:Class rdf:about="http://purl.org/spar/datacite/PersonalIdentifierScheme">
-        <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIndetifierScheme"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -615,6 +615,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/acm -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/acm">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dl.acm.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">ACM Digital Library author ID, which is resolvable using the following URL: https://dl.acm.org/profile/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">acm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/ark -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/ark">
@@ -647,6 +658,39 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/crossref -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/crossref">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/OrganizationIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://crossref.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">Crossref member identifier, which is resolvable from the following URL: https://api.crossref.org/members/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">crossref</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/dblp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/dblp">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dblp.org</fabio:hasURL>
+        <rdfs:comment xml:lang="en">DBLP author identifier, which is resolvable from the following URL: https://dblp.org/pid/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">dblp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/dblp-record -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/dblp-record">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dblp.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">DBLP publication identifier, which is resolvable from the following URL: https://dblp.org/rec/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">dblp record</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/dia -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/dia">
@@ -658,12 +702,23 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/dnb -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/dnb">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://d-nb.info/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">DNB catalogue number, which is resolvable from the following URL: https://d-nb.info/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">dnb</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/doi -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/doi">
         <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.doi.org/</fabio:hasURL>
-        <rdfs:comment xml:lang="en">Digital Object Identier.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Digital Object Identier</rdfs:comment>
         <rdfs:label xml:lang="en">doi</rdfs:label>
     </owl:NamedIndividual>
     
@@ -703,6 +758,50 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/gepris -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/gepris">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gepris.dfg.de</fabio:hasURL>
+        <rdfs:comment xml:lang="en">GEPRIS person identifier, which is resolvable from the following URL: http://gepris.dfg.de/gepris/person/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">gepris</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/github -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/github">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">GitHub username, which is resolvable from the following URL: https://github.com/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">github</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/gnd -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/gnd">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://gnd.network/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">Gemeinsame Normdatei identifier, which is resolvable from the following URL: https://d-nb.info/gnd/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">gnd</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/google-scholar -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/google-scholar">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://scholar.google.com/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">Google Scholar author identifier, which resolvable from the following URL:	https://scholar.google.com/citations?user=&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">google scholar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/handle -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/handle">
@@ -710,6 +809,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.handle.net/</fabio:hasURL>
         <rdfs:comment xml:lang="en">The Handle system</rdfs:comment>
         <rdfs:label xml:lang="en">handle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/ieee -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/ieee">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ieeexplore.ieee.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">IEEE Xplore author ID, which is resolvable from the following URL: https://ieeexplore.ieee.org/author/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">ieee</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -780,6 +890,28 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/lattes -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/lattes">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://lattes.cnpq.br/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">Lattes Platform number, which is resolvable from the following URL: http://lattes.cnpq.br/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">lattes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/linkedin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/linkedin">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.linkedin.com/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">LinkedIn personal profile identifier, which is resolvable from the following URL: https://www.linkedin.com/in/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">linkedin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/lissn -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/lissn">
@@ -787,6 +919,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.issn.org/</fabio:hasURL>
         <rdfs:comment xml:lang="en">Linking International Standard Serial Number</rdfs:comment>
         <rdfs:label xml:lang="en">lissn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/loc -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/loc">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://id.loc.gov/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">Library of Congress authority identifier, which is resolvable from the following URL: https://id.loc.gov/authorities/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">loc</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -838,6 +981,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ibm.com/developerworks/opensource/library/os-lsidbp/</fabio:hasURL>
         <rdfs:comment xml:lang="en">Life Science Identifier</rdfs:comment>
         <rdfs:label xml:lang="en">lsid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/math-genealogy -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/math-genealogy">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://mathgenealogy.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">Mathematics Genealogy Project identifier, which is resolvable from the following URL: https://mathgenealogy.org/id.php?id=&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">math genealogy</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -896,6 +1050,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/oclc -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/oclc">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.worldcat.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">OCLC control number, which is resolvable from the following URL: https://www.worldcat.org/oclc/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">oclc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/openid -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/openid">
@@ -910,7 +1075,7 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     <!-- http://purl.org/spar/datacite/orcid -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/orcid">
-        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://orcid.org/</fabio:hasURL>
         <rdfs:comment xml:lang="en">Open Researcher and Contributor Identifier.</rdfs:comment>
         <rdfs:label xml:lang="en">orcid</rdfs:label>
@@ -972,6 +1137,28 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/repec -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/repec">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://authors.repec.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">RePEc Short identifier, which is resolvable from the following URL: https://authors.repec.org/pro/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">repec</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/research-gate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/research-gate">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.researchgate.net</fabio:hasURL>
+        <rdfs:comment xml:lang="en">ResearchGate profile identifier, which is resolvable from the following URL: https://www.researchgate.net/profile/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">research gate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/researcherid -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/researcherid">
@@ -979,6 +1166,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.researcherid.com/</fabio:hasURL>
         <rdfs:comment xml:lang="en">ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters.</rdfs:comment>
         <rdfs:label xml:lang="en">researcherid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/ror -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/ror">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/OrganizationIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ror.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">The Research Organization Registry Community identifier, which is resolvable from the following URL: https://ror.org/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">ror</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1038,6 +1236,16 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/twitter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/twitter">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://twitter.com/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">Twitter handle, which is resolvable from the following URL: https://twitter.com/&lt;identifier&gt;.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/upc -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/upc">
@@ -1091,6 +1299,39 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/wikidata -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/wikidata">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.wikidata.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">Wikidata QID, which is resolvable from the following URL: https://www.wikidata.org/wiki/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label>wikidata</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/wikipedia -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/wikipedia">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">Wikipedia page name, which is resolvable from the following URL: https://en.wikipedia.org/wiki/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">wikipedia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/zbmath -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/zbmath">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://zbmath.org/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">zbMATH author identifier, which is resolvable from the following URL: https://zbmath.org/authors/?q=ai:&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label xml:lang="en">zbmath</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1111,5 +1352,5 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
