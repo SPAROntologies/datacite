@@ -49,7 +49,7 @@ This version of the DataCite Ontology has been completely revised and significan
 **Website:** http://www.sparontologies.net/ontologies/datacite"""@en ;
     owl:imports <http://purl.org/spar/literal> ;
     owl:priorVersion :2021-09-24 ;
-    owl:versionIRI :2021-09-24 ;
+    owl:versionIRI :2022-09-15 ;
     owl:versionInfo "1.2"^^xsd:string .
 
 :AlternateResourceIdentifier a owl:Class ;
@@ -610,12 +610,12 @@ skos:Concept a owl:Class .
     rdfs:label "identifier"@en ;
     rdfs:comment "An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty [ owl:inverseOf :hasIdentifier ] ],
+        [ a owl:Restriction ;
             owl:onClass :IdentifierScheme ;
             owl:onProperty :usesIdentifierScheme ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty [ owl:inverseOf :hasIdentifier ] ],
         literal:Literal .
 
 :OrganizationIdentifierScheme a owl:Class ;
