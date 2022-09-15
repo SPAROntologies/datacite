@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The DataCite Ontology</title><title>The DataCite Ontology</title><link href="./owl.css" rel="stylesheet" type="text/css" /><link href="./Primer.css" rel="stylesheet" type="text/css" /><link href="./rec.css" rel="stylesheet" type="text/css" /><link href="./extra.css" rel="stylesheet" type="text/css" /><link rel="shortcut icon" href="./favicon.ico" /><script src="./jquery.js"></script><script src="./jquery.scrollTo.js"></script><script src="./marked.min.js"></script><script>
-			$(document).ready(
-			function () {
-			jQuery(".markdown").each(function(el){
-			jQuery(this).after(marked(jQuery(this).text())).remove()});
-			var list =
-			$('a[name="
-			http://purl.org/spar/datacite
-			"]');
-			if (list.size() != 0) {
-			var element = list.first();
-			$.scrollTo(element);
-			}
-			});
-		</script></head><body><div class="head"><h1>The DataCite Ontology</h1><dl><dt>IRI:</dt><dd>http://purl.org/spar/datacite</dd><dt>Version IRI:</dt><dd>http://purl.org/spar/datacite/2022-09-15</dd></dl><dl><dt>Date
+                $(document).ready(
+                    function () {
+                    	jQuery(".markdown").each(function(el){
+							jQuery(this).after(marked(jQuery(this).text())).remove()});
+                        var list = $('a[name="http://purl.org/spar/datacite"]');
+                        if (list.size() != 0) {
+                        	var element = list.first();
+                        	$.scrollTo(element);
+                        }
+                    });
+        </script></head><body><div class="head"><h1>The DataCite Ontology</h1><dl><dt>IRI:</dt><dd>http://purl.org/spar/datacite</dd><dt>Version IRI:</dt><dd>http://purl.org/spar/datacite/2022-09-15</dd></dl><dl><dt>Date
 			:
 		</dt><dd>15/09/2022</dd><dt>Current version
 			:
