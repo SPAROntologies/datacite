@@ -1,31 +1,36 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.org/spar/datacite/"
      xml:base="http://purl.org/spar/datacite/"
-     xmlns:discourse-relationships="http://purl.org/swan/2.0/discourse-relationships/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:fabio="http://purl.org/spar/fabio/"
-     xmlns:datacite="http://purl.org/spar/datacite/"
-     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:co="http://purl.org/co/"
-     xmlns:literal="http://www.essepuntato.it/2010/06/literalreification/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:owlapi="http://www.semanticweb.org/owlapi#"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:owlapi="http://www.semanticweb.org/owlapi#">
+     xmlns:literal="http://www.essepuntato.it/2010/06/literalreification/"
+     xmlns:datacite="http://purl.org/spar/datacite/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:discourse-relationships="http://purl.org/swan/2.0/discourse-relationships/">
     <owl:Ontology rdf:about="http://purl.org/spar/datacite">
         <owl:versionIRI rdf:resource="http://purl.org/spar/datacite/2021-09-24"/>
-        <owl:imports rdf:resource="http://purl.org/co"/>
         <owl:imports rdf:resource="http://purl.org/spar/literal"/>
+        <dc:contributor>Amy J. Barton</dc:contributor>
+        <dc:contributor>Egbert Gramsbergen</dc:contributor>
+        <dc:contributor>Jan Ashton</dc:contributor>
+        <dc:contributor>Marie-Christine Jacquemot</dc:contributor>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-09-15</dc:date>
+        <dc:description rdf:resource="http://purl.org/spar/datacite/datacite.png"/>
         <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  
 
 This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.</dc:description>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
-        <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2018-01-20"/>
+        <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
         <dc:title xml:lang="en">The DataCite Ontology</dc:title>
         <rdfs:comment xml:lang="en">The DataCite Ontology (DataCite) is an ontology that enables the metadata properties of the DataCite Metadata Schema Specification (i.e., a list of metadata properties for the accurate and consistent identification of a resource for citation and retrieval purposes) to be described in RDF.
 
@@ -38,14 +43,8 @@ This version of the DataCite Ontology has been completely revised and significan
 **License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 **Website:** http://www.sparontologies.net/ontologies/datacite</rdfs:comment>
-        <dc:contributor>Amy J. Barton</dc:contributor>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1</owl:versionInfo>
-        <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>
-        <dc:contributor>Jan Ashton</dc:contributor>
-        <dc:contributor>Egbert Gramsbergen</dc:contributor>
-        <dc:description rdf:resource="http://purl.org/spar/datacite/datacite.png"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-09-24</dc:date>
-        <dc:contributor>Marie-Christine Jacquemot</dc:contributor>
+        <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2021-09-24"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -298,6 +297,12 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/co/List -->
+
+    <owl:Class rdf:about="http://purl.org/co/List"/>
     
 
 
@@ -780,6 +785,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/gitlab -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/gitlab">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.gitlab.com/ee/user/profile/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">The identifier for GitLab Users.</rdfs:comment>
+        <rdfs:label xml:lang="en">GitLab user account</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/gnd -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/gnd">
@@ -1061,6 +1077,19 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/openalex -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/openalex">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.openalex.org/about-the-data</fabio:hasURL>
+        <rdfs:comment xml:lang="en">The primary key for all entities included in OpenAlex. 
+
+The OpenAlex ID has two parts. The first part is the base, that is always https://openalex.org/. The second part is the key, i.e. the unique primary key that identifies a given resource in our database. The key starts with a letter that tells us the kind of entity: W(ork), A(uthor), V(enue), I(nstitution), or C(oncept). In addition, the IDs are not case-sensitive, so w2741809807 is just as valid as W2741809807.</rdfs:comment>
+        <rdfs:label xml:lang="en">OpenAlex ID</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/openid -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/openid">
@@ -1177,6 +1206,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ror.org/</fabio:hasURL>
         <rdfs:comment xml:lang="en">The Research Organization Registry Community identifier, which is resolvable from the following URL: https://ror.org/&lt;identifier&gt;.</rdfs:comment>
         <rdfs:label xml:lang="en">ror</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/scigraph -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/scigraph">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://scigraph.springernature.com/explorer/datasets/data_at_a_glance/</fabio:hasURL>
+        <rdfs:comment xml:lang="en">The identifier used for referring to entities in the Springer Nature SciGraph dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">SciGraph ID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1352,5 +1392,5 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
