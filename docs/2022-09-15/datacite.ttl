@@ -610,12 +610,12 @@ skos:Concept a owl:Class .
     rdfs:label "identifier"@en ;
     rdfs:comment "An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty [ owl:inverseOf :hasIdentifier ] ],
-        [ a owl:Restriction ;
             owl:onClass :IdentifierScheme ;
             owl:onProperty :usesIdentifierScheme ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty [ owl:inverseOf :hasIdentifier ] ],
         literal:Literal .
 
 :OrganizationIdentifierScheme a owl:Class ;
