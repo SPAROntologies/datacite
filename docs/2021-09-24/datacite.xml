@@ -72,7 +72,7 @@
     <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2018-01-20"/>
     <dc:contributor>Egbert Gramsbergen</dc:contributor>
     <dc:contributor>Marie-Christine Jacquemot</dc:contributor>
-    <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  
+    <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://schema.datacite.org/meta/kernel-3.1/index.html) to be described in RDF.  
 
 This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.</dc:description>
     <owl:versionIRI rdf:resource="http://purl.org/spar/datacite/2021-09-24"/>
