@@ -27,7 +27,7 @@
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-09-15</dc:date>
         <dc:description rdf:resource="http://purl.org/spar/datacite/datacite.png"/>
-        <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  
+        <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://schema.datacite.org/meta/kernel-3.1/index.html) to be described in RDF.  
 
 This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.</dc:description>
         <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).</dc:rights>

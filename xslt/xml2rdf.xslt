@@ -512,7 +512,7 @@
 			<relation type=""><dct:relation/></relation>
 		</xsl:variable>
 		<!--
-		see https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf
+		see https://schema.datacite.org/meta/kernel-3.1/index.html
 		@relatedIdentifierType - all have an equivalent (lower-case) insividual in the Datacite ontology.
 		Values with * are (resolved to) urls.
 			ARK
