@@ -17,16 +17,16 @@
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
      xmlns:discourse-relationships="http://purl.org/swan/2.0/discourse-relationships/">
     <owl:Ontology rdf:about="http://purl.org/spar/datacite">
-        <owl:versionIRI rdf:resource="http://purl.org/spar/datacite/2022-09-15"/>
+        <owl:versionIRI rdf:resource="http://purl.org/spar/datacite/2025-09-22"/>
         <owl:imports rdf:resource="http://purl.org/spar/literal"/>
         <dc:contributor>Amy J. Barton</dc:contributor>
         <dc:contributor>Egbert Gramsbergen</dc:contributor>
         <dc:contributor>Jan Ashton</dc:contributor>
         <dc:contributor>Marie-Christine Jacquemot</dc:contributor>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-09-15</dc:date>
-        <dc:description rdf:resource="http://purl.org/spar/datacite/datacite.png"/>
+        <dc:creator>David Shotton</dc:creator>
+        <dc:creator>Silvio Peroni</dc:creator>
+        <dc:date>2022-09-15</dc:date>
+        <dc:description rdf:resource="datacite.png"/>
         <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  
 
 This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.</dc:description>
@@ -43,8 +43,8 @@ This version of the DataCite Ontology has been completely revised and significan
 **License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 **Website:** http://www.sparontologies.net/ontologies/datacite</rdfs:comment>
-        <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2021-09-24"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</owl:versionInfo>
+        <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2022-09-15"/>
+        <owl:versionInfo>1.2.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -609,6 +609,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite#w3id -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite#w3id">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/</fabio:hasURL>
+        <dc:description>The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with &quot;https://w3id.org/&quot; plus a local identifier that completes it (e.g. &quot;https://w3id.org/changes&quot;).</dc:description>
+        <rdfs:label>w3id</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/abstract -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/abstract">
@@ -657,7 +668,19 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/bibcode">
         <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
-        <rdfs:comment xml:lang="en">It is the Astrophysics Data System bibliographic codes, a standardized 19 character identifier according to the syntax &quot;yyyyjjjjjvvvvmppppa&quot;.</rdfs:comment>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://adsabs.harvard.edu/abs_doc/help_pages/data.html</fabio:hasURL>
+        <rdfs:comment xml:lang="en">The Bibliographic Code (bibcode) is a 19 ASCII characters identifier which describes a journal article. The format was originally adopted by the SIMBAD and NED projects, and follows the syntax &quot;YYYYJJJJJVVVVMPPPPA&quot;, where:
+
+* YYYY: Year of publication
+* JJJJJ: A standard abbreviation for the journal (e.g. ApJ, AJ, MNRAS, Sci, PASP, etc.). A list of abbreviations is available.
+* VVVV: The volume number (for a serial) or an abbreviation that specifies what type of publication it is (e.g. conf for conference proceedings, meet for Meeting proceedings, book for a book, coll for colloquium proceedings, proc for any other type of proceedings).
+* M: Qualifier for publication:
+  * E: Electronic Abstract (usually a counter, not a page number)
+  * L: Letter
+  * P: Pink page
+  * Q-Z: Unduplicating character for identical codes
+* PPPP: Page number. Note that for page numbers greater than 9999, the page number is continued in the m column.
+* A: The first letter of the last name of the first author.</rdfs:comment>
         <rdfs:label xml:lang="en">bibcode</rdfs:label>
     </owl:NamedIndividual>
     
@@ -896,6 +919,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/ivoid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/ivoid">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ivoa.net/documents/IVOAIdentifiers/</fabio:hasURL>
+        <rdfs:comment>The IVOA identifier (ivoid) is the identifier of resources within the resource registry (datasets, data access services, etc.) maintained by the International Virtual Observatory Alliance (IVOA). These identifiers are RFC 3986-compliant URIs with a scheme of ivo. Thus, their generic form is: ivo://&lt;authority&gt;&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt;.</rdfs:comment>
+        <rdfs:label>ivoid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/jst -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/jst">
@@ -1058,9 +1092,8 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/oci">
         <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
-        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/oc/oci</fabio:hasURL>
-        <dc:description xml:lang="en">The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net).</dc:description>
-        <rdfs:comment xml:lang="en">Open Citation Identifier.</rdfs:comment>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://registry.identifiers.org/registry/oci</fabio:hasURL>
+        <rdfs:comment xml:lang="en">The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net).</rdfs:comment>
         <rdfs:label xml:lang="en">oci</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1077,6 +1110,17 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
+    <!-- http://purl.org/spar/datacite/omid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/omid">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://registry.identifiers.org/registry/omid</fabio:hasURL>
+        <rdfs:comment>The OpenCitations Meta Identifier (OMID) is a persistent identifier for bibliographic resources, created and maintained by OpenCitations (http://opencitations.net). The OMID has structure [[entity_type_abbreviation]]/[[supplier_prefix]][[sequential_number]] (e.g. &quot;br/0601&quot;, where &quot;br&quot; is the entity type, &quot;060&quot; is the supplier prefix, and &quot;1&quot; is the sequential number).</rdfs:comment>
+        <rdfs:label>omid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/openalex -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/openalex">
@@ -1086,6 +1130,18 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
 
 The OpenAlex ID has two parts. The first part is the base, that is always https://openalex.org/. The second part is the key, i.e. the unique primary key that identifies a given resource in our database. The key starts with a letter that tells us the kind of entity: W(ork), A(uthor), V(enue), I(nstitution), or C(oncept). In addition, the IDs are not case-sensitive, so w2741809807 is just as valid as W2741809807.</rdfs:comment>
         <rdfs:label xml:lang="en">OpenAlex ID</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/opendoar -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/opendoar">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://opendoar.ac.uk/</fabio:hasURL>
+        <dc:description>The Directory of Open Access Repositories (OpenDOAR) is service that lists open access repositories, and uses numerical internal identifiers to store their record.</dc:description>
+        <rdfs:comment>OpenDOAR identifier</rdfs:comment>
+        <rdfs:label>opendoar</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1265,6 +1321,17 @@ The OpenAlex ID has two parts. The first part is the base, that is always https:
     
 
 
+    <!-- http://purl.org/spar/datacite/spase -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/spase">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spase-group.org/services/</fabio:hasURL>
+        <rdfs:comment>The SPASE resource identifier (spase) is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group. Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://&lt;authority&gt;&lt;path&gt;.</rdfs:comment>
+        <rdfs:label>spase</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/spar/datacite/table-of-content -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/table-of-content">
@@ -1301,7 +1368,7 @@ The OpenAlex ID has two parts. The first part is the base, that is always https:
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/uri">
         <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://tools.ietf.org/html/rfc3986</fabio:hasURL>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uniform Resource Identifier</rdfs:comment>
+        <rdfs:comment>Uniform Resource Identifier</rdfs:comment>
         <rdfs:label xml:lang="en">uri</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1392,5 +1459,5 @@ The OpenAlex ID has two parts. The first part is the base, that is always https:
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
