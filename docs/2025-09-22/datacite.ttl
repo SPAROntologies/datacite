@@ -52,12 +52,6 @@ This version of the DataCite Ontology has been completely revised and significan
     owl:versionIRI :2025-09-22 ;
     owl:versionInfo "1.2.1" .
 
-<http://purl.org/spar/datacite#w3id> a :IdentifierScheme,
-        owl:NamedIndividual ;
-    rdfs:label "w3id" ;
-    fabio:hasURL "https://w3id.org/"^^xsd:anyURI ;
-    rdfs:comment "The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with \"https://w3id.org/\" plus a local identifier that completes it (e.g. \"https://w3id.org/changes\")." .
-
 :AlternateResourceIdentifier a owl:Class ;
     rdfs:label "alternate resource identifier"@en ;
     rdfs:comment "An identifier other than a DOI that is used as an alternative identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record, belonging to a particular scheme such as ISBN specified by an individual that is a member of the class datacite:ResourceIdentifierScheme. "@en ;
@@ -528,6 +522,12 @@ The OpenAlex ID has two parts. The first part is the base, that is always https:
     rdfs:label "viaf"@en ;
     fabio:hasURL "http://viaf.org/"^^xsd:anyURI ;
     rdfs:comment "The Virtual International Authority File is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC).  It contains information about many topics including personal names."@en .
+
+:w3id a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "w3id" ;
+    fabio:hasURL "https://w3id.org/"^^xsd:anyURI ;
+    rdfs:comment "The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with \"https://w3id.org/\" plus a local identifier that completes it (e.g. \"https://w3id.org/changes\")." .
 
 :wikidata a :IdentifierScheme,
         owl:NamedIndividual ;
