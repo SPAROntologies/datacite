@@ -1,588 +1,589 @@
-<http://purl.org/spar/datacite/local-personal-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "local personal identifier scheme"@en .
-_:N1dec9c20e2414bf38778ff1d91d7db65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N6c7a707647b04262b633f417ba8d3cfd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Ndbc251826e8d45eca7006d756967d184 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#label> <http://purl.org/spar/deo/Methods> .
-<http://purl.org/spar/datacite/ror> <http://purl.org/spar/fabio/hasURL> "https://ror.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
-<http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#comment> "Serial Item and Contribution Identifier"@en .
-<http://purl.org/spar/datacite/twitter> <http://purl.org/spar/fabio/hasURL> "https://twitter.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-_:N0555266c62c349d991fa2b4b5b6b51ca <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/repec> <http://purl.org/spar/fabio/hasURL> "https://authors.repec.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-_:N7ae130c72ae84cce88e05be081157215 <http://www.w3.org/2002/07/owl#members> _:Na0424a2849b441b1b9cc57388030a22a .
-_:N461505c77b44440bbd8799adac158dfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/linkedin> <http://purl.org/spar/fabio/hasURL> "https://www.linkedin.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd4da3c3d27fe431f9e1d5fecfd578a1f .
-<http://purl.org/spar/datacite/repec> <http://www.w3.org/2000/01/rdf-schema#label> "repec"@en .
-<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/isbn> <http://www.w3.org/2000/01/rdf-schema#comment> "International Standard Book Number"@en .
-_:Naec503cfbaa640d99016befe0bc40140 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/ror> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/dnb> <http://purl.org/spar/fabio/hasURL> "https://d-nb.info/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/infouri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/istc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-_:N0d0aedce09b241139b6d9010ad76948d <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to charactierize a description of a resource that is part of a series."@en .
-<http://purl.org/spar/datacite/nihmsid> <http://www.w3.org/2000/01/rdf-schema#label> "nihmsid"@en .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an individual person, belonging to a particular identifier scheme such as ORCID specified by an individual within the class datacite:PersonalIdentifierScheme."@en .
-<http://purl.org/spar/datacite/url> <http://www.w3.org/2000/01/rdf-schema#comment> "Uniform Resource Locator."@en .
-<http://purl.org/spar/datacite/ieee> <http://www.w3.org/2000/01/rdf-schema#comment> "IEEE Xplore author ID, which is resolvable from the following URL: https://ieeexplore.ieee.org/author/<identifier>."@en .
-<http://purl.org/spar/datacite/purl> <http://www.w3.org/2000/01/rdf-schema#comment> "Persistent Uniform Resource Locator"@en .
-<http://purl.org/spar/datacite/opendoar> <http://www.w3.org/2000/01/rdf-schema#comment> "OpenDOAR identifier" .
-<http://purl.org/spar/datacite/gnd> <http://www.w3.org/2000/01/rdf-schema#comment> "Gemeinsame Normdatei identifier, which is resolvable from the following URL: https://d-nb.info/gnd/<identifier>."@en .
-<http://purl.org/spar/datacite/google-scholar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/social-security-number> <http://www.w3.org/2000/01/rdf-schema#label> "social security number"@en .
-<http://purl.org/spar/datacite/jst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/research-gate> <http://purl.org/spar/fabio/hasURL> "https://www.researchgate.net"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/contributor> "Jan Ashton" .
-<http://purl.org/spar/datacite/crossref> <http://purl.org/spar/fabio/hasURL> "https://crossref.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/acm> <http://www.w3.org/2000/01/rdf-schema#label> "acm"@en .
-_:Ndbc251826e8d45eca7006d756967d184 <http://www.w3.org/2002/07/owl#onProperty> _:N17caeec34c0445eb99153adb36496639 .
-_:N2ae52138bd6541fcb962a5bd9805e64b <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N2ae52138bd6541fcb962a5bd9805e64b .
-<http://purl.org/spar/datacite/lissn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/opendoar> <http://purl.org/spar/fabio/hasURL> "https://opendoar.ac.uk/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-_:Nac27557a0b684ca89166bc98d3bfd9c3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/AgentIdentifier> .
-<http://purl.org/spar/datacite/isbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/zbmath> <http://purl.org/spar/fabio/hasURL> "https://zbmath.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary key for all entities included in OpenAlex. \n\nThe OpenAlex ID has two parts. The first part is the base, that is always https://openalex.org/. The second part is the key, i.e. the unique primary key that identifies a given resource in our database. The key starts with a letter that tells us the kind of entity: W(ork), A(uthor), V(enue), I(nstitution), or C(oncept). In addition, the IDs are not case-sensitive, so w2741809807 is just as valid as W2741809807."@en .
-<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "agent identifier scheme"@en .
-<http://purl.org/spar/datacite#w3id> <http://purl.org/dc/elements/1.1/description> "The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with \"https://w3id.org/\" plus a local identifier that completes it (e.g. \"https://w3id.org/changes\")." .
-<http://purl.org/spar/datacite/twitter> <http://www.w3.org/2000/01/rdf-schema#comment> "Twitter handle, which is resolvable from the following URL: https://twitter.com/<identifier>."@en .
-<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/2000/01/rdf-schema#label> "math genealogy"@en .
-<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en .
-<http://purl.org/spar/datacite/nihmsid> <http://www.w3.org/2000/01/rdf-schema#comment> "NIH Manuscript Submission Identifier"@en .
-<http://purl.org/spar/datacite/dnb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/pmcid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/crossref> <http://www.w3.org/2000/01/rdf-schema#label> "crossref"@en .
-_:Nd87957fca7d34c83ac3c710022bde891 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/spar/datacite/arxiv> <http://purl.org/spar/fabio/hasURL> "http://arxiv.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property permitting specification of the identifier scheme used to provide the identifier for an entity – either a funder, a person or a resource – defined as an individual of the class datacite:IdentifierScheme."@en .
-_:Nc25e17105aca45648fbc763c734f322e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite/loc> <http://www.w3.org/2000/01/rdf-schema#comment> "Library of Congress authority identifier, which is resolvable from the following URL: https://id.loc.gov/authorities/<identifier>."@en .
-<http://purl.org/spar/datacite/ror> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> .
-<http://purl.org/spar/datacite/openalex> <http://purl.org/spar/fabio/hasURL> "https://docs.openalex.org/about-the-data"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/eissn> <http://purl.org/spar/fabio/hasURL> "http://www.issn.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2000/01/rdf-schema#label> "pmid"@en .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property permitting specification of the type of description used to describe a resource, defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract, SeriesInformation, TableOfContent and Other."@en .
-<http://purl.org/spar/datacite/handle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/crossref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/title> "The DataCite Ontology"@en .
-_:N6c7a707647b04262b633f417ba8d3cfd <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/opendoar> <http://purl.org/dc/elements/1.1/description> "The Directory of Open Access Repositories (OpenDOAR) is service that lists open access repositories, and uses numerical internal identifiers to store their record." .
-<http://purl.org/spar/datacite/omid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/upc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N4ebb3c31d05a4561a8f63b7b2e2d6302 .
-<http://purl.org/spar/datacite/bibcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "primary resource identifier"@en .
+<http://purl.org/spar/datacite/urn> <http://www.w3.org/2000/01/rdf-schema#label> "urn"@en .
+<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/2000/01/rdf-schema#label> "researcherid"@en .
 <http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme."@en .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#label> "has description type"@en .
-<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "agent identifier"@en .
-<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#comment> "A description in a research paper documenting the specialized methods used in the work described."@en .
+<http://purl.org/spar/datacite/wikidata> <http://www.w3.org/2000/01/rdf-schema#label> "wikidata" .
+<http://purl.org/spar/datacite/lissn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/istc> <http://www.w3.org/2000/01/rdf-schema#label> "istc"@en .
+<http://purl.org/spar/datacite/local-personal-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A personal identifier scheme that provides local personal identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
+<http://purl.org/spar/datacite/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/spar> <http://www.w3.org/2000/01/rdf-schema#label> "SPAR Ontologies"@en .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/2000/01/rdf-schema#comment> "DNB catalogue number, which is resolvable from the following URL: https://d-nb.info/<identifier>."@en .
+<http://purl.org/spar/datacite/issn> <http://www.w3.org/2000/01/rdf-schema#label> "issn"@en .
+<http://purl.org/spar/datacite/arxiv> <http://www.w3.org/2000/01/rdf-schema#label> "arxiv"@en .
+<http://purl.org/spar/datacite/research-gate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:N31edc6c969384676aa863b69171b9bab <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/ean13> <http://purl.org/spar/fabio/hasURL> "http://www.gs1.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/2000/01/rdf-schema#comment> "International Standard Book Number"@en .
+<http://purl.org/spar/datacite/twitter> <http://purl.org/spar/fabio/hasURL> "https://twitter.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/zbmath> <http://www.w3.org/2000/01/rdf-schema#comment> "zbMATH author identifier, which is resolvable from the following URL: https://zbmath.org/authors/?q=ai:<identifier>."@en .
+<http://purl.org/spar/datacite/google-scholar> <http://purl.org/spar/fabio/hasURL> "https://scholar.google.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/abstract> <http://www.w3.org/2000/01/rdf-schema#label> "abstract"@en .
+<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N5c5292824f754d8491875408d7f13057 .
 <http://purl.org/spar/datacite/other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
-<http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/MetadataScheme> .
+<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#label> "gepris"@en .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify an organization. Individual schemes are defines as members of this class."@en .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/lissn> <http://www.w3.org/2000/01/rdf-schema#label> "lissn"@en .
+<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier for GitLab Users."@en .
+<http://purl.org/spar/datacite/isbn> <http://purl.org/spar/fabio/hasURL> "http://www.isbn-international.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/istc> <http://purl.org/spar/fabio/hasURL> "http://www.istc-international.org/html/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/crossref> <http://www.w3.org/2000/01/rdf-schema#label> "crossref"@en .
+<http://purl.org/spar/datacite/ark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an individual person, belonging to a particular identifier scheme such as ORCID specified by an individual within the class datacite:PersonalIdentifierScheme."@en .
+<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an individual organization, belonging to a particular identifier scheme such as ISNI specified by an individual within the class datacite:OrganizationIdentifierScheme."@en .
+<http://purl.org/spar/datacite/sici> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a person.  Individual schemes are defines as members of this class."@en .
+<http://purl.org/spar/datacite> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/spar/literal> .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#label> "spase" .
+<http://purl.org/spar/datacite/acm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.essepuntato.it/2010/06/literalreification/Literal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifier> .
+<http://purl.org/spar/datacite/repec> <http://www.w3.org/2000/01/rdf-schema#label> "repec"@en .
+<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/opendoar> <http://purl.org/dc/elements/1.1/description> "The Directory of Open Access Repositories (OpenDOAR) is service that lists open access repositories, and uses numerical internal identifiers to store their record." .
+<http://www.w3.org/2002/07/owl#priorVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows one to specify the list of the creators of a certain resource."@en .
+<http://purl.org/spar/datacite/oci> <http://purl.org/spar/fabio/hasURL> "https://registry.identifiers.org/registry/oci"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/dblp-record> <http://purl.org/spar/fabio/hasURL> "https://dblp.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:N6eb1e2203e3a42009bfb0f11e297c2cc <http://www.w3.org/2002/07/owl#onProperty> _:N6f561b192bd44d9a96e95c64395ce4d9 .
+<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#label> "ean13"@en .
+<http://purl.org/spar/datacite/istc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+_:N4316ad53ec6b4feea8f5c625f78929ac <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N5f2e83769485492f81fff4fd2fb242a0 .
+<http://purl.org/spar/datacite/dblp-record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite/fundref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
+<http://purl.org/spar/datacite/linkedin> <http://purl.org/spar/fabio/hasURL> "https://www.linkedin.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/national-insurance-number> <http://www.w3.org/2000/01/rdf-schema#label> "national insurance number"@en .
+<http://purl.org/spar/datacite/pmcid> <http://purl.org/spar/fabio/hasURL> "http://www.ncbi.nlm.nih.gov/pmc/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/title> "The DataCite Ontology"@en .
+_:Nf29366f9104e451587036f40c7430d37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/PersonalIdentifier> .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property permitting specification of the identifier scheme used to provide the identifier for an entity – either a funder, a person or a resource – defined as an individual of the class datacite:IdentifierScheme."@en .
+<http://purl.org/spar/datacite/opendoar> <http://www.w3.org/2000/01/rdf-schema#label> "opendoar" .
+_:N6eb1e2203e3a42009bfb0f11e297c2cc <http://www.w3.org/2002/07/owl#allValuesFrom> _:N0d51fb5276bb42d3b05828af7de8fd07 .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N236c863e82cb4c9c94dd8240c70c9a21 .
+_:Nc7462b55e53649beb2f2d3c821478699 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/PersonalIdentifier> .
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/pii> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Publisher_Item_Identifier> .
+<http://purl.org/spar/datacite/upc> <http://www.w3.org/2000/01/rdf-schema#comment> "Universal Product Code"@en .
+<http://purl.org/spar/datacite/openid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite#w3id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/pii> <http://www.w3.org/2000/01/rdf-schema#label> "pii"@en .
+<http://purl.org/spar/datacite/spar> <http://www.w3.org/2000/01/rdf-schema#comment> "The Semantic Publishing and Referencing Ontologies, a.k.a. SPAR Ontologies, form a suite of orthogonal and complementary OWL 2 DL ontology modules for the creation of comprehensive machine-readable RDF metadata for every aspect of semantic publishing and referencing: document description, bibliographic resource identifiers, types of citations and related contexts, bibliographic references, document parts and status, agents' roles and contributions, bibliometric data and workflow processes."@en .
+<http://purl.org/spar/datacite/arxiv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/other> <http://www.w3.org/2000/01/rdf-schema#label> "other"@en .
+<http://purl.org/spar/datacite/loc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/gepris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+_:N251982ea763c4a00bf72b35788b43e1a <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/handle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "personal identifier scheme"@en .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N75d4e6695cd647288ad5e28c536284ae .
+<http://purl.org/spar/datacite/ivoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/lissn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/ror> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> .
+<http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#comment> "Serial Item and Contribution Identifier"@en .
+<http://purl.org/spar/datacite/social-security-number> <http://www.w3.org/2000/01/rdf-schema#label> "social security number"@en .
+<http://purl.org/spar/datacite/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
+_:Nfeb758140d674650a37d44906e404620 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/local-funder-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A funder identifier scheme that provides local funder identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
+<http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ne65c78da817543d495d68f49253eed02 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nc7462b55e53649beb2f2d3c821478699 .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/creator> "David Shotton" .
+_:N75d4e6695cd647288ad5e28c536284ae <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/jst> <http://www.w3.org/2000/01/rdf-schema#comment> "Japanese Science and Technology Agency identifier scheme"@en .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/gnd> <http://purl.org/spar/fabio/hasURL> "https://gnd.network/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/description> <http://purl.org/spar/datacite/datacite.png> .
+<http://purl.org/spar/datacite/local-resource-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/2000/01/rdf-schema#comment> "The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net)."@en .
+<http://purl.org/spar/datacite/url> <http://www.w3.org/2000/01/rdf-schema#label> "url"@en .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "organization identifier scheme"@en .
+<http://purl.org/spar/datacite/fundref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/FunderIdentifierScheme> .
+<http://purl.org/spar/datacite/local-resource-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "local resource identifier scheme"@en .
+<http://purl.org/spar/datacite/lsid> <http://purl.org/spar/fabio/hasURL> "http://www.ibm.com/developerworks/opensource/library/os-lsidbp/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/zbmath> <http://www.w3.org/2000/01/rdf-schema#label> "zbmath"@en .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#label> "methods"@en .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/BookSeries> .
+<http://purl.org/spar/datacite/oclc> <http://purl.org/spar/fabio/hasURL> "https://www.worldcat.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property permitting specification of an entity used to describe a resource."@en .
+<http://purl.org/spar/datacite/local-personal-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "local personal identifier scheme"@en .
+<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#comment> "International Article Number"@en .
+<http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify an entity such as a funding agency, a person or a resource. Individual schemes are defines as members of this class."@en .
+<http://purl.org/spar/datacite/ror> <http://purl.org/spar/fabio/hasURL> "https://ror.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite> <http://www.w3.org/2000/01/rdf-schema#comment> "The DataCite Ontology (DataCite) is an ontology that enables the metadata properties of the DataCite Metadata Schema Specification (i.e., a list of metadata properties for the accurate and consistent identification of a resource for citation and retrieval purposes) to be described in RDF.\n\n**URL:** http://purl.org/spar/datacite\n\n**Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)\n\n**Contributors:** [Amy J. Barton](https://orcid.org/0000-0002-2184-3723), [Egbert Gramsbergen](https://www.linkedin.com/in/egbertgramsbergen/), [Jan Ashton](https://www.bl.uk/people/experts/janet-ashton), [Marie-Christine Jacquemot](https://orcid.org/0000-0002-6316-1472)\n\n**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)\n\n**Website:** http://www.sparontologies.net/ontologies/datacite"@en .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/2000/01/rdf-schema#label> "oclc"@en .
+<http://purl.org/spar/datacite/ark> <http://www.w3.org/2000/01/rdf-schema#comment> "Archival Resource Key."@en .
+<http://purl.org/spar/datacite/opendoar> <http://purl.org/spar/fabio/hasURL> "https://opendoar.ac.uk/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an individual agent, belonging to a particular identifier scheme specified by an individual within the class datacite:AgentIdentifierScheme (or any of its subclasses)."@en .
+<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/purl> <http://www.w3.org/2000/01/rdf-schema#comment> "Persistent Uniform Resource Locator"@en .
+<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify an agent. Individual schemes are defines as members of its sub-classes."@en .
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:N4316ad53ec6b4feea8f5c625f78929ac <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasDescriptionType> .
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/urn> <http://purl.org/spar/fabio/hasURL> "http://datatracker.ietf.org/wg/urn/charter/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/dia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N7a482355637f493ea073ca8ddecf6859 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N31edc6c969384676aa863b69171b9bab <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2000/01/rdf-schema#comment> "LinkedIn personal profile identifier, which is resolvable from the following URL: https://www.linkedin.com/in/<identifier>."@en .
+<http://purl.org/spar/datacite/openid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/ror> <http://www.w3.org/2000/01/rdf-schema#comment> "The Research Organization Registry Community identifier, which is resolvable from the following URL: https://ror.org/<identifier>."@en .
+<http://purl.org/spar/datacite/openalex> <http://purl.org/spar/fabio/hasURL> "https://docs.openalex.org/about-the-data"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/lsid> <http://www.w3.org/2000/01/rdf-schema#label> "lsid"@en .
+<http://purl.org/spar/datacite/gepris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/issn> <http://purl.org/spar/fabio/hasURL> "http://www.issn.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/twitter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/bibcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+_:N5f2e83769485492f81fff4fd2fb242a0 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/eissn> <http://purl.org/spar/fabio/hasURL> "http://www.issn.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/scigraph> <http://purl.org/spar/fabio/hasURL> "https://scigraph.springernature.com/explorer/datasets/data_at_a_glance/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:N6eb1e2203e3a42009bfb0f11e297c2cc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/github> <http://purl.org/spar/fabio/hasURL> "https://github.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/bibcode> <http://purl.org/spar/fabio/hasURL> "https://adsabs.harvard.edu/abs_doc/help_pages/data.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that is used to uniquely identifies a resource."@en .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/description> "The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  \n\nThis version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF."@en .
+<http://purl.org/spar/datacite/ivoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary key for all entities included in OpenAlex. \n\nThe OpenAlex ID has two parts. The first part is the base, that is always https://openalex.org/. The second part is the key, i.e. the unique primary key that identifies a given resource in our database. The key starts with a letter that tells us the kind of entity: W(ork), A(uthor), V(enue), I(nstitution), or C(oncept). In addition, the IDs are not case-sensitive, so w2741809807 is just as valid as W2741809807."@en .
+<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2000/01/rdf-schema#label> "SciGraph ID"@en .
+<http://purl.org/spar/datacite/dblp> <http://www.w3.org/2000/01/rdf-schema#comment> "DBLP author identifier, which is resolvable from the following URL: https://dblp.org/pid/<identifier>."@en .
+<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier other than a DOI that is used as an alternative identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record, belonging to a particular scheme such as ISBN specified by an individual that is a member of the class datacite:ResourceIdentifierScheme. "@en .
+<http://purl.org/spar/datacite/isni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/FunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N71dce4e2e2a34952ba3ada4cb50c9071 .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "uses identifier scheme"@en .
+<http://purl.org/spar/datacite/istc> <http://www.w3.org/2000/01/rdf-schema#comment> "International Standard Text Code"@en .
+<http://purl.org/spar/datacite/spar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/MetadataScheme> .
+<http://purl.org/spar/datacite/bibcode> <http://www.w3.org/2000/01/rdf-schema#comment> "The Bibliographic Code (bibcode) is a 19 ASCII characters identifier which describes a journal article. The format was originally adopted by the SIMBAD and NED projects, and follows the syntax \"YYYYJJJJJVVVVMPPPPA\", where:\n\n* YYYY: Year of publication\n* JJJJJ: A standard abbreviation for the journal (e.g. ApJ, AJ, MNRAS, Sci, PASP, etc.). A list of abbreviations is available.\n* VVVV: The volume number (for a serial) or an abbreviation that specifies what type of publication it is (e.g. conf for conference proceedings, meet for Meeting proceedings, book for a book, coll for colloquium proceedings, proc for any other type of proceedings).\n* M: Qualifier for publication:\n  * E: Electronic Abstract (usually a counter, not a page number)\n  * L: Letter\n  * P: Pink page\n  * Q-Z: Unduplicating character for identical codes\n* PPPP: Page number. Note that for page numbers greater than 9999, the page number is continued in the m column.\n* A: The first letter of the last name of the first author."@en .
+_:N7a482355637f493ea073ca8ddecf6859 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
+_:Ndb4f9a70d2694723b169413201a6ba56 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasIdentifier> .
+<http://purl.org/spar/datacite/nihmsid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/loc> <http://www.w3.org/2000/01/rdf-schema#label> "loc"@en .
+<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/2000/01/rdf-schema#comment> "ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters."@en .
+<http://purl.org/spar/datacite/FunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "funder identifier"@en .
+<http://purl.org/spar/datacite/uri> <http://www.w3.org/2000/01/rdf-schema#comment> "Uniform Resource Identifier" .
+<http://purl.org/spar/datacite/lattes> <http://www.w3.org/2000/01/rdf-schema#label> "lattes"@en .
+_:N5c5292824f754d8491875408d7f13057 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/orcid> <http://www.w3.org/2000/01/rdf-schema#label> "orcid"@en .
+<http://purl.org/spar/datacite/arxiv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/google-scholar> <http://www.w3.org/2000/01/rdf-schema#label> "google scholar"@en .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#label> "OpenAlex ID"@en .
+<http://purl.org/spar/datacite/doi> <http://purl.org/spar/fabio/hasURL> "http://www.doi.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#comment> "The Virtual International Authority File is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC).  It contains information about many topics including personal names."@en .
-_:Ne08710d7ab0249298c3a3ede44f90073 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/FunderIdentifier> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "has general resource type"@en .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/lattes> <http://purl.org/spar/fabio/hasURL> "https://lattes.cnpq.br/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nf29366f9104e451587036f40c7430d37 .
+<http://purl.org/spar/datacite/handle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/ark> <http://purl.org/spar/fabio/hasURL> "https://confluence.ucop.edu/display/Curation/ARK"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/purl> <http://www.w3.org/2000/01/rdf-schema#label> "purl"@en .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property permitting specification of the general type of a resource, defined from the DataCite controlled list, namely: \n\n* dcmitype:MovingImage;\n* dcmitype:Collection;\n* dcmitype:Dataset;\n* dcmitype:Event;\n* dcmitype:dcmitype:StillImage;\n* dcmitype:InteractiveResource;\n* fabio:Model;\n* dcmitype:PhysicalObject;\n* dcmitype:Service;\n* dcmitype:Software;\n* dcmitype:Sound;\n* dcmitype:Text;\n* fabio:Workflow;\n* frbr:Endeavour.\n\nAll the prefixes used here refer to external ontologies, i.e., DC Metadata Terms (dcmitype: http://purl.org/dc/dcmitype/), FaBiO (fabio: http://purl.org/spar/fabio/), and FRBR (frbr: http://purl.org/vocab/frbr/core#)."@en .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/datacite/lattes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/local-funder-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "local funder identifier scheme"@en .
+<http://purl.org/spar/datacite/pmcid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "funder identifier scheme"@en .
+<http://purl.org/spar/datacite#w3id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite#w3id> <http://www.w3.org/2000/01/rdf-schema#comment> "The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with \"https://w3id.org/\" plus a local identifier that completes it (e.g. \"https://w3id.org/changes\")." .
+_:N97ef834676294f6d8e9c889f07ac8ddd <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/loc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/dia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#label> "viaf"@en .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#domain> _:N7a482355637f493ea073ca8ddecf6859 .
+<http://purl.org/spar/datacite/local-resource-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/ivoid> <http://www.w3.org/2000/01/rdf-schema#comment> "The IVOA identifier (ivoid) is the identifier of resources within the resource registry (datasets, data access services, etc.) maintained by the International Virtual Observatory Alliance (IVOA). These identifiers are RFC 3986-compliant URIs with a scheme of ivo. Thus, their generic form is: ivo://<authority><path>?<query>#<fragment>." .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "personal identifier"@en .
+<http://purl.org/spar/datacite/crossref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/MetadataScheme> .
+<http://purl.org/spar/datacite/acm> <http://www.w3.org/2000/01/rdf-schema#label> "acm"@en .
+<http://purl.org/spar/datacite/dia> <http://www.w3.org/2000/01/rdf-schema#comment> "The Digital Author Identification system assigns a unique number to all authors in the Netherlands research system."@en .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/2000/01/rdf-schema#label> "wikipedia"@en .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/2000/01/rdf-schema#comment> "Wikipedia page name, which is resolvable from the following URL: https://en.wikipedia.org/wiki/<identifier>."@en .
+<http://purl.org/spar/datacite/omid> <http://www.w3.org/2000/01/rdf-schema#label> "omid" .
+_:N09b91520c4f14bc88294b3bd161148e0 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/2000/01/rdf-schema#label> "ieee"@en .
+<http://purl.org/spar/fabio/hasURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/datacite/social-security-number> <http://www.w3.org/2000/01/rdf-schema#comment> "United States of America social security number scheme"@en .
+<http://purl.org/spar/datacite/pii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/2000/01/rdf-schema#label> "isbn"@en .
+<http://purl.org/spar/datacite/uri> <http://www.w3.org/2000/01/rdf-schema#label> "uri"@en .
 <http://purl.org/spar/datacite/isni> <http://www.w3.org/2000/01/rdf-schema#comment> "International Standard Name Identifier scheme."@en .
 <http://purl.org/spar/datacite/research-gate> <http://www.w3.org/2000/01/rdf-schema#label> "research gate"@en .
-<http://purl.org/spar/datacite/purl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#label> "OpenAlex ID"@en .
-<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
-_:N335d61301245439c8c51c1de7e2c07af <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasDescriptionType> .
-<http://purl.org/spar/datacite/lsid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/doi> <http://purl.org/spar/fabio/hasURL> "http://www.doi.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/local-resource-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/MetadataDocument> .
-<http://purl.org/spar/datacite/infouri> <http://purl.org/spar/fabio/hasURL> "http://info-uri.info/registry/docs/misc/faq.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/sici> <http://purl.org/spar/fabio/hasURL> "http://en.wikipedia.org/wiki/Serial_Item_and_Contribution_Identifier"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/fundref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The link between a metadata document and the scheme followed for creating metadata."@en .
-<http://purl.org/spar/datacite/pii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite/opendoar> <http://www.w3.org/2000/01/rdf-schema#label> "opendoar" .
-<http://purl.org/spar/datacite/repec> <http://www.w3.org/2000/01/rdf-schema#comment> "RePEc Short identifier, which is resolvable from the following URL: https://authors.repec.org/pro/<identifier>."@en .
-<http://purl.org/spar/datacite/omid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/local-funder-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A funder identifier scheme that provides local funder identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
-<http://purl.org/spar/datacite/opendoar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/FunderIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that is used to uniquely identifies a resource."@en .
-<http://purl.org/spar/datacite/isbn> <http://www.w3.org/2000/01/rdf-schema#label> "isbn"@en .
-<http://purl.org/spar/datacite/urn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/handle> <http://www.w3.org/2000/01/rdf-schema#label> "handle"@en .
-<http://purl.org/spar/datacite/research-gate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N1dec9c20e2414bf38778ff1d91d7db65 .
-<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/2000/01/rdf-schema#label> "researcherid"@en .
-_:Nd87957fca7d34c83ac3c710022bde891 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/loc> <http://www.w3.org/2000/01/rdf-schema#label> "loc"@en .
-<http://purl.org/spar/datacite/ror> <http://www.w3.org/2000/01/rdf-schema#label> "ror"@en .
-<http://purl.org/spar/datacite/ivoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/nii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/pmcid> <http://www.w3.org/2000/01/rdf-schema#comment> "PubMed Central Identifier"@en .
-<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#label> "github"@en .
-<http://purl.org/spar/datacite/issn> <http://purl.org/spar/fabio/hasURL> "http://www.issn.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/abstract> <http://www.w3.org/2000/01/rdf-schema#comment> "A brief summary of a textual work, appearing at the beginning of the work and designed to act as the point-of-entry that will help the reader quickly to obtain an overview of the work's contents."@en .
-_:Nafb38cad24ab40db8dcc641801ff993f <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
-_:Nafb38cad24ab40db8dcc641801ff993f <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
-<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify an organization. Individual schemes are defines as members of this class."@en .
-_:Naec503cfbaa640d99016befe0bc40140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/wikidata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/arxiv> <http://www.w3.org/2000/01/rdf-schema#label> "arxiv"@en .
-<http://purl.org/spar/datacite/bibcode> <http://purl.org/spar/fabio/hasURL> "https://adsabs.harvard.edu/abs_doc/help_pages/data.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/DescriptionType> <http://www.w3.org/2000/01/rdf-schema#comment> "This class permits classification of the type of description given to a resource described by the DataCite Metadata schema.  Individual members of the class conform to the five values allowed in the DataCite controlled list, namely: \n\n* abstract;\n* methods;\n* series-information;\n* table-of-content;\n* other."@en .
-<http://purl.org/spar/datacite/pmcid> <http://purl.org/spar/fabio/hasURL> "http://www.ncbi.nlm.nih.gov/pmc/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/research-gate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/ivoid> <http://www.w3.org/2000/01/rdf-schema#label> "ivoid" .
-<http://purl.org/spar/datacite/wikidata> <http://www.w3.org/2000/01/rdf-schema#label> "wikidata" .
-<http://purl.org/spar/datacite/pii> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Publisher_Item_Identifier> .
-<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "funder identifier scheme"@en .
-<http://purl.org/spar/datacite/national-insurance-number> <http://www.w3.org/2000/01/rdf-schema#comment> "United Kingdom National Insurance Number scheme."@en .
-<http://purl.org/spar/datacite/pii> <http://www.w3.org/2000/01/rdf-schema#label> "pii"@en .
-_:Ndbc251826e8d45eca7006d756967d184 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/ivoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/dblp-record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/dia> <http://www.w3.org/2000/01/rdf-schema#comment> "The Digital Author Identification system assigns a unique number to all authors in the Netherlands research system."@en .
-<http://purl.org/spar/datacite/oci> <http://www.w3.org/2000/01/rdf-schema#label> "oci"@en .
-<http://purl.org/spar/datacite/research-gate> <http://www.w3.org/2000/01/rdf-schema#comment> "ResearchGate profile identifier, which is resolvable from the following URL: https://www.researchgate.net/profile/<identifier>."@en .
-<http://purl.org/spar/datacite/github> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "local organization identifier scheme"@en .
-<http://purl.org/spar/datacite/ieee> <http://purl.org/spar/fabio/hasURL> "https://ieeexplore.ieee.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/pmid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/zbmath> <http://www.w3.org/2000/01/rdf-schema#label> "zbmath"@en .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/date> "2022-09-15" .
-<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
-<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> .
-<http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify an entity such as a funding agency, a person or a resource. Individual schemes are defines as members of this class."@en .
-_:N0555266c62c349d991fa2b4b5b6b51ca <http://www.w3.org/2002/07/owl#onProperty> _:N03e19988da87452fbb7a7dcd5486bf5f .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "personal identifier"@en .
-<http://purl.org/spar/datacite/pmcid> <http://www.w3.org/2000/01/rdf-schema#label> "pmcid"@en .
-<http://purl.org/spar/datacite/nihmsid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/isni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/istc> <http://www.w3.org/2000/01/rdf-schema#label> "istc"@en .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows one to specify the list of the creators of a certain resource."@en .
-<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite/orcid> <http://www.w3.org/2000/01/rdf-schema#label> "orcid"@en .
-<http://purl.org/spar/datacite/bibcode> <http://www.w3.org/2000/01/rdf-schema#comment> "The Bibliographic Code (bibcode) is a 19 ASCII characters identifier which describes a journal article. The format was originally adopted by the SIMBAD and NED projects, and follows the syntax \"YYYYJJJJJVVVVMPPPPA\", where:\n\n* YYYY: Year of publication\n* JJJJJ: A standard abbreviation for the journal (e.g. ApJ, AJ, MNRAS, Sci, PASP, etc.). A list of abbreviations is available.\n* VVVV: The volume number (for a serial) or an abbreviation that specifies what type of publication it is (e.g. conf for conference proceedings, meet for Meeting proceedings, book for a book, coll for colloquium proceedings, proc for any other type of proceedings).\n* M: Qualifier for publication:\n  * E: Electronic Abstract (usually a counter, not a page number)\n  * L: Letter\n  * P: Pink page\n  * Q-Z: Unduplicating character for identical codes\n* PPPP: Page number. Note that for page numbers greater than 9999, the page number is continued in the m column.\n* A: The first letter of the last name of the first author."@en .
-<http://purl.org/spar/datacite/istc> <http://www.w3.org/2000/01/rdf-schema#comment> "International Standard Text Code"@en .
-<http://purl.org/spar/datacite/sici> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/nii> <http://www.w3.org/2000/01/rdf-schema#label> "nii"@en .
-<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier other than a DOI that is used as an alternative identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record, belonging to a particular scheme such as ISBN specified by an individual that is a member of the class datacite:ResourceIdentifierScheme. "@en .
-_:N2ae52138bd6541fcb962a5bd9805e64b <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/OrganizationIdentifier> .
-<http://purl.org/spar/datacite/ieee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/lsid> <http://www.w3.org/2000/01/rdf-schema#label> "lsid"@en .
-<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/gepris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/FunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N5ed36683d8274b59b09ca3304e18783b .
-_:N461505c77b44440bbd8799adac158dfc <http://www.w3.org/2002/07/owl#allValuesFrom> _:Nafb38cad24ab40db8dcc641801ff993f .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.essepuntato.it/2010/06/literalreification/Literal> .
-<http://purl.org/spar/datacite/istc> <http://purl.org/spar/fabio/hasURL> "http://www.istc-international.org/html/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/wikidata> <http://purl.org/spar/fabio/hasURL> "https://www.wikidata.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/spar/literal> .
-<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "resource identifier scheme"@en .
-_:N461505c77b44440bbd8799adac158dfc <http://www.w3.org/2002/07/owl#onProperty> _:Nb3074d51f65547e29b82e9ee5ac13e2a .
-<http://purl.org/spar/datacite/lattes> <http://purl.org/spar/fabio/hasURL> "https://lattes.cnpq.br/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/EAN13> .
-<http://purl.org/spar/datacite/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/Identifier> .
-<http://purl.org/spar/datacite/loc> <http://purl.org/spar/fabio/hasURL> "https://id.loc.gov/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/issn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/viaf> <http://purl.org/spar/fabio/hasURL> "http://viaf.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/eissn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-_:Ne08710d7ab0249298c3a3ede44f90073 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#label> "doi"@en .
-<http://purl.org/spar/datacite/ark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/orcid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/orcid> <http://www.w3.org/2000/01/rdf-schema#comment> "Open Researcher and Contributor Identifier."@en .
-<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier for GitLab Users."@en .
-<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2000/01/rdf-schema#label> "linkedin"@en .
-<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/2000/01/rdf-schema#label> "wikipedia"@en .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/datacite/Identifier> .
-_:N675b75971fa442128d4ad10852671883 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nc25e17105aca45648fbc763c734f322e .
-<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/2000/01/rdf-schema#comment> "Mathematics Genealogy Project identifier, which is resolvable from the following URL: https://mathgenealogy.org/id.php?id=<identifier>."@en .
-<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
-_:N335d61301245439c8c51c1de7e2c07af <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-_:N1dec9c20e2414bf38778ff1d91d7db65 <http://www.w3.org/2002/07/owl#onProperty> _:Ne1eea47f82d84beabe91660e41c29e57 .
-<http://purl.org/spar/datacite/oci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
-<http://purl.org/spar/datacite/lissn> <http://www.w3.org/2000/01/rdf-schema#label> "lissn"@en .
-<http://purl.org/spar/datacite/FunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "funder identifier"@en .
-<http://purl.org/spar/datacite/oclc> <http://www.w3.org/2000/01/rdf-schema#comment> "OCLC control number, which is resolvable from the following URL: https://www.worldcat.org/oclc/<identifier>."@en .
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/2000/01/rdf-schema#label> "uses metadata scheme"@en .
-<http://purl.org/spar/datacite/purl> <http://purl.org/spar/fabio/hasURL> "http://purl.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/lsid> <http://purl.org/spar/fabio/hasURL> "http://www.ibm.com/developerworks/opensource/library/os-lsidbp/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/ean13> <http://purl.org/spar/fabio/hasURL> "http://www.gs1.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/oclc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/dblp-record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/other> <http://www.w3.org/2000/01/rdf-schema#comment> "A catch-all description type required by the DataCite Metadata Schema to characterize description types that are not abstracts, series information or tables of content."@en .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/description> <http://purl.org/spar/datacite/datacite.png> .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/orcid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
-_:Nafb38cad24ab40db8dcc641801ff993f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N5ed36683d8274b59b09ca3304e18783b <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/FunderIdentifierScheme> .
-<http://purl.org/spar/datacite/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property permitting specification of the general type of a resource, defined from the DataCite controlled list, namely: \n\n* dcmitype:MovingImage;\n* dcmitype:Collection;\n* dcmitype:Dataset;\n* dcmitype:Event;\n* dcmitype:dcmitype:StillImage;\n* dcmitype:InteractiveResource;\n* fabio:Model;\n* dcmitype:PhysicalObject;\n* dcmitype:Service;\n* dcmitype:Software;\n* dcmitype:Sound;\n* dcmitype:Text;\n* fabio:Workflow;\n* frbr:Endeavour.\n\nAll the prefixes used here refer to external ontologies, i.e., DC Metadata Terms (dcmitype: http://purl.org/dc/dcmitype/), FaBiO (fabio: http://purl.org/spar/fabio/), and FRBR (frbr: http://purl.org/vocab/frbr/core#)."@en .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#label> "has creator list"@en .
-<http://purl.org/spar/datacite/fundref> <http://purl.org/spar/fabio/hasURL> "http://www.crossref.org/fundref/index.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/isbn> <http://purl.org/spar/fabio/hasURL> "http://www.isbn-international.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/openid> <http://purl.org/spar/fabio/hasURL> "http://openid.net/foundation/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/jst> <http://www.w3.org/2000/01/rdf-schema#comment> "Japanese Science and Technology Agency identifier scheme"@en .
-<http://purl.org/spar/datacite/jst> <http://www.w3.org/2000/01/rdf-schema#label> "jst"@en .
-<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:Nac27557a0b684ca89166bc98d3bfd9c3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/wikidata> <http://www.w3.org/2000/01/rdf-schema#comment> "Wikidata QID, which is resolvable from the following URL: https://www.wikidata.org/wiki/<identifier>."@en .
-<http://purl.org/spar/datacite/dblp> <http://www.w3.org/2000/01/rdf-schema#comment> "DBLP author identifier, which is resolvable from the following URL: https://dblp.org/pid/<identifier>."@en .
-<http://purl.org/spar/datacite/gnd> <http://purl.org/spar/fabio/hasURL> "https://gnd.network/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/loc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier"@en .
-<http://purl.org/spar/datacite/spar> <http://purl.org/spar/fabio/hasURL> "http://www.sparontologies.net"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/openid> <http://www.w3.org/2000/01/rdf-schema#comment> "OpenID is an open standard that describes how users can be authenticated in a decentralized manner, eliminating the need for centralized registration services. "@en .
-<http://purl.org/spar/datacite/urn> <http://purl.org/spar/fabio/hasURL> "http://datatracker.ietf.org/wg/urn/charter/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-_:N7ae130c72ae84cce88e05be081157215 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-<http://purl.org/spar/datacite/orcid> <http://purl.org/spar/fabio/hasURL> "http://orcid.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/other> <http://www.w3.org/2000/01/rdf-schema#label> "other"@en .
-<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identier"@en .
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/acm> <http://purl.org/spar/fabio/hasURL> "https://dl.acm.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/oci> <http://purl.org/spar/fabio/hasURL> "https://registry.identifiers.org/registry/oci"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> .
-<http://purl.org/spar/datacite/infouri> <http://www.w3.org/2000/01/rdf-schema#comment> "Info URI scheme"@en .
-<http://purl.org/spar/datacite#w3id> <http://www.w3.org/2000/01/rdf-schema#label> "w3id" .
-<http://purl.org/spar/datacite/istc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a resource.  Individual schemes are defines as members of this class.  For DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier."@en .
-<http://purl.org/spar/datacite/gnd> <http://www.w3.org/2000/01/rdf-schema#label> "gnd"@en .
-<http://purl.org/spar/datacite/issn> <http://www.w3.org/2000/01/rdf-schema#comment> "International Standard Serial Number"@en .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
-<http://purl.org/spar/datacite/urn> <http://www.w3.org/2000/01/rdf-schema#label> "urn"@en .
-<http://purl.org/spar/datacite/lissn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "identifier scheme"@en .
-<http://purl.org/spar/datacite/loc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/creator> "David Shotton" .
-<http://purl.org/spar/datacite/crossref> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossref member identifier, which is resolvable from the following URL: https://api.crossref.org/members/<identifier>."@en .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/)."@en .
-<http://purl.org/spar/datacite/isbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/national-insurance-number> <http://www.w3.org/2000/01/rdf-schema#label> "national insurance number"@en .
-<http://purl.org/spar/datacite/zbmath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nf5fbe7dd3fa645fd911fdf1ae812e9b9 .
-_:Nf5fbe7dd3fa645fd911fdf1ae812e9b9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/AgentIdentifier> .
-<http://purl.org/spar/datacite/dia> <http://www.w3.org/2000/01/rdf-schema#label> "dia"@en .
-<http://purl.org/spar/datacite/other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:Na0424a2849b441b1b9cc57388030a22a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/FunderIdentifier> .
-_:N096564f386db46a992f9b432ba612f86 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
-<http://purl.org/spar/datacite/local-personal-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/pii> <http://www.w3.org/2000/01/rdf-schema#comment> "Pulisher Item Identifier scheme."@en .
-<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#comment> "FundRef is a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research. "@en .
-<http://purl.org/spar/datacite/arxiv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> _:N335d61301245439c8c51c1de7e2c07af .
-<http://purl.org/spar/datacite/google-scholar> <http://www.w3.org/2000/01/rdf-schema#label> "google scholar"@en .
-<http://purl.org/spar/datacite/dnb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/lattes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/ean13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-_:N17caeec34c0445eb99153adb36496639 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasIdentifier> .
-<http://purl.org/spar/datacite/handle> <http://purl.org/spar/fabio/hasURL> "http://www.handle.net/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a funding agency. Individual schemes are defines as members of this class. At present, the only individual of this class is datacite:fundref."@en .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#domain> _:N4b847cc2f36146ce81e1afa839d82758 .
-<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#comment> "International Article Number"@en .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/spar/datacite/2022-09-15> .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/zbmath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/ResourceIdentifier> .
-_:N5ed36683d8274b59b09ca3304e18783b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/omid> <http://www.w3.org/2000/01/rdf-schema#comment> "The OpenCitations Meta Identifier (OMID) is a persistent identifier for bibliographic resources, created and maintained by OpenCitations (http://opencitations.net). The OMID has structure [[entity_type_abbreviation]]/[[supplier_prefix]][[sequential_number]] (e.g. \"br/0601\", where \"br\" is the entity type, \"060\" is the supplier prefix, and \"1\" is the sequential number)." .
-<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifier> .
-<http://purl.org/spar/datacite/handle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization identifier scheme that provides local organization identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
-<http://purl.org/spar/datacite/issn> <http://www.w3.org/2000/01/rdf-schema#label> "issn"@en .
-<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/eissn> <http://www.w3.org/2000/01/rdf-schema#label> "eissn"@en .
-_:N335d61301245439c8c51c1de7e2c07af <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Nd4da3c3d27fe431f9e1d5fecfd578a1f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#comment> "GitHub username, which is resolvable from the following URL: https://github.com/<identifier>."@en .
-<http://purl.org/spar/datacite/nii> <http://www.w3.org/2000/01/rdf-schema#comment> "National Individual Identifier scheme."@en .
-<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "personal identifier scheme"@en .
-<http://purl.org/spar/datacite/bibcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/oclc> <http://purl.org/spar/fabio/hasURL> "https://www.worldcat.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/spar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/MetadataScheme> .
-<http://purl.org/spar/datacite> <http://www.w3.org/2002/07/owl#versionInfo> "1.2.1" .
-<http://purl.org/spar/datacite/dblp-record> <http://purl.org/spar/fabio/hasURL> "https://dblp.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2000/01/rdf-schema#label> "GitLab user account"@en .
-<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/2000/01/rdf-schema#label> "table of content"@en .
-<http://purl.org/spar/datacite/infouri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#label> "methods"@en .
-<http://purl.org/spar/datacite/DescriptionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/description> "The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  \n\nThis version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF."@en .
-<http://purl.org/spar/datacite/dia> <http://purl.org/spar/fabio/hasURL> "http://www.surf.nl/en/themas/openonderzoek/infrastructuur/Pages/digitalauthoridentifierdai.aspx"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/ark> <http://www.w3.org/2000/01/rdf-schema#comment> "Archival Resource Key."@en .
-<http://purl.org/spar/datacite/openid> <http://www.w3.org/2000/01/rdf-schema#label> "openid"@en .
-<http://purl.org/spar/datacite/dia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/local-personal-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A personal identifier scheme that provides local personal identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
-_:N0555266c62c349d991fa2b4b5b6b51ca <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/OrganizationIdentifier> .
-_:N4ebb3c31d05a4561a8f63b7b2e2d6302 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ne08710d7ab0249298c3a3ede44f90073 .
-<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/isni> <http://www.w3.org/2000/01/rdf-schema#label> "isni"@en .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ndbc251826e8d45eca7006d756967d184 .
-<http://purl.org/spar/datacite/methods> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
-<http://purl.org/spar/datacite/purl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/handle> <http://www.w3.org/2000/01/rdf-schema#comment> "The Handle system"@en .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/contributor> "Amy J. Barton" .
-<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#label> "ean13"@en .
-_:Nd4da3c3d27fe431f9e1d5fecfd578a1f <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#label> "series information"@en .
-<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property permitting specification of an entity used to describe a resource."@en .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
-<http://purl.org/spar/datacite/url> <http://www.w3.org/2000/01/rdf-schema#label> "url"@en .
-<http://purl.org/spar/datacite/local-resource-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource identifier scheme that provides local resource identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
-<http://purl.org/spar/datacite/twitter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:Nc8ca5cf5e8e44309a42c60ea3f80bf47 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2000/01/rdf-schema#label> "SciGraph ID"@en .
-<http://purl.org/spar/datacite/upc> <http://www.w3.org/2000/01/rdf-schema#label> "upc"@en .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/spar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/local-funder-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/FunderIdentifierScheme> .
-_:Nb3074d51f65547e29b82e9ee5ac13e2a <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasDescription> .
-<http://purl.org/spar/datacite/pii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/arxiv> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier for ArXiv (http://arxiv.org/), a open access repository of preprints, having the format arXiv:1207.2147."@en .
-<http://purl.org/spar/datacite/pmcid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/dia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/google-scholar> <http://purl.org/spar/fabio/hasURL> "https://scholar.google.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-_:N675b75971fa442128d4ad10852671883 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/PersonalIdentifier> .
-<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite/openid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/github> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
-<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N0555266c62c349d991fa2b4b5b6b51ca .
-_:Nc25e17105aca45648fbc763c734f322e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/methods> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/spase> <http://purl.org/spar/fabio/hasURL> "https://spase-group.org/services/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/fabio/hasURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#label> "fundref"@en .
-<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
-_:N5ed36683d8274b59b09ca3304e18783b <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an individual organization, belonging to a particular identifier scheme such as ISNI specified by an individual within the class datacite:OrganizationIdentifierScheme."@en .
-<http://purl.org/spar/datacite/DescriptionType> <http://www.w3.org/2000/01/rdf-schema#label> "description type"@en .
-<http://purl.org/spar/datacite/omid> <http://purl.org/spar/fabio/hasURL> "https://registry.identifiers.org/registry/omid"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/2000/01/rdf-schema#label> "metadata scheme"@en .
-<http://www.essepuntato.it/2010/06/literalreification/Literal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/google-scholar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N6c7a707647b04262b633f417ba8d3cfd .
-<http://purl.org/spar/datacite/twitter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
-<http://purl.org/spar/datacite/upc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nf5fbe7dd3fa645fd911fdf1ae812e9b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Ne1eea47f82d84beabe91660e41c29e57 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/oci> <http://www.w3.org/2000/01/rdf-schema#comment> "The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net)."@en .
-<http://purl.org/spar/datacite/gepris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/scigraph> <http://purl.org/spar/fabio/hasURL> "https://scigraph.springernature.com/explorer/datasets/data_at_a_glance/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/nihmsid> <http://purl.org/spar/fabio/hasURL> "http://nexus.od.nih.gov/all/2009/09/01/nih-public-access-update-clarifying-use-of-the-nih-manuscript-submission-id-nihmsid/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> _:N096564f386db46a992f9b432ba612f86 .
-_:Ne08710d7ab0249298c3a3ede44f90073 <http://www.w3.org/2002/07/owl#onProperty> _:N0d0aedce09b241139b6d9010ad76948d .
-<http://purl.org/spar/datacite/openid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni" .
-_:N03e19988da87452fbb7a7dcd5486bf5f <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-_:Nd8a276cad97e4de9b7645c2f382166a1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/2000/01/rdf-schema#comment> "A table of content giving information about the content of a resource, appearing before the body text.  Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number."@en .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "primary resource identifier"@en .
-<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/spar> <http://www.w3.org/2000/01/rdf-schema#comment> "The Semantic Publishing and Referencing Ontologies, a.k.a. SPAR Ontologies, form a suite of orthogonal and complementary OWL 2 DL ontology modules for the creation of comprehensive machine-readable RDF metadata for every aspect of semantic publishing and referencing: document description, bibliographic resource identifiers, types of citations and related contexts, bibliographic references, document parts and status, agents' roles and contributions, bibliometric data and workflow processes."@en .
-<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "organization identifier scheme"@en .
-<http://purl.org/spar/datacite/local-resource-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "local resource identifier scheme"@en .
-<http://purl.org/spar/datacite/crossref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:Naec503cfbaa640d99016befe0bc40140 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/spar/datacite/doi> .
-<http://purl.org/spar/datacite/lsid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/local-resource-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/doco/TableOfContents> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record.  Within the DataCite metadata record, a Digital Object Identifier is the only permitted primary resource identifier scheme, specified by the individual datacite:doi, that is a member of the class datacite:ResourceIdentifierScheme."@en .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/Identifier> .
-<http://purl.org/spar/datacite#w3id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#label> "gepris"@en .
-<http://purl.org/spar/datacite/dnb> <http://www.w3.org/2000/01/rdf-schema#comment> "DNB catalogue number, which is resolvable from the following URL: https://d-nb.info/<identifier>."@en .
-_:N4b847cc2f36146ce81e1afa839d82758 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
-_:N4b847cc2f36146ce81e1afa839d82758 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
-<http://purl.org/spar/datacite/urn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/ror> <http://www.w3.org/2000/01/rdf-schema#comment> "The Research Organization Registry Community identifier, which is resolvable from the following URL: https://ror.org/<identifier>."@en .
-<http://purl.org/spar/datacite/sici> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd8a276cad97e4de9b7645c2f382166a1 .
-<http://purl.org/spar/datacite/uri> <http://www.w3.org/2000/01/rdf-schema#label> "uri"@en .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/spar/datacite/eissn> <http://www.w3.org/2000/01/rdf-schema#comment> "Electronic International Standard Serial Number"@en .
-<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an individual agent, belonging to a particular identifier scheme specified by an individual within the class datacite:AgentIdentifierScheme (or any of its subclasses)."@en .
-_:Nd87957fca7d34c83ac3c710022bde891 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/FunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities a funding agency, belonging to a particular scheme such as FundRef specified by an individual within the class datacite:FunderIdentifierScheme."@en .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Periodical> .
-<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/acm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/dblp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/bibcode> <http://www.w3.org/2000/01/rdf-schema#label> "bibcode"@en .
-<http://purl.org/spar/datacite/gitlab> <http://purl.org/spar/fabio/hasURL> "https://docs.gitlab.com/ee/user/profile/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/2000/01/rdf-schema#comment> "Wikipedia page name, which is resolvable from the following URL: https://en.wikipedia.org/wiki/<identifier>."@en .
-<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/spar> <http://www.w3.org/2000/01/rdf-schema#label> "SPAR Ontologies"@en .
-<http://purl.org/spar/datacite/abstract> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Abstract> .
-<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/issn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#comment> "The SPASE resource identifier (spase) is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group. Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://<authority><path>." .
-<http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/google-scholar> <http://www.w3.org/2000/01/rdf-schema#comment> "Google Scholar author identifier, which resolvable from the following URL:	https://scholar.google.com/citations?user=<identifier>."@en .
-<http://purl.org/spar/datacite/eissn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/Identifier> .
-<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/lissn> <http://purl.org/spar/fabio/hasURL> "http://www.issn.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/contributor> "Marie-Christine Jacquemot" .
-<http://purl.org/spar/datacite/social-security-number> <http://www.w3.org/2000/01/rdf-schema#comment> "United States of America social security number scheme"@en .
-_:Nf5fbe7dd3fa645fd911fdf1ae812e9b9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/DescriptionType> .
-<http://purl.org/spar/datacite/DescriptionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/lsid> <http://www.w3.org/2000/01/rdf-schema#comment> "Life Science Identifier"@en .
-<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#label> "viaf"@en .
-<http://purl.org/spar/datacite/purl> <http://www.w3.org/2000/01/rdf-schema#label> "purl"@en .
-<http://purl.org/spar/datacite/dblp-record> <http://www.w3.org/2000/01/rdf-schema#comment> "DBLP publication identifier, which is resolvable from the following URL: https://dblp.org/rec/<identifier>."@en .
-_:Na0424a2849b441b1b9cc57388030a22a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N675b75971fa442128d4ad10852671883 .
-<http://purl.org/spar/datacite/acm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/dblp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/wikipedia> <http://purl.org/spar/fabio/hasURL> "https://en.wikipedia.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/co/List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/contributor> "Egbert Gramsbergen" .
-<http://purl.org/spar/datacite/ieee> <http://www.w3.org/2000/01/rdf-schema#label> "ieee"@en .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/dnb> <http://www.w3.org/2000/01/rdf-schema#label> "dnb"@en .
-<http://purl.org/spar/datacite/upc> <http://www.w3.org/2000/01/rdf-schema#comment> "Universal Product Code"@en .
-_:Nd8a276cad97e4de9b7645c2f382166a1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nac27557a0b684ca89166bc98d3bfd9c3 .
-<http://purl.org/spar/datacite/oci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/fundref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/FunderIdentifierScheme> .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "resource identifier"@en .
-_:N096564f386db46a992f9b432ba612f86 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2000/01/rdf-schema#comment> "LinkedIn personal profile identifier, which is resolvable from the following URL: https://www.linkedin.com/in/<identifier>."@en .
-<http://purl.org/spar/datacite/oclc> <http://www.w3.org/2000/01/rdf-schema#label> "oclc"@en .
-<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "organization identifier"@en .
-<http://purl.org/spar/datacite/pmid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#label> "spase" .
-<http://purl.org/spar/datacite/uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "uses identifier scheme"@en .
-<http://purl.org/spar/datacite/infouri> <http://www.w3.org/2000/01/rdf-schema#label> "infouri"@en .
-<http://purl.org/spar/datacite/national-insurance-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/nii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/oclc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:N6c7a707647b04262b633f417ba8d3cfd <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/nihmsid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/gnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/researcherid> <http://purl.org/spar/fabio/hasURL> "http://www.researcherid.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/dblp-record> <http://www.w3.org/2000/01/rdf-schema#label> "dblp record"@en .
-<http://purl.org/spar/datacite/dblp> <http://purl.org/spar/fabio/hasURL> "https://dblp.org"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/lattes> <http://www.w3.org/2000/01/rdf-schema#comment> "Lattes Platform number, which is resolvable from the following URL: http://lattes.cnpq.br/<identifier>."@en .
-<http://purl.org/spar/datacite/isni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/ivoid> <http://purl.org/spar/fabio/hasURL> "https://www.ivoa.net/documents/IVOAIdentifiers/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-_:N1dec9c20e2414bf38778ff1d91d7db65 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/PersonalIdentifier> .
-_:N4ebb3c31d05a4561a8f63b7b2e2d6302 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/spar/datacite/IdentifierScheme> .
-_:N4ebb3c31d05a4561a8f63b7b2e2d6302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/math-genealogy> <http://purl.org/spar/fabio/hasURL> "https://mathgenealogy.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/ark> <http://www.w3.org/2000/01/rdf-schema#label> "ark"@en .
-<http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#label> "sici"@en .
-<http://purl.org/spar/datacite/github> <http://purl.org/spar/fabio/hasURL> "https://github.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/2000/01/rdf-schema#comment> "ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters."@en .
-_:N4b847cc2f36146ce81e1afa839d82758 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Nd8a276cad97e4de9b7645c2f382166a1 <http://www.w3.org/2002/07/owl#onProperty> _:Nc8ca5cf5e8e44309a42c60ea3f80bf47 .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#domain> _:N461505c77b44440bbd8799adac158dfc .
-<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#comment> "GEPRIS person identifier, which is resolvable from the following URL: http://gepris.dfg.de/gepris/person/<identifier>."@en .
-<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:N4ebb3c31d05a4561a8f63b7b2e2d6302 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
-<http://purl.org/spar/datacite/local-personal-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
-<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://purl.org/spar/datacite/gnd> <http://www.w3.org/2000/01/rdf-schema#comment> "Gemeinsame Normdatei identifier, which is resolvable from the following URL: https://d-nb.info/gnd/<identifier>."@en .
 <http://purl.org/spar/datacite/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/BookSeries> .
-<http://purl.org/spar/datacite#w3id> <http://purl.org/spar/fabio/hasURL> "https://w3id.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/ivoid> <http://www.w3.org/2000/01/rdf-schema#comment> "The IVOA identifier (ivoid) is the identifier of resources within the resource registry (datasets, data access services, etc.) maintained by the International Virtual Observatory Alliance (IVOA). These identifiers are RFC 3986-compliant URIs with a scheme of ivo. Thus, their generic form is: ivo://<authority><path>?<query>#<fragment>." .
-<http://purl.org/spar/datacite/lattes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
-<http://purl.org/spar/datacite/national-insurance-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/social-security-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite/ark> <http://purl.org/spar/fabio/hasURL> "https://confluence.ucop.edu/display/Curation/ARK"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://www.w3.org/2002/07/owl#priorVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:Nac27557a0b684ca89166bc98d3bfd9c3 <http://www.w3.org/2002/07/owl#onProperty> _:Ndb97640ee9164a5b8e77b1fbc5e47514 .
-<http://purl.org/spar/datacite/abstract> <http://www.w3.org/2000/01/rdf-schema#label> "abstract"@en .
 <http://purl.org/spar/datacite/isni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/ark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/pmid> <http://purl.org/spar/fabio/hasURL> "http://www.ncbi.nlm.nih.gov/pubmed/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/gnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/cito/citesAsMetadataDocument> .
-<http://purl.org/spar/datacite/uri> <http://purl.org/spar/fabio/hasURL> "http://tools.ietf.org/html/rfc3986"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/zbmath> <http://www.w3.org/2000/01/rdf-schema#comment> "zbMATH author identifier, which is resolvable from the following URL: https://zbmath.org/authors/?q=ai:<identifier>."@en .
-<http://purl.org/spar/datacite/repec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/uri> <http://www.w3.org/2000/01/rdf-schema#comment> "Uniform Resource Identifier" .
-<http://purl.org/spar/datacite/acm> <http://www.w3.org/2000/01/rdf-schema#comment> "ACM Digital Library author ID, which is resolvable using the following URL: https://dl.acm.org/profile/<identifier>."@en .
-<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The class that describe metadata schemes used for creating a metadata document referring to a certain resource. \n\nNeither a class for metadata documents nor a property linking a resource to its metadata document are not explicitly defined in this ontology. However, we recommend to use the class fabio:MetadataDocument (from http://purl.org/spar/fabio) and cito:citesAsMetadataDocument (from http://purl.org/spar/cito) for providing such descriptions. An example of use of such entities is shown as follows:\n\n    :my-resource\n        cito:citesAsMetadataDocument :my-resource-metadata .\n    :my-resource-metadata a fabio:MetadataDocument ;\n        datacite:usesMetadataScheme datacite:spar .\n\nIn addition, if needed, it is possible to use the dataproperty fabio:hasURL (not included in this ontology as well) for defining the actual URL of a certain metadata scheme."@en .
-_:N2ae52138bd6541fcb962a5bd9805e64b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify an agent. Individual schemes are defines as members of its sub-classes."@en .
-<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/IdentifierScheme> .
-_:Ndb97640ee9164a5b8e77b1fbc5e47514 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/dblp> <http://www.w3.org/2000/01/rdf-schema#label> "dblp"@en .
-<http://purl.org/spar/datacite/urn> <http://www.w3.org/2000/01/rdf-schema#comment> "Uniform Resource Name."@en .
-<http://purl.org/spar/datacite/isni> <http://purl.org/spar/fabio/hasURL> "http://www.isni.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/omid> <http://www.w3.org/2000/01/rdf-schema#label> "omid" .
-_:Nd4da3c3d27fe431f9e1d5fecfd578a1f <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/social-security-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a person.  Individual schemes are defines as members of this class."@en .
-<http://purl.org/spar/datacite/ieee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2000/01/rdf-schema#comment> "PubMed Identifier"@en .
-<http://purl.org/spar/datacite/lissn> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking International Standard Serial Number"@en .
-_:N096564f386db46a992f9b432ba612f86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/spar/datacite/2025-09-22> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nd87957fca7d34c83ac3c710022bde891 .
-<http://purl.org/spar/datacite/arxiv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/local-funder-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "local funder identifier scheme"@en .
+_:Nd822f1d67e3941178346a279efc6e2c4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Nd3bee536c73143f889e3705bfc66b610 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/google-scholar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/orcid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite/nihmsid> <http://www.w3.org/2000/01/rdf-schema#label> "nihmsid"@en .
+<http://purl.org/spar/datacite/ror> <http://www.w3.org/2000/01/rdf-schema#label> "ror"@en .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/abstract> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Abstract> .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property permitting specification of the type of description used to describe a resource, defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract, SeriesInformation, TableOfContent and Other."@en .
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/spar/datacite/FunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifier> .
-<http://purl.org/spar/datacite/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/ean13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/lattes> <http://www.w3.org/2000/01/rdf-schema#label> "lattes"@en .
-<http://purl.org/spar/datacite/repec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/wikidata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifier> .
-<http://purl.org/spar/datacite/gepris> <http://purl.org/spar/fabio/hasURL> "http://gepris.dfg.de"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/2000/01/rdf-schema#label> "math genealogy"@en .
+<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#label> "doi"@en .
+<http://purl.org/spar/datacite/bibcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/openid> <http://www.w3.org/2000/01/rdf-schema#comment> "OpenID is an open standard that describes how users can be authenticated in a decentralized manner, eliminating the need for centralized registration services. "@en .
+<http://purl.org/spar/datacite/infouri> <http://purl.org/spar/fabio/hasURL> "http://info-uri.info/registry/docs/misc/faq.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/ivoid> <http://www.w3.org/2000/01/rdf-schema#label> "ivoid" .
 <http://purl.org/spar/datacite/local-funder-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/opendoar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "alternate resource identifier"@en .
-<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Naec503cfbaa640d99016befe0bc40140 .
+<http://purl.org/spar/datacite/abstract> <http://www.w3.org/2000/01/rdf-schema#comment> "A brief summary of a textual work, appearing at the beginning of the work and designed to act as the point-of-entry that will help the reader quickly to obtain an overview of the work's contents."@en .
+<http://purl.org/spar/datacite/purl> <http://purl.org/spar/fabio/hasURL> "http://purl.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
 <http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier used for referring to entities in the Springer Nature SciGraph dataset."@en .
+<http://purl.org/spar/datacite/repec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/EAN13> .
+<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nc6492950285841ae9a777239a7d32261 .
+<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:Nd3bee536c73143f889e3705bfc66b610 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/urn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a funding agency. Individual schemes are defines as members of this class. At present, the only individual of this class is datacite:fundref."@en .
+<http://purl.org/spar/datacite/openid> <http://www.w3.org/2000/01/rdf-schema#label> "openid"@en .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/datacite/nihmsid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/date> "2022-09-15" .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#label> "has description type"@en .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "has general resource type"@en .
+<http://purl.org/spar/datacite/arxiv> <http://purl.org/spar/fabio/hasURL> "http://arxiv.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/lsid> <http://www.w3.org/2000/01/rdf-schema#comment> "Life Science Identifier"@en .
+_:N75d4e6695cd647288ad5e28c536284ae <http://www.w3.org/2002/07/owl#onProperty> _:Nd04f0dcddfab40dcbfc4b0c2ad599ac6 .
+<http://purl.org/spar/datacite/local-personal-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+_:N0c39383bec434efea3a5fa6771db4c85 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record.  Within the DataCite metadata record, a Digital Object Identifier is the only permitted primary resource identifier scheme, specified by the individual datacite:doi, that is a member of the class datacite:ResourceIdentifierScheme."@en .
+_:Nc6492950285841ae9a777239a7d32261 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/dblp> <http://purl.org/spar/fabio/hasURL> "https://dblp.org"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en .
+_:N236c863e82cb4c9c94dd8240c70c9a21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/DescriptionType> <http://www.w3.org/2000/01/rdf-schema#comment> "This class permits classification of the type of description given to a resource described by the DataCite Metadata schema.  Individual members of the class conform to the five values allowed in the DataCite controlled list, namely: \n\n* abstract;\n* methods;\n* series-information;\n* table-of-content;\n* other."@en .
+<http://purl.org/spar/datacite/pmid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+_:Nc6492950285841ae9a777239a7d32261 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/google-scholar> <http://www.w3.org/2000/01/rdf-schema#comment> "Google Scholar author identifier, which resolvable from the following URL:	https://scholar.google.com/citations?user=<identifier>."@en .
+<http://purl.org/spar/datacite/repec> <http://purl.org/spar/fabio/hasURL> "https://authors.repec.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:N0c39383bec434efea3a5fa6771db4c85 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/OrganizationIdentifier> .
+<http://purl.org/spar/datacite/pmcid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/arxiv> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier for ArXiv (http://arxiv.org/), a open access repository of preprints, having the format arXiv:1207.2147."@en .
+<http://purl.org/spar/datacite/twitter> <http://www.w3.org/2000/01/rdf-schema#comment> "Twitter handle, which is resolvable from the following URL: https://twitter.com/<identifier>."@en .
+_:Nb6abfb1b0247407b9a840f99835b0ff6 <http://www.w3.org/2002/07/owl#onProperty> _:N07dc330276244cada36ae2ac7c5a5ce8 .
+<http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/2000/01/rdf-schema#label> "uses metadata scheme"@en .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite/spar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/issn> <http://www.w3.org/2000/01/rdf-schema#comment> "International Standard Serial Number"@en .
+<http://purl.org/spar/datacite/ivoid> <http://purl.org/spar/fabio/hasURL> "https://www.ivoa.net/documents/IVOAIdentifiers/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/social-security-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/national-insurance-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/google-scholar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:Nf29366f9104e451587036f40c7430d37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N07dc330276244cada36ae2ac7c5a5ce8 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+_:N0c39383bec434efea3a5fa6771db4c85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/sici> <http://purl.org/spar/fabio/hasURL> "http://en.wikipedia.org/wiki/Serial_Item_and_Contribution_Identifier"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/viaf> <http://purl.org/spar/fabio/hasURL> "http://viaf.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/2000/01/rdf-schema#comment> "A table of content giving information about the content of a resource, appearing before the body text.  Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number."@en .
+<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#label> "fundref"@en .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> _:N97ef834676294f6d8e9c889f07ac8ddd .
+<http://purl.org/spar/datacite/zbmath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+_:N5c5292824f754d8491875408d7f13057 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/AgentIdentifier> .
+_:N71dce4e2e2a34952ba3ada4cb50c9071 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/2000/01/rdf-schema#comment> "National Individual Identifier scheme."@en .
+_:N6d9e977e4dec46b8bb3c15058f2aca21 <http://www.w3.org/2002/07/owl#members> _:Ne65c78da817543d495d68f49253eed02 .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/contributor> "Egbert Gramsbergen" .
+_:Ndbd9908d9996479c8822ccbb62969877 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+_:N738225bc86f04b2ba66202dd7e727b22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/pii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/math-genealogy> <http://purl.org/spar/fabio/hasURL> "https://mathgenealogy.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/acm> <http://www.w3.org/2000/01/rdf-schema#comment> "ACM Digital Library author ID, which is resolvable using the following URL: https://dl.acm.org/profile/<identifier>."@en .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/2000/01/rdf-schema#label> "nii"@en .
+<http://purl.org/spar/datacite/repec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/crossref> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossref member identifier, which is resolvable from the following URL: https://api.crossref.org/members/<identifier>."@en .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.essepuntato.it/2010/06/literalreification/Literal> .
+<http://purl.org/spar/datacite/eissn> <http://www.w3.org/2000/01/rdf-schema#comment> "Electronic International Standard Serial Number"@en .
+_:N236c863e82cb4c9c94dd8240c70c9a21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Nd822f1d67e3941178346a279efc6e2c4 <http://www.w3.org/2002/07/owl#onProperty> _:N251982ea763c4a00bf72b35788b43e1a .
+<http://purl.org/spar/datacite/lissn> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking International Standard Serial Number"@en .
+<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd822f1d67e3941178346a279efc6e2c4 .
+<http://purl.org/spar/datacite/eissn> <http://www.w3.org/2000/01/rdf-schema#label> "eissn"@en .
+<http://purl.org/spar/datacite/local-personal-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/FunderIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/opendoar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/contributor> "Marie-Christine Jacquemot" .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/contributor> "Amy J. Barton" .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#comment> "GitHub username, which is resolvable from the following URL: https://github.com/<identifier>."@en .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> _:N4316ad53ec6b4feea8f5c625f78929ac .
+<http://purl.org/spar/datacite/bibcode> <http://www.w3.org/2000/01/rdf-schema#label> "bibcode"@en .
+<http://purl.org/spar/datacite/ean13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2000/01/rdf-schema#label> "linkedin"@en .
+<http://purl.org/spar/datacite/ieee> <http://purl.org/spar/fabio/hasURL> "https://ieeexplore.ieee.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:Nf29366f9104e451587036f40c7430d37 <http://www.w3.org/2002/07/owl#onProperty> _:N09b91520c4f14bc88294b3bd161148e0 .
+<http://purl.org/spar/datacite/omid> <http://www.w3.org/2000/01/rdf-schema#comment> "The OpenCitations Meta Identifier (OMID) is a persistent identifier for bibliographic resources, created and maintained by OpenCitations (http://opencitations.net). The OMID has structure [[entity_type_abbreviation]]/[[supplier_prefix]][[sequential_number]] (e.g. \"br/0601\", where \"br\" is the entity type, \"060\" is the supplier prefix, and \"1\" is the sequential number)." .
+_:N97ef834676294f6d8e9c889f07ac8ddd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N6d9e977e4dec46b8bb3c15058f2aca21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+<http://purl.org/spar/datacite/zbmath> <http://purl.org/spar/fabio/hasURL> "https://zbmath.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/nihmsid> <http://www.w3.org/2000/01/rdf-schema#comment> "NIH Manuscript Submission Identifier"@en .
+<http://purl.org/spar/datacite/purl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/upc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#label> "has creator list"@en .
+<http://purl.org/spar/datacite/orcid> <http://purl.org/spar/fabio/hasURL> "http://orcid.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/isni> <http://www.w3.org/2000/01/rdf-schema#label> "isni"@en .
+<http://purl.org/spar/datacite/social-security-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
+<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "organization identifier"@en .
+<http://purl.org/spar/datacite/national-insurance-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifier> .
+<http://purl.org/spar/datacite/eissn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/pmid> <http://purl.org/spar/fabio/hasURL> "http://www.ncbi.nlm.nih.gov/pubmed/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/urn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/other> <http://www.w3.org/2000/01/rdf-schema#comment> "A catch-all description type required by the DataCite Metadata Schema to characterize description types that are not abstracts, series information or tables of content."@en .
+<http://purl.org/spar/datacite/spar> <http://purl.org/spar/fabio/hasURL> "http://www.sparontologies.net"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/gepris> <http://purl.org/spar/fabio/hasURL> "http://gepris.dfg.de"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/MetadataDocument> .
+<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd3bee536c73143f889e3705bfc66b610 .
+_:N31edc6c969384676aa863b69171b9bab <http://www.w3.org/2002/07/owl#onProperty> _:Ndb4f9a70d2694723b169413201a6ba56 .
+<http://purl.org/spar/datacite/spase> <http://purl.org/spar/fabio/hasURL> "https://spase-group.org/services/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/DescriptionType> <http://www.w3.org/2000/01/rdf-schema#label> "description type"@en .
+<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> .
+<http://purl.org/spar/datacite/zbmath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:Ne65c78da817543d495d68f49253eed02 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/FunderIdentifier> .
+_:N6f561b192bd44d9a96e95c64395ce4d9 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasDescription> .
+_:Nb6abfb1b0247407b9a840f99835b0ff6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/OrganizationIdentifier> .
+<http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "identifier scheme"@en .
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/2000/01/rdf-schema#label> "oci"@en .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/pmid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/lissn> <http://purl.org/spar/fabio/hasURL> "http://www.issn.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/local-resource-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource identifier scheme that provides local resource identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/2000/01/rdf-schema#comment> "IEEE Xplore author ID, which is resolvable from the following URL: https://ieeexplore.ieee.org/author/<identifier>."@en .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/contributor> "Jan Ashton" .
+<http://purl.org/spar/datacite#w3id> <http://www.w3.org/2000/01/rdf-schema#label> "w3id" .
+<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://purl.org/spar/datacite/issn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite/DescriptionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/FunderIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/nihmsid> <http://purl.org/spar/fabio/hasURL> "http://nexus.od.nih.gov/all/2009/09/01/nih-public-access-update-clarifying-use-of-the-nih-manuscript-submission-id-nihmsid/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/lsid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/urn> <http://www.w3.org/2000/01/rdf-schema#comment> "Uniform Resource Name."@en .
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization identifier scheme that provides local organization identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
+<http://purl.org/spar/datacite/acm> <http://purl.org/spar/fabio/hasURL> "https://dl.acm.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:Nb6abfb1b0247407b9a840f99835b0ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/wikidata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/national-insurance-number> <http://www.w3.org/2000/01/rdf-schema#comment> "United Kingdom National Insurance Number scheme."@en .
+<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/2000/01/rdf-schema#label> "metadata scheme"@en .
+<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identier"@en .
+_:N5c5292824f754d8491875408d7f13057 <http://www.w3.org/2002/07/owl#onProperty> _:Ndbd9908d9996479c8822ccbb62969877 .
+<http://purl.org/spar/datacite/omid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> .
+<http://purl.org/spar/datacite/DescriptionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#comment> "FundRef is a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research. "@en .
+<http://purl.org/spar/datacite/crossref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> .
+<http://purl.org/spar/datacite/dnb> <http://purl.org/spar/fabio/hasURL> "https://d-nb.info/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The class that describe metadata schemes used for creating a metadata document referring to a certain resource. \n\nNeither a class for metadata documents nor a property linking a resource to its metadata document are not explicitly defined in this ontology. However, we recommend to use the class fabio:MetadataDocument (from http://purl.org/spar/fabio) and cito:citesAsMetadataDocument (from http://purl.org/spar/cito) for providing such descriptions. An example of use of such entities is shown as follows:\n\n    :my-resource\n        cito:citesAsMetadataDocument :my-resource-metadata .\n    :my-resource-metadata a fabio:MetadataDocument ;\n        datacite:usesMetadataScheme datacite:spar .\n\nIn addition, if needed, it is possible to use the dataproperty fabio:hasURL (not included in this ontology as well) for defining the actual URL of a certain metadata scheme."@en .
+<http://purl.org/spar/datacite> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/spar/datacite/2022-09-15> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/DescriptionType> .
+_:Nc6492950285841ae9a777239a7d32261 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/spar/datacite/doi> .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni" .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nb6abfb1b0247407b9a840f99835b0ff6 .
+_:Nca5cdd7644b24c27b8cada329cb1db9b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#comment> "A description in a research paper documenting the specialized methods used in the work described."@en .
+<http://purl.org/spar/datacite/pmcid> <http://www.w3.org/2000/01/rdf-schema#label> "pmcid"@en .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/deo/Methods> .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/2000/01/rdf-schema#comment> "OCLC control number, which is resolvable from the following URL: https://www.worldcat.org/oclc/<identifier>."@en .
+<http://purl.org/spar/datacite/dblp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/research-gate> <http://purl.org/spar/fabio/hasURL> "https://www.researchgate.net"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:Nd04f0dcddfab40dcbfc4b0c2ad599ac6 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/lattes> <http://www.w3.org/2000/01/rdf-schema#comment> "Lattes Platform number, which is resolvable from the following URL: http://lattes.cnpq.br/<identifier>."@en .
+<http://purl.org/spar/datacite/isni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> .
+_:N0d51fb5276bb42d3b05828af7de8fd07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite> <http://www.w3.org/2002/07/owl#versionInfo> "1.2.1" .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/crossref> <http://purl.org/spar/fabio/hasURL> "https://crossref.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/wikidata> <http://purl.org/spar/fabio/hasURL> "https://www.wikidata.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/jst> <http://www.w3.org/2000/01/rdf-schema#label> "jst"@en .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/dia> <http://www.w3.org/2000/01/rdf-schema#label> "dia"@en .
+<http://purl.org/spar/datacite/gitlab> <http://purl.org/spar/fabio/hasURL> "https://docs.gitlab.com/ee/user/profile/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:N71dce4e2e2a34952ba3ada4cb50c9071 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/FunderIdentifierScheme> .
+_:N7a482355637f493ea073ca8ddecf6859 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/2000/01/rdf-schema#label> "table of content"@en .
+<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "agent identifier"@en .
+<http://purl.org/spar/datacite/ean13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2000/01/rdf-schema#label> "pmid"@en .
+<http://purl.org/spar/datacite/upc> <http://www.w3.org/2000/01/rdf-schema#label> "upc"@en .
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/2000/01/rdf-schema#label> "infouri"@en .
 <http://purl.org/spar/datacite/jst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite> <http://www.w3.org/2000/01/rdf-schema#comment> "The DataCite Ontology (DataCite) is an ontology that enables the metadata properties of the DataCite Metadata Schema Specification (i.e., a list of metadata properties for the accurate and consistent identification of a resource for citation and retrieval purposes) to be described in RDF.\n\n**URL:** http://purl.org/spar/datacite\n\n**Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)\n\n**Contributors:** [Amy J. Barton](https://orcid.org/0000-0002-2184-3723), [Egbert Gramsbergen](https://www.linkedin.com/in/egbertgramsbergen/), [Jan Ashton](https://www.bl.uk/people/experts/janet-ashton), [Marie-Christine Jacquemot](https://orcid.org/0000-0002-6316-1472)\n\n**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)\n\n**Website:** http://www.sparontologies.net/ontologies/datacite"@en .
-<http://purl.org/spar/datacite#w3id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/dblp> <http://www.w3.org/2000/01/rdf-schema#label> "dblp"@en .
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "local organization identifier scheme"@en .
+<http://purl.org/spar/datacite/purl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/wikipedia> <http://purl.org/spar/fabio/hasURL> "https://en.wikipedia.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/spar/datacite/2025-09-22> .
+<http://purl.org/spar/datacite/upc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/doco/TableOfContents> .
+<http://purl.org/spar/datacite#w3id> <http://purl.org/spar/fabio/hasURL> "https://w3id.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The link between a metadata document and the scheme followed for creating metadata."@en .
+<http://purl.org/spar/datacite/AgentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/Identifier> .
+<http://purl.org/spar/datacite/orcid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/co/List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N738225bc86f04b2ba66202dd7e727b22 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/eissn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+_:Nd822f1d67e3941178346a279efc6e2c4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/FunderIdentifier> .
+<http://purl.org/spar/datacite/gnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+_:N0d51fb5276bb42d3b05828af7de8fd07 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
+<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2000/01/rdf-schema#label> "GitLab user account"@en .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/)."@en .
+_:N97ef834676294f6d8e9c889f07ac8ddd <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:N71dce4e2e2a34952ba3ada4cb50c9071 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N738225bc86f04b2ba66202dd7e727b22 .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/Identifier> .
+_:Nd3bee536c73143f889e3705bfc66b610 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/AgentIdentifier> .
+<http://purl.org/spar/datacite/wikidata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#comment> "GEPRIS person identifier, which is resolvable from the following URL: http://gepris.dfg.de/gepris/person/<identifier>."@en .
+<http://purl.org/spar/datacite/omid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/orcid> <http://www.w3.org/2000/01/rdf-schema#comment> "Open Researcher and Contributor Identifier."@en .
+<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2000/01/rdf-schema#comment> "PubMed Identifier"@en .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/issn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to charactierize a description of a resource that is part of a series."@en .
+<http://purl.org/spar/datacite/dblp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/pmcid> <http://www.w3.org/2000/01/rdf-schema#comment> "PubMed Central Identifier"@en .
+<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/twitter> <http://www.w3.org/2000/01/rdf-schema#label> "twitter" .
+<http://purl.org/spar/datacite/AlternateResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "alternate resource identifier"@en .
+<http://purl.org/spar/datacite/ror> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:N738225bc86f04b2ba66202dd7e727b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/local-funder-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/FunderIdentifierScheme> .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/lsid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/url> <http://www.w3.org/2000/01/rdf-schema#comment> "Uniform Resource Locator."@en .
+<http://purl.org/spar/datacite/opendoar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Periodical> .
+_:N236c863e82cb4c9c94dd8240c70c9a21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/handle> <http://www.w3.org/2000/01/rdf-schema#label> "handle"@en .
+<http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nfeb758140d674650a37d44906e404620 .
+<http://purl.org/spar/datacite/wikidata> <http://www.w3.org/2000/01/rdf-schema#comment> "Wikidata QID, which is resolvable from the following URL: https://www.wikidata.org/wiki/<identifier>."@en .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
+_:N5f2e83769485492f81fff4fd2fb242a0 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N0c39383bec434efea3a5fa6771db4c85 .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/2000/01/rdf-schema#label> "dnb"@en .
+<http://purl.org/spar/datacite/gnd> <http://www.w3.org/2000/01/rdf-schema#label> "gnd"@en .
+<http://purl.org/spar/datacite/dia> <http://purl.org/spar/fabio/hasURL> "http://www.surf.nl/en/themas/openonderzoek/infrastructuur/Pages/digitalauthoridentifierdai.aspx"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/datacite/Identifier> .
+<http://purl.org/spar/datacite/jst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/OrganizationIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/AgentIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "agent identifier scheme"@en .
+<http://purl.org/spar/datacite/dblp-record> <http://www.w3.org/2000/01/rdf-schema#comment> "DBLP publication identifier, which is resolvable from the following URL: https://dblp.org/rec/<identifier>."@en .
+<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "resource identifier scheme"@en .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+_:N5f2e83769485492f81fff4fd2fb242a0 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/datacite/uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:Nc7462b55e53649beb2f2d3c821478699 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nca5cdd7644b24c27b8cada329cb1db9b .
+<http://purl.org/spar/datacite/fundref> <http://purl.org/spar/fabio/hasURL> "http://www.crossref.org/fundref/index.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:N4316ad53ec6b4feea8f5c625f78929ac <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/handle> <http://www.w3.org/2000/01/rdf-schema#comment> "The Handle system"@en .
+_:Nca5cdd7644b24c27b8cada329cb1db9b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/handle> <http://purl.org/spar/fabio/hasURL> "http://www.handle.net/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/twitter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+_:N0d51fb5276bb42d3b05828af7de8fd07 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/repec> <http://www.w3.org/2000/01/rdf-schema#comment> "RePEc Short identifier, which is resolvable from the following URL: https://authors.repec.org/pro/<identifier>."@en .
+<http://purl.org/spar/datacite/ark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/researcherid> <http://purl.org/spar/fabio/hasURL> "http://www.researcherid.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/research-gate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/2000/01/rdf-schema#comment> "Mathematics Genealogy Project identifier, which is resolvable from the following URL: https://mathgenealogy.org/id.php?id=<identifier>."@en .
+<http://purl.org/spar/datacite/loc> <http://purl.org/spar/fabio/hasURL> "https://id.loc.gov/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/sici> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "resource identifier"@en .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/datacite/isni> <http://purl.org/spar/fabio/hasURL> "http://www.isni.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/ark> <http://www.w3.org/2000/01/rdf-schema#label> "ark"@en .
+<http://purl.org/spar/datacite/omid> <http://purl.org/spar/fabio/hasURL> "https://registry.identifiers.org/registry/omid"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/Identifier> .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#label> "series information"@en .
+<http://purl.org/spar/datacite/dblp-record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/istc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:Nfeb758140d674650a37d44906e404620 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#label> "github"@en .
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/2000/01/rdf-schema#comment> "Info URI scheme"@en .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a resource.  Individual schemes are defines as members of this class.  For DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier."@en .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N31edc6c969384676aa863b69171b9bab .
+_:N5f2e83769485492f81fff4fd2fb242a0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/cito/citesAsMetadataDocument> .
+<http://purl.org/spar/datacite/dblp-record> <http://www.w3.org/2000/01/rdf-schema#label> "dblp record"@en .
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#domain> _:N6eb1e2203e3a42009bfb0f11e297c2cc .
+<http://purl.org/spar/datacite/gnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/lattes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite/uri> <http://purl.org/spar/fabio/hasURL> "http://tools.ietf.org/html/rfc3986"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/FunderIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities a funding agency, belonging to a particular scheme such as FundRef specified by an individual within the class datacite:FunderIdentifierScheme."@en .
+<http://purl.org/spar/datacite/pii> <http://www.w3.org/2000/01/rdf-schema#comment> "Pulisher Item Identifier scheme."@en .
+<http://purl.org/spar/datacite/opendoar> <http://www.w3.org/2000/01/rdf-schema#comment> "OpenDOAR identifier" .
+<http://purl.org/spar/datacite/acm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#comment> "The SPASE resource identifier (spase) is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group. Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://<authority><path>." .
+_:Nfeb758140d674650a37d44906e404620 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/openid> <http://purl.org/spar/fabio/hasURL> "http://openid.net/foundation/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:N75d4e6695cd647288ad5e28c536284ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
+<http://purl.org/spar/datacite/research-gate> <http://www.w3.org/2000/01/rdf-schema#comment> "ResearchGate profile identifier, which is resolvable from the following URL: https://www.researchgate.net/profile/<identifier>."@en .
+<http://purl.org/spar/datacite/loc> <http://www.w3.org/2000/01/rdf-schema#comment> "Library of Congress authority identifier, which is resolvable from the following URL: https://id.loc.gov/authorities/<identifier>."@en .
+<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#label> "sici"@en .
+<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier"@en .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

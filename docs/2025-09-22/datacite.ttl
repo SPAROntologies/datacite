@@ -55,8 +55,8 @@ This version of the DataCite Ontology has been completely revised and significan
 <http://purl.org/spar/datacite#w3id> a :IdentifierScheme,
         owl:NamedIndividual ;
     rdfs:label "w3id" ;
-    dc:description "The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with \"https://w3id.org/\" plus a local identifier that completes it (e.g. \"https://w3id.org/changes\")." ;
-    fabio:hasURL "https://w3id.org/"^^xsd:anyURI .
+    fabio:hasURL "https://w3id.org/"^^xsd:anyURI ;
+    rdfs:comment "The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with \"https://w3id.org/\" plus a local identifier that completes it (e.g. \"https://w3id.org/changes\")." .
 
 :AlternateResourceIdentifier a owl:Class ;
     rdfs:label "alternate resource identifier"@en ;
@@ -330,9 +330,9 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
 
 :methods a :DescriptionType,
         owl:NamedIndividual ;
-    rdfs:label <http://purl.org/spar/deo/Methods>,
-        "methods"@en ;
-    rdfs:comment "A description in a research paper documenting the specialized methods used in the work described."@en .
+    rdfs:label "methods"@en ;
+    rdfs:comment "A description in a research paper documenting the specialized methods used in the work described."@en ;
+    rdfs:seeAlso <http://purl.org/spar/deo/Methods> .
 
 :national-insurance-number a :PersonalIdentifierScheme,
         owl:NamedIndividual ;
@@ -492,6 +492,7 @@ The OpenAlex ID has two parts. The first part is the base, that is always https:
 
 :twitter a :AgentIdentifierScheme,
         owl:NamedIndividual ;
+    rdfs:label "twitter" ;
     fabio:hasURL "https://twitter.com/"^^xsd:anyURI ;
     rdfs:comment "Twitter handle, which is resolvable from the following URL: https://twitter.com/<identifier>."@en .
 
@@ -652,12 +653,12 @@ skos:Concept a owl:Class .
     rdfs:label "identifier"@en ;
     rdfs:comment "An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty [ owl:inverseOf :hasIdentifier ] ],
+        [ a owl:Restriction ;
             owl:onClass :IdentifierScheme ;
             owl:onProperty :usesIdentifierScheme ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty [ owl:inverseOf :hasIdentifier ] ],
         literal:Literal .
 
 :OrganizationIdentifierScheme a owl:Class ;

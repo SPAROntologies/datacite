@@ -26,7 +26,7 @@
         <dc:creator>David Shotton</dc:creator>
         <dc:creator>Silvio Peroni</dc:creator>
         <dc:date>2022-09-15</dc:date>
-        <dc:description rdf:resource="datacite.png"/>
+        <dc:description rdf:resource="http://purl.org/spar/datacite/datacite.png"/>
         <dc:description xml:lang="en">The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  
 
 This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.</dc:description>
@@ -614,7 +614,7 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite#w3id">
         <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/</fabio:hasURL>
-        <dc:description>The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with &quot;https://w3id.org/&quot; plus a local identifier that completes it (e.g. &quot;https://w3id.org/changes&quot;).</dc:description>
+        <rdfs:comment>The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with &quot;https://w3id.org/&quot; plus a local identifier that completes it (e.g. &quot;https://w3id.org/changes&quot;).</rdfs:comment>
         <rdfs:label>w3id</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1051,8 +1051,8 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/methods">
         <rdf:type rdf:resource="http://purl.org/spar/datacite/DescriptionType"/>
         <rdfs:comment xml:lang="en">A description in a research paper documenting the specialized methods used in the work described.</rdfs:comment>
-        <rdfs:label rdf:resource="http://purl.org/spar/deo/Methods"/>
         <rdfs:label xml:lang="en">methods</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.org/spar/deo/Methods"/>
     </owl:NamedIndividual>
     
 
@@ -1349,6 +1349,7 @@ The OpenAlex ID has two parts. The first part is the base, that is always https:
         <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://twitter.com/</fabio:hasURL>
         <rdfs:comment xml:lang="en">Twitter handle, which is resolvable from the following URL: https://twitter.com/&lt;identifier&gt;.</rdfs:comment>
+        <rdfs:label>twitter</rdfs:label>
     </owl:NamedIndividual>
     
 
