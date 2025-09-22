@@ -609,17 +609,6 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     
 
 
-    <!-- http://purl.org/spar/datacite#w3id -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite#w3id">
-        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
-        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/</fabio:hasURL>
-        <rdfs:comment>The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with &quot;https://w3id.org/&quot; plus a local identifier that completes it (e.g. &quot;https://w3id.org/changes&quot;).</rdfs:comment>
-        <rdfs:label>w3id</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.org/spar/datacite/abstract -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/abstract">
@@ -1403,6 +1392,17 @@ The OpenAlex ID has two parts. The first part is the base, that is always https:
         <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</fabio:hasURL>
         <rdfs:comment xml:lang="en">The Virtual International Authority File is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC).  It contains information about many topics including personal names.</rdfs:comment>
         <rdfs:label xml:lang="en">viaf</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/datacite/w3id -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/datacite/w3id">
+        <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+        <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/</fabio:hasURL>
+        <rdfs:comment>The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group. It has the shape of a URL starting with &quot;https://w3id.org/&quot; plus a local identifier that completes it (e.g. &quot;https://w3id.org/changes&quot;).</rdfs:comment>
+        <rdfs:label>w3id</rdfs:label>
     </owl:NamedIndividual>
     
 
