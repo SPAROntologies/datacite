@@ -1,0 +1,1466 @@
+@prefix : <http://purl.org/spar/datacite/> .
+@prefix co: <http://purl.org/co/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:contributor a owl:AnnotationProperty .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:date a owl:AnnotationProperty .
+
+dc:description a owl:AnnotationProperty .
+
+dc:rights a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+<http://purl.org/spar/datacite> a owl:Ontology ;
+    dc:contributor "Amy J. Barton",
+        "Egbert Gramsbergen",
+        "Jan Ashton",
+        "Marie-Christine Jacquemot" ,
+        "Sebastian Barzaghi" ;
+    dc:creator "David Shotton",
+        "Silvio Peroni" ;
+    dc:date "2022-09-15" ;
+    dc:description :datacite.png,
+        """
+        The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1](https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf) to be described in RDF.  
+
+        This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.
+
+        """@en ;
+    dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/)."@en ;
+    dc:title "The DataCite Ontology"@en ;
+    rdfs:comment """
+    
+        The DataCite Ontology (DataCite) is an ontology that enables the metadata properties of the DataCite Metadata Schema Specification (i.e., a list of metadata properties for the accurate and consistent identification of a resource for citation and retrieval purposes) to be described in RDF.
+
+        **URL:** http://purl.org/spar/datacite
+
+        **Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
+
+        **Contributors:** [Amy J. Barton](https://orcid.org/0000-0002-2184-3723), [Egbert Gramsbergen](https://www.linkedin.com/in/egbertgramsbergen/), [Jan Ashton](https://www.bl.uk/people/experts/janet-ashton), [Marie-Christine Jacquemot](https://orcid.org/0000-0002-6316-1472), [Sebastian Barzaghi](https://orcid.org/0000-0002-0799-1527)
+
+        **License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+        **Website:** http://www.sparontologies.net/ontologies/datacite
+        
+        """@en ;
+    owl:imports <http://purl.org/spar/literal> ;
+    owl:priorVersion :2025-09-22 ;
+    owl:versionIRI :2026-05-05 ;
+    owl:versionInfo "1.3.1" ;
+    vann:preferredNamespacePrefix "datacite"@en ;
+    vann:preferredNamespaceUri "http://purl.org/spar/datacite"@en ;
+    schema:codeRepository "https://github.com/SPAROntologies/datacite"@en .
+
+:AlternateResourceIdentifier a owl:Class ;
+    rdfs:label "alternate resource identifier"@en ;
+    rdfs:comment "An identifier other than a DOI that is used as an alternative identifier to uniquely identify a resource that is the subject of the DataCite metadata record, belonging to a particular scheme such as ISBN specified by an individual that is a member of the class datacite:ResourceIdentifierScheme."@en ;
+    rdfs:subClassOf :ResourceIdentifier ;
+    owl:disjointWith :PrimaryResourceIdentifier ;
+    vann:example """
+        :my-resource
+            datacite:hasIdentifier :my-resource-alt .
+        :my-resource-alt a datacite:AlternateResourceIdentifier ;
+            literal:hasLiteralValue \"19381256\" .
+    """ ;
+    skos:scopeNote ""@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:abstract a :DescriptionType,
+        owl:NamedIndividual ;
+    rdfs:label "abstract"@en ;
+    rdfs:comment "A brief summary of a textual work, appearing at the beginning of the work and designed to act as the point-of-entry that will help the reader quickly to obtain an overview of the work's contents."@en ;
+    rdfs:seeAlso fabio:Abstract ;
+    vann:example """
+        :my-resource-additional-info
+            datacite:hasDescriptionType datacite:abstract .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:acm a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "acm"@en ;
+    fabio:hasURL "https://dl.acm.org/"^^xsd:anyURI ;
+    rdfs:comment "An ACM Digital Library author ID is a unique identifier found within an ACM Author Profile Page, which consolidates an researcher's publications, citations, and metadata."@en ;
+    vann:example """
+        :silvio-peroni-id 
+            datacite:usesIdentifierScheme datacite:acm ;
+            literal:hasLiteralValue \"81442604750\" .
+    """ ;
+    skos:scopeNote "The ACM Digital Library author ID is resolvable using the following URL: https://dl.acm.org/profile/<identifier>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:ark a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "ark"@en ;
+    fabio:hasURL "https://confluence.ucop.edu/display/Curation/ARK"^^xsd:anyURI ;
+    rdfs:comment "An Archival Resource Key (ARK) is a multi-purpose URL suited to being a persistent identifier for information objects of any type."@en ;
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:ark ;
+            literal:hasLiteralValue \"ark:53355/cl010066723\" .
+    """ ;
+    skos:scopeNote "" ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:arxiv a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "arxiv"@en ;
+    fabio:hasURL "http://arxiv.org/"^^xsd:anyURI ;
+    rdfs:comment "Identifier for ArXiv (http://arxiv.org/), a open access repository of preprints, having the format arXiv:1207.2147."@en ;
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:arxiv ;
+            literal:hasLiteralValue \"2505.13276\" .
+    """ ;
+    skos:scopeNote "An ArXiv ID is resolvable using the following URL: https://arxiv.org/abs/<identifier>" ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:bibcode a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "bibcode"@en ;
+    fabio:hasURL "https://adsabs.harvard.edu/abs_doc/help_pages/data.html"^^xsd:anyURI ;
+    rdfs:comment "The Bibliographic Code (bibcode) is a 19 ASCII characters identifier which describes a journal article."@en ;
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:bibcode ;
+            literal:hasLiteralValue \"1974AJ.....79..819H\" .
+    """ ;
+    skos:scopeNote """
+        The format was originally adopted by the SIMBAD and NED projects, and follows the syntax \"YYYYJJJJJVVVVMPPPPA\", where:
+
+            * YYYY: Year of publication
+            * JJJJJ: A standard abbreviation for the journal (e.g. ApJ, AJ, MNRAS, Sci, PASP, etc.). A list of abbreviations is available.
+            * VVVV: The volume number (for a serial) or an abbreviation that specifies what type of publication it is (e.g. conf for conference proceedings, meet for Meeting proceedings, book for a book, coll for colloquium proceedings, proc for any other type of proceedings).
+            * M: Qualifier for publication.
+            * E: Electronic Abstract (usually a counter, not a page number).
+            * L: Letter.
+            * P: Pink page.
+            * Q-Z: Unduplicating character for identical codes.
+            * PPPP: Page number. Note that for page numbers greater than 9999, the page number is continued in the m column.
+            * A: The first letter of the last name of the first author.
+    """@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:crossref a :OrganizationIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "crossref"@en ;
+    fabio:hasURL "https://crossref.org/"^^xsd:anyURI ;
+    rdfs:comment "A Crossref member identifier is a unique numerical ID automatically assigned to each organization when they join Crossref to manage their account and content registration."@en ;
+    vann:example """
+        :my-organization-id 
+            datacite:usesIdentifierScheme datacite:crossref ;
+            literal:hasLiteralValue \"20280\" .
+    """ ;
+    skos:scopeNote "A Crossref member identifier is resolvable from the following URL: https://api.crossref.org/members/<identifier>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:cstr a :ResourceIdentifierScheme ,
+        owl:NamedIndividual ;
+    rdfs:label "cstr"@en ;
+    fabio:hasURL "https://www.cstr.cn/"^^xsd:anyURI ;
+    rdfs:comment "The Common Science and Technology Resources Identifier is an identifier based on the Chinese National Standard GB/T 32843—2016 “Science and technology resource identification”, providing a unique identification service for scientific data, papers, scientific institutions, researchers, scientific instruments, patents and other scientific and technological resources."@en ;
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:cstr ;
+            literal:hasLiteralValue \"31253.11.sciencedb.j00001.00123\" .
+    """ ;
+    skos:scopeNote "A Common Science and Technology Resources Identifier is resolvable from the following URL: https://www.cstr.cn/<identifier>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:dblp a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "dblp"@en ;
+    fabio:hasURL "https://dblp.org"^^xsd:anyURI ;
+    rdfs:comment "The DBLP author identifier is a unique, persistent key assigned to each researcher registered on DBLP."@en ;
+    vann:example """
+        :silvio-peroni-id
+            datacite:usesIdentifierScheme datacite:dblp ;
+            literal:hasLiteralValue \"48/1099\" .
+    """ ;
+    skos:scopeNote "A DBLP author identifier is resolvable from the following URL: https://dblp.org/pid/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:dblp-record a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "dblp record"@en ;
+    fabio:hasURL "https://dblp.org/"^^xsd:anyURI ;
+    rdfs:comment "The DBLP publication identifier is a unique key that identifies a specific publication record, conference, or journal registered on DBLP."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:dblp-record ;
+            literal:hasLiteralValue \"conf/semweb/BarzaghiHMP24\" .
+    """ ;
+    skos:scopeNote "A DBLP publication identifier is resolvable from the following URL: https://dblp.org/rec/<identifier>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:dia a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "dia"@en ;
+    fabio:hasURL "http://www.surf.nl/en/themas/openonderzoek/infrastructuur/Pages/digitalauthoridentifierdai.aspx"^^xsd:anyURI ;
+    rdfs:comment "The Digital Author Identification system assigns a unique number to all authors in the Netherlands research system."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:dnb a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "dnb"@en ;
+    fabio:hasURL "https://d-nb.info/"^^xsd:anyURI ;
+    rdfs:comment "The Deutsche Nationalbibliothek (DNB) catalogue number is a unique identifier assigned to every entry in the DNB catalogue."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:dnb ;
+            literal:hasLiteralValue \"gnd/7749153-1\" .
+    """ ;
+    skos:scopeNote "A DNB catalogue number is resolvable from the following URL: https://d-nb.info/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:ean13 a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "ean13"@en ;
+    fabio:hasURL "http://www.gs1.org/"^^xsd:anyURI ;
+    rdfs:comment "The International Article Number is a unique 13-digit barcode standard used worldwide to identify retail products."@en ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/EAN13> ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:ean13 ;
+            literal:hasLiteralValue \"4003994155486\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:eissn a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "eissn"@en ;
+    fabio:hasURL "http://www.issn.org/"^^xsd:anyURI ;
+    rdfs:comment "The Electronic International Standard Serial Number (eISSN) is an eight-digit identifier specifically for electronic versions of serials, such as online journals, databases, or websites."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:eissn ;
+            literal:hasLiteralValue \"1460-2105\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:fundref a :FunderIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "fundref"@en ;
+    fabio:hasURL "http://www.crossref.org/fundref/index.html"^^xsd:anyURI ;
+    rdfs:comment "FundRef is a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research."@en ;
+    vann:example """
+        :my-funder-id
+            datacite:usesIdentifierScheme datacite:fundref ;
+            literal:hasLiteralValue \"501100000831\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:gepris a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "gepris"@en ;
+    fabio:hasURL "http://gepris.dfg.de"^^xsd:anyURI ;
+    rdfs:comment "The GEPRIS person identifier is a unique, numerical identifier assigned to researchers and investigators in the GEPRIS database."@en ;
+    vann:example """
+        :david-aitken-id
+            datacite:usesIdentifierScheme datacite:gepris ;
+            literal:hasLiteralValue \"209346727\" .
+    """ ;
+    skos:scopeNote "A GEPRIS person identifier is resolvable from the following URL: http://gepris.dfg.de/gepris/person/<identifier>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:github a :AgentIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "github"@en ;
+    fabio:hasURL "https://github.com/"^^xsd:anyURI ;
+    rdfs:comment "The GitHub username is a unique identifier assigned to GitHub users."@en ;
+    vann:example """
+        :silvio-peroni-id
+            datacite:usesIdentifierScheme datacite:github ;
+            literal:hasLiteralValue \"essepuntato\" .
+    """ ;
+    skos:scopeNote "A GitHub username is resolvable from the following URL: https://github.com/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:gitlab a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "GitLab user account"@en ;
+    fabio:hasURL "https://docs.gitlab.com/ee/user/profile/"^^xsd:anyURI ;
+    rdfs:comment "The GitLab user account is a unique identifier assigned to GitLab users."@en ;
+    vann:example """
+        :my-user-id 
+            datacite:usesIdentifierScheme datacite:gitlab ;
+            literal:hasLiteralValue \"gitlab-org\" .
+    """ ;
+    skos:scopeNote "a GitLab user account is resolvable from the following URL: https://gitlab.com/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:gnd a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "gnd"@en ;
+    fabio:hasURL "https://gnd.network/"^^xsd:anyURI ;
+    rdfs:comment "The Gemeinsame Normdatei identifier is a unique key assigned to authority data managed by the German National Library."@en ;
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:gnd ;
+            literal:hasLiteralValue \"7749153-1\" .
+    """ ;
+    skos:scopeNote "A Gemeinsame Normdatei identifier is resolvable from the following URL: https://d-nb.info/gnd/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:google-scholar a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "google scholar"@en ;
+    fabio:hasURL "https://scholar.google.com/"^^xsd:anyURI ;
+    rdfs:comment "The Google Scholar author identifier is a unique identifier assigned to authors signed to Google Scholar. "@en ;
+    vann:example """
+        :david-shotton-id 
+            datacite:usesIdentifierScheme datacite:google-scholar ;
+            literal:hasLiteralValue \"YyvE-_oAAAAJ\" .
+    """ ;
+    skos:scopeNote "A Google Scholar author identifier is resolvable from the following URL: https://scholar.google.com/citations?user=<identifier>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:handle a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "handle"@en ;
+    fabio:hasURL "http://www.handle.net/"^^xsd:anyURI ;
+    rdfs:comment "The Handle System is a distributed computing technology that provides unique, persistent identifiers (handles) for digital resources, allowing them to be located over time regardless of URL changes."@en ;
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:handle ;
+            literal:hasLiteralValue \"20.1000/100\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:hasCreatorList a owl:ObjectProperty ;
+    rdfs:label "has creator list"@en ;
+    rdfs:comment "This property allows one to specify the list of the creators of a certain resource."@en ;
+    rdfs:domain [ a owl:Restriction ;
+            owl:onProperty :hasIdentifier ;
+            owl:someValuesFrom :ResourceIdentifier ] ;
+    rdfs:range co:List .
+
+:hasGeneralResourceType a owl:ObjectProperty ;
+    rdfs:label "has general resource type"@en ;
+    rdfs:comment """An object property permitting specification of the general type of a resource, defined from the DataCite controlled list."""@en ;
+    rdfs:domain [ a owl:Restriction ;
+            owl:onProperty :hasIdentifier ;
+            owl:someValuesFrom :ResourceIdentifier ] ;
+    rdfs:range skos:Concept ;
+    rdfs:subPropertyOf dcterms:type ;
+    vann:example """
+        :my-resource
+            datacite:hasGeneralResourceType dcmitype:Dataset .
+    """ ;
+    skos:scopeNote """
+        The Datacite controlled list includes: 
+
+- dcmitype:MovingImage;
+- fabio:Book;
+- fabio:BookChapter;
+- dcmitype:Collection;
+- fabio:LaboratoryNotebook;
+- fabio:ConferencePaper;
+- fabio:ConferenceProceedings;
+- fabio:ResourcePaper;
+- dcmitype:Dataset;
+- fabio:Thesis;
+- dcmitype:Event;
+- dcmitype:StillImage;
+- dcmitype:InteractiveResource;
+- fabio:Journal;
+- fabio:JournalArticle;
+- fabio:Model;
+- fabio:DataManagementPlan;
+- dcmitype:PhysicalObject;
+- fabio:ConferencePoster;
+- fabio:Preprint;
+- fabio:Presentation;
+- fabio:ProjectPlan;
+- fabio:ReportDocument;
+- dcmitype:Service;
+- dcmitype:Software;
+- dcmitype:Sound;
+- fabio:TechnicalStandard;
+- fabio:Report;
+- dcmitype:Text;
+- fabio:Workflow;
+- frbr:Endeavour.
+
+All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms (dcmitype: http://purl.org/dc/dcmitype/), FaBiO (fabio: http://purl.org/spar/fabio/), and FRBR (frbr: http://purl.org/vocab/frbr/core#).
+    """@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:ieee a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "ieee"@en ;
+    fabio:hasURL "https://ieeexplore.ieee.org/"^^xsd:anyURI ;
+    rdfs:comment "The IEEE Xplore author ID is a unique identifier assigned to authors in IEEE Xplore."@en ;
+    vann:example """
+        :silvio-peroni-id 
+            datacite:usesIdentifierScheme datacite:ieee ;
+            literal:hasLiteralValue \"37542690500\" .
+    """ ;
+    skos:scopeNote "A IEEE Xplore author ID is resolvable from the following URL: https://ieeexplore.ieee.org/author/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:igsn a :ResourceIdentifierScheme ,
+        owl:NamedIndividual ;
+    rdfs:label "igsn"@en ;
+    fabio:hasURL "http://igsn.org/"^^anyURI ;
+    rdfs:comment "The International Generic Sample Number is a code that uniquely identifies samples from our natural environment and related features-of-interest."@en ;
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:igsn ;
+            literal:hasLiteralValue \"AU124\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:infouri a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "infouri"@en ;
+    fabio:hasURL "http://info-uri.info/registry/docs/misc/faq.html"^^xsd:anyURI ;
+    rdfs:comment "The Info URI scheme is a standardized method for identifying information assets that have public identifiers (like ISBNs, DOIs, or LCCNs) but lack a native URI representation."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:isbn ;
+            literal:hasLiteralValue \"info:ddc/22/eng//004.678\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:isbn a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "isbn"@en ;
+    fabio:hasURL "http://www.isbn-international.org/"^^xsd:anyURI ;
+    rdfs:comment "The International Standard Book Number (ISBN) is a unique 13-digit commercial identifier for books and monographic publications."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:isbn ;
+            literal:hasLiteralValue \"978-81-7525-766-5\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:isni a :OrganizationIdentifierScheme,
+        :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "isni"@en ;
+    fabio:hasURL "http://www.isni.org/"^^xsd:anyURI ;
+    rdfs:comment "The International Standard Name Identifier is an identifier system for uniquely identifying the public identities of contributors to media content."@en ;
+    vann:example """
+        :david-shotton-id
+            datacite:usesIdentifierScheme datacite:isni ;
+            literal:hasLiteralValue \"0000000117402098\" .
+    """ ;
+    skos:scopeNote "A International Standard Name Identifier is resolvable from the following URL: http://www.isni.org/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:issn a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "issn"@en ;
+    fabio:hasURL "http://www.issn.org/"^^xsd:anyURI ;
+    rdfs:comment "The International Standard Serial Number is an eight-digit code to uniquely identify a periodical publication, such as a magazine."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:issn ;
+            literal:hasLiteralValue \"2049-3630\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:istc a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "istc"@en ;
+    fabio:hasURL "http://www.istc-international.org/html/"^^xsd:anyURI ;
+    rdfs:comment "The International Standard Text Code is a standard designed to uniquely identify textual works."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:istc ;
+            literal:hasLiteralValue \"A02-2009-000004BE-A\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:ivoid a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "ivoid" ;
+    fabio:hasURL "https://www.ivoa.net/documents/IVOAIdentifiers/"^^xsd:anyURI ;
+    rdfs:comment "The IVOA identifier (ivoid) is the identifier of resources within the resource registry (datasets, data access services, etc.) maintained by the International Virtual Observatory Alliance (IVOA)."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:ivoid ;
+            literal:hasLiteralValue \"ivo://org.gavo.dc/~?flashheros/data/ca92/f0065.mt.\" .
+    """ ;
+    skos:scopeNote "These identifiers are RFC 3986-compliant URIs with a scheme of ivo. Thus, their generic form is: ivo://<authority><path>?<query>#<fragment>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:jst a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "jst"@en ;
+    rdfs:comment "The Japanese Science and Technology Agency identifier is a unique code assigned to scientific research products by the Japan Science and Technology Agency."@en ;
+    vann:example """
+        :my-person-id
+            datacite:usesIdentifierScheme datacite:jst ;
+            literal:hasLiteralValue \"200901000000000000\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:lattes a :AgentIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "lattes"@en ;
+    fabio:hasURL "https://lattes.cnpq.br/"^^xsd:anyURI ;
+    rdfs:comment "The Lattes Platform number is an identifier for a Lattes Platform entry related to a person or group."@en ;
+    vann:example """
+        :marcos-bagno-id
+            datacite:usesIdentifierScheme datacite:lattes ;
+            literal:hasLiteralValue \"9975840620597737\" .
+    """ ;
+    skos:scopeNote "A Lattes Platform number is resolvable from the following URL: http://lattes.cnpq.br/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:linkedin a :AgentIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "linkedin"@en ;
+    fabio:hasURL "https://www.linkedin.com/"^^xsd:anyURI ;
+    rdfs:comment "The LinkedIn personal profile identifier is an unique identifier assigned to a LinkedIn user."@en ;
+    vann:example """
+        :silvio-peroni-id
+            datacite:usesIdentifierScheme datacite:linkedin ;
+            literal:hasLiteralValue \"essepuntato\" .
+    """ ;
+    skos:scopeNote "A LinkedIn personal profile identifier is resolvable from the following URL: https://www.linkedin.com/in/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:lissn a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "lissn"@en ;
+    fabio:hasURL "http://www.issn.org/"^^xsd:anyURI ;
+    rdfs:comment "Linking International Standard Serial Number"@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:lissn ;
+            literal:hasLiteralValue \"1748-7188\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:loc a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "loc"@en ;
+    fabio:hasURL "https://id.loc.gov/"^^xsd:anyURI ;
+    rdfs:comment "The Library of Congress authority identifier is a unique identifier used for authority control in the Library of Congress."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:loc ;
+            literal:hasLiteralValue \"sh2010112128\" .
+    """ ;
+    skos:scopeNote "A Library of Congress authority identifier is resolvable from the following URL: https://id.loc.gov/authorities/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:local-funder-identifier-scheme a :FunderIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "local funder identifier scheme"@en ;
+    rdfs:comment "A funder identifier scheme that provides local funder identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
+
+:local-organization-identifier-scheme a :OrganizationIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "local organization identifier scheme"@en ;
+    rdfs:comment "An organization identifier scheme that provides local organization identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
+
+:local-personal-identifier-scheme a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "local personal identifier scheme"@en ;
+    rdfs:comment "A personal identifier scheme that provides local personal identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
+
+:local-resource-identifier-scheme a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "local resource identifier scheme"@en ;
+    rdfs:comment "A resource identifier scheme that provides local resource identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
+
+:lsid a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "lsid"@en ;
+    fabio:hasURL "http://www.ibm.com/developerworks/opensource/library/os-lsidbp/"^^xsd:anyURI ;
+    rdfs:comment "The Life Science Identifier (LSID) is a unique identifier used for uniquely naming significant resources in the biology domain."@en ;
+    vann:example """
+        :gustav-dirichlet-id
+            datacite:usesIdentifierScheme datacite:math-genealogy ;
+            literal:hasLiteralValue \"17946\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:math-genealogy a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "math genealogy"@en ;
+    fabio:hasURL "https://mathgenealogy.org/"^^xsd:anyURI ;
+    rdfs:comment "Mathematics Genealogy Project identifier is an identifier for mathematicians and computer scientists at the Mathematics Genealogy Project."@en ;
+    vann:example """
+        :gustav-dirichlet-id
+            datacite:usesIdentifierScheme datacite:math-genealogy ;
+            literal:hasLiteralValue \"17946\" .
+    """ ;
+    skos:scopeNote "A Mathematics Genealogy Project identifier is resolvable from the following URL: https://mathgenealogy.org/id.php?id=<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:methods a :DescriptionType,
+        owl:NamedIndividual ;
+    rdfs:label "methods"@en ;
+    rdfs:comment "A description in a research paper documenting the specialized methods used in the work described."@en ;
+    rdfs:seeAlso <http://purl.org/spar/deo/Methods> ;
+    vann:example """
+        :my-resource-additional-info
+            datacite:hasDescriptionType datacite:methods .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:national-insurance-number a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "national insurance number"@en ;
+    rdfs:comment "The United Kingdom National Insurance Number is a code used to uniquely identify in the tax system, banking, social welfare, online government services and electoral registration."@en ;
+    vann:example """
+        :my-person-id
+            datacite:usesIdentifierScheme datacite:national-insurance-number ;
+            literal:hasLiteralValue \"QQ123456C\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:nihmsid a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "nihmsid"@en ;
+    fabio:hasURL "http://nexus.od.nih.gov/all/2009/09/01/nih-public-access-update-clarifying-use-of-the-nih-manuscript-submission-id-nihmsid/"^^xsd:anyURI ;
+    rdfs:comment "The NIH Manuscript Submission Identifier is a preliminary article identifier that applies only to manuscripts deposited through the NIHMS system."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:nihmsid ;
+            literal:hasLiteralValue \"NIHMS44135\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:nii a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "nii"@en ;
+    rdfs:comment "National Individual Identifier scheme."@en ;
+    vann:example """
+        :shizumu-nomura-id
+            datacite:usesIdentifierScheme datacite:nii ;
+            literal:hasLiteralValue \"9000363887724\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:oci a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "oci"@en ;
+    fabio:hasURL "https://registry.identifiers.org/registry/oci"^^xsd:anyURI ;
+    rdfs:comment "The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net)."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:oci ;
+            literal:hasLiteralValue \"06101801781-06180334099\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:oclc a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "oclc"@en ;
+    fabio:hasURL "https://www.worldcat.org/"^^xsd:anyURI ;
+    rdfs:comment "The OCLC control number is a unique identifier assigned by OCLC to each bibliographic record input into WorldCat."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:oclc ;
+            literal:hasLiteralValue \"1587443818\" .
+    """ ;
+    skos:scopeNote "An OCLC control number is resolvable from the following URL: https://www.worldcat.org/oclc/<identifier>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:omid a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "omid" ;
+    fabio:hasURL "https://registry.identifiers.org/registry/omid"^^xsd:anyURI ;
+    rdfs:comment "The OpenCitations Meta Identifier (OMID) is a persistent identifier for bibliographic resources, created and maintained by OpenCitations (http://opencitations.net)."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:omid ;
+            literal:hasLiteralValue \"br/06101801781\" .
+    """ ;
+    skos:scopeNote "The OMID is structured as follows: [[entity_type_abbreviation]]/[[supplier_prefix]][[sequential_number]] (e.g. \"br/0601\", where \"br\" is the entity type, \"060\" is the supplier prefix, and \"1\" is the sequential number)."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:openalex a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "OpenAlex ID"@en ;
+    fabio:hasURL "https://docs.openalex.org/about-the-data"^^xsd:anyURI ;
+    rdfs:comment """The OpenAlex ID is a unique identifier assigned to each entity included in OpenAlex."""@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:openalex ;
+            literal:hasLiteralValue \"w1995055324\" .
+    """ ;
+    skos:scopeNote "An OpenAlex ID has two parts. The first part is the base, that is always https://openalex.org/. The second part is the key, i.e. the unique primary key that identifies a given resource in our database. The key starts with a letter that tells us the kind of entity: W(ork), A(uthor), V(enue), I(nstitution), or C(oncept). In addition, the IDs are not case-sensitive, so w2741809807 is just as valid as W2741809807."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:opendoar a :ResourceIdentifier,
+        owl:NamedIndividual ;
+    rdfs:label "opendoar" ;
+    fabio:hasURL "https://opendoar.ac.uk/"^^xsd:anyURI ;
+    rdfs:comment "The Directory of Open Access Repositories (OpenDOAR) is a service that lists open access repositories, and uses numerical internal identifiers to store their record." ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:openid a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "openid"@en ;
+    fabio:hasURL "http://openid.net/foundation/"^^xsd:anyURI ;
+    rdfs:comment "OpenID is an open standard that describes how users can be authenticated in a decentralized manner, eliminating the need for centralized registration services."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:orcid a :AgentIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "orcid"@en ;
+    fabio:hasURL "http://orcid.org/"^^xsd:anyURI ;
+    rdfs:comment "The Open Researcher and Contributor Identifier (ORCID) is a unique identifier for individuals to use as they engage in research, scholarship, and innovation activities."@en ;
+    vann:example """
+        :david-shotton-id
+            datacite:usesIdentifierScheme datacite:orcid ;
+            literal:hasLiteralValue \"0000-0001-5506-523X\" .
+    """ ;
+    skos:scopeNote "An ORCID is resolvable from the following URL: http://orcid.org/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:other a :DescriptionType,
+        owl:NamedIndividual ;
+    rdfs:label "other"@en ;
+    rdfs:comment "A catch-all description type required by the DataCite Metadata Schema to characterize description types that are not abstracts, series information or tables of content."@en ;
+    vann:example """
+        :my-resource-additional-info
+            datacite:hasDescriptionType datacite:other .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:pii a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "pii"@en ;
+    rdfs:comment "The Publisher Item Identifier is a unique identifier used by several scientific journal publishers to identify documents."@en ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Publisher_Item_Identifier> ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:pii ;
+            literal:hasLiteralValue \"S0960-894X(96)00515-X\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:pmcid a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "pmcid"@en ;
+    fabio:hasURL "http://www.ncbi.nlm.nih.gov/pmc/"^^xsd:anyURI ;
+    rdfs:comment "The PubMed Central Identifier is a bibliographic identifier for the PubMed Central database."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:pmcid ;
+            literal:hasLiteralValue \"PMC6513384\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:pmid a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "pmid"@en ;
+    fabio:hasURL "http://www.ncbi.nlm.nih.gov/pubmed/"^^xsd:anyURI ;
+    rdfs:comment "The PubMed Identifier is a bibliographic identifier for the PubMed database."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:pmid ;
+            literal:hasLiteralValue \"29943802\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:purl a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "purl"@en ;
+    fabio:hasURL "http://purl.org/"^^xsd:anyURI ;
+    rdfs:comment "The Persistent Uniform Resource Locator is a URL that is used to redirect to the location of a requested web resource."@en ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:purl ;
+            literal:hasLiteralValue \"http://purl.org/spar/cito\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:repec a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "repec"@en ;
+    fabio:hasURL "https://authors.repec.org/"^^xsd:anyURI ;
+    rdfs:comment "The RePEc Short identifier is a unique, permanent identifier for researchers registered in the RePEc Author Service."@en ;
+    vann:example """
+        :andrei-shleifer-id
+            datacite:usesIdentifierScheme datacite:repec ;
+            literal:hasLiteralValue \"psh93\" .
+    """ ;
+    skos:scopeNote "A RePEc Short Identifier is resolvable from the following URL: https://authors.repec.org/pro/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:research-gate a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "research gate"@en ;
+    fabio:hasURL "https://www.researchgate.net"^^xsd:anyURI ;
+    rdfs:comment "The ResearchGate profile identifier is a unique code for researchers registered in the ResearchGate platform."@en ;
+    vann:example """
+        :david-shotton-id
+            datacite:usesIdentifierScheme datacite:research-gate ;
+            literal:hasLiteralValue \"David-Shotton-2\" .
+    """ ;
+    skos:scopeNote "A ResearchGate profile identifier is resolvable from the following URL: https://www.researchgate.net/profile/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:researcherid a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "researcherid"@en ;
+    fabio:hasURL "http://www.researcherid.com/"^^xsd:anyURI ;
+    rdfs:comment "ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters."@en ;
+    vann:example """
+        :david-shotton-id
+            datacite:usesIdentifierScheme datacite:researcherid ;
+            literal:hasLiteralValue \"DXS-2121-2022\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:RightsIdentifier a owl:Class ;
+    rdfs:label "rights identifier"@en ;
+    rdfs:comment "An identifier that uniquely identifies a license."@en ;
+    rdfs:subClassOf :Identifier ;
+    vann:example """
+        :my-resource-rights
+            datacite:hasIdentifier :my-resource-rights-id .
+        :my-resource-rights-id a datacite:RightsIdentifier ;
+            literal:hasLiteralValue \"CC-BY-1.0\" .
+    """ ;
+    skos:scopeNote "A rights identifier belongs to a particular scheme, such as SPDX, specified by an individual within the class datacite:RightsIdentifierScheme."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:RightsIdentifierScheme a owl:Class ;
+    rdfs:label "rights identifier scheme"@en ;
+    rdfs:comment "The identifier scheme used to identify a license."@en ;
+    rdfs:subClassOf :IdentifierScheme ;
+    vann:example """
+        :my-resource-rights-id a datacite:RightsIdentifier ;
+            datacite:usesIdentifierScheme datacite:spdx ;
+            literal:hasLiteralValue \"CC-BY-1.0\" .
+    """ ;
+    skos:scopeNote "Individual schemes are defined as members of this class."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:ror a :OrganizationIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "ror"@en ;
+    fabio:hasURL "https://ror.org/"^^xsd:anyURI ;
+    rdfs:comment "The Research Organization Registry (ROR) Community identifier is a unique code assigned to research organizations."@en ;
+    vann:example """
+        :my-organization-id 
+            datacite:usesIdentifierScheme datacite:ror ;
+            literal:hasLiteralValue \"00wb4mk85\" .
+    """ ;
+    skos:scopeNote "A ROR identifier is resolvable from the following URL: https://ror.org/<identifier>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:rrid a :ResourceIdentifierScheme ,
+        owl:NamedIndividual ;
+    rdfs:label "rrid"@en ;
+    fabio:hasURL "https://scicrunch.org/resolver"^^anyURI ;
+    rdfs:comment "The Research Resource IDentifier is a character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases."@en ;
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:rrid ;
+            literal:hasLiteralValue \"RRID:AB_262044\" .
+    """ ;
+    skos:scopeNote "An RRID name is divided into two parts, the authority and a local identifier, separated by an underscore."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:scigraph a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "SciGraph ID"@en ;
+    fabio:hasURL "https://scigraph.springernature.com/explorer/datasets/data_at_a_glance/"^^xsd:anyURI ;
+    rdfs:comment "The SciGraph ID is an unique identifier used for referring to entities in the Springer Nature SciGraph dataset."@en ;
+    vann:example """
+        :my-object-id
+            datacite:usesIdentifierScheme datacite:scigraph ;
+            literal:hasLiteralValue \"013217540103.39\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:series-information a :DescriptionType,
+        owl:NamedIndividual ;
+    rdfs:label "series information"@en ;
+    rdfs:comment "Used to charactierize a description of a resource that is part of a series."@en ;
+    rdfs:seeAlso fabio:BookSeries,
+        fabio:Periodical ;
+    vann:example """
+        :my-resource-additional-info
+            datacite:hasDescriptionType datacite:series-information .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:sici a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "sici"@en ;
+    fabio:hasURL "http://en.wikipedia.org/wiki/Serial_Item_and_Contribution_Identifier"^^xsd:anyURI ;
+    rdfs:comment "The Serial Item and Contribution Identifier is a code used to uniquely identify specific volumes, articles or other identifiable parts of a serial."@en ;
+    vann:example """
+        :my-object-id
+            datacite:usesIdentifierScheme datacite:sici ;
+            literal:hasLiteralValue \"0002-8231(199412)45:10<737:TIODIM>2.3.TX;2-M\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:social-security-number a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "social security number"@en ;
+    rdfs:comment "The United States of America social security number is a nine-digit number issued to U.S. residents."@en ;
+    vann:example """
+        :my-person-id
+            datacite:usesIdentifierScheme datacite:sici ;
+            literal:hasLiteralValue \"999-00-9999\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:spar a :MetadataScheme,
+        owl:NamedIndividual ;
+    rdfs:label "SPAR Ontologies"@en ;
+    fabio:hasURL "http://www.sparontologies.net"^^xsd:anyURI ;
+    rdfs:comment "The Semantic Publishing and Referencing Ontologies, a.k.a. SPAR Ontologies, form a suite of orthogonal and complementary OWL 2 DL ontology modules for the creation of comprehensive machine-readable RDF metadata for every aspect of semantic publishing and referencing: document description, bibliographic resource identifiers, types of citations and related contexts, bibliographic references, document parts and status, agents' roles and contributions, bibliometric data and workflow processes."@en ;
+    vann:example """
+        :related-document a fabio:MetadataDocument ;
+            datacite:usesMetadataScheme datacite:spar .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+    
+:spase a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "spase" ;
+    fabio:hasURL "https://spase-group.org/services/"^^xsd:anyURI ;
+    rdfs:comment "The SPASE resource identifier (spase) is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group." ;
+    vann:example """
+        :my-object-id
+            datacite:usesIdentifierScheme datacite:spase ;
+            literal:hasLiteralValue \"spase://Example/NumericalData/MagProbe-1/Mag/PT1D\" .
+    """ ;
+    skos:scopeNote "Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://<authority><path>."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:spdx a :ResourceIdentifierScheme ,
+        owl:NamedIndividual ;
+    rdfs:label "spdx"@en ;
+    fabio:hasURL "https://spdx.org/licenses/"^^anyURI ;
+    rdfs:comment "The SPDX License List is a list of commonly found licenses and exceptions used in free and open source and other collaborative software or documentation."@en ;
+    vann:example """
+        :my-resource-rights-id 
+            datacite:usesIdentifierScheme datacite:spdx ;
+            literal:hasLiteralValue \"CC-BY-1.0\" .
+    """ ;
+    skos:scopeNote "A SPDX identifier is resolvable from the following URL: https://spdx.org/licenses/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:table-of-content a :DescriptionType,
+        owl:NamedIndividual ;
+    rdfs:label "table of content"@en ;
+    rdfs:comment "A table of content giving information about the content of a resource, appearing before the body text. Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number."@en ;
+    rdfs:seeAlso <http://purl.org/spar/doco/TableOfContents> ;
+    vann:example """
+        :my-resource-additional-info
+            datacite:hasDescriptionType datacite:table-of-content .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:twitter a :AgentIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "twitter" ;
+    fabio:hasURL "https://twitter.com/"^^xsd:anyURI ;
+    rdfs:comment "A Twitter handle is the unique identifier assigned to Twitter users."@en ;
+    vann:example """
+        :silvio-peroni-id ;
+            datacite:usesIdentifierScheme datacite:twitter ;
+            literal:hasLiteralValue \"@essepuntato\" .
+    """ ;
+    skos:scopeNote "A Twitter handle is resolvable from the following URL: https://twitter.com/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:upc a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "upc"@en ;
+    rdfs:comment "The Universal Product Code is a unique number used to identify products and their manufacturers."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:uri a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "uri"@en ;
+    fabio:hasURL "http://tools.ietf.org/html/rfc3986"^^xsd:anyURI ;
+    rdfs:comment "The Uniform Resource Identifier (URI) is a unique identifier for abstract or physical resources."@en ;
+    vann:example """
+        :fabio-id ;
+            datacite:usesIdentifierScheme datacite:uri ;
+            literal:hasLiteralValue \"http://purl.org/spar/fabio\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:url a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "url"@en ;
+    rdfs:comment "The Uniform Resource Locator (URL) is a unique identifier for a resource retrievable on the World Wide Web."@en ;
+    vann:example """
+        :my-resource-id ;
+            datacite:usesIdentifierScheme datacite:url ;
+            literal:hasLiteralValue \"https://www.sparontologies.net/\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:urn a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "urn"@en ;
+    fabio:hasURL "http://datatracker.ietf.org/wg/urn/charter/"^^xsd:anyURI ;
+    rdfs:comment "The Uniform Resource Name (URN) is a unique identifier for a resource, following the URN scheme."@en ;
+    vann:example """
+        :my-resource-id ;
+            datacite:usesIdentifierScheme datacite:urn ;
+            literal:hasLiteralValue \"urn:isbn:9780141036144\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:usesMetadataScheme a owl:ObjectProperty ;
+    rdfs:label "uses metadata scheme"@en ;
+    rdfs:comment "The link between a metadata document and the scheme followed for creating metadata."@en ;
+    rdfs:range :MetadataScheme ;
+    vann:example """
+        :related-document a fabio:MetadataDocument ;
+            datacite:usesMetadataScheme datacite:spar .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:viaf a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "viaf"@en ;
+    fabio:hasURL "http://viaf.org/"^^xsd:anyURI ;
+    rdfs:comment "The Virtual International Authority File (VIAF) is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC). It contains information about many topics including personal names."@en ;
+    vann:example """
+        :david-shotton-id ;
+            datacite:usesIdentifierScheme datacite:viaf ;
+            literal:hasLiteralValue \"7484794\" .
+    """ ;
+    skos:scopeNote "A VIAF identifier is resolvable from the following URL: http://viaf.org/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:w3id a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "w3id" ;
+    fabio:hasURL "https://w3id.org/"^^xsd:anyURI ;
+    rdfs:comment "The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group." ;
+    vann:example """
+        :my-resource-id ;
+            datacite:usesIdentifierScheme datacite:wikidata ;
+            literal:hasLiteralValue \"changes/4/aldrovandi\" .
+    """ ;
+    skos:scopeNote "It has the shape of a URL starting with \"https://w3id.org/\" plus a local identifier that completes it (e.g. \"https://w3id.org/changes\")."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:wikidata a :IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "wikidata" ;
+    fabio:hasURL "https://www.wikidata.org/"^^xsd:anyURI ;
+    rdfs:comment "The Wikidata QID is a unique identifier used for the entities in Wikidata."@en ;
+    vann:example """
+        :my-resource-id ;
+            datacite:usesIdentifierScheme datacite:wikidata ;
+            literal:hasLiteralValue \"Q113333457\" .
+    """ ;
+    skos:scopeNote "A Wikidata QID is resolvable from the following URL: https://www.wikidata.org/wiki/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:wikipedia a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "wikipedia"@en ;
+    fabio:hasURL "https://en.wikipedia.org/"^^xsd:anyURI ;
+    rdfs:comment "The Wikipedia page name is a unique identifier used to refer to any entity present in a Wikipedia database."@en .
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:wikipedia ;
+            literal:hasLiteralValue \"The_Canterbury_Tales\" .
+    """ ;
+    skos:scopeNote "A Wikipedia page name is resolvable from the following URL: https://en.wikipedia.org/wiki/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:zbmath a :PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "zbmath"@en ;
+    fabio:hasURL "https://zbmath.org/"^^xsd:anyURI ;
+    rdfs:comment "The zbMATH author identifier is a unique identifier used for a person in the Zentralblatt MATH database."@en ;
+    vann:example """
+        :silvio-peroni
+            datacite:hasIdentifier :silvio-peroni-id .
+        :silvio-peroni-id 
+            datacite:usesIdentifierScheme datacite:zbmath ;
+            literal:hasLiteralValue \"peroni.silvio\" .
+    """ ;
+    skos:scopeNote "A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+fabio:hasURL a owl:DatatypeProperty .
+
+rdfs:comment a owl:AnnotationProperty .
+
+rdfs:label a owl:AnnotationProperty .
+
+owl:priorVersion a owl:AnnotationProperty .
+
+owl:topObjectProperty a owl:ObjectProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+co:List a owl:Class .
+
+:PrimaryResourceIdentifier a owl:Class ;
+    rdfs:label "primary resource identifier"@en ;
+    rdfs:comment "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue :doi ;
+            owl:onProperty :usesIdentifierScheme ],
+        :ResourceIdentifier ;
+    vann:example """
+        :my-resource-id a datacite:PrimaryResourceIdentifier ;
+            literal:hasLiteralValue \"10.1371/journal.pntd.0000228.g002.x001\" ;
+            datacite:usesIdentifierScheme datacite:doi .
+    """ ;
+    skos:scopeNote "This class uses a datacite:IdentiferScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme." ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:doi a :ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "doi"@en ;
+    fabio:hasURL "http://www.doi.org/"^^xsd:anyURI ;
+    rdfs:comment "The Digital Object Identier (DOI) is a unique identifier assigned to identify digital objects."@en ;
+    vann:example """
+        :my-resource-id 
+            datacite:usesIdentifierScheme datacite:doi ;
+            literal:hasLiteralValue \"10.1007/978-3-031-77847-6_11\" .
+    """ ;
+    skos:scopeNote "A DOI is resolvable from the following URL: http://www.doi.org/<identifier>"@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:hasDescription a owl:ObjectProperty ;
+    rdfs:label "has description"@en ;
+    rdfs:comment "An object property permitting specification of an entity used to describe a resource."@en ;
+    rdfs:domain [ a owl:Restriction ;
+            owl:onProperty :hasIdentifier ;
+            owl:someValuesFrom :ResourceIdentifier ] ;
+    rdfs:range [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :hasDescriptionType ] ;
+    vann:example """
+        :my-resource
+            datacite:hasDescription :my-resource-additional-info .
+        :my-resource-additional-info
+            literal:hasLiteralValue \"A textual description\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:hasDescriptionType a owl:ObjectProperty ;
+    rdfs:label "has description type"@en ;
+    rdfs:comment "An object property permitting specification of the type of description used to describe a resource."@en ;
+    rdfs:domain [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Restriction ;
+                    owl:onProperty :hasIdentifier ;
+                    owl:someValuesFrom :ResourceIdentifier ] ;
+            owl:onProperty [ owl:inverseOf :hasDescription ] ] ;
+    rdfs:range :DescriptionType ;
+    rdfs:subPropertyOf dcterms:type ;
+    vann:example """
+        :my-resource-additional-info
+            datacite:hasDescriptionType datacite:abstract .
+    """ ;
+    skos:scopeNote "A type of description is defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract (datacite:abstract), SeriesInformation (datacite:series-information), TableOfContent (datacite:table-of-content) and Other (datacite:other)."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+literal:Literal a owl:Class .
+
+dcterms:type a owl:ObjectProperty .
+
+:FunderIdentifier a owl:Class ;
+    rdfs:label "funder identifier"@en ;
+    rdfs:comment "An identifier that uniquely identities a funding agency."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :FunderIdentifierScheme ;
+            owl:onProperty :usesIdentifierScheme ],
+        :AgentIdentifier ;
+    vann:example """
+        :my-funder-id a datacite:FunderIdentifier ;
+            literal:hasLiteralValue \"\" .
+    """ ;
+    skos:scopeNote "A funder identifier belongs to a particular scheme, such as FundRef, specified by an individual within the class datacite:FunderIdentifierScheme."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:MetadataScheme a owl:Class ;
+    rdfs:label "metadata scheme"@en ;
+    rdfs:comment """The class that describe metadata schemes used for creating a metadata document referring to a certain resource."""@en ;
+    rdfs:seeAlso <http://purl.org/spar/cito/citesAsMetadataDocument>,
+        fabio:MetadataDocument ;
+    vann:example """
+        :my-resource
+            cito:citesAsMetadataDocument :my-resource-metadata .
+        :my-resource-metadata a fabio:MetadataDocument ;
+            datacite:usesMetadataScheme datacite:spar .
+    """ ;
+    skos:scopeNote "Neither a class for metadata documents nor a property linking a resource to its metadata document are explicitly defined in this ontology. However, we recommend to use the class fabio:MetadataDocument (from http://purl.org/spar/fabio) and cito:citesAsMetadataDocument (from http://purl.org/spar/cito) for providing such descriptions. In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not included in this ontology as well) for defining the actual URL of a certain metadata scheme."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:OrganizationIdentifier a owl:Class ;
+    rdfs:label "organization identifier"@en ;
+    rdfs:comment "An identifier that uniquely identities an individual organization."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :OrganizationIdentifier ;
+            owl:onProperty :usesIdentifierScheme ],
+        :AgentIdentifier ;
+    vann:example """
+        :my-organization-id a datacite:OrganizationIdentifier ;
+            literal:hasLiteralValue \"00wb4mk85\" .
+    """ ;
+    skos:scopeNote "An organization identifier belongs to a particular identifier scheme, such as ISNI, specified by an individual within the class datacite:OrganizationIdentifierScheme."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:PersonalIdentifier a owl:Class ;
+    rdfs:label "personal identifier"@en ;
+    rdfs:comment "An identifier that uniquely identifies an individual person."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :PersonalIdentifierScheme ;
+            owl:onProperty :usesIdentifierScheme ],
+        :AgentIdentifier ;
+    vann:example """
+        :david-shotton
+            datacite:hasIdentifier :david-shotton-id .
+        :david-shotton-id a datacite:PersonalIdentifier ;
+            literal:hasLiteralValue \"0000-0001-5506-523X\" .
+    """ ;
+    skos:scopeNote "A personal identifier belongs to a particular identifier scheme, such as ORCID, specified by an individual within the class datacite:PersonalIdentifierScheme."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+skos:Concept a owl:Class .
+
+:FunderIdentifierScheme a owl:Class ;
+    rdfs:label "funder identifier scheme"@en ;
+    rdfs:comment "The identifier scheme used to identify a funding agency."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf :usesIdentifierScheme ] ;
+            owl:someValuesFrom :FunderIdentifier ],
+        :AgentIdentifierScheme ;
+    vann:example """
+        :my-funder-id 
+            datacite:usesIdentifierScheme datacite:fundref .
+    """ ;
+    skos:scopeNote "Individual schemes are defines as members of this class. At present, the only individual of this class is datacite:fundref."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:Identifier a owl:Class ;
+    rdfs:label "identifier"@en ;
+    rdfs:comment "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty [ owl:inverseOf :hasIdentifier ] ],
+        [ a owl:Restriction ;
+            owl:onClass :IdentifierScheme ;
+            owl:onProperty :usesIdentifierScheme ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        literal:Literal ;
+    skos:scopeNote "An identifier belongs to a particular scheme, such as those specified by individuals of the class datacite:IdentifierScheme."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:OrganizationIdentifierScheme a owl:Class ;
+    rdfs:label "organization identifier scheme"@en ;
+    rdfs:comment "The identifier scheme used to identify an organization."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf :usesIdentifierScheme ] ;
+            owl:someValuesFrom :OrganizationIdentifier ],
+        :AgentIdentifierScheme ;
+    vann:example """
+        :my-organization-id a datacite:OrganizationIdentifier ;
+            datacite:usesIdentifierScheme datacite:ror .
+    """ ;
+    skos:scopeNote "Individual schemes are defines as members of this class."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:AgentIdentifier a owl:Class ;
+    rdfs:label "agent identifier"@en ;
+    rdfs:comment "An identifier that uniquely identities an individual agent."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :AgentIdentifier ;
+            owl:onProperty :usesIdentifierScheme ],
+        :Identifier ;
+    owl:disjointWith :ResourceIdentifier ;
+    vann:example """
+        :essempuntato a datacite:AgentIdentifier ;
+            literal:hasLiteralValue \"https://github.com/essepuntato\" .
+    """ ;
+    skos:scopeNote "An agent identifier belongs to a particular identifier scheme, specified by an individual within the class datacite:AgentIdentifierScheme (or any of its subclasses)."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:hasIdentifier a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has identifier"@en ;
+    rdfs:comment "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en ;
+    rdfs:range :Identifier ;
+    vann:example """
+        :my-resource
+            datacite:hasIdentifier :my-resource-pri .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:DescriptionType a owl:Class ;
+    rdfs:label "description type"@en ;
+    rdfs:comment """This class permits classification of the type of description given to a resource described by the DataCite Metadata schema."""@en ;
+    rdfs:subClassOf skos:Concept ;
+    vann:example """
+        :my-resource-additional-info
+            datacite:hasDescriptionType datacite:abstract .
+    """ ;
+    skos:scopeNote """
+         Individual members of the class conform to the five values allowed in the DataCite controlled list, namely: 
+
+        * datacite:abstract;
+        * datacite:methods;
+        * datacite:series-information;
+        * datacite:table-of-content;
+        * datacite:other.
+    """@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:AgentIdentifierScheme a owl:Class ;
+    rdfs:label "agent identifier scheme"@en ;
+    rdfs:comment "The identifier scheme used to identify an agent."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf :usesIdentifierScheme ] ;
+            owl:someValuesFrom :AgentIdentifier ],
+        :IdentifierScheme ;
+    vann:example """
+        :silvio-peroni-id
+            datacite:usesIdentifierScheme datacite:github ;
+            literal:hasLiteralValue \"essepuntato\" .
+    """ ;
+    skos:scopeNote "Individual schemes are defines as members of its sub-classes."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:ResourceIdentifier a owl:Class ;
+    rdfs:label "resource identifier"@en ;
+    rdfs:comment "An identifier that is used to uniquely identify a resource."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :ResourceIdentifierScheme ;
+            owl:onProperty :usesIdentifierScheme ],
+        :Identifier ;
+    vann:example """
+        :my-resource-id a datacite:ResourceIdentifier ;
+            literal:hasLiteralValue \"10.3457/1098.a45\" .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:usesIdentifierScheme a owl:ObjectProperty ;
+    rdfs:label "uses identifier scheme"@en ;
+    rdfs:comment "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."@en ;
+    rdfs:domain :Identifier ;
+    rdfs:range :IdentifierScheme ;
+    vann:example """
+        :my-resource-id
+            datacite:usesIdentifierScheme datacite:doi .
+    """ ;
+    skos:scopeNote "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:IdentifierScheme a owl:Class ;
+    rdfs:label "identifier scheme"@en ;
+    rdfs:comment "The identifier scheme used to identify an entity such as a funding agency, a person or a resource."@en .
+    vann:example """
+        :my-object-id ;
+            datacite:usesIdentifierScheme datacite:wikidata ;
+            literal:hasLiteralValue \"Q113333457\" .
+    """ ;
+    skos:scopeNote "Individual schemes are defines as members of this class."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:PersonalIdentifierScheme a owl:Class ;
+    rdfs:label "personal identifier scheme"@en ;
+    rdfs:comment "The identifier scheme used to identify a person."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf :usesIdentifierScheme ] ;
+            owl:someValuesFrom :PersonalIdentifier ],
+        :AgentIdentifierScheme ;
+    vann:example """
+        :david-shotton-id
+            datacite:usesIdentifierScheme datacite:orcid .
+    """ ;
+    skos:scopeNote "Individual schemes are defines as members of this class."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:ResourceIdentifierScheme a owl:Class ;
+    rdfs:label "resource identifier scheme"@en ;
+    rdfs:comment "The identifier scheme used to identify a resource."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf :usesIdentifierScheme ] ;
+            owl:someValuesFrom :ResourceIdentifier ],
+        :IdentifierScheme ;
+    vann:example """
+        :my-resource-pri
+            datacite:usesIdentifierScheme datacite:doi .
+    """ ;
+    skos:scopeNote "Individual schemes are defines as members of this class. For DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier (datacite:doi)."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:QualifiedRelation a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+        owl:intersectionOf ( sit:Situation [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :hasRelationCharacterization ] [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :hasRelationObject ] [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :hasRelationSubject ] ) ] ;
+    rdfs:label "qualified relation"@en ;
+    rdfs:comment "A class representing a reified relation between two resources, allowing the assignment of a specific role or type to the connection."@en ;
+    vann:example """
+        :relation-dataset-article a datacite:QualifiedRelation ;
+            datacite:hasRelationSubject :my-resource ;
+            datacite:hasRelationObject :my-article ;
+            datacite:hasRelationCharacterization cito:isCitedBy .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:hasRelationSubject a owl:ObjectProperty ;
+    rdfs:subPropertyOf sit:isSettingFor ;
+    rdfs:label "has relation subject"@en ;
+    rdfs:comment "An object property linking a reified relation to its subject resource."@en ;
+    rdfs:domain :QualifiedRelation ;
+    vann:example """
+        :relation-dataset-article a datacite:QualifiedRelation ;
+            datacite:hasRelationSubject :my-resource .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:hasRelationObject a owl:ObjectProperty ;
+    rdfs:subPropertyOf sit:isSettingFor ;
+    rdfs:label "has relation object"@en ;
+    rdfs:comment "An object property linking a reified relation to its object resource."@en ;
+    rdfs:domain :QualifiedRelation ;
+    vann:example """
+        :relation-dataset-article a datacite:QualifiedRelation ;
+            datacite:hasRelationObject :my-article .
+    """ ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+:hasRelationCharacterization a owl:ObjectProperty ;
+    rdfs:subPropertyOf sit:isSettingFor ;
+    rdfs:label "has relation characterization"@en ;
+    rdfs:comment "An object property defining the specific nature or type of the reified relation."@en ;
+    rdfs:domain :QualifiedRelation ;
+    vann:example """
+        :relation-dataset-article a datacite:QualifiedRelation ;
+            datacite:hasRelationCharacterization cito:isCitedBy .
+    """ ;
+    skos:scopeNote "This property uses as range an existing property via OWL2 punning, according to which it becomes possible to use an object property as the object of an OWL assertion. In such cases of OWL punning, the object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class owl:Thing."@en ;
+    rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :FunderIdentifier :PersonalIdentifier :ResourceIdentifier ) .
+
