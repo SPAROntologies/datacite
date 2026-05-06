@@ -66,25 +66,23 @@ dc:title a owl:AnnotationProperty .
         """
 ## Description
 
-The DataCite Ontology (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the DataCite Metadata Schema (version 4.7) to be described in RDF.
-
-The main intent of the DataCite Ontology (shown in the following diagram) is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors). To this end, we use the object property datacite:hasIdentifier that has as its object a member of the class datacite:Identifier or of one of its two sub-classes, datacite:ResourceIdentifier or datacite:AgentIdentifier, while the latter one is sub-classed by three additional classes, i.e., datacite:PersonalIdentifier, datacite:OrganizationIdentifier, and datacite:FunderIdentifier.
-
-The exact nature of the identifier is then defined using the second DataCite object property datacite:usesIdentifierScheme that has as its object the class datacite:IdentifierScheme or one of its two sub-classes: datacite:ResourceIdentifierScheme and datacite:AgentIdentifierScheme, while the latter one is sub-classed by three additional classes, i.e., datacite:PersonalIdentifierScheme, datacite:OrganizationIdentifierScheme, and , datacite:FunderIdentifierScheme.
-
+The _DataCite Ontology_ (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. 
+The main intent of the DataCite Ontology is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors). To this end, Datacite uses the object property `datacite:hasIdentifier`, which has as its object a member of the class `datacite:Identifier` or of one of its sub-classes (`datacite:ResourceIdentifier`, `datacite:AgentIdentifier` or `datacite:RightsIdentifier`). 
+In turn, `datacite:AgentIdentifier` is further sub-classed by three additional classes, i.e., `datacite:PersonalIdentifier`, `datacite:OrganizationIdentifier`, and `datacite:FunderIdentifier`. 
+The exact nature of the identifier is then defined using the second DataCite object property `datacite:usesIdentifierScheme`, which has as its object the class `datacite:IdentifierScheme` or one of its sub-classes: `datacite:ResourceIdentifierScheme`, `datacite:AgentIdentifierScheme` or `datacite:RightsIdentifierScheme`. `datacite:AgentIdentifierScheme` is further sub-classed by three additional classes, i.e., `datacite:PersonalIdentifierScheme`, `datacite:OrganizationIdentifierScheme`, and `datacite:FunderIdentifierScheme`.
 This provides a robust method for defining identifiers, since each specific identifier is defined as an individual member of its appropriate identifier scheme class. Of course, existing identifier schemes have been already defined within the ontology. For instance:
 
-* datacite:doi is an individual member of the class datacite:ResourceIdentifierScheme specifying a DataCite Digital Object Identifier;
+* `datacite:doi` is an individual member of the class `datacite:ResourceIdentifierScheme` specifying a DataCite Digital Object Identifier (DOI);
+* `datacite:orcid` is an individual member of the class `datacite:PersonalIdentifierScheme` specifying an Open Researcher and Contributor Identifier (ORCID);
+* `datacite:fundref` is an individual member of the class `datacite:FunderIdentifierScheme` specifying a FundRef Funder Identifier.
 
-* datacite:orcid is an individual member of the class datacite:PersonalIdentifierScheme specifying an Open Researcher and Contributor Identifier;
+As need arises, new identifiers can be added later as new members of each class, without having to modify the structure of the DataCite Ontology. In addition, some members, i.e., `datacite:local-resource-identifier-scheme`, `datacite:local-personal-identifier-scheme`, `datacite:local-organization-identifier-scheme` and `datacite:local-funder-identifier-scheme`, have been already added to permit the use of local identifiers.
 
-* datacite:fundref is an individual member of the class datacite:FunderIdentifierScheme specifying a FundRef Funder Identifier.
-
-As need arises, new identifiers can be added later as new members of each class, without having to modify the structure of the DataCite Ontology. In addition, three members, i.e., datacite:local-resource-identifier-scheme, datacite:local-personal-identifier-scheme, datacite:local-organization-identifier-scheme and datacite:local-funder-identifier-scheme, have been already added to permit the use of local identifiers.
-
-The class datacite:DescriptionType, and the object properties datacite:hasDescription and datacite:hasDescriptionType have also been defined in order to link an entity to another item representing an entity description of a particular type. This is defined using the property datacite:hasDescriptionType, which must have as its object one of the members of the class datacite:DescriptionType, i.e., datacite:abstract, datacite:methods, datacite:other, datacite:series-information and datacite:table-of-content. In this way it is possible to associate written documents (e.g. journal articles or 'data articles') as descriptions of datasets.
-
-Finally, it is also possible to provide a link between a resource, such as a dataset, and the document describing its metadata by means of CiTO, using the property cito:citesAsMetadataDocument, and FaBiO, by means of the class fabio:MetadataDocument. In addition to these entities, the DataCite Ontology provides appropriate classes (i.e., datacite:MetadataScheme) and properties (i.e., datacite:hasMetadataScheme) to specify the particular scheme followed for creating the resource metadata exemplified in the metadata document.
+The class `datacite:DescriptionType`, and the object properties `datacite:hasDescription` and `datacite:hasDescriptionType`, have also been defined in order to link an entity to another item representing an entity description of a particular type. 
+This is defined using the property `datacite:hasDescriptionType`, which must have as its object one of the members of the class `datacite:DescriptionType`, i.e., `datacite:abstract`, `datacite:methods`, `datacite:other`, `datacite:series-information` and `datacite:table-of-content`. 
+In this way, it is possible to associate written documents (e.g. journal articles or data articles) as descriptions of datasets.
+It is also possible to provide a link between a resource, such as a dataset, and the document describing its metadata by means of the _Citation Typing Ontology_ (CiTO), using the property `cito:citesAsMetadataDocument`, and the _FRBR-aligned Bibliographic Ontology_ (FaBiO), by means of the class `fabio:MetadataDocument`. In addition to these entities, the DataCite Ontology provides appropriate classes (i.e., `datacite:MetadataScheme`) and properties (i.e., `datacite:hasMetadataScheme`) to specify the particular scheme followed for creating the resource metadata exemplified in the metadata document.
+---> QUALIFIED RELATION
 
 ## Examples of use
 
@@ -97,7 +95,9 @@ The prefixes that are used in all the examples provided below are defined as fol
     @prefix datacite: <http://purl.org/spar/datacite/> .
     @prefix dcterms: <http://purl.org/dc/terms/> .
     @prefix fabio: <http://purl.org/spar/fabio/> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
     @prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
+    @prefix orcid: <http://orcid.org/> .
     @prefix owl: <http://www.w3.org/2002/07/owl#> .
     @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
     @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -106,17 +106,12 @@ The prefixes that are used in all the examples provided below are defined as fol
 
 ### Datasets' DOIs and authors' ORCIDs 
 
-DataCite allows one to associate identifiers to a bibliographic entity (e.g., a dataset, a person, an article) specifying their exact nature by means of the object property datacite:usesIdentifierScheme. In addition, it is also possible, through the object property datacite:hasDescription, to link an entity to another item representing an entity description of a particular type. This is defined using the property datacite:hasDescriptionType, which must have as its object one of the members of the class datacite:DescriptionType, i.e., datacite:abstract, datacite:other, datacite:series-information, datacite:methods, and datacite:table-of-content. In this way it is possible to associate written documents (e.g., journal articles) as descriptions of datasets.
+DataCite allows one to associate identifiers to a bibliographic entity (e.g., a dataset, a person, an article) specifying their exact nature by means of the object property `datacite:usesIdentifierScheme`. 
+In addition, it is also possible, through the object property `datacite:hasDescription`, to link an entity to another item representing an entity description of a particular type. 
+This is defined using the property `datacite:hasDescriptionType`, which must have as its object one of the members of the class `datacite:DescriptionType`, i.e., `datacite:abstract`, `datacite:other`, `datacite:series-information`, `datacite:methods`, and `datacite:table-of-content`. 
+In this way, it is possible to associate written documents (e.g., journal articles) as descriptions of datasets.
 
 ```
-@prefix : <http://www.sparontologies.net/example/> .
-@prefix datacite: <http://purl.org/spar/datacite/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix fabio: <http://purl.org/spar/fabio/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
-@prefix orcid: <http://orcid.org/> .
-
 <http://dx.doi.org/10.5061/dryad.15v26> a fabio:Dataset ;
     datacite:hasIdentifier :dataset-doi ;
     dcterms:creator
@@ -160,7 +155,8 @@ orcid:0000-0002-7811-3617 a foaf:Person ;
 
 ### Competency Questions
 
-The Datacite Ontology can be used for answering several questions related to .... In the following subsections, some of them are introduced together with their respective SPARQL queries. 
+The Datacite Ontology can be used for answering several questions related to related to the identification, attribution, and discoverability of research products within a scholarly knowledge graph. 
+In the following subsections, some of them are introduced together with their respective SPARQL queries. 
 
 The prefixes that are used in all the SPARQL queries provided below are defined as follows:
 
@@ -237,7 +233,7 @@ How many identifiers are registered for each identifier scheme?
 
 :AlternateResourceIdentifier a owl:Class ;
     rdfs:label "alternate resource identifier"@en ;
-    rdfs:comment "An identifier other than a DOI that is used as an alternative identifier to uniquely identify a resource that is the subject of the DataCite metadata record, belonging to a particular scheme such as ISBN specified by an individual that is a member of the class datacite:ResourceIdentifierScheme."@en ;
+    rdfs:comment "An identifier other than a DOI that is used as an alternative identifier to uniquely identify a resource that is the subject of the DataCite metadata record."@en ;
     rdfs:subClassOf :ResourceIdentifier ;
     owl:disjointWith :PrimaryResourceIdentifier ;
     vann:example """
@@ -246,7 +242,7 @@ How many identifiers are registered for each identifier scheme?
         :my-resource-alt a datacite:AlternateResourceIdentifier ;
             literal:hasLiteralValue \"19381256\" .
     """ ;
-    skos:scopeNote ""@en ;
+    skos:scopeNote "An alternate resource identifier belongs to a particular scheme, such as ISBN, specified by an individual that is a member of the class datacite:ResourceIdentifierScheme."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :abstract a :DescriptionType,
@@ -290,13 +286,13 @@ How many identifiers are registered for each identifier scheme?
         owl:NamedIndividual ;
     rdfs:label "arxiv"@en ;
     fabio:hasURL "http://arxiv.org/"^^xsd:anyURI ;
-    rdfs:comment "Identifier for ArXiv (http://arxiv.org/), a open access repository of preprints, having the format arXiv:1207.2147."@en ;
+    rdfs:comment "An identifier for ArXiv (http://arxiv.org/), a open access repository of preprints."@en ;
     vann:example """
         :my-resource-id 
             datacite:usesIdentifierScheme datacite:arxiv ;
             literal:hasLiteralValue \"2505.13276\" .
     """ ;
-    skos:scopeNote "An ArXiv ID is resolvable using the following URL: https://arxiv.org/abs/<identifier>" ;
+    skos:scopeNote "An ArXiv ID is resolvable using the following URL: https://arxiv.org/abs/<identifier>." ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :bibcode a :ResourceIdentifierScheme,
@@ -312,15 +308,15 @@ How many identifiers are registered for each identifier scheme?
     skos:scopeNote """
         The format was originally adopted by the SIMBAD and NED projects, and follows the syntax \"YYYYJJJJJVVVVMPPPPA\", where:
 
-            * YYYY: Year of publication
-            * JJJJJ: A standard abbreviation for the journal (e.g. ApJ, AJ, MNRAS, Sci, PASP, etc.). A list of abbreviations is available.
-            * VVVV: The volume number (for a serial) or an abbreviation that specifies what type of publication it is (e.g. conf for conference proceedings, meet for Meeting proceedings, book for a book, coll for colloquium proceedings, proc for any other type of proceedings).
-            * M: Qualifier for publication.
-            * E: Electronic Abstract (usually a counter, not a page number).
-            * L: Letter.
-            * P: Pink page.
-            * Q-Z: Unduplicating character for identical codes.
-            * PPPP: Page number. Note that for page numbers greater than 9999, the page number is continued in the m column.
+            * YYYY: Year of publication;
+            * JJJJJ: A standard abbreviation for the journal (e.g. ApJ, AJ, MNRAS, Sci, PASP, etc.). A list of abbreviations is available;
+            * VVVV: The volume number (for a serial) or an abbreviation that specifies what type of publication it is (e.g. conf for conference proceedings, meet for Meeting proceedings, book for a book, coll for colloquium proceedings, proc for any other type of proceedings);
+            * M: Qualifier for publication;
+            * E: Electronic Abstract (usually a counter, not a page number);
+            * L: Letter;
+            * P: Pink page;
+            * Q-Z: Unduplicating character for identical codes;
+            * PPPP: Page number. Note that for page numbers greater than 9999, the page number is continued in the m column;
             * A: The first letter of the last name of the first author.
     """@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
@@ -361,7 +357,7 @@ How many identifiers are registered for each identifier scheme?
             datacite:usesIdentifierScheme datacite:dblp ;
             literal:hasLiteralValue \"48/1099\" .
     """ ;
-    skos:scopeNote "A DBLP author identifier is resolvable from the following URL: https://dblp.org/pid/<identifier>"@en ;
+    skos:scopeNote "A DBLP author identifier is resolvable from the following URL: https://dblp.org/pid/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :dblp-record a :ResourceIdentifierScheme,
@@ -394,7 +390,7 @@ How many identifiers are registered for each identifier scheme?
             datacite:usesIdentifierScheme datacite:dnb ;
             literal:hasLiteralValue \"gnd/7749153-1\" .
     """ ;
-    skos:scopeNote "A DNB catalogue number is resolvable from the following URL: https://d-nb.info/<identifier>"@en ;
+    skos:scopeNote "A DNB catalogue number is resolvable from the following URL: https://d-nb.info/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :ean13 a :ResourceIdentifierScheme,
@@ -457,7 +453,7 @@ How many identifiers are registered for each identifier scheme?
             datacite:usesIdentifierScheme datacite:github ;
             literal:hasLiteralValue \"essepuntato\" .
     """ ;
-    skos:scopeNote "A GitHub username is resolvable from the following URL: https://github.com/<identifier>"@en ;
+    skos:scopeNote "A GitHub username is resolvable from the following URL: https://github.com/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :gitlab a :PersonalIdentifierScheme,
@@ -466,11 +462,11 @@ How many identifiers are registered for each identifier scheme?
     fabio:hasURL "https://docs.gitlab.com/ee/user/profile/"^^xsd:anyURI ;
     rdfs:comment "The GitLab user account is a unique identifier assigned to GitLab users."@en ;
     vann:example """
-        :my-user-id 
+        :my-person-id 
             datacite:usesIdentifierScheme datacite:gitlab ;
             literal:hasLiteralValue \"gitlab-org\" .
     """ ;
-    skos:scopeNote "a GitLab user account is resolvable from the following URL: https://gitlab.com/<identifier>"@en ;
+    skos:scopeNote "A GitLab user account is resolvable from the following URL: https://gitlab.com/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :gnd a :IdentifierScheme,
@@ -483,7 +479,7 @@ How many identifiers are registered for each identifier scheme?
             datacite:usesIdentifierScheme datacite:gnd ;
             literal:hasLiteralValue \"7749153-1\" .
     """ ;
-    skos:scopeNote "A Gemeinsame Normdatei identifier is resolvable from the following URL: https://d-nb.info/gnd/<identifier>"@en ;
+    skos:scopeNote "A Gemeinsame Normdatei identifier is resolvable from the following URL: https://d-nb.info/gnd/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :google-scholar a :PersonalIdentifierScheme,
@@ -580,7 +576,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:ieee ;
             literal:hasLiteralValue \"37542690500\" .
     """ ;
-    skos:scopeNote "A IEEE Xplore author ID is resolvable from the following URL: https://ieeexplore.ieee.org/author/<identifier>"@en ;
+    skos:scopeNote "A IEEE Xplore author ID is resolvable from the following URL: https://ieeexplore.ieee.org/author/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :igsn a :ResourceIdentifierScheme ,
@@ -630,7 +626,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:isni ;
             literal:hasLiteralValue \"0000000117402098\" .
     """ ;
-    skos:scopeNote "A International Standard Name Identifier is resolvable from the following URL: http://www.isni.org/<identifier>"@en ;
+    skos:scopeNote "A International Standard Name Identifier is resolvable from the following URL: http://www.isni.org/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :issn a :ResourceIdentifierScheme,
@@ -691,7 +687,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:lattes ;
             literal:hasLiteralValue \"9975840620597737\" .
     """ ;
-    skos:scopeNote "A Lattes Platform number is resolvable from the following URL: http://lattes.cnpq.br/<identifier>"@en ;
+    skos:scopeNote "A Lattes Platform number is resolvable from the following URL: http://lattes.cnpq.br/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :linkedin a :AgentIdentifierScheme,
@@ -704,7 +700,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:linkedin ;
             literal:hasLiteralValue \"essepuntato\" .
     """ ;
-    skos:scopeNote "A LinkedIn personal profile identifier is resolvable from the following URL: https://www.linkedin.com/in/<identifier>"@en ;
+    skos:scopeNote "A LinkedIn personal profile identifier is resolvable from the following URL: https://www.linkedin.com/in/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :lissn a :ResourceIdentifierScheme,
@@ -729,7 +725,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:loc ;
             literal:hasLiteralValue \"sh2010112128\" .
     """ ;
-    skos:scopeNote "A Library of Congress authority identifier is resolvable from the following URL: https://id.loc.gov/authorities/<identifier>"@en ;
+    skos:scopeNote "A Library of Congress authority identifier is resolvable from the following URL: https://id.loc.gov/authorities/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :local-funder-identifier-scheme a :FunderIdentifierScheme,
@@ -774,7 +770,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:math-genealogy ;
             literal:hasLiteralValue \"17946\" .
     """ ;
-    skos:scopeNote "A Mathematics Genealogy Project identifier is resolvable from the following URL: https://mathgenealogy.org/id.php?id=<identifier>"@en ;
+    skos:scopeNote "A Mathematics Genealogy Project identifier is resolvable from the following URL: https://mathgenealogy.org/id.php?id=<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :methods a :DescriptionType,
@@ -897,7 +893,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:orcid ;
             literal:hasLiteralValue \"0000-0001-5506-523X\" .
     """ ;
-    skos:scopeNote "An ORCID is resolvable from the following URL: http://orcid.org/<identifier>"@en ;
+    skos:scopeNote "An ORCID is resolvable from the following URL: http://orcid.org/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :other a :DescriptionType,
@@ -968,7 +964,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:repec ;
             literal:hasLiteralValue \"psh93\" .
     """ ;
-    skos:scopeNote "A RePEc Short Identifier is resolvable from the following URL: https://authors.repec.org/pro/<identifier>"@en ;
+    skos:scopeNote "A RePEc Short Identifier is resolvable from the following URL: https://authors.repec.org/pro/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :research-gate a :PersonalIdentifierScheme,
@@ -981,7 +977,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:research-gate ;
             literal:hasLiteralValue \"David-Shotton-2\" .
     """ ;
-    skos:scopeNote "A ResearchGate profile identifier is resolvable from the following URL: https://www.researchgate.net/profile/<identifier>"@en ;
+    skos:scopeNote "A ResearchGate profile identifier is resolvable from the following URL: https://www.researchgate.net/profile/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :researcherid a :PersonalIdentifierScheme,
@@ -1128,7 +1124,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:spdx ;
             literal:hasLiteralValue \"CC-BY-1.0\" .
     """ ;
-    skos:scopeNote "A SPDX identifier is resolvable from the following URL: https://spdx.org/licenses/<identifier>"@en ;
+    skos:scopeNote "A SPDX identifier is resolvable from the following URL: https://spdx.org/licenses/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :table-of-content a :DescriptionType,
@@ -1152,7 +1148,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:twitter ;
             literal:hasLiteralValue \"@essepuntato\" .
     """ ;
-    skos:scopeNote "A Twitter handle is resolvable from the following URL: https://twitter.com/<identifier>"@en ;
+    skos:scopeNote "A Twitter handle is resolvable from the following URL: https://twitter.com/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :upc a :ResourceIdentifierScheme,
@@ -1216,7 +1212,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:viaf ;
             literal:hasLiteralValue \"7484794\" .
     """ ;
-    skos:scopeNote "A VIAF identifier is resolvable from the following URL: http://viaf.org/<identifier>"@en ;
+    skos:scopeNote "A VIAF identifier is resolvable from the following URL: http://viaf.org/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :w3id a :IdentifierScheme,
@@ -1242,7 +1238,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:wikidata ;
             literal:hasLiteralValue \"Q113333457\" .
     """ ;
-    skos:scopeNote "A Wikidata QID is resolvable from the following URL: https://www.wikidata.org/wiki/<identifier>"@en ;
+    skos:scopeNote "A Wikidata QID is resolvable from the following URL: https://www.wikidata.org/wiki/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :wikipedia a :ResourceIdentifierScheme,
@@ -1255,7 +1251,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:wikipedia ;
             literal:hasLiteralValue \"The_Canterbury_Tales\" .
     """ ;
-    skos:scopeNote "A Wikipedia page name is resolvable from the following URL: https://en.wikipedia.org/wiki/<identifier>"@en ;
+    skos:scopeNote "A Wikipedia page name is resolvable from the following URL: https://en.wikipedia.org/wiki/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :zbmath a :PersonalIdentifierScheme,
@@ -1270,7 +1266,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:zbmath ;
             literal:hasLiteralValue \"peroni.silvio\" .
     """ ;
-    skos:scopeNote "A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:<identifier>"@en ;
+    skos:scopeNote "A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 fabio:hasURL a owl:DatatypeProperty .
@@ -1312,7 +1308,7 @@ co:List a owl:Class .
             datacite:usesIdentifierScheme datacite:doi ;
             literal:hasLiteralValue \"10.1007/978-3-031-77847-6_11\" .
     """ ;
-    skos:scopeNote "A DOI is resolvable from the following URL: http://www.doi.org/<identifier>"@en ;
+    skos:scopeNote "A DOI is resolvable from the following URL: http://www.doi.org/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :hasDescription a owl:ObjectProperty ;
