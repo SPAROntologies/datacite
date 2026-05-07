@@ -1,0 +1,4251 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "it", "undefined" ],
+    "baseIris" : [ "http://purl.org/co", "http://www.essepuntato.it/2010/06/literalreification", "http://purl.org/spar/datacite", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.ontologydesignpatterns.org/cp/owl/region.owl", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://purl.org/spar/fabio", "http://www.ontologydesignpatterns.org/cp/owl/situation.owl", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "The DataCite Ontology"
+    },
+    "iri" : "http://purl.org/spar/datacite",
+    "version" : "1.3.1",
+    "author" : [ "David Shotton", "Silvio Peroni" ],
+    "description" : {
+      "en" : "\n## Description\n\nThe _DataCite Ontology_ (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. \n\n![A diagram of the DataCite Ontology.](datacite.png)\n\nThe main intent of the DataCite Ontology is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors). To this end, DataCite uses the object property `datacite:hasIdentifier`, which has as its object a member of the class `datacite:Identifier` or of one of its sub-classes (`datacite:ResourceIdentifier`, `datacite:AgentIdentifier` or `datacite:RightsIdentifier`). \nIn turn, `datacite:AgentIdentifier` is further sub-classed by three additional classes, i.e., `datacite:PersonalIdentifier`, `datacite:OrganizationIdentifier`, and `datacite:FunderIdentifier`. \nThe exact nature of the identifier is then defined using the second DataCite object property `datacite:usesIdentifierScheme`, which has as its object the class `datacite:IdentifierScheme` or one of its sub-classes: `datacite:ResourceIdentifierScheme`, `datacite:AgentIdentifierScheme` or `datacite:RightsIdentifierScheme`. `datacite:AgentIdentifierScheme` is further sub-classed by three additional classes, i.e., `datacite:PersonalIdentifierScheme`, `datacite:OrganizationIdentifierScheme`, and `datacite:FunderIdentifierScheme`.\nThis provides a robust method for defining identifiers, since each specific identifier is defined as an individual member of its appropriate identifier scheme class. Of course, existing identifier schemes have been already defined within the ontology. For instance:\n\n* `datacite:doi` is an individual member of the class `datacite:ResourceIdentifierScheme` specifying a DataCite Digital Object Identifier (DOI);\n* `datacite:orcid` is an individual member of the class `datacite:PersonalIdentifierScheme` specifying an Open Researcher and Contributor Identifier (ORCID);\n* `datacite:fundref` is an individual member of the class `datacite:FunderIdentifierScheme` specifying a FundRef Funder Identifier.\n\nAs need arises, new identifiers can be added later as new members of each class, without having to modify the structure of the DataCite Ontology. In addition, some members, i.e., `datacite:local-resource-identifier-scheme`, `datacite:local-personal-identifier-scheme`, `datacite:local-organization-identifier-scheme` and `datacite:local-funder-identifier-scheme`, have been already added to permit the use of local identifiers.\n\nThe class `datacite:DescriptionType`, and the object properties `datacite:hasDescription` and `datacite:hasDescriptionType`, have also been defined in order to link an entity to another item representing an entity description of a particular type. \nThis is defined using the property `datacite:hasDescriptionType`, which must have as its object one of the members of the class `datacite:DescriptionType`, i.e., `datacite:abstract`, `datacite:methods`, `datacite:other`, `datacite:series-information` and `datacite:table-of-content`. \nIn this way, it is possible to associate written documents (e.g. journal articles or data articles) as descriptions of datasets.\n\nIt is also possible to provide a link between a resource, such as a dataset, and the document describing its metadata by means of the _Citation Typing Ontology_ (CiTO), using the property `cito:citesAsMetadataDocument`, and the _FRBR-aligned Bibliographic Ontology_ (FaBiO), by means of the class `fabio:MetadataDocument`. \nIn addition to these entities, the DataCite Ontology provides appropriate classes (i.e., `datacite:MetadataScheme`) and properties (i.e., `datacite:hasMetadataScheme`) to specify the particular scheme followed for creating the resource metadata exemplified in the metadata document.\n\nFinally, with the DataCite Ontology, it is possible to represent situations where a given relation between two entities needs to be qualified in some way, e.g. with a description that specifies the nature of said relation.\nThis is provided by the class `datacite:QualifiedRelation`, which represents a certain relationship existing between two entities. \nThe qualified relation is linked with one entity (more specifically, the subject of the relation) via the object property `datacite:hasRelationSubject`, and with the other (the object of the relation) via the object property `datacite:hasRelationObject`.\nThe type of relation itself is defined via the property `datacite:hasRelationCharacterization`, which links a qualified relation to its characterization made by using an object property such as `dcterms:relation`, `cito:cites`, or `frbr:isPartOf`. \nThis usage involves [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), a mechanism according to which an object property can be used as the object of an OWL assertion by being considered simultaneously both as a normal property and also as a named individual of the class `owl:Thing`.\n\n## Examples of use\n\nIn the following subsections, we introduce some examples to showcase how to use the DataCite Ontology. \n\nThe prefixes that are used in all the examples provided below are defined as follows:\n\n    @prefix : <http://www.sparontologies.net/example/> .\n    @prefix co: <http://purl.org/co/> .\n    @prefix datacite: <http://purl.org/spar/datacite/> .\n    @prefix dcterms: <http://purl.org/dc/terms/> .\n    @prefix fabio: <http://purl.org/spar/fabio/> .\n    @prefix foaf: <http://xmlns.com/foaf/0.1/> .\n    @prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .\n    @prefix orcid: <http://orcid.org/> .\n    @prefix owl: <http://www.w3.org/2002/07/owl#> .\n    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n    @prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n### Datasets' DOIs and authors' ORCIDs \n\nDataCite allows one to associate identifiers to a bibliographic entity (e.g., a dataset, a person, an article) specifying their exact nature by means of the object property `datacite:usesIdentifierScheme`. \nIn addition, it is also possible, through the object property `datacite:hasDescription`, to link an entity to another item representing an entity description of a particular type. \nThis is defined using the property `datacite:hasDescriptionType`, which must have as its object one of the members of the class `datacite:DescriptionType`, i.e., `datacite:abstract`, `datacite:other`, `datacite:series-information`, `datacite:methods`, and `datacite:table-of-content`. \nIn this way, it is possible to associate written documents (e.g., journal articles) as descriptions of datasets.\n\n\n    <http://dx.doi.org/10.5061/dryad.15v26> a fabio:Dataset ;\n        datacite:hasIdentifier :dataset-doi ;\n        dcterms:creator\n            orcid:0000-0002-5159-9717 ,\n            orcid:0000-0002-7811-3617 ;\n        datacite:hasDescription\n            <http://dx.doi.org/10.1098/rsbl.2015.0486> .\n\n    <http://dx.doi.org/10.1098/rsbl.2015.0486>\n        a fabio:JournalArticle ;\n        datacite:hasIdentifier :paper-doi ;\n        dcterms:creator\n            orcid:0000-0002-5159-9717 ,\n            orcid:0000-0002-7811-3617 ;\n        datacite:hasDescriptionType datacite:other .\n\n    :paper-doi a datacite:PrimaryResourceIdentifier ;\n        literal:hasLiteralValue \"10.1098/rsbl.2015.0486\" ;\n        datacite:usesIdentifierScheme datacite:doi .\n\n    :dataset-doi a datacite:PrimaryResourceIdentifier ;\n        literal:hasLiteralValue \"10.5061/dryad.mq8r2\" ;\n        datacite:usesIdentifierScheme datacite:doi .\n\n    orcid:0000-0002-5159-9717 a foaf:Person ;\n        foaf:name \"Nidhi Seethapathi\" ;\n        datacite:hasIdentifier :seethapathi-orcid .\n\n    :seethapathi-orcid a datacite:PersonalIdentifier ;\n        literal:hasLiteralValue \"0000-0002-5159-9717\" ;\n        datacite:usesIdentifierScheme datacite:orcid .\n\n    orcid:0000-0002-7811-3617 a foaf:Person ;\n        foaf:name \"Manoj Srinivasan\" ;\n        datacite:hasIdentifier :srinivasan-orcid .\n\n    :srinivasan-orcid a datacite:PersonalIdentifier ;\n        literal:hasLiteralValue \"0000-0002-7811-3617\" ;\n        datacite:usesIdentifierScheme datacite:orcid .\n\n\n### Competency Questions\n\nThe DataCite Ontology can be used for answering several questions related to related to the identification, attribution, and discoverability of research products within a scholarly knowledge graph. \nIn the following subsections, some of them are introduced together with their respective SPARQL queries. \n\nThe prefixes that are used in all the SPARQL queries provided below are defined as follows:\n\n    PREFIX datacite: <http://purl.org/spar/datacite/>\n    PREFIX dcterms: <http://purl.org/dc/terms/>\n    PREFIX fabio: <http://purl.org/spar/fabio/>\n    PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n    PREFIX literal: <http://www.essepuntato.it/2010/06/literalreification/>\n\n#### CQ1\n\nWhich article provides the description for a specific dataset identified by the DOI \"10.5061/dryad.mq8r2\"?\n\n    SELECT ?article ?article_doi\n    WHERE {\n        ?dataset_id literal:hasLiteralValue \"10.5061/dryad.mq8r2\" .\n        ?dataset datacite:hasIdentifier ?dataset_id ;\n            a fabio:Dataset ;\n            datacite:hasDescription ?article .\n        \n        ?article datacite:hasIdentifier ?paper_id .\n        ?paper_id literal:hasLiteralValue ?article_doi .\n    }\n\n#### CQ2\n\nWho are the creators associated with both the dataset and the article?\n\n    SELECT DISTINCT ?name ?orcid_uri\n    WHERE {\n        ?dataset a fabio:Dataset ;\n                dcterms:creator ?orcid_uri .\n        \n        ?article a fabio:JournalArticle ;\n                dcterms:creator ?orcid_uri .\n                \n        ?orcid_uri foaf:name ?name .\n    }\n\n#### CQ3\n\nWhat are the names and ORCID iDs of all researchers mentioned in the graph?\n\n    SELECT ?name ?orcid_value\n    WHERE {\n        ?person a foaf:Person ;\n                foaf:name ?name ;\n                datacite:hasIdentifier ?id_node .\n        \n        ?id_node datacite:usesIdentifierScheme datacite:orcid ;\n                literal:hasLiteralValue ?orcid_value .\n    }\n\n#### CQ4\n\nList all resources that have a description type categorized as \"other\".\n\n    SELECT ?resource\n    WHERE {\n        ?resource datacite:hasDescriptionType datacite:other .\n    }\n\n#### CQ5\n\nHow many identifiers are registered for each identifier scheme?\n\n    SELECT ?scheme (COUNT(?id_node) AS ?count)\n    WHERE {\n        ?id_node datacite:usesIdentifierScheme ?scheme .\n    }\n    GROUP BY ?scheme\n\n        ",
+      "undefined" : "http://purl.org/spar/datacite/datacite.png"
+    },
+    "other" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2022-09-15",
+        "type" : "label"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/2025-09-22",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Silvio Peroni",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "David Shotton",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2016-01-21",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://datacite-metadata-schema.readthedocs.io/en/4.7/",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.3.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The DataCite Ontology",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.sparontologies.net/ontologies/datacite",
+        "type" : "iri"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Sebastian Barzaghi",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Amy J. Barton",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Marie-Christine Jacquemot",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Egbert Gramsbergen",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Jan Ashton",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/).",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "datacite",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-05-05",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "en",
+        "value" : "http://purl.org/spar/datacite",
+        "type" : "label"
+      } ],
+      "codeRepository" : [ {
+        "identifier" : "codeRepository",
+        "language" : "undefined",
+        "value" : "https://github.com/SPAROntologies/datacite",
+        "type" : "iri"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2016-01-21",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "41",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "42",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "27",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "24",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "35",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "2",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "20",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/spar/datacite/OrganizationIdentifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-organization-id a datacite:OrganizationIdentifier ;\n            literal:hasLiteralValue \"00wb4mk85\" .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An organization identifier belongs to a particular identifier scheme, such as ISNI, specified by an individual within the class datacite:OrganizationIdentifierScheme.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OrganizationIdentifier",
+      "en" : "organization identifier"
+    },
+    "comment" : {
+      "en" : "An identifier that uniquely identities an individual organization."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/PersonalIdentifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A personal identifier belongs to a particular identifier scheme, such as ORCID, specified by an individual within the class datacite:PersonalIdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :david-shotton\n            datacite:hasIdentifier :david-shotton-id .\n        :david-shotton-id a datacite:PersonalIdentifier ;\n            literal:hasLiteralValue \"0000-0001-5506-523X\" .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PersonalIdentifier",
+      "en" : "personal identifier"
+    },
+    "comment" : {
+      "en" : "An identifier that uniquely identifies an individual person."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/Identifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier belongs to a particular scheme, such as those specified by individuals of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Identifier",
+      "en" : "identifier"
+    },
+    "subClasses" : [ "14", "9", "11" ],
+    "comment" : {
+      "en" : "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept"
+    },
+    "subClasses" : [ "16" ],
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-pri\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Individual schemes are defines as members of this class. For DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier (datacite:doi).",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ResourceIdentifierScheme",
+      "en" : "resource identifier scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/spar/datacite/uri",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :fabio-id ;\n            datacite:usesIdentifierScheme datacite:uri ;\n            literal:hasLiteralValue \"http://purl.org/spar/fabio\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Uniform Resource Identifier (URI) is a unique identifier for abstract or physical resources."
+      },
+      "labels" : {
+        "IRI-based" : "uri",
+        "en" : "uri"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/lsid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :gustav-dirichlet-id\n            datacite:usesIdentifierScheme datacite:math-genealogy ;\n            literal:hasLiteralValue \"17946\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Life Science Identifier (LSID) is a unique identifier used for uniquely naming significant resources in the biology domain."
+      },
+      "labels" : {
+        "IRI-based" : "lsid",
+        "en" : "lsid"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/rrid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:rrid ;\n            literal:hasLiteralValue \"RRID:AB_262044\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "An RRID name is divided into two parts, the authority and a local identifier, separated by an underscore.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Research Resource IDentifier (RRID) is a character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases."
+      },
+      "labels" : {
+        "IRI-based" : "rrid",
+        "en" : "rrid"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/url",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id ;\n            datacite:usesIdentifierScheme datacite:url ;\n            literal:hasLiteralValue \"https://www.sparontologies.net/\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Uniform Resource Locator (URL) is a unique identifier for a resource retrievable on the World Wide Web."
+      },
+      "labels" : {
+        "IRI-based" : "url",
+        "en" : "url"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/dblp-record",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A DBLP publication identifier is resolvable from the following URL: https://dblp.org/rec/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:dblp-record ;\n            literal:hasLiteralValue \"conf/semweb/BarzaghiHMP24\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The DBLP publication identifier is a unique key that identifies a specific publication record, conference, or journal registered on DBLP."
+      },
+      "labels" : {
+        "IRI-based" : "dblp-record",
+        "en" : "dblp record"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/urn",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id ;\n            datacite:usesIdentifierScheme datacite:urn ;\n            literal:hasLiteralValue \"urn:isbn:9780141036144\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Uniform Resource Name (URN) is a unique identifier for a resource, following the URN scheme."
+      },
+      "labels" : {
+        "IRI-based" : "urn",
+        "en" : "urn"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/doi",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A DOI is resolvable from the following URL: http://www.doi.org/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:doi ;\n            literal:hasLiteralValue \"10.1007/978-3-031-77847-6_11\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Digital Object Identier (DOI) is a unique identifier assigned to identify digital objects."
+      },
+      "labels" : {
+        "IRI-based" : "doi",
+        "en" : "doi"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/oclc",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:oclc ;\n            literal:hasLiteralValue \"1587443818\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "An OCLC control number is resolvable from the following URL: https://www.worldcat.org/oclc/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The OCLC control number is a unique identifier assigned by OCLC to each bibliographic record input into WorldCat."
+      },
+      "labels" : {
+        "IRI-based" : "oclc",
+        "en" : "oclc"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/pmid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:pmid ;\n            literal:hasLiteralValue \"29943802\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The PubMed Identifier (PMID) is a bibliographic identifier for the PubMed database."
+      },
+      "labels" : {
+        "IRI-based" : "pmid",
+        "en" : "pmid"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/local-resource-identifier-scheme",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "comment" : {
+        "en" : "A resource identifier scheme that provides local resource identifiers that are unique in their local environment and understood by the person submitting the metadata."
+      },
+      "labels" : {
+        "IRI-based" : "local-resource-identifier-scheme",
+        "en" : "local resource identifier scheme"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/istc",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:istc ;\n            literal:hasLiteralValue \"A02-2009-000004BE-A\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The International Standard Text Code (ISTC) is a standard designed to uniquely identify textual works."
+      },
+      "labels" : {
+        "IRI-based" : "istc",
+        "en" : "istc"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/bibcode",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:bibcode ;\n            literal:hasLiteralValue \"1974AJ.....79..819H\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "\n        The format was originally adopted by the SIMBAD and NED projects, and follows the syntax \"YYYYJJJJJVVVVMPPPPA\", where:\n\n            * YYYY: Year of publication;\n            * JJJJJ: A standard abbreviation for the journal (e.g. ApJ, AJ, MNRAS, Sci, PASP, etc.). A list of abbreviations is available;\n            * VVVV: The volume number (for a serial) or an abbreviation that specifies what type of publication it is (e.g. conf for conference proceedings, meet for Meeting proceedings, book for a book, coll for colloquium proceedings, proc for any other type of proceedings);\n            * M: Qualifier for publication;\n            * E: Electronic Abstract (usually a counter, not a page number);\n            * L: Letter;\n            * P: Pink page;\n            * Q-Z: Unduplicating character for identical codes;\n            * PPPP: Page number. Note that for page numbers greater than 9999, the page number is continued in the m column;\n            * A: The first letter of the last name of the first author.\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Bibliographic Code (BIBCODE) is a 19 ASCII characters identifier which describes a journal article."
+      },
+      "labels" : {
+        "IRI-based" : "bibcode",
+        "en" : "bibcode"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/wikipedia",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Wikipedia page name is resolvable from the following URL: https://en.wikipedia.org/wiki/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:wikipedia ;\n            literal:hasLiteralValue \"The_Canterbury_Tales\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Wikipedia page name is a unique identifier used to refer to any entity present in a Wikipedia database."
+      },
+      "labels" : {
+        "IRI-based" : "wikipedia",
+        "en" : "wikipedia"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/purl",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:purl ;\n            literal:hasLiteralValue \"http://purl.org/spar/cito\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Persistent Uniform Resource Locator (PURL) is a URL that is used to redirect to the location of a requested web resource."
+      },
+      "labels" : {
+        "IRI-based" : "purl",
+        "en" : "purl"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/sici",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-object-id\n            datacite:usesIdentifierScheme datacite:sici ;\n            literal:hasLiteralValue \"0002-8231(199412)45:10<737:TIODIM>2.3.TX;2-M\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Serial Item and Contribution Identifier (SICI) is a code used to uniquely identify specific volumes, articles or other identifiable parts of a serial."
+      },
+      "labels" : {
+        "IRI-based" : "sici",
+        "en" : "sici"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/pii",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://en.wikipedia.org/wiki/Publisher_Item_Identifier",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:pii ;\n            literal:hasLiteralValue \"S0960-894X(96)00515-X\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Publisher Item Identifier is a unique identifier used by several scientific journal publishers to identify documents."
+      },
+      "labels" : {
+        "IRI-based" : "pii",
+        "en" : "pii"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/arxiv",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:arxiv ;\n            literal:hasLiteralValue \"2505.13276\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "undefined",
+          "value" : "An ArXiv ID is resolvable using the following URL: https://arxiv.org/abs/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The ArXiv ID is a unique identifier for ArXiv (http://arxiv.org/), a open access repository of preprints."
+      },
+      "labels" : {
+        "IRI-based" : "arxiv",
+        "en" : "arxiv"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/lissn",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:lissn ;\n            literal:hasLiteralValue \"1748-7188\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Linking International Standard Serial Number (LISSN) is an identifier that connects different media versions of the same serial publication."
+      },
+      "labels" : {
+        "IRI-based" : "lissn",
+        "en" : "lissn"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/nihmsid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:nihmsid ;\n            literal:hasLiteralValue \"NIHMS44135\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The NIH Manuscript Submission Identifier (NIHMSID) is a preliminary article identifier that applies only to manuscripts deposited through the NIHMS system."
+      },
+      "labels" : {
+        "IRI-based" : "nihmsid",
+        "en" : "nihmsid"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/infouri",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:isbn ;\n            literal:hasLiteralValue \"info:ddc/22/eng//004.678\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Info URI scheme is a standardized method for identifying information assets that have public identifiers (like ISBNs, DOIs, or LCCNs) but lack a native URI representation."
+      },
+      "labels" : {
+        "IRI-based" : "infouri",
+        "en" : "infouri"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/pmcid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:pmcid ;\n            literal:hasLiteralValue \"PMC6513384\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The PubMed Central Identifier (PMCID) is a bibliographic identifier for the PubMed Central database."
+      },
+      "labels" : {
+        "IRI-based" : "pmcid",
+        "en" : "pmcid"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/oci",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:oci ;\n            literal:hasLiteralValue \"06101801781-06180334099\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net)."
+      },
+      "labels" : {
+        "IRI-based" : "oci",
+        "en" : "oci"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/issn",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:issn ;\n            literal:hasLiteralValue \"2049-3630\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The International Standard Serial Number (ISSN) is an eight-digit code to uniquely identify a periodical publication, such as a magazine."
+      },
+      "labels" : {
+        "IRI-based" : "issn",
+        "en" : "issn"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/dnb",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A DNB catalogue number is resolvable from the following URL: https://d-nb.info/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:dnb ;\n            literal:hasLiteralValue \"gnd/7749153-1\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Deutsche Nationalbibliothek (DNB) catalogue number is a unique identifier assigned to every entry in the DNB catalogue."
+      },
+      "labels" : {
+        "IRI-based" : "dnb",
+        "en" : "dnb"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/cstr",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:cstr ;\n            literal:hasLiteralValue \"31253.11.sciencedb.j00001.00123\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Common Science and Technology Resources Identifier is resolvable from the following URL: https://www.cstr.cn/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Common Science and Technology Resources (CSTR) Identifier is an identifier based on the Chinese National Standard GB/T 32843—2016 “Science and technology resource identification”, providing a unique identification service for scientific data, papers, scientific institutions, researchers, scientific instruments, patents and other scientific and technological resources."
+      },
+      "labels" : {
+        "IRI-based" : "cstr",
+        "en" : "cstr"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/ark",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:ark ;\n            literal:hasLiteralValue \"ark:53355/cl010066723\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "An Archival Resource Key (ARK) is a multi-purpose URL suited to being a persistent identifier for information objects of any type."
+      },
+      "labels" : {
+        "IRI-based" : "ark",
+        "en" : "ark"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/spdx",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-rights-id \n            datacite:usesIdentifierScheme datacite:spdx ;\n            literal:hasLiteralValue \"CC-BY-1.0\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A SPDX identifier is resolvable from the following URL: https://spdx.org/licenses/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The SPDX License List is a list of commonly found licenses and exceptions used in free and open source and other collaborative software or documentation."
+      },
+      "labels" : {
+        "IRI-based" : "spdx",
+        "en" : "spdx"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/ean13",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://en.wikipedia.org/wiki/EAN13",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:ean13 ;\n            literal:hasLiteralValue \"4003994155486\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The International Article Number is a unique 13-digit barcode standard used worldwide to identify retail products."
+      },
+      "labels" : {
+        "IRI-based" : "ean13",
+        "en" : "ean13"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/isbn",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:isbn ;\n            literal:hasLiteralValue \"978-81-7525-766-5\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The International Standard Book Number (ISBN) is a unique 13-digit commercial identifier for books and monographic publications."
+      },
+      "labels" : {
+        "IRI-based" : "isbn",
+        "en" : "isbn"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/upc",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Universal Product Code (UPC) is a unique number used to identify products and their manufacturers."
+      },
+      "labels" : {
+        "IRI-based" : "upc",
+        "en" : "upc"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/eissn",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:eissn ;\n            literal:hasLiteralValue \"1460-2105\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Electronic International Standard Serial Number (eISSN) is an eight-digit identifier specifically for electronic versions of serials, such as online journals, databases, or websites."
+      },
+      "labels" : {
+        "IRI-based" : "eissn",
+        "en" : "eissn"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/igsn",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:igsn ;\n            literal:hasLiteralValue \"AU124\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The International Generic Sample Number (IGSN) is a code that uniquely identifies samples from our natural environment and related features-of-interest."
+      },
+      "labels" : {
+        "IRI-based" : "igsn",
+        "en" : "igsn"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/handle",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:handle ;\n            literal:hasLiteralValue \"20.1000/100\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Handle System is a distributed computing technology that provides unique, persistent identifiers (handles) for digital resources, allowing them to be located over time regardless of URL changes."
+      },
+      "labels" : {
+        "IRI-based" : "handle",
+        "en" : "handle"
+      }
+    } ],
+    "comment" : {
+      "en" : "The identifier scheme used to identify a resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "17",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl#Region",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Region",
+      "en" : "Region",
+      "it" : "Regione"
+    },
+    "subClasses" : [ "1" ],
+    "comment" : {
+      "undefined" : "Any region in a dimensional space (a dimensional space is a maximal Region), which can be used as a value for a quality of an Entity . For example, TimeInterval, SpaceRegion, PhysicalAttribute, Amount, SocialAttribute are all subclasses of Region. \nRegions are not data values in the ordinary knowledge representation sense; in order to get patterns for modelling data, see the properties: representsDataValue and hasDataValue"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/FunderIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Individual schemes are defines as members of this class. At present, the only individual of this class is datacite:fundref.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-funder-id \n            datacite:usesIdentifierScheme datacite:fundref .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FunderIdentifierScheme",
+      "en" : "funder identifier scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/spar/datacite/local-funder-identifier-scheme",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "comment" : {
+        "en" : "A funder identifier scheme that provides local funder identifiers that are unique in their local environment and understood by the person submitting the metadata."
+      },
+      "labels" : {
+        "IRI-based" : "local-funder-identifier-scheme",
+        "en" : "local funder identifier scheme"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/fundref",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-funder-id\n            datacite:usesIdentifierScheme datacite:fundref ;\n            literal:hasLiteralValue \"501100000831\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The FundRef identifier is a unique code assigned by Fundref, a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research."
+      },
+      "labels" : {
+        "IRI-based" : "fundref",
+        "en" : "fundref"
+      }
+    } ],
+    "comment" : {
+      "en" : "The identifier scheme used to identify a funding agency."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "41",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "42",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "27",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "24",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://purl.org/spar/datacite/DescriptionType",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "\n         Individual members of the class conform to the five values allowed in the DataCite controlled list, namely: \n\n        * datacite:abstract;\n        * datacite:methods;\n        * datacite:series-information;\n        * datacite:table-of-content;\n        * datacite:other.\n    ",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-additional-info\n            datacite:hasDescriptionType datacite:abstract .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DescriptionType",
+      "en" : "description type"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/spar/datacite/methods",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/deo/Methods",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-additional-info\n            datacite:hasDescriptionType datacite:methods .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "A description in a research paper documenting the specialized methods used in the work described."
+      },
+      "labels" : {
+        "IRI-based" : "methods",
+        "en" : "methods"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/series-information",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/fabio/BookSeries",
+          "type" : "iri"
+        }, {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/fabio/Periodical",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-additional-info\n            datacite:hasDescriptionType datacite:series-information .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Used to charactierize a description of a resource that is part of a series."
+      },
+      "labels" : {
+        "IRI-based" : "series-information",
+        "en" : "series information"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/other",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-additional-info\n            datacite:hasDescriptionType datacite:other .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "A catch-all description type required by the DataCite Metadata Schema to characterize description types that are not abstracts, series information or tables of content."
+      },
+      "labels" : {
+        "IRI-based" : "other",
+        "en" : "other"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/table-of-content",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/doco/TableOfContents",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-additional-info\n            datacite:hasDescriptionType datacite:table-of-content .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "A table of content giving information about the content of a resource, appearing before the body text. Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number."
+      },
+      "labels" : {
+        "IRI-based" : "table-of-content",
+        "en" : "table of content"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/abstract",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/fabio/Abstract",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-additional-info\n            datacite:hasDescriptionType datacite:abstract .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "A brief summary of a textual work, appearing at the beginning of the work and designed to act as the point-of-entry that will help the reader quickly to obtain an overview of the work's contents."
+      },
+      "labels" : {
+        "IRI-based" : "abstract",
+        "en" : "abstract"
+      }
+    } ],
+    "comment" : {
+      "en" : "This class permits classification of the type of description given to a resource described by the DataCite Metadata schema."
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "43",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "35",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/situation.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Situation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "5",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "2",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "20",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://purl.org/spar/datacite/IdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-object-id ;\n            datacite:usesIdentifierScheme datacite:wikidata ;\n            literal:hasLiteralValue \"Q113333457\" .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Individual schemes are defines as members of this class.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IdentifierScheme",
+      "en" : "identifier scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/spar/datacite/gnd",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:gnd ;\n            literal:hasLiteralValue \"7749153-1\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Gemeinsame Normdatei identifier is resolvable from the following URL: https://d-nb.info/gnd/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Gemeinsame Normdatei (GND) identifier is a unique key assigned to authority data managed by the German National Library."
+      },
+      "labels" : {
+        "IRI-based" : "gnd",
+        "en" : "gnd"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/spase",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-object-id\n            datacite:usesIdentifierScheme datacite:spase ;\n            literal:hasLiteralValue \"spase://Example/NumericalData/MagProbe-1/Mag/PT1D\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://<authority><path>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "The SPASE resource identifier is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group."
+      },
+      "labels" : {
+        "IRI-based" : "spase",
+        "undefined" : "spase"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/loc",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Library of Congress authority identifier is resolvable from the following URL: https://id.loc.gov/authorities/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:loc ;\n            literal:hasLiteralValue \"sh2010112128\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Library of Congress (LoC) authority identifier is a unique identifier used for authority control in the Library of Congress."
+      },
+      "labels" : {
+        "IRI-based" : "loc",
+        "en" : "loc"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/scigraph",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-object-id\n            datacite:usesIdentifierScheme datacite:scigraph ;\n            literal:hasLiteralValue \"013217540103.39\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The SciGraph ID is an unique identifier used for referring to entities in the Springer Nature SciGraph dataset."
+      },
+      "labels" : {
+        "IRI-based" : "scigraph",
+        "en" : "SciGraph ID"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/wikidata",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id ;\n            datacite:usesIdentifierScheme datacite:wikidata ;\n            literal:hasLiteralValue \"Q113333457\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Wikidata QID is resolvable from the following URL: https://www.wikidata.org/wiki/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Wikidata QID is a unique identifier used for the entities in Wikidata."
+      },
+      "labels" : {
+        "IRI-based" : "wikidata",
+        "undefined" : "wikidata"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/w3id",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "It has the shape of a URL starting with \"https://w3id.org/\" plus a local identifier that completes it (e.g. \"https://w3id.org/changes\").",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id ;\n            datacite:usesIdentifierScheme datacite:wikidata ;\n            literal:hasLiteralValue \"changes/4/aldrovandi\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "The W3id.org identifier is a secure, permanent URL re-direction service for Web applications, run by the W3C Permanent Identifier Community Group."
+      },
+      "labels" : {
+        "IRI-based" : "w3id",
+        "undefined" : "w3id"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/openalex",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:openalex ;\n            literal:hasLiteralValue \"w1995055324\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "An OpenAlex ID has two parts. The first part is the base, that is always https://openalex.org/. The second part is the key, i.e. the unique primary key that identifies a given resource in our database. The key starts with a letter that tells us the kind of entity: W(ork), A(uthor), V(enue), I(nstitution), or C(oncept). In addition, the IDs are not case-sensitive, so w2741809807 is just as valid as W2741809807.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The OpenAlex ID is a unique identifier assigned to each entity included in OpenAlex."
+      },
+      "labels" : {
+        "IRI-based" : "openalex",
+        "en" : "OpenAlex ID"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/ivoid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:ivoid ;\n            literal:hasLiteralValue \"ivo://org.gavo.dc/~?flashheros/data/ca92/f0065.mt.\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "These identifiers are RFC 3986-compliant URIs with a scheme of ivo. Thus, their generic form is: ivo://<authority><path>?<query>#<fragment>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The IVOA identifier (IVOID) is the identifier of resources within the resource registry (datasets, data access services, etc.) maintained by the International Virtual Observatory Alliance (IVOA)."
+      },
+      "labels" : {
+        "IRI-based" : "ivoid",
+        "undefined" : "ivoid"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/omid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "The OMID is structured as follows: [[entity_type_abbreviation]]/[[supplier_prefix]][[sequential_number]] (e.g. \"br/0601\", where \"br\" is the entity type, \"060\" is the supplier prefix, and \"1\" is the sequential number).",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:omid ;\n            literal:hasLiteralValue \"br/06101801781\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The OpenCitations Meta Identifier (OMID) is a persistent identifier for bibliographic resources, created and maintained by OpenCitations (http://opencitations.net)."
+      },
+      "labels" : {
+        "IRI-based" : "omid",
+        "undefined" : "omid"
+      }
+    } ],
+    "subClasses" : [ "55", "33", "17" ],
+    "comment" : {
+      "en" : "The identifier scheme used to identify an entity such as a funding agency, a person or a resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/PersonalIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Individual schemes are defines as members of this class.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :david-shotton-id\n            datacite:usesIdentifierScheme datacite:orcid .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PersonalIdentifierScheme",
+      "en" : "personal identifier scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/spar/datacite/ieee",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :silvio-peroni-id \n            datacite:usesIdentifierScheme datacite:ieee ;\n            literal:hasLiteralValue \"37542690500\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A IEEE Xplore author ID is resolvable from the following URL: https://ieeexplore.ieee.org/author/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The IEEE Xplore author ID is a unique identifier assigned to authors in IEEE Xplore."
+      },
+      "labels" : {
+        "IRI-based" : "ieee",
+        "en" : "ieee"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/acm",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :silvio-peroni-id \n            datacite:usesIdentifierScheme datacite:acm ;\n            literal:hasLiteralValue \"81442604750\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "The ACM Digital Library author ID is resolvable using the following URL: https://dl.acm.org/profile/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "An ACM Digital Library author ID is a unique identifier found within an ACM Author Profile Page, which consolidates an researcher's publications, citations, and metadata."
+      },
+      "labels" : {
+        "IRI-based" : "acm",
+        "en" : "acm"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/jst",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-person-id\n            datacite:usesIdentifierScheme datacite:jst ;\n            literal:hasLiteralValue \"200901000000000000\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Japanese Science and Technology Agency (JST) identifier is a unique code assigned to scientific research products by the Japan Science and Technology Agency."
+      },
+      "labels" : {
+        "IRI-based" : "jst",
+        "en" : "jst"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/zbmath",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :silvio-peroni\n            datacite:hasIdentifier :silvio-peroni-id .\n        :silvio-peroni-id \n            datacite:usesIdentifierScheme datacite:zbmath ;\n            literal:hasLiteralValue \"peroni.silvio\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The zbMATH author identifier is a unique identifier used for a person in the Zentralblatt MATH database."
+      },
+      "labels" : {
+        "IRI-based" : "zbmath",
+        "en" : "zbmath"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/national-insurance-number",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-person-id\n            datacite:usesIdentifierScheme datacite:national-insurance-number ;\n            literal:hasLiteralValue \"QQ123456C\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The United Kingdom National Insurance Number is a code used to uniquely identify in the tax system, banking, social welfare, online government services and electoral registration."
+      },
+      "labels" : {
+        "IRI-based" : "national-insurance-number",
+        "en" : "national insurance number"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/nii",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :shizumu-nomura-id\n            datacite:usesIdentifierScheme datacite:nii ;\n            literal:hasLiteralValue \"9000363887724\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The National Individual Identifier (NII) is a unique number assigned to citizens, residents and visitors for tracking and verification purposes."
+      },
+      "labels" : {
+        "IRI-based" : "nii",
+        "en" : "nii"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/math-genealogy",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :gustav-dirichlet-id\n            datacite:usesIdentifierScheme datacite:math-genealogy ;\n            literal:hasLiteralValue \"17946\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Mathematics Genealogy Project identifier is resolvable from the following URL: https://mathgenealogy.org/id.php?id=<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Mathematics Genealogy Project identifier is an identifier for mathematicians and computer scientists at the Mathematics Genealogy Project."
+      },
+      "labels" : {
+        "IRI-based" : "math-genealogy",
+        "en" : "math genealogy"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/repec",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :andrei-shleifer-id\n            datacite:usesIdentifierScheme datacite:repec ;\n            literal:hasLiteralValue \"psh93\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A RePEc Short Identifier is resolvable from the following URL: https://authors.repec.org/pro/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The RePEc Short identifier is a unique, permanent identifier for researchers registered in the RePEc Author Service."
+      },
+      "labels" : {
+        "IRI-based" : "repec",
+        "en" : "repec"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/isni",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "An ISNI is resolvable from the following URL: http://www.isni.org/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :david-shotton-id\n            datacite:usesIdentifierScheme datacite:isni ;\n            literal:hasLiteralValue \"0000000117402098\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The International Standard Name Identifier (ISNI) is an identifier system for uniquely identifying the public identities of contributors to media content."
+      },
+      "labels" : {
+        "IRI-based" : "isni",
+        "en" : "isni"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/dia",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Digital Author Identification system assigns a unique number to all authors in the Netherlands research system."
+      },
+      "labels" : {
+        "IRI-based" : "dia",
+        "en" : "dia"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/gitlab",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-person-id \n            datacite:usesIdentifierScheme datacite:gitlab ;\n            literal:hasLiteralValue \"gitlab-org\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A GitLab user account is resolvable from the following URL: https://gitlab.com/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The GitLab user account is a unique identifier assigned to GitLab users."
+      },
+      "labels" : {
+        "IRI-based" : "gitlab",
+        "en" : "GitLab user account"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/research-gate",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A ResearchGate profile identifier is resolvable from the following URL: https://www.researchgate.net/profile/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :david-shotton-id\n            datacite:usesIdentifierScheme datacite:research-gate ;\n            literal:hasLiteralValue \"David-Shotton-2\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The ResearchGate profile identifier is a unique code for researchers registered in the ResearchGate platform."
+      },
+      "labels" : {
+        "IRI-based" : "research-gate",
+        "en" : "research gate"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/google-scholar",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :david-shotton-id \n            datacite:usesIdentifierScheme datacite:google-scholar ;\n            literal:hasLiteralValue \"YyvE-_oAAAAJ\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Google Scholar author identifier is resolvable from the following URL: https://scholar.google.com/citations?user=<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Google Scholar author identifier is a unique identifier assigned to authors signed to Google Scholar. "
+      },
+      "labels" : {
+        "IRI-based" : "google-scholar",
+        "en" : "google scholar"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/openid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "OpenID is an open standard that describes how users can be authenticated in a decentralized manner, eliminating the need for centralized registration services."
+      },
+      "labels" : {
+        "IRI-based" : "openid",
+        "en" : "openid"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/gepris",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :david-aitken-id\n            datacite:usesIdentifierScheme datacite:gepris ;\n            literal:hasLiteralValue \"209346727\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A GEPRIS person identifier is resolvable from the following URL: http://gepris.dfg.de/gepris/person/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The GEPRIS person identifier is a unique, numerical identifier assigned to researchers and investigators in the GEPRIS database."
+      },
+      "labels" : {
+        "IRI-based" : "gepris",
+        "en" : "gepris"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/dblp",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A DBLP author identifier is resolvable from the following URL: https://dblp.org/pid/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :silvio-peroni-id\n            datacite:usesIdentifierScheme datacite:dblp ;\n            literal:hasLiteralValue \"48/1099\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The DBLP author identifier is a unique key assigned to each researcher registered on DBLP."
+      },
+      "labels" : {
+        "IRI-based" : "dblp",
+        "en" : "dblp"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/viaf",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :david-shotton-id ;\n            datacite:usesIdentifierScheme datacite:viaf ;\n            literal:hasLiteralValue \"7484794\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A VIAF identifier is resolvable from the following URL: http://viaf.org/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Virtual International Authority File (VIAF) is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC). It contains information about many topics including personal names."
+      },
+      "labels" : {
+        "IRI-based" : "viaf",
+        "en" : "viaf"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/researcherid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :david-shotton-id\n            datacite:usesIdentifierScheme datacite:researcherid ;\n            literal:hasLiteralValue \"DXS-2121-2022\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters."
+      },
+      "labels" : {
+        "IRI-based" : "researcherid",
+        "en" : "researcherid"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/social-security-number",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-person-id\n            datacite:usesIdentifierScheme datacite:sici ;\n            literal:hasLiteralValue \"999-00-9999\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The United States of America social security number is a nine-digit number issued to U.S. residents."
+      },
+      "labels" : {
+        "IRI-based" : "social-security-number",
+        "en" : "social security number"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/local-personal-identifier-scheme",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "comment" : {
+        "en" : "A personal identifier scheme that provides local personal identifiers that are unique in their local environment and understood by the person submitting the metadata."
+      },
+      "labels" : {
+        "IRI-based" : "local-personal-identifier-scheme",
+        "en" : "local personal identifier scheme"
+      }
+    } ],
+    "comment" : {
+      "en" : "The identifier scheme used to identify a person."
+    },
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/RightsIdentifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-rights\n            datacite:hasIdentifier :my-resource-rights-id .\n        :my-resource-rights-id a datacite:RightsIdentifier ;\n            literal:hasLiteralValue \"CC-BY-1.0\" .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A rights identifier belongs to a particular scheme, such as SPDX, specified by an individual within the class datacite:RightsIdentifierScheme.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RightsIdentifier",
+      "en" : "rights identifier"
+    },
+    "comment" : {
+      "en" : "An identifier that uniquely identifies a license."
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/OrganizationIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Individual schemes are defines as members of this class.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-organization-id a datacite:OrganizationIdentifier ;\n            datacite:usesIdentifierScheme datacite:ror .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OrganizationIdentifierScheme",
+      "en" : "organization identifier scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/spar/datacite/crossref",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Crossref member identifier is resolvable from the following URL: https://api.crossref.org/members/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-organization-id \n            datacite:usesIdentifierScheme datacite:crossref ;\n            literal:hasLiteralValue \"20280\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Crossref member identifier is a unique numerical ID automatically assigned to each organization when they join Crossref to manage their account and content registration."
+      },
+      "labels" : {
+        "IRI-based" : "crossref",
+        "en" : "crossref"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/ror",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A ROR identifier is resolvable from the following URL: https://ror.org/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :my-organization-id \n            datacite:usesIdentifierScheme datacite:ror ;\n            literal:hasLiteralValue \"00wb4mk85\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Research Organization Registry (ROR) Community identifier is a unique code assigned to research organizations."
+      },
+      "labels" : {
+        "IRI-based" : "ror",
+        "en" : "ror"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/isni",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "An ISNI is resolvable from the following URL: http://www.isni.org/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :david-shotton-id\n            datacite:usesIdentifierScheme datacite:isni ;\n            literal:hasLiteralValue \"0000000117402098\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The International Standard Name Identifier (ISNI) is an identifier system for uniquely identifying the public identities of contributors to media content."
+      },
+      "labels" : {
+        "IRI-based" : "isni",
+        "en" : "isni"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/local-organization-identifier-scheme",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "comment" : {
+        "en" : "An organization identifier scheme that provides local organization identifiers that are unique in their local environment and understood by the person submitting the metadata."
+      },
+      "labels" : {
+        "IRI-based" : "local-organization-identifier-scheme",
+        "en" : "local organization identifier scheme"
+      }
+    } ],
+    "comment" : {
+      "en" : "The identifier scheme used to identify an organization."
+    },
+    "attributes" : [ "external" ],
+    "id" : "54",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://www.essepuntato.it/2010/06/literalreification/Literal",
+    "baseIri" : "http://www.essepuntato.it/2010/06/literalreification",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Literal",
+      "en" : "literal"
+    },
+    "subClasses" : [ "12" ],
+    "comment" : {
+      "en" : "It describes reified literals, where the literal value they represent is speficied through the property litre:hasLiteralValue. Each individual of this class must always have a specified value."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://purl.org/co/List",
+    "baseIri" : "http://purl.org/co",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "List"
+    },
+    "attributes" : [ "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/AlternateResourceIdentifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An alternate resource identifier belongs to a particular scheme, such as ISBN, specified by an individual that is a member of the class datacite:ResourceIdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource\n            datacite:hasIdentifier :my-resource-alt .\n        :my-resource-alt a datacite:AlternateResourceIdentifier ;\n            literal:hasLiteralValue \"19381256\" .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AlternateResourceIdentifier",
+      "en" : "alternate resource identifier"
+    },
+    "comment" : {
+      "en" : "An identifier other than a DOI that is used as an alternative identifier to uniquely identify a resource that is the subject of the DataCite metadata record."
+    },
+    "attributes" : [ "external" ],
+    "id" : "61",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/FunderIdentifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A funder identifier belongs to a particular scheme, such as FundRef, specified by an individual within the class datacite:FunderIdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-funder-id a datacite:FunderIdentifier ;\n            literal:hasLiteralValue \"\" .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FunderIdentifier",
+      "en" : "funder identifier"
+    },
+    "comment" : {
+      "en" : "An identifier that uniquely identities a funding agency."
+    },
+    "attributes" : [ "external" ],
+    "id" : "64",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/QualifiedRelation",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n            datacite:hasRelationSubject :my-resource ;\n            datacite:hasRelationObject :my-article ;\n            datacite:hasRelationCharacterization cito:isCitedBy .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "QualifiedRelation",
+      "en" : "qualified relation"
+    },
+    "intersection" : [ "46" ],
+    "comment" : {
+      "en" : "A class representing a reified relation between two resources, allowing the assignment of a specific role or type to the connection."
+    },
+    "attributes" : [ "external", "intersection" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/MetadataScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/cito/citesAsMetadataDocument",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/fabio/MetadataDocument",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource\n            cito:citesAsMetadataDocument :my-resource-metadata .\n        :my-resource-metadata a fabio:MetadataDocument ;\n            datacite:usesMetadataScheme datacite:spar .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Neither a class for metadata documents nor a property linking a resource to its metadata document are explicitly defined in this ontology. However, we recommend to use the class fabio:MetadataDocument (from http://purl.org/spar/fabio) and cito:citesAsMetadataDocument (from http://purl.org/spar/cito) for providing such descriptions. In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not included in this ontology as well) for defining the actual URL of a certain metadata scheme.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MetadataScheme",
+      "en" : "metadata scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/spar/datacite/spar",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :related-document a fabio:MetadataDocument ;\n            datacite:usesMetadataScheme datacite:spar .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Semantic Publishing and Referencing Ontologies, a.k.a. SPAR Ontologies, form a suite of orthogonal and complementary OWL 2 DL ontology modules for the creation of comprehensive machine-readable RDF metadata for every aspect of semantic publishing and referencing: document description, bibliographic resource identifiers, types of citations and related contexts, bibliographic references, document parts and status, agents' roles and contributions, bibliometric data and workflow processes."
+      },
+      "labels" : {
+        "IRI-based" : "spar",
+        "en" : "SPAR Ontologies"
+      }
+    } ],
+    "comment" : {
+      "en" : "The class that describe metadata schemes used for creating a metadata document referring to a certain resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/PrimaryResourceIdentifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id a datacite:PrimaryResourceIdentifier ;\n            literal:hasLiteralValue \"10.1371/journal.pntd.0000228.g002.x001\" ;\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "undefined",
+        "value" : "This class uses a datacite:IdentiferScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PrimaryResourceIdentifier",
+      "en" : "primary resource identifier"
+    },
+    "comment" : {
+      "en" : "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record."
+    },
+    "attributes" : [ "external" ],
+    "id" : "62",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/ResourceIdentifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id a datacite:ResourceIdentifier ;\n            literal:hasLiteralValue \"10.3457/1098.a45\" .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ResourceIdentifier",
+      "en" : "resource identifier"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/spar/datacite/opendoar",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Directory of Open Access Repositories (OpenDOAR) is a service that lists open access repositories, and uses numerical internal identifiers to store their record."
+      },
+      "labels" : {
+        "IRI-based" : "opendoar",
+        "undefined" : "opendoar"
+      }
+    } ],
+    "subClasses" : [ "62", "61" ],
+    "comment" : {
+      "en" : "An identifier that is used to uniquely identify a resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/RightsIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-rights-id a datacite:RightsIdentifier ;\n            datacite:usesIdentifierScheme datacite:spdx ;\n            literal:hasLiteralValue \"CC-BY-1.0\" .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Individual schemes are defined as members of this class.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RightsIdentifierScheme",
+      "en" : "rights identifier scheme"
+    },
+    "comment" : {
+      "en" : "The identifier scheme used to identify a license."
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/AgentIdentifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An agent identifier belongs to a particular identifier scheme, specified by an individual within the class datacite:AgentIdentifierScheme (or any of its subclasses).",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :essepuntato a datacite:AgentIdentifier ;\n            literal:hasLiteralValue \"https://github.com/essepuntato\" .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AgentIdentifier",
+      "en" : "agent identifier"
+    },
+    "subClasses" : [ "8", "13", "64" ],
+    "comment" : {
+      "en" : "An identifier that uniquely identities an individual agent."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://purl.org/spar/datacite/AgentIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :silvio-peroni-id\n            datacite:usesIdentifierScheme datacite:github ;\n            literal:hasLiteralValue \"essepuntato\" .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "Individual schemes are defines as members of its sub-classes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AgentIdentifierScheme",
+      "en" : "agent identifier scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/spar/datacite/lattes",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :marcos-bagno-id\n            datacite:usesIdentifierScheme datacite:lattes ;\n            literal:hasLiteralValue \"9975840620597737\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Lattes Platform number is resolvable from the following URL: http://lattes.cnpq.br/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Lattes Platform number is an identifier for a Lattes Platform entry related to a person or group."
+      },
+      "labels" : {
+        "IRI-based" : "lattes",
+        "en" : "lattes"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/orcid",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "An ORCID is resolvable from the following URL: http://orcid.org/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :david-shotton-id\n            datacite:usesIdentifierScheme datacite:orcid ;\n            literal:hasLiteralValue \"0000-0001-5506-523X\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The Open Researcher and Contributor Identifier (ORCID) is a unique identifier for individuals to use as they engage in research, scholarship, and innovation activities."
+      },
+      "labels" : {
+        "IRI-based" : "orcid",
+        "en" : "orcid"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/linkedin",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A LinkedIn personal profile identifier is resolvable from the following URL: https://www.linkedin.com/in/<identifier>.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :silvio-peroni-id\n            datacite:usesIdentifierScheme datacite:linkedin ;\n            literal:hasLiteralValue \"essepuntato\" .\n    ",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The LinkedIn personal profile identifier is an unique identifier assigned to a LinkedIn user."
+      },
+      "labels" : {
+        "IRI-based" : "linkedin",
+        "en" : "linkedin"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/github",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :silvio-peroni-id\n            datacite:usesIdentifierScheme datacite:github ;\n            literal:hasLiteralValue \"essepuntato\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A GitHub username is resolvable from the following URL: https://github.com/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The GitHub username is a unique identifier assigned to GitHub users."
+      },
+      "labels" : {
+        "IRI-based" : "github",
+        "en" : "github"
+      }
+    }, {
+      "iri" : "http://purl.org/spar/datacite/twitter",
+      "baseIri" : "http://purl.org/spar/datacite",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://purl.org/spar/datacite/",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "\n        :silvio-peroni-id ;\n            datacite:usesIdentifierScheme datacite:twitter ;\n            literal:hasLiteralValue \"@essepuntato\" .\n    ",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "A Twitter handle is resolvable from the following URL: https://twitter.com/<identifier>.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "A Twitter handle is the unique identifier assigned to Twitter users."
+      },
+      "labels" : {
+        "IRI-based" : "twitter",
+        "undefined" : "twitter"
+      }
+    } ],
+    "subClasses" : [ "57", "32", "54" ],
+    "comment" : {
+      "en" : "The identifier scheme used to identify an agent."
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "18" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "50",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "56",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "58",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "59",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "60",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "63",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "65",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "66",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "67",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "68",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "69",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "71",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.essepuntato.it/2010/06/literalreification/isLiteralOf",
+    "baseIri" : "http://www.essepuntato.it/2010/06/literalreification",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "isLiteralOf",
+      "en" : "is literal of"
+    },
+    "superproperty" : [ "3" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "It connects the reified literal to the individuals that are using it."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl#hasRegion",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasRegion",
+      "en" : "has region",
+      "it" : "ha regione"
+    },
+    "domain" : "5",
+    "subproperty" : [ "7" ],
+    "comment" : {
+      "undefined" : "A relation between entities and regions, e.g. 'the number of wheels of that truck is 12'."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "4"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/hasDescriptionType",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "16",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A type of description is defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract (datacite:abstract), SeriesInformation (datacite:series-information), TableOfContent (datacite:table-of-content) and Other (datacite:other).",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-additional-info\n            datacite:hasDescriptionType datacite:abstract .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDescriptionType",
+      "en" : "has description type"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "20",
+    "comment" : {
+      "en" : "An object property permitting specification of the type of description used to describe a resource."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/hasRelationCharacterization",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n            datacite:hasRelationCharacterization cito:isCitedBy .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "This property uses as range an existing property via OWL2 punning, according to which it becomes possible to use an object property as the object of an OWL assertion. In such cases of OWL punning, the object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class owl:Thing.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasRelationCharacterization",
+      "en" : "has relation characterization"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "23",
+    "comment" : {
+      "en" : "An object property defining the specific nature or type of the reified relation."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/hasCreatorList",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasCreatorList",
+      "en" : "has creator list"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "This property allows one to specify the list of the creators of a certain resource."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "18",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "12",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "12",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "35",
+    "subproperty" : [ "36" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/situation.owl",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "isSettingFor"
+    },
+    "domain" : "35",
+    "subproperty" : [ "39", "40", "22" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl#isRegionFor",
+    "inverse" : "4",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isRegionFor",
+      "en" : "is region for",
+      "it" : "è un ragione di"
+    },
+    "domain" : "6",
+    "subproperty" : [ "0" ],
+    "comment" : {
+      "undefined" : "A relation between entities and regions, e.g. 'the color of my car is red'."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.essepuntato.it/2010/06/literalreification/hasSameLiteralValueAs",
+    "baseIri" : "http://www.essepuntato.it/2010/06/literalreification",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasSameLiteralValueAs",
+      "en" : "has same literal value as"
+    },
+    "superproperty" : [ "34" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "It relates the reified literal to another one that has the same literal value."
+    },
+    "attributes" : [ "external", "object", "symmetric", "transitive" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue",
+    "baseIri" : "http://www.essepuntato.it/2010/06/literalreification",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "hasLiteralValue",
+      "en" : "has literal value"
+    },
+    "cardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "en" : "It is used to specify the literal value that an individual of litre:Literal represents."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://purl.org/spar/fabio/hasURL",
+    "baseIri" : "http://purl.org/spar/fabio",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "hasURL"
+    },
+    "domain" : "35",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://www.essepuntato.it/2010/06/literalreification/hasLiteral",
+    "inverse" : "0",
+    "baseIri" : "http://www.essepuntato.it/2010/06/literalreification",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasLiteral",
+      "en" : "has literal"
+    },
+    "superproperty" : [ "4" ],
+    "domain" : "2",
+    "comment" : {
+      "en" : "It connects individuals of any class to a reified literal."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/hasGeneralResourceType",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource\n            datacite:hasGeneralResourceType dcmitype:Dataset .\n    ",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "\nThe DataCite controlled list includes: \n\n- dcmitype:MovingImage;\n- fabio:Book;\n- fabio:BookChapter;\n- dcmitype:Collection;\n- fabio:LaboratoryNotebook;\n- fabio:ConferencePaper;\n- fabio:ConferenceProceedings;\n- fabio:ResourcePaper;\n- dcmitype:Dataset;\n- fabio:Thesis;\n- dcmitype:Event;\n- dcmitype:StillImage;\n- dcmitype:InteractiveResource;\n- fabio:Journal;\n- fabio:JournalArticle;\n- fabio:Model;\n- fabio:DataManagementPlan;\n- dcmitype:PhysicalObject;\n- fabio:ConferencePoster;\n- fabio:Preprint;\n- fabio:Presentation;\n- fabio:ProjectPlan;\n- fabio:ReportDocument;\n- dcmitype:Service;\n- dcmitype:Software;\n- dcmitype:Sound;\n- fabio:TechnicalStandard;\n- fabio:Report;\n- dcmitype:Text;\n- fabio:Workflow;\n- frbr:Endeavour.\n\nAll the prefixes used here refer to external ontologies, i.e., DC Metadata Terms (dcmitype: http://purl.org/dc/dcmitype/), FaBiO (fabio: http://purl.org/spar/fabio/), and FRBR (frbr: http://purl.org/vocab/frbr/core#).\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasGeneralResourceType",
+      "en" : "has general resource type"
+    },
+    "superproperty" : [ "21" ],
+    "domain" : "42",
+    "comment" : {
+      "en" : "An object property permitting specification of the general type of a resource, defined from the DataCite controlled list."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "17",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/hasRelationSubject",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n            datacite:hasRelationSubject :my-resource .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasRelationSubject",
+      "en" : "has relation subject"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "23",
+    "comment" : {
+      "en" : "An object property linking a reified relation to its subject resource."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/hasDescription",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "35",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource\n            datacite:hasDescription :my-resource-additional-info .\n        :my-resource-additional-info\n            literal:hasLiteralValue \"A textual description\" .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDescription",
+      "en" : "has description"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "An object property permitting specification of an entity used to describe a resource."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "54",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "57",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "57",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "33",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "62",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "32",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "64",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "13",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "11",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "11",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "64",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/hasRelationObject",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n            datacite:hasRelationObject :my-article .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasRelationObject",
+      "en" : "has relation object"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "23",
+    "comment" : {
+      "en" : "An object property linking a reified relation to its object resource."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesIdentifierScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource-id\n            datacite:usesIdentifierScheme datacite:doi .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesIdentifierScheme",
+      "en" : "uses identifier scheme"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "11",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/hasIdentifier",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "12",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :my-resource\n            datacite:hasIdentifier :my-resource-pri .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasIdentifier",
+      "en" : "has identifier"
+    },
+    "cardinality" : "1",
+    "domain" : "43",
+    "comment" : {
+      "en" : "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."
+    },
+    "attributes" : [ "external", "object", "inverse functional" ],
+    "id" : "72"
+  }, {
+    "range" : "33",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "33",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "33",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "9",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "range" : "9",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl#hasRegionDataValue",
+    "baseIri" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl",
+    "range" : "38",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.ontologydesignpatterns.org/cp/owl/region.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasRegionDataValue",
+      "en" : "has region data value",
+      "undefined" : "regione ha valore {it}"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "A datatype property that encodes values for a Region, e.g. a float for the Region Height."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "79"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "1",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "18",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://purl.org/spar/datacite/usesMetadataScheme",
+    "baseIri" : "http://purl.org/spar/datacite",
+    "range" : "75",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/spar/datacite/",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "\n        :related-document a fabio:MetadataDocument ;\n            datacite:usesMetadataScheme datacite:spar .\n    ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesMetadataScheme",
+      "en" : "uses metadata scheme"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "The link between a metadata document and the scheme followed for creating metadata."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "83"
+  }, {
+    "range" : "11",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "range" : "11",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "range" : "6",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://purl.org/dc/terms/type",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "type"
+    },
+    "domain" : "35",
+    "subproperty" : [ "48", "19" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "15",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "range" : "18",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "18",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  } ]
+}
