@@ -82,7 +82,12 @@ The class `datacite:DescriptionType`, and the object properties `datacite:hasDes
 This is defined using the property `datacite:hasDescriptionType`, which must have as its object one of the members of the class `datacite:DescriptionType`, i.e., `datacite:abstract`, `datacite:methods`, `datacite:other`, `datacite:series-information` and `datacite:table-of-content`. 
 In this way, it is possible to associate written documents (e.g. journal articles or data articles) as descriptions of datasets.
 It is also possible to provide a link between a resource, such as a dataset, and the document describing its metadata by means of the _Citation Typing Ontology_ (CiTO), using the property `cito:citesAsMetadataDocument`, and the _FRBR-aligned Bibliographic Ontology_ (FaBiO), by means of the class `fabio:MetadataDocument`. In addition to these entities, the DataCite Ontology provides appropriate classes (i.e., `datacite:MetadataScheme`) and properties (i.e., `datacite:hasMetadataScheme`) to specify the particular scheme followed for creating the resource metadata exemplified in the metadata document.
----> QUALIFIED RELATION
+
+Finally, with the Datacite Ontology, it is possible to represent situations where a given relation between two entities needs to be qualified in some way, e.g. with a description that specifies the nature of said relation.
+This is provided by the class `datacite:QualifiedRelation`, which represents a certain relationship existing between two entities. 
+The qualified relation is linked with one entity (more specifically, the subject of the relation) via the object property `datacite:hasRelationSubject`, and with the other (the object of the relation) via the object property `datacite:hasRelationObject`.
+The type of relation itself is defined via the property `datacite:hasRelationCharacterization`, which links a qualified relation to its characterization made by using an object property such as `dcterms:relation`, `cito:cites`, or `frbr:isPartOf`. 
+This usage involves [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), a mechanism according to which an object property can be used as the object of an OWL assertion by being considered simultaneously both as a normal property and also as a named individual of the class `owl:Thing`.
 
 ## Examples of use
 
@@ -279,14 +284,13 @@ How many identifiers are registered for each identifier scheme?
             datacite:usesIdentifierScheme datacite:ark ;
             literal:hasLiteralValue \"ark:53355/cl010066723\" .
     """ ;
-    skos:scopeNote "" ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :arxiv a :ResourceIdentifierScheme,
         owl:NamedIndividual ;
     rdfs:label "arxiv"@en ;
     fabio:hasURL "http://arxiv.org/"^^xsd:anyURI ;
-    rdfs:comment "An identifier for ArXiv (http://arxiv.org/), a open access repository of preprints."@en ;
+    rdfs:comment "The ArXiv ID is a unique identifier for ArXiv (http://arxiv.org/), a open access repository of preprints."@en ;
     vann:example """
         :my-resource-id 
             datacite:usesIdentifierScheme datacite:arxiv ;
@@ -299,7 +303,7 @@ How many identifiers are registered for each identifier scheme?
         owl:NamedIndividual ;
     rdfs:label "bibcode"@en ;
     fabio:hasURL "https://adsabs.harvard.edu/abs_doc/help_pages/data.html"^^xsd:anyURI ;
-    rdfs:comment "The Bibliographic Code (bibcode) is a 19 ASCII characters identifier which describes a journal article."@en ;
+    rdfs:comment "The Bibliographic Code (BIBCODE) is a 19 ASCII characters identifier which describes a journal article."@en ;
     vann:example """
         :my-resource-id 
             datacite:usesIdentifierScheme datacite:bibcode ;
@@ -325,7 +329,7 @@ How many identifiers are registered for each identifier scheme?
         owl:NamedIndividual ;
     rdfs:label "crossref"@en ;
     fabio:hasURL "https://crossref.org/"^^xsd:anyURI ;
-    rdfs:comment "A Crossref member identifier is a unique numerical ID automatically assigned to each organization when they join Crossref to manage their account and content registration."@en ;
+    rdfs:comment "The Crossref member identifier is a unique numerical ID automatically assigned to each organization when they join Crossref to manage their account and content registration."@en ;
     vann:example """
         :my-organization-id 
             datacite:usesIdentifierScheme datacite:crossref ;
@@ -338,7 +342,7 @@ How many identifiers are registered for each identifier scheme?
         owl:NamedIndividual ;
     rdfs:label "cstr"@en ;
     fabio:hasURL "https://www.cstr.cn/"^^xsd:anyURI ;
-    rdfs:comment "The Common Science and Technology Resources Identifier is an identifier based on the Chinese National Standard GB/T 32843—2016 “Science and technology resource identification”, providing a unique identification service for scientific data, papers, scientific institutions, researchers, scientific instruments, patents and other scientific and technological resources."@en ;
+    rdfs:comment "The Common Science and Technology Resources (CSTR) Identifier is an identifier based on the Chinese National Standard GB/T 32843—2016 “Science and technology resource identification”, providing a unique identification service for scientific data, papers, scientific institutions, researchers, scientific instruments, patents and other scientific and technological resources."@en ;
     vann:example """
         :my-resource-id 
             datacite:usesIdentifierScheme datacite:cstr ;
@@ -351,7 +355,7 @@ How many identifiers are registered for each identifier scheme?
         owl:NamedIndividual ;
     rdfs:label "dblp"@en ;
     fabio:hasURL "https://dblp.org"^^xsd:anyURI ;
-    rdfs:comment "The DBLP author identifier is a unique, persistent key assigned to each researcher registered on DBLP."@en ;
+    rdfs:comment "The DBLP author identifier is a unique key assigned to each researcher registered on DBLP."@en ;
     vann:example """
         :silvio-peroni-id
             datacite:usesIdentifierScheme datacite:dblp ;
@@ -422,7 +426,7 @@ How many identifiers are registered for each identifier scheme?
         owl:NamedIndividual ;
     rdfs:label "fundref"@en ;
     fabio:hasURL "http://www.crossref.org/fundref/index.html"^^xsd:anyURI ;
-    rdfs:comment "FundRef is a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research."@en ;
+    rdfs:comment "The FundRef identifier is a unique code assigned by Fundref, a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research."@en ;
     vann:example """
         :my-funder-id
             datacite:usesIdentifierScheme datacite:fundref ;
@@ -473,7 +477,7 @@ How many identifiers are registered for each identifier scheme?
         owl:NamedIndividual ;
     rdfs:label "gnd"@en ;
     fabio:hasURL "https://gnd.network/"^^xsd:anyURI ;
-    rdfs:comment "The Gemeinsame Normdatei identifier is a unique key assigned to authority data managed by the German National Library."@en ;
+    rdfs:comment "The Gemeinsame Normdatei (GND) identifier is a unique key assigned to authority data managed by the German National Library."@en ;
     vann:example """
         :my-resource-id 
             datacite:usesIdentifierScheme datacite:gnd ;
@@ -528,7 +532,7 @@ How many identifiers are registered for each identifier scheme?
             datacite:hasGeneralResourceType dcmitype:Dataset .
     """ ;
     skos:scopeNote """
-        The Datacite controlled list includes: 
+The Datacite controlled list includes: 
 
 - dcmitype:MovingImage;
 - fabio:Book;
@@ -583,7 +587,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "igsn"@en ;
     fabio:hasURL "http://igsn.org/"^^anyURI ;
-    rdfs:comment "The International Generic Sample Number is a code that uniquely identifies samples from our natural environment and related features-of-interest."@en ;
+    rdfs:comment "The International Generic Sample Number (IGSN) is a code that uniquely identifies samples from our natural environment and related features-of-interest."@en ;
     vann:example """
         :my-resource-id 
             datacite:usesIdentifierScheme datacite:igsn ;
@@ -620,20 +624,20 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "isni"@en ;
     fabio:hasURL "http://www.isni.org/"^^xsd:anyURI ;
-    rdfs:comment "The International Standard Name Identifier is an identifier system for uniquely identifying the public identities of contributors to media content."@en ;
+    rdfs:comment "The International Standard Name Identifier (ISNI) is an identifier system for uniquely identifying the public identities of contributors to media content."@en ;
     vann:example """
         :david-shotton-id
             datacite:usesIdentifierScheme datacite:isni ;
             literal:hasLiteralValue \"0000000117402098\" .
     """ ;
-    skos:scopeNote "A International Standard Name Identifier is resolvable from the following URL: http://www.isni.org/<identifier>."@en ;
+    skos:scopeNote "An ISNI is resolvable from the following URL: http://www.isni.org/<identifier>."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :issn a :ResourceIdentifierScheme,
         owl:NamedIndividual ;
     rdfs:label "issn"@en ;
     fabio:hasURL "http://www.issn.org/"^^xsd:anyURI ;
-    rdfs:comment "The International Standard Serial Number is an eight-digit code to uniquely identify a periodical publication, such as a magazine."@en ;
+    rdfs:comment "The International Standard Serial Number (ISSN) is an eight-digit code to uniquely identify a periodical publication, such as a magazine."@en ;
     vann:example """
         :my-resource-id
             datacite:usesIdentifierScheme datacite:issn ;
@@ -645,7 +649,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "istc"@en ;
     fabio:hasURL "http://www.istc-international.org/html/"^^xsd:anyURI ;
-    rdfs:comment "The International Standard Text Code is a standard designed to uniquely identify textual works."@en ;
+    rdfs:comment "The International Standard Text Code (ISTC) is a standard designed to uniquely identify textual works."@en ;
     vann:example """
         :my-resource-id
             datacite:usesIdentifierScheme datacite:istc ;
@@ -657,7 +661,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "ivoid" ;
     fabio:hasURL "https://www.ivoa.net/documents/IVOAIdentifiers/"^^xsd:anyURI ;
-    rdfs:comment "The IVOA identifier (ivoid) is the identifier of resources within the resource registry (datasets, data access services, etc.) maintained by the International Virtual Observatory Alliance (IVOA)."@en ;
+    rdfs:comment "The IVOA identifier (IVOID) is the identifier of resources within the resource registry (datasets, data access services, etc.) maintained by the International Virtual Observatory Alliance (IVOA)."@en ;
     vann:example """
         :my-resource-id
             datacite:usesIdentifierScheme datacite:ivoid ;
@@ -669,7 +673,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
 :jst a :PersonalIdentifierScheme,
         owl:NamedIndividual ;
     rdfs:label "jst"@en ;
-    rdfs:comment "The Japanese Science and Technology Agency identifier is a unique code assigned to scientific research products by the Japan Science and Technology Agency."@en ;
+    rdfs:comment "The Japanese Science and Technology Agency (JST) identifier is a unique code assigned to scientific research products by the Japan Science and Technology Agency."@en ;
     vann:example """
         :my-person-id
             datacite:usesIdentifierScheme datacite:jst ;
@@ -707,7 +711,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "lissn"@en ;
     fabio:hasURL "http://www.issn.org/"^^xsd:anyURI ;
-    rdfs:comment "Linking International Standard Serial Number"@en ;
+    rdfs:comment "The Linking International Standard Serial Number (LISSN) is an identifier that connects different media versions of the same serial publication."@en ;
     vann:example """
         :my-resource-id
             datacite:usesIdentifierScheme datacite:lissn ;
@@ -719,7 +723,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "loc"@en ;
     fabio:hasURL "https://id.loc.gov/"^^xsd:anyURI ;
-    rdfs:comment "The Library of Congress authority identifier is a unique identifier used for authority control in the Library of Congress."@en ;
+    rdfs:comment "The Library of Congress (LoC) authority identifier is a unique identifier used for authority control in the Library of Congress."@en ;
     vann:example """
         :my-resource-id
             datacite:usesIdentifierScheme datacite:loc ;
@@ -764,7 +768,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "math genealogy"@en ;
     fabio:hasURL "https://mathgenealogy.org/"^^xsd:anyURI ;
-    rdfs:comment "Mathematics Genealogy Project identifier is an identifier for mathematicians and computer scientists at the Mathematics Genealogy Project."@en ;
+    rdfs:comment "The Mathematics Genealogy Project identifier is an identifier for mathematicians and computer scientists at the Mathematics Genealogy Project."@en ;
     vann:example """
         :gustav-dirichlet-id
             datacite:usesIdentifierScheme datacite:math-genealogy ;
@@ -799,7 +803,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "nihmsid"@en ;
     fabio:hasURL "http://nexus.od.nih.gov/all/2009/09/01/nih-public-access-update-clarifying-use-of-the-nih-manuscript-submission-id-nihmsid/"^^xsd:anyURI ;
-    rdfs:comment "The NIH Manuscript Submission Identifier is a preliminary article identifier that applies only to manuscripts deposited through the NIHMS system."@en ;
+    rdfs:comment "The NIH Manuscript Submission Identifier (NIHMSID) is a preliminary article identifier that applies only to manuscripts deposited through the NIHMS system."@en ;
     vann:example """
         :my-resource-id
             datacite:usesIdentifierScheme datacite:nihmsid ;
@@ -810,7 +814,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
 :nii a :PersonalIdentifierScheme,
         owl:NamedIndividual ;
     rdfs:label "nii"@en ;
-    rdfs:comment "National Individual Identifier scheme."@en ;
+    rdfs:comment "The National Individual Identifier (NII) is a unique number assigned to citizens, residents and visitors for tracking and verification purposes."@en ;
     vann:example """
         :shizumu-nomura-id
             datacite:usesIdentifierScheme datacite:nii ;
@@ -873,7 +877,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "opendoar" ;
     fabio:hasURL "https://opendoar.ac.uk/"^^xsd:anyURI ;
-    rdfs:comment "The Directory of Open Access Repositories (OpenDOAR) is a service that lists open access repositories, and uses numerical internal identifiers to store their record." ;
+    rdfs:comment "The Directory of Open Access Repositories (OpenDOAR) is a service that lists open access repositories, and uses numerical internal identifiers to store their record."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :openid a :PersonalIdentifierScheme,
@@ -922,7 +926,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "pmcid"@en ;
     fabio:hasURL "http://www.ncbi.nlm.nih.gov/pmc/"^^xsd:anyURI ;
-    rdfs:comment "The PubMed Central Identifier is a bibliographic identifier for the PubMed Central database."@en ;
+    rdfs:comment "The PubMed Central Identifier (PMCID) is a bibliographic identifier for the PubMed Central database."@en ;
     vann:example """
         :my-resource-id
             datacite:usesIdentifierScheme datacite:pmcid ;
@@ -934,7 +938,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "pmid"@en ;
     fabio:hasURL "http://www.ncbi.nlm.nih.gov/pubmed/"^^xsd:anyURI ;
-    rdfs:comment "The PubMed Identifier is a bibliographic identifier for the PubMed database."@en ;
+    rdfs:comment "The PubMed Identifier (PMID) is a bibliographic identifier for the PubMed database."@en ;
     vann:example """
         :my-resource-id
             datacite:usesIdentifierScheme datacite:pmid ;
@@ -946,7 +950,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "purl"@en ;
     fabio:hasURL "http://purl.org/"^^xsd:anyURI ;
-    rdfs:comment "The Persistent Uniform Resource Locator is a URL that is used to redirect to the location of a requested web resource."@en ;
+    rdfs:comment "The Persistent Uniform Resource Locator (PURL) is a URL that is used to redirect to the location of a requested web resource."@en ;
     vann:example """
         :my-resource-id
             datacite:usesIdentifierScheme datacite:purl ;
@@ -984,7 +988,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "researcherid"@en ;
     fabio:hasURL "http://www.researcherid.com/"^^xsd:anyURI ;
-    rdfs:comment "ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters."@en ;
+    rdfs:comment "The ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters."@en ;
     vann:example """
         :david-shotton-id
             datacite:usesIdentifierScheme datacite:researcherid ;
@@ -1034,7 +1038,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "rrid"@en ;
     fabio:hasURL "https://scicrunch.org/resolver"^^anyURI ;
-    rdfs:comment "The Research Resource IDentifier is a character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases."@en ;
+    rdfs:comment "The Research Resource IDentifier (RRID) is a character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases."@en ;
     vann:example """
         :my-resource-id 
             datacite:usesIdentifierScheme datacite:rrid ;
@@ -1071,7 +1075,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "sici"@en ;
     fabio:hasURL "http://en.wikipedia.org/wiki/Serial_Item_and_Contribution_Identifier"^^xsd:anyURI ;
-    rdfs:comment "The Serial Item and Contribution Identifier is a code used to uniquely identify specific volumes, articles or other identifiable parts of a serial."@en ;
+    rdfs:comment "The Serial Item and Contribution Identifier (SICI) is a code used to uniquely identify specific volumes, articles or other identifiable parts of a serial."@en ;
     vann:example """
         :my-object-id
             datacite:usesIdentifierScheme datacite:sici ;
@@ -1105,7 +1109,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "spase" ;
     fabio:hasURL "https://spase-group.org/services/"^^xsd:anyURI ;
-    rdfs:comment "The SPASE resource identifier (spase) is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group." ;
+    rdfs:comment "The SPASE resource identifier is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group." ;
     vann:example """
         :my-object-id
             datacite:usesIdentifierScheme datacite:spase ;
@@ -1154,7 +1158,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
 :upc a :ResourceIdentifierScheme,
         owl:NamedIndividual ;
     rdfs:label "upc"@en ;
-    rdfs:comment "The Universal Product Code is a unique number used to identify products and their manufacturers."@en ;
+    rdfs:comment "The Universal Product Code (UPC) is a unique number used to identify products and their manufacturers."@en ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :uri a :ResourceIdentifierScheme,
