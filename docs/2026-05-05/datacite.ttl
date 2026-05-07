@@ -8,6 +8,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -27,47 +28,32 @@ dc:title a owl:AnnotationProperty .
 <http://purl.org/spar/datacite> a owl:Ontology ;
     owl:versionIRI :2026-05-05 ;
     dc:abstract "The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF."@en ;
-    dc:contributor "Amy J. Barton",
-        "Egbert Gramsbergen",
-        "Jan Ashton",
-        "Marie-Christine Jacquemot" ,
-        "Sebastian Barzaghi" ;
-    dc:creator "David Shotton",
-        "Silvio Peroni" ;
+    dc:contributor "Amy J. Barton (https://orcid.org/0000-0002-2184-3723)",
+        "Egbert Gramsbergen (https://www.linkedin.com/in/egbertgramsbergen/)",
+        "Jan Ashton (https://www.bl.uk/people/experts/janet-ashton)",
+        "Marie-Christine Jacquemot (https://orcid.org/0000-0002-6316-1472)" ,
+        "Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)" ;
+    dc:creator "David Shotton (http://orcid.org/0000-0001-5506-523X)",
+        "Silvio Peroni (http://orcid.org/0000-0003-0530-4305)" ;
     dc:date "2022-09-15" ;
-    dcterms:created "" ;
-    dcterms:issued "" ;
+    dcterms:created "2016-01-21" ;
+    dcterms:issued "2016-01-21" ;
     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "" ;
+    dcterms:modified "2026-05-05" ;
     dc:title "The DataCite Ontology"@en ;
     dc:rights "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/)."@en ;
     vann:preferredNamespacePrefix "datacite"@en ;
     vann:preferredNamespaceUri "http://purl.org/spar/datacite"@en ;
-    schema:codeRepository "https://github.com/SPAROntologies/datacite"@en ;
-    rdfs:comment """
-    
-        The DataCite Ontology (DataCite) is an ontology that enables the metadata properties of the DataCite Metadata Schema Specification (i.e., a list of metadata properties for the accurate and consistent identification of a resource for citation and retrieval purposes) to be described in RDF.
-
-        **URL:** http://purl.org/spar/datacite
-
-        **Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)
-
-        **Contributors:** [Amy J. Barton](https://orcid.org/0000-0002-2184-3723), [Egbert Gramsbergen](https://www.linkedin.com/in/egbertgramsbergen/), [Jan Ashton](https://www.bl.uk/people/experts/janet-ashton), [Marie-Christine Jacquemot](https://orcid.org/0000-0002-6316-1472), [Sebastian Barzaghi](https://orcid.org/0000-0002-0799-1527)
-
-        **License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
-
-        **Website:** http://www.sparontologies.net/ontologies/datacite
-        
-        """@en ;
+    schema:codeRepository <https://github.com/SPAROntologies/datacite> ;
     owl:imports <http://purl.org/spar/literal> ;
     owl:priorVersion :2025-09-22 ;
     owl:versionInfo "1.3.1" ;
+    rdfs:seeAlso <http://www.sparontologies.net/ontologies/datacite> ;
+    dcterms:source <https://datacite-metadata-schema.readthedocs.io/en/4.7/> ;
     dc:description :datacite.png,
         """
-## Description
-
 The _DataCite Ontology_ (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. 
-The main intent of the DataCite Ontology is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors). To this end, Datacite uses the object property `datacite:hasIdentifier`, which has as its object a member of the class `datacite:Identifier` or of one of its sub-classes (`datacite:ResourceIdentifier`, `datacite:AgentIdentifier` or `datacite:RightsIdentifier`). 
+The main intent of the DataCite Ontology is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors). To this end, DataCite uses the object property `datacite:hasIdentifier`, which has as its object a member of the class `datacite:Identifier` or of one of its sub-classes (`datacite:ResourceIdentifier`, `datacite:AgentIdentifier` or `datacite:RightsIdentifier`). 
 In turn, `datacite:AgentIdentifier` is further sub-classed by three additional classes, i.e., `datacite:PersonalIdentifier`, `datacite:OrganizationIdentifier`, and `datacite:FunderIdentifier`. 
 The exact nature of the identifier is then defined using the second DataCite object property `datacite:usesIdentifierScheme`, which has as its object the class `datacite:IdentifierScheme` or one of its sub-classes: `datacite:ResourceIdentifierScheme`, `datacite:AgentIdentifierScheme` or `datacite:RightsIdentifierScheme`. `datacite:AgentIdentifierScheme` is further sub-classed by three additional classes, i.e., `datacite:PersonalIdentifierScheme`, `datacite:OrganizationIdentifierScheme`, and `datacite:FunderIdentifierScheme`.
 This provides a robust method for defining identifiers, since each specific identifier is defined as an individual member of its appropriate identifier scheme class. Of course, existing identifier schemes have been already defined within the ontology. For instance:
@@ -81,9 +67,11 @@ As need arises, new identifiers can be added later as new members of each class,
 The class `datacite:DescriptionType`, and the object properties `datacite:hasDescription` and `datacite:hasDescriptionType`, have also been defined in order to link an entity to another item representing an entity description of a particular type. 
 This is defined using the property `datacite:hasDescriptionType`, which must have as its object one of the members of the class `datacite:DescriptionType`, i.e., `datacite:abstract`, `datacite:methods`, `datacite:other`, `datacite:series-information` and `datacite:table-of-content`. 
 In this way, it is possible to associate written documents (e.g. journal articles or data articles) as descriptions of datasets.
-It is also possible to provide a link between a resource, such as a dataset, and the document describing its metadata by means of the _Citation Typing Ontology_ (CiTO), using the property `cito:citesAsMetadataDocument`, and the _FRBR-aligned Bibliographic Ontology_ (FaBiO), by means of the class `fabio:MetadataDocument`. In addition to these entities, the DataCite Ontology provides appropriate classes (i.e., `datacite:MetadataScheme`) and properties (i.e., `datacite:hasMetadataScheme`) to specify the particular scheme followed for creating the resource metadata exemplified in the metadata document.
 
-Finally, with the Datacite Ontology, it is possible to represent situations where a given relation between two entities needs to be qualified in some way, e.g. with a description that specifies the nature of said relation.
+It is also possible to provide a link between a resource, such as a dataset, and the document describing its metadata by means of the _Citation Typing Ontology_ (CiTO), using the property `cito:citesAsMetadataDocument`, and the _FRBR-aligned Bibliographic Ontology_ (FaBiO), by means of the class `fabio:MetadataDocument`. 
+In addition to these entities, the DataCite Ontology provides appropriate classes (i.e., `datacite:MetadataScheme`) and properties (i.e., `datacite:hasMetadataScheme`) to specify the particular scheme followed for creating the resource metadata exemplified in the metadata document.
+
+Finally, with the DataCite Ontology, it is possible to represent situations where a given relation between two entities needs to be qualified in some way, e.g. with a description that specifies the nature of said relation.
 This is provided by the class `datacite:QualifiedRelation`, which represents a certain relationship existing between two entities. 
 The qualified relation is linked with one entity (more specifically, the subject of the relation) via the object property `datacite:hasRelationSubject`, and with the other (the object of the relation) via the object property `datacite:hasRelationObject`.
 The type of relation itself is defined via the property `datacite:hasRelationCharacterization`, which links a qualified relation to its characterization made by using an object property such as `dcterms:relation`, `cito:cites`, or `frbr:isPartOf`. 
@@ -91,7 +79,7 @@ This usage involves [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-feature
 
 ## Examples of use
 
-In the following subsections, we introduce some examples to showcase how to use the Datacite Ontology. 
+In the following subsections, we introduce some examples to showcase how to use the DataCite Ontology. 
 
 The prefixes that are used in all the examples provided below are defined as follows:
 
@@ -160,7 +148,7 @@ orcid:0000-0002-7811-3617 a foaf:Person ;
 
 ### Competency Questions
 
-The Datacite Ontology can be used for answering several questions related to related to the identification, attribution, and discoverability of research products within a scholarly knowledge graph. 
+The DataCite Ontology can be used for answering several questions related to related to the identification, attribution, and discoverability of research products within a scholarly knowledge graph. 
 In the following subsections, some of them are introduced together with their respective SPARQL queries. 
 
 The prefixes that are used in all the SPARQL queries provided below are defined as follows:
@@ -532,7 +520,7 @@ How many identifiers are registered for each identifier scheme?
             datacite:hasGeneralResourceType dcmitype:Dataset .
     """ ;
     skos:scopeNote """
-The Datacite controlled list includes: 
+The DataCite controlled list includes: 
 
 - dcmitype:MovingImage;
 - fabio:Book;
@@ -586,7 +574,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
 :igsn a :ResourceIdentifierScheme ,
         owl:NamedIndividual ;
     rdfs:label "igsn"@en ;
-    fabio:hasURL "http://igsn.org/"^^anyURI ;
+    fabio:hasURL "http://igsn.org/"^^xsd:anyURI ;
     rdfs:comment "The International Generic Sample Number (IGSN) is a code that uniquely identifies samples from our natural environment and related features-of-interest."@en ;
     vann:example """
         :my-resource-id 
@@ -1037,7 +1025,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
 :rrid a :ResourceIdentifierScheme ,
         owl:NamedIndividual ;
     rdfs:label "rrid"@en ;
-    fabio:hasURL "https://scicrunch.org/resolver"^^anyURI ;
+    fabio:hasURL "https://scicrunch.org/resolver"^^xsd:anyURI ;
     rdfs:comment "The Research Resource IDentifier (RRID) is a character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases."@en ;
     vann:example """
         :my-resource-id 
@@ -1121,7 +1109,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
 :spdx a :ResourceIdentifierScheme ,
         owl:NamedIndividual ;
     rdfs:label "spdx"@en ;
-    fabio:hasURL "https://spdx.org/licenses/"^^anyURI ;
+    fabio:hasURL "https://spdx.org/licenses/"^^xsd:anyURI ;
     rdfs:comment "The SPDX License List is a list of commonly found licenses and exceptions used in free and open source and other collaborative software or documentation."@en ;
     vann:example """
         :my-resource-rights-id 
@@ -1249,7 +1237,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         owl:NamedIndividual ;
     rdfs:label "wikipedia"@en ;
     fabio:hasURL "https://en.wikipedia.org/"^^xsd:anyURI ;
-    rdfs:comment "The Wikipedia page name is a unique identifier used to refer to any entity present in a Wikipedia database."@en .
+    rdfs:comment "The Wikipedia page name is a unique identifier used to refer to any entity present in a Wikipedia database."@en ;
     vann:example """
         :my-resource-id 
             datacite:usesIdentifierScheme datacite:wikipedia ;
@@ -1542,7 +1530,7 @@ skos:Concept a owl:Class .
 
 :IdentifierScheme a owl:Class ;
     rdfs:label "identifier scheme"@en ;
-    rdfs:comment "The identifier scheme used to identify an entity such as a funding agency, a person or a resource."@en .
+    rdfs:comment "The identifier scheme used to identify an entity such as a funding agency, a person or a resource."@en ;
     vann:example """
         :my-object-id ;
             datacite:usesIdentifierScheme datacite:wikidata ;
