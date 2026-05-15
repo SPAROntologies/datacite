@@ -244,7 +244,7 @@ This version of the DataCite Ontology has been completely revised and significan
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
     <rdfs:range rdf:resource="http://purl.org/spar/datacite/Identifier"/>
-    <rdfs:comment xml:lang="en">An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource).</rdfs:comment>
+    <rdfs:comment xml:lang="en">An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource).</rdfs:comment>
     <rdfs:label xml:lang="en">has identifier</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:nodeID="N053c7b76c80044eea8dd5fbf070c9cb9">
@@ -833,7 +833,7 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
     <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.doi.org/</fabio:hasURL>
-    <rdfs:comment xml:lang="en">Digital Object Identier</rdfs:comment>
+    <rdfs:comment xml:lang="en">Digital Object Identifier</rdfs:comment>
     <rdfs:label xml:lang="en">doi</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/datacite/dnb">

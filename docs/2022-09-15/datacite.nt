@@ -34,7 +34,7 @@ _:N3b2e9f5a4bde4f88a843968fa900c04b <http://www.w3.org/2002/07/owl#onProperty> <
 <http://purl.org/spar/datacite/github> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
 <http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N153bcf6575e04436adc29fe9fe11db73 .
 <http://purl.org/spar/datacite/IdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en .
+<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource)."@en .
 _:N053c7b76c80044eea8dd5fbf070c9cb9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
 <http://purl.org/spar/datacite/research-gate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/DescriptionType> .
@@ -475,7 +475,7 @@ _:Ne884fc21a67741c7a4c9e2572ec150eb <http://www.w3.org/2002/07/owl#onProperty> _
 <http://purl.org/spar/datacite/ieee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/spar/datacite/wikidata> <http://www.w3.org/2000/01/rdf-schema#comment> "Wikidata QID, which is resolvable from the following URL: https://www.wikidata.org/wiki/<identifier>."@en .
 _:N053c7b76c80044eea8dd5fbf070c9cb9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identier"@en .
+<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identifier"@en .
 <http://purl.org/spar/datacite/openid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/spar/datacite/ror> <http://purl.org/spar/fabio/hasURL> "https://ror.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/series-information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .

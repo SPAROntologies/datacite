@@ -188,7 +188,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."
+        "@value": "An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource)."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1272,7 +1272,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Digital Object Identier."
+        "@value": "Digital Object Identifier."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [

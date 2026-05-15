@@ -26,7 +26,7 @@ _:N13942078ab8b4003b3bb2b184250a3ce <http://www.w3.org/1999/02/22-rdf-syntax-ns#
 <http://purl.org/spar/datacite/dnb> <http://purl.org/spar/fabio/hasURL> "https://d-nb.info/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#label> "sici"@en .
 <http://purl.org/spar/datacite/MetadataScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identier"@en .
+<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identifier"@en .
 <http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#comment> "GitHub username, which is resolvable from the following URL: https://github.com/<identifier>."@en .
 <http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> .
 <http://purl.org/spar/datacite/ror> <http://www.w3.org/2000/01/rdf-schema#comment> "The Research Organization Registry Community identifier, which is resolvable from the following URL: https://ror.org/<identifier>."@en .
@@ -154,7 +154,7 @@ _:N88a579319b6d4baa8458d6ce287655a9 <http://www.w3.org/2002/07/owl#allValuesFrom
 <http://purl.org/spar/datacite/ark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/spar/datacite/dblp-record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en .
+<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource)."@en .
 <http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#label> "OpenAlex ID"@en .
 <http://purl.org/spar/datacite/oclc> <http://www.w3.org/2000/01/rdf-schema#label> "oclc"@en .
 <http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#label> "has creator list"@en .

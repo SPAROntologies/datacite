@@ -29,7 +29,7 @@ _:Na33a054b79d44bfeb8cf134791b0e321 <http://www.w3.org/2002/07/owl#onProperty> _
 <http://purl.org/spar/datacite/pmcid> <http://www.w3.org/2000/01/rdf-schema#label> "pmcid"@en .
 <http://purl.org/spar/datacite/spar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en .
+<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource)."@en .
 <http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/spar/datacite/pii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
 <http://purl.org/spar/datacite/fundref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/FunderIdentifierScheme> .
@@ -111,7 +111,7 @@ _:Nd1eb6f90911d49dd9c38990d08964aba <http://www.w3.org/1999/02/22-rdf-syntax-ns#
 <http://purl.org/spar/datacite/pii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/datacite/Identifier> .
 <http://purl.org/spar/datacite/social-security-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identier."@en .
+<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identifier."@en .
 <http://purl.org/spar/datacite/table-of-content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#label> "fundref"@en .
 _:N58a58f03b07441bf830e4962d062f4cd <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
