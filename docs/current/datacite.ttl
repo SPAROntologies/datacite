@@ -422,7 +422,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         :my-resource
             datacite:hasIdentifier :my-resource-pri .
     """ ;
-                                              rdfs:comment "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en ;
+                                              rdfs:comment "An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource)."@en ;
                                               rdfs:isDefinedBy <http://purl.org/spar/datacite/> ;
                                               rdfs:label "has identifier"@en .
 
@@ -761,7 +761,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                                           rdfs:comment "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record."@en ;
                                                           rdfs:isDefinedBy <http://purl.org/spar/datacite/> ;
                                                           rdfs:label "primary resource identifier"@en ;
-                                                          <http://www.w3.org/2004/02/skos/core#scopeNote> "This class uses a datacite:IdentiferScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme." .
+                                                          <http://www.w3.org/2004/02/skos/core#scopeNote> "This class uses a datacite:IdentifierScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme." .
 
 
 ###  http://purl.org/spar/datacite/QualifiedRelation
@@ -1050,7 +1050,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
             datacite:usesIdentifierScheme datacite:doi ;
             literal:hasLiteralValue \"10.1007/978-3-031-77847-6_11\" .
     """ ;
-                                    rdfs:comment "The Digital Object Identier (DOI) is a unique identifier assigned to identify digital objects."@en ;
+                                    rdfs:comment "The Digital Object Identifier (DOI) is a unique identifier assigned to identify digital objects."@en ;
                                     rdfs:isDefinedBy <http://purl.org/spar/datacite/> ;
                                     rdfs:label "doi"@en ;
                                     <http://www.w3.org/2004/02/skos/core#scopeNote> "A DOI is resolvable from the following URL: http://www.doi.org/<identifier>."@en .

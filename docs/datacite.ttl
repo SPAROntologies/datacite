@@ -1292,14 +1292,14 @@ co:List a owl:Class .
             literal:hasLiteralValue \"10.1371/journal.pntd.0000228.g002.x001\" ;
             datacite:usesIdentifierScheme datacite:doi .
     """ ;
-    skos:scopeNote "This class uses a datacite:IdentiferScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme." ;
+    skos:scopeNote "This class uses a datacite:IdentifierScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme." ;
     rdfs:isDefinedBy <http://purl.org/spar/datacite/> .
 
 :doi a :ResourceIdentifierScheme,
         owl:NamedIndividual ;
     rdfs:label "doi"@en ;
     fabio:hasURL "http://www.doi.org/"^^xsd:anyURI ;
-    rdfs:comment "The Digital Object Identier (DOI) is a unique identifier assigned to identify digital objects."@en ;
+    rdfs:comment "The Digital Object Identifier (DOI) is a unique identifier assigned to identify digital objects."@en ;
     vann:example """
         :my-resource-id 
             datacite:usesIdentifierScheme datacite:doi ;
@@ -1466,7 +1466,7 @@ skos:Concept a owl:Class .
 :hasIdentifier a owl:InverseFunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "has identifier"@en ;
-    rdfs:comment "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en ;
+    rdfs:comment "An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource)."@en ;
     rdfs:range :Identifier ;
     vann:example """
         :my-resource

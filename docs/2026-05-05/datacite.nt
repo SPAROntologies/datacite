@@ -171,7 +171,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
 <http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/Identifier> .
 <http://purl.org/spar/datacite/hasIdentifier> <http://purl.org/vocab/vann/example> "\n        :my-resource\n            datacite:hasIdentifier :my-resource-pri .\n    " .
-<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en .
+<http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource)."@en .
 <http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier"@en .
 # 
@@ -426,7 +426,7 @@ _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record."@en .
 <http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "primary resource identifier"@en .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2004/02/skos/core#scopeNote> "This class uses a datacite:IdentiferScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme." .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2004/02/skos/core#scopeNote> "This class uses a datacite:IdentifierScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme." .
 # 
 # http://purl.org/spar/datacite/QualifiedRelation
 <http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -632,7 +632,7 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/spar/datacite/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
 <http://purl.org/spar/datacite/doi> <http://purl.org/spar/fabio/hasURL> "http://www.doi.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/doi> <http://purl.org/vocab/vann/example> "\n        :my-resource-id \n            datacite:usesIdentifierScheme datacite:doi ;\n            literal:hasLiteralValue \"10.1007/978-3-031-77847-6_11\" .\n    " .
-<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "The Digital Object Identier (DOI) is a unique identifier assigned to identify digital objects."@en .
+<http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "The Digital Object Identifier (DOI) is a unique identifier assigned to identify digital objects."@en .
 <http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/doi> <http://www.w3.org/2000/01/rdf-schema#label> "doi"@en .
 <http://purl.org/spar/datacite/doi> <http://www.w3.org/2004/02/skos/core#scopeNote> "A DOI is resolvable from the following URL: http://www.doi.org/<identifier>."@en .

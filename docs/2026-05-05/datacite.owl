@@ -548,7 +548,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         :my-resource
             datacite:hasIdentifier :my-resource-pri .
     </vann:example>
-        <rdfs:comment xml:lang="en">An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource).</rdfs:comment>
+        <rdfs:comment xml:lang="en">An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
         <rdfs:label xml:lang="en">has identifier</rdfs:label>
     </owl:ObjectProperty>
@@ -1028,7 +1028,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
         <rdfs:comment xml:lang="en">An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
         <rdfs:label xml:lang="en">primary resource identifier</rdfs:label>
-        <skos:scopeNote>This class uses a datacite:IdentiferScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme.</skos:scopeNote>
+        <skos:scopeNote>This class uses a datacite:IdentifierScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme.</skos:scopeNote>
     </owl:Class>
     
 
@@ -1412,7 +1412,7 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
             datacite:usesIdentifierScheme datacite:doi ;
             literal:hasLiteralValue &quot;10.1007/978-3-031-77847-6_11&quot; .
     </vann:example>
-        <rdfs:comment xml:lang="en">The Digital Object Identier (DOI) is a unique identifier assigned to identify digital objects.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Digital Object Identifier (DOI) is a unique identifier assigned to identify digital objects.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
         <rdfs:label xml:lang="en">doi</rdfs:label>
         <skos:scopeNote xml:lang="en">A DOI is resolvable from the following URL: http://www.doi.org/&lt;identifier&gt;.</skos:scopeNote>

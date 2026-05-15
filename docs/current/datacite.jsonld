@@ -746,7 +746,7 @@
     "@id" : "_:genid23"
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
-    "@value" : "This class uses a datacite:IdentiferScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme."
+    "@value" : "This class uses a datacite:IdentifierScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme."
   } ]
 }, {
   "@id" : "http://purl.org/spar/datacite/QualifiedRelation",
@@ -1170,7 +1170,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The Digital Object Identier (DOI) is a unique identifier assigned to identify digital objects."
+    "@value" : "The Digital Object Identifier (DOI) is a unique identifier assigned to identify digital objects."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/spar/datacite/"
@@ -1530,7 +1530,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."
+    "@value" : "An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/spar/datacite/"

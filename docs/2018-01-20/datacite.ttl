@@ -382,7 +382,7 @@ owl:versionInfo a owl:AnnotationProperty .
         owl:NamedIndividual ;
     rdfs:label "doi"@en ;
     fabio:hasURL "http://www.doi.org/"^^xsd:anyURI ;
-    rdfs:comment "Digital Object Identier."@en .
+    rdfs:comment "Digital Object Identifier."@en .
 
 :hasDescription a owl:ObjectProperty ;
     rdfs:label "has description"@en ;
@@ -502,7 +502,7 @@ skos:Concept a owl:Class .
 :hasIdentifier a owl:InverseFunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "has identifier"@en ;
-    rdfs:comment "An object property specifying a datacite:Identifier that provides a unique identifer for the entity (either a funder, a person or a resource)."@en ;
+    rdfs:comment "An object property specifying a datacite:Identifier that provides a unique identifier for the entity (either a funder, a person or a resource)."@en ;
     rdfs:range :Identifier .
 
 :DescriptionType a owl:Class ;
