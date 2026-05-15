@@ -178,7 +178,6 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://purl.org/spar/datacite/hasRelationCharacterization
 <http://purl.org/spar/datacite/hasRelationCharacterization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/spar/datacite/hasRelationCharacterization> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor> .
-<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/spar/datacite/hasRelationCharacterization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/datacite/QualifiedRelation> .
 <http://purl.org/spar/datacite/hasRelationCharacterization> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n            datacite:hasRelationCharacterization cito:isCitedBy .\n    " .
 <http://purl.org/spar/datacite/hasRelationCharacterization> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property defining the specific nature or type of the reified relation."@en .
@@ -223,6 +222,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/spar/datacite/usesMetadataScheme> <http://www.w3.org/2000/01/rdf-schema#label> "uses metadata scheme"@en .
 # 
 # http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor
+<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://www.w3.org/2002/07/owl#topObjectProperty
 <http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -453,7 +453,6 @@ _:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datac
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation> .
-<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://purl.org/spar/datacite/QualifiedRelation> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n            datacite:hasRelationSubject :my-resource ;\n            datacite:hasRelationObject :my-article ;\n            datacite:hasRelationCharacterization cito:isCitedBy .\n    " .
 <http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "A class representing a reified relation between two resources, allowing the assignment of a specific role or type to the connection."@en .
@@ -508,6 +507,7 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.essepuntato.it/2010/06/literalreification/Literal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation
+<http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

@@ -97,14 +97,13 @@ $(function(){
 <dd><a href="http://www.sparontologies.net/ontologies/datacite">http://www.sparontologies.net/ontologies/datacite</a></dd>
 
 <dt>Download serialization:</dt><dd><span><a href="datacite.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="datacite.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="datacite.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="datacite.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
-</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd>David Shotton, Silvio Peroni. The DataCite Ontology. Revision: 1.3.1. Retrieved from: http://purl.org/spar/datacite/2026-05-05</dd>
 <dt>Vocabulary maintained at:</dt>
 <dd><a href="https://github.com/SPAROntologies/datacite">https://github.com/SPAROntologies/datacite</a></dd>
 </dl>
 
-<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+<hr/>
 </div>
 <div class="status">
 <div>
@@ -128,15 +127,15 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>co</b></td><td>&lt;http://purl.org/co/&gt;</td></tr>
 <tr><td><b>datacite</b></td><td>&lt;http://purl.org/spar/datacite/&gt;</td></tr>
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
-<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
 <tr><td><b>fabio</b></td><td>&lt;http://purl.org/spar/fabio/&gt;</td></tr>
-<tr><td><b>literal</b></td><td>&lt;http://www.essepuntato.it/2010/06/literalreification/&gt;</td></tr>
+<tr><td><b>literalreification</b></td><td>&lt;http://www.essepuntato.it/2010/06/literalreification/&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
 <tr><td><b>schema</b></td><td>&lt;https://schema.org/&gt;</td></tr>
-<tr><td><b>sit</b></td><td>&lt;http://www.ontologydesignpatterns.org/cp/owl/situation.owl#&gt;</td></tr>
+<tr><td><b>situation</b></td><td>&lt;http://www.ontologydesignpatterns.org/cp/owl/situation.owl#&gt;</td></tr>
 <tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
@@ -504,7 +503,7 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#/zbmath" title="http://purl.org/spar/datacite/zbmath">zbmath</a>
    </li>
-</ul><iframe src="webvowl/index.html"></iframe> 
+</ul>
 </div>
   
 
@@ -4594,8 +4593,8 @@ This section provides details for each class and property defined by The DataCit
 </li>
 <li><a href="#/Identifier">http://purl.org/spar/datacite/Identifier</a>
 <ul>
-<li>Added: rdfs:comment "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."@en</li>
 <li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
+<li>Added: rdfs:comment "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."@en</li>
 <li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "An identifier belongs to a particular scheme, such as those specified by individuals of the class datacite:IdentifierScheme."@en</li>
 </ul>
 <ul>
@@ -4777,11 +4776,11 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not
 <ul>
 <li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "A type of description is defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract (datacite:abstract), SeriesInformation (datacite:series-information), TableOfContent (datacite:table-of-content) and Other (datacite:other)."@en</li>
 <li>Added: rdfs:comment "An object property permitting specification of the type of description used to describe a resource."@en</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
 <li>Added: <http://purl.org/vocab/vann/example> "
         :my-resource-additional-info
             datacite:hasDescriptionType datacite:abstract .
     "^^xsd:string</li>
+<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
 </ul>
 <ul>
 <li>Deleted: rdfs:comment "An object property permitting specification of the type of description used to describe a resource, defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract, SeriesInformation, TableOfContent and Other."@en</li>
