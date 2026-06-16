@@ -208,7 +208,13 @@ How many identifiers are registered for each identifier scheme?
                                  rdfs:seeAlso <http://www.sparontologies.net/ontologies/datacite> ;
                                  owl:priorVersion <http://purl.org/spar/datacite/2025-09-22> ;
                                  owl:versionInfo "1.3.1" ;
-                                 <https://schema.org/codeRepository> <https://github.com/SPAROntologies/datacite> .
+                                 <https://schema.org/codeRepository> <https://github.com/SPAROntologies/datacite> ;
+                                 <https://w3id.org/mod#status> "Published version" ;
+                                 <https://w3id.org/widoco/vocab#introduction> """
+The _DataCite Ontology_ (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. 
+
+The main intent of the DataCite Ontology is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors).                                                     
+                                 """ .
 
 #################################################################
 #    Annotation properties
@@ -296,6 +302,14 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 ###  https://schema.org/codeRepository
 <https://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#status
+<https://w3id.org/mod#status> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#introduction
+<https://w3id.org/widoco/vocab#introduction> rdf:type owl:AnnotationProperty .
 
 
 #################################################################

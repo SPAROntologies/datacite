@@ -96,7 +96,7 @@ $(function(){
 <dt>See also:</dt>
 <dd><a href="http://www.sparontologies.net/ontologies/datacite">http://www.sparontologies.net/ontologies/datacite</a></dd>
 
-<dt>Download serialization:</dt><dd><span><a href="datacite.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="datacite.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="datacite.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="datacite.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
+<dt>Download serialization:</dt><dd><span><a href="datacite.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="datacite.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="datacite.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="datacite.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd>David Shotton, Silvio Peroni. The DataCite Ontology. Revision: 1.3.1. Retrieved from: http://purl.org/spar/datacite/2026-05-05</dd>
 <dt>Vocabulary maintained at:</dt>
@@ -107,7 +107,7 @@ $(function(){
 </div>
 <div class="status">
 <div>
-<span>Ontology Specification Draft</span>
+<span>Published version</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
 The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF.</span>
@@ -117,7 +117,10 @@ The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+The _DataCite Ontology_ (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. 
+
+The main intent of the DataCite Ontology is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors).                                                     
+                                 </span>
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
@@ -129,6 +132,7 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
 <tr><td><b>fabio</b></td><td>&lt;http://purl.org/spar/fabio/&gt;</td></tr>
 <tr><td><b>literalreification</b></td><td>&lt;http://www.essepuntato.it/2010/06/literalreification/&gt;</td></tr>
+<tr><td><b>mod</b></td><td>&lt;https://w3id.org/mod#&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
@@ -137,6 +141,7 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
 <tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>vocab</b></td><td>&lt;https://w3id.org/widoco/vocab#&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
 </tbody>
@@ -207,7 +212,8 @@ This ontology has the following classes and properties.</span>
       <a href="#/QualifiedRelation" title="http://purl.org/spar/datacite/QualifiedRelation">qualified relation</a>
    </li>
    <li>
-      <a href="#/ResourceIdentifier" title="http://purl.org/spar/datacite/ResourceIdentifier">resource identifier</a>
+      <a href="#/ResourceIdentifier"
+         title="http://purl.org/spar/datacite/ResourceIdentifier">resource identifier</a>
    </li>
    <li>
       <a href="#/ResourceIdentifierScheme"
@@ -4488,425 +4494,6 @@ This section provides details for each class and property defined by The DataCit
 <!--CHANGELOG SECTION-->
    <div id="changelog"><div id="changelog">
 <h2 id="changes" class="list">Changes from last version</h2>
-<h3 id="changeClass" class="list">Classes</h3>
-<details><summary><u>Modified classes</u></summary>
-<ul><li><a href="#/AgentIdentifier">http://purl.org/spar/datacite/AgentIdentifier</a>
-<ul>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :essepuntato a datacite:AgentIdentifier ;
-            literal:hasLiteralValue \"https://github.com/essepuntato\" .
-    "^^xsd:string</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "An agent identifier belongs to a particular identifier scheme, specified by an individual within the class datacite:AgentIdentifierScheme (or any of its subclasses)."@en</li>
-<li>Added: rdfs:comment "An identifier that uniquely identities an individual agent."@en</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An identifier that uniquely identities an individual agent, belonging to a particular identifier scheme specified by an individual within the class datacite:AgentIdentifierScheme (or any of its subclasses)."@en</li>
-</ul>
-</li>
-<li><a href="#/AgentIdentifierScheme">http://purl.org/spar/datacite/AgentIdentifierScheme</a>
-<ul>
-<li>Added: rdfs:comment "The identifier scheme used to identify an agent."@en</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "Individual schemes are defines as members of its sub-classes."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :silvio-peroni-id
-            datacite:usesIdentifierScheme datacite:github ;
-            literal:hasLiteralValue \"essepuntato\" .
-    "^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "The identifier scheme used to identify an agent. Individual schemes are defines as members of its sub-classes."@en</li>
-</ul>
-</li>
-<li><a href="#/AlternateResourceIdentifier">http://purl.org/spar/datacite/AlternateResourceIdentifier</a>
-<ul>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "An alternate resource identifier belongs to a particular scheme, such as ISBN, specified by an individual that is a member of the class datacite:ResourceIdentifierScheme."@en</li>
-<li>Added: rdfs:comment "An identifier other than a DOI that is used as an alternative identifier to uniquely identify a resource that is the subject of the DataCite metadata record."@en</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource
-            datacite:hasIdentifier :my-resource-alt .
-        :my-resource-alt a datacite:AlternateResourceIdentifier ;
-            literal:hasLiteralValue \"19381256\" .
-    "^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An identifier other than a DOI that is used as an alternative identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record, belonging to a particular scheme such as ISBN specified by an individual that is a member of the class datacite:ResourceIdentifierScheme. "@en</li>
-</ul>
-</li>
-<li><a href="#/DescriptionType">http://purl.org/spar/datacite/DescriptionType</a>
-<ul>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "
-         Individual members of the class conform to the five values allowed in the DataCite controlled list, namely: 
-
-        * datacite:abstract;
-        * datacite:methods;
-        * datacite:series-information;
-        * datacite:table-of-content;
-        * datacite:other.
-    "@en</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource-additional-info
-            datacite:hasDescriptionType datacite:abstract .
-    "^^xsd:string</li>
-<li>Added: rdfs:comment "This class permits classification of the type of description given to a resource described by the DataCite Metadata schema."@en</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "This class permits classification of the type of description given to a resource described by the DataCite Metadata schema.  Individual members of the class conform to the five values allowed in the DataCite controlled list, namely: 
-
-* abstract;
-* methods;
-* series-information;
-* table-of-content;
-* other."@en</li>
-</ul>
-</li>
-<li><a href="#/FunderIdentifier">http://purl.org/spar/datacite/FunderIdentifier</a>
-<ul>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "A funder identifier belongs to a particular scheme, such as FundRef, specified by an individual within the class datacite:FunderIdentifierScheme."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-funder-id a datacite:FunderIdentifier ;
-            literal:hasLiteralValue \"\" .
-    "^^xsd:string</li>
-<li>Added: rdfs:comment "An identifier that uniquely identities a funding agency."@en</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An identifier that uniquely identities a funding agency, belonging to a particular scheme such as FundRef specified by an individual within the class datacite:FunderIdentifierScheme."@en</li>
-</ul>
-</li>
-<li><a href="#/FunderIdentifierScheme">http://purl.org/spar/datacite/FunderIdentifierScheme</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "Individual schemes are defines as members of this class. At present, the only individual of this class is datacite:fundref."@en</li>
-<li>Added: rdfs:comment "The identifier scheme used to identify a funding agency."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-funder-id 
-            datacite:usesIdentifierScheme datacite:fundref .
-    "^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "The identifier scheme used to identify a funding agency. Individual schemes are defines as members of this class. At present, the only individual of this class is datacite:fundref."@en</li>
-</ul>
-</li>
-<li><a href="#/Identifier">http://purl.org/spar/datacite/Identifier</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: rdfs:comment "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."@en</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "An identifier belongs to a particular scheme, such as those specified by individuals of the class datacite:IdentifierScheme."@en</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme."@en</li>
-</ul>
-</li>
-<li><a href="#/IdentifierScheme">http://purl.org/spar/datacite/IdentifierScheme</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: rdfs:comment "The identifier scheme used to identify an entity such as a funding agency, a person or a resource."@en</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "Individual schemes are defines as members of this class."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-object-id ;
-            datacite:usesIdentifierScheme datacite:wikidata ;
-            literal:hasLiteralValue \"Q113333457\" .
-    "^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "The identifier scheme used to identify an entity such as a funding agency, a person or a resource. Individual schemes are defines as members of this class."@en</li>
-</ul>
-</li>
-<li><a href="#/MetadataScheme">http://purl.org/spar/datacite/MetadataScheme</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource
-            cito:citesAsMetadataDocument :my-resource-metadata .
-        :my-resource-metadata a fabio:MetadataDocument ;
-            datacite:usesMetadataScheme datacite:spar .
-    "^^xsd:string</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "Neither a class for metadata documents nor a property linking a resource to its metadata document are explicitly defined in this ontology. However, we recommend to use the class fabio:MetadataDocument (from http://purl.org/spar/fabio) and cito:citesAsMetadataDocument (from http://purl.org/spar/cito) for providing such descriptions. In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not included in this ontology as well) for defining the actual URL of a certain metadata scheme."@en</li>
-<li>Added: rdfs:comment "The class that describe metadata schemes used for creating a metadata document referring to a certain resource."@en</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "The class that describe metadata schemes used for creating a metadata document referring to a certain resource. 
-
-Neither a class for metadata documents nor a property linking a resource to its metadata document are not explicitly defined in this ontology. However, we recommend to use the class fabio:MetadataDocument (from http://purl.org/spar/fabio) and cito:citesAsMetadataDocument (from http://purl.org/spar/cito) for providing such descriptions. An example of use of such entities is shown as follows:
-
-    :my-resource
-        cito:citesAsMetadataDocument :my-resource-metadata .
-    :my-resource-metadata a fabio:MetadataDocument ;
-        datacite:usesMetadataScheme datacite:spar .
-
-In addition, if needed, it is possible to use the dataproperty fabio:hasURL (not included in this ontology as well) for defining the actual URL of a certain metadata scheme."@en</li>
-</ul>
-</li>
-<li><a href="#/OrganizationIdentifier">http://purl.org/spar/datacite/OrganizationIdentifier</a>
-<ul>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-organization-id a datacite:OrganizationIdentifier ;
-            literal:hasLiteralValue \"00wb4mk85\" .
-    "^^xsd:string</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "An organization identifier belongs to a particular identifier scheme, such as ISNI, specified by an individual within the class datacite:OrganizationIdentifierScheme."@en</li>
-<li>Added: rdfs:comment "An identifier that uniquely identities an individual organization."@en</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An identifier that uniquely identities an individual organization, belonging to a particular identifier scheme such as ISNI specified by an individual within the class datacite:OrganizationIdentifierScheme."@en</li>
-</ul>
-</li>
-<li><a href="#/OrganizationIdentifierScheme">http://purl.org/spar/datacite/OrganizationIdentifierScheme</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: rdfs:comment "The identifier scheme used to identify an organization."@en</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "Individual schemes are defines as members of this class."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-organization-id a datacite:OrganizationIdentifier ;
-            datacite:usesIdentifierScheme datacite:ror .
-    "^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "The identifier scheme used to identify an organization. Individual schemes are defines as members of this class."@en</li>
-</ul>
-</li>
-<li><a href="#/PersonalIdentifier">http://purl.org/spar/datacite/PersonalIdentifier</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: rdfs:comment "An identifier that uniquely identifies an individual person."@en</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "A personal identifier belongs to a particular identifier scheme, such as ORCID, specified by an individual within the class datacite:PersonalIdentifierScheme."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :david-shotton
-            datacite:hasIdentifier :david-shotton-id .
-        :david-shotton-id a datacite:PersonalIdentifier ;
-            literal:hasLiteralValue \"0000-0001-5506-523X\" .
-    "^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An identifier that uniquely identities an individual person, belonging to a particular identifier scheme such as ORCID specified by an individual within the class datacite:PersonalIdentifierScheme."@en</li>
-</ul>
-</li>
-<li><a href="#/PersonalIdentifierScheme">http://purl.org/spar/datacite/PersonalIdentifierScheme</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "Individual schemes are defines as members of this class."@en</li>
-<li>Added: rdfs:comment "The identifier scheme used to identify a person."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :david-shotton-id
-            datacite:usesIdentifierScheme datacite:orcid .
-    "^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "The identifier scheme used to identify a person.  Individual schemes are defines as members of this class."@en</li>
-</ul>
-</li>
-<li><a href="#/PrimaryResourceIdentifier">http://purl.org/spar/datacite/PrimaryResourceIdentifier</a>
-<ul>
-<li>Added: rdfs:comment "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource-id a datacite:PrimaryResourceIdentifier ;
-            literal:hasLiteralValue \"10.1371/journal.pntd.0000228.g002.x001\" ;
-            datacite:usesIdentifierScheme datacite:doi .
-    "^^xsd:string</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "This class uses a datacite:IdentifierScheme that is restricted to datacite:doi, an individual in the datacite:ResourceIdentifierScheme."^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record.  Within the DataCite metadata record, a Digital Object Identifier is the only permitted primary resource identifier scheme, specified by the individual datacite:doi, that is a member of the class datacite:ResourceIdentifierScheme."@en</li>
-</ul>
-</li>
-<li><a href="#/ResourceIdentifier">http://purl.org/spar/datacite/ResourceIdentifier</a>
-<ul>
-<li>Added: rdfs:comment "An identifier that is used to uniquely identify a resource."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource-id a datacite:ResourceIdentifier ;
-            literal:hasLiteralValue \"10.3457/1098.a45\" .
-    "^^xsd:string</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An identifier that is used to uniquely identifies a resource."@en</li>
-</ul>
-</li>
-<li><a href="#/ResourceIdentifierScheme">http://purl.org/spar/datacite/ResourceIdentifierScheme</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "Individual schemes are defines as members of this class. For DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier (datacite:doi)."@en</li>
-<li>Added: rdfs:comment "The identifier scheme used to identify a resource."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource-pri
-            datacite:usesIdentifierScheme datacite:doi .
-    "^^xsd:string</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "The identifier scheme used to identify a resource.  Individual schemes are defines as members of this class.  For DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier."@en</li>
-</ul>
-</li>
-</ul></details><details><summary><u>Added classes</u></summary>
-<ul><li><a href="#/QualifiedRelation">http://purl.org/spar/datacite/QualifiedRelation</a>
-<ul>
-<li>Added: EquivalentClasses EquivalentClasses(&lt;http://purl.org/spar/datacite/QualifiedRelation&gt; ObjectIntersectionOf(&lt;http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation&gt; ObjectExactCardinality(1 &lt;http://purl.org/spar/datacite/hasRelationCharacterization&gt; owl:Thing) ObjectExactCardinality(1 &lt;http://purl.org/spar/datacite/hasRelationObject&gt; owl:Thing) ObjectExactCardinality(1 &lt;http://purl.org/spar/datacite/hasRelationSubject&gt; owl:Thing)))</li>
-</ul>
-</li>
-<li><a href="#/RightsIdentifier">http://purl.org/spar/datacite/RightsIdentifier</a>
-<ul>
-<li>Added: SubClass of http://purl.org/spar/datacite/Identifier</li>
-</ul>
-</li>
-<li><a href="#/RightsIdentifierScheme">http://purl.org/spar/datacite/RightsIdentifierScheme</a>
-<ul>
-<li>Added: SubClass of http://purl.org/spar/datacite/IdentifierScheme</li>
-</ul>
-</li>
-<li><a href="#http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation</a>
-</li>
-</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
-<details><summary><u>Modified object properties</u></summary>
-<ul><li><a href="#/hasDescription">http://purl.org/spar/datacite/hasDescription</a>
-<ul>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource
-            datacite:hasDescription :my-resource-additional-info .
-        :my-resource-additional-info
-            literal:hasLiteralValue \"A textual description\" .
-    "^^xsd:string</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-</ul>
-</li>
-<li><a href="#/hasDescriptionType">http://purl.org/spar/datacite/hasDescriptionType</a>
-<ul>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "A type of description is defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract (datacite:abstract), SeriesInformation (datacite:series-information), TableOfContent (datacite:table-of-content) and Other (datacite:other)."@en</li>
-<li>Added: rdfs:comment "An object property permitting specification of the type of description used to describe a resource."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource-additional-info
-            datacite:hasDescriptionType datacite:abstract .
-    "^^xsd:string</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An object property permitting specification of the type of description used to describe a resource, defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract, SeriesInformation, TableOfContent and Other."@en</li>
-</ul>
-</li>
-<li><a href="#/hasGeneralResourceType">http://purl.org/spar/datacite/hasGeneralResourceType</a>
-<ul>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "
-The DataCite controlled list includes: 
-
-- dcmitype:MovingImage;
-- fabio:Book;
-- fabio:BookChapter;
-- dcmitype:Collection;
-- fabio:LaboratoryNotebook;
-- fabio:ConferencePaper;
-- fabio:ConferenceProceedings;
-- fabio:ResourcePaper;
-- dcmitype:Dataset;
-- fabio:Thesis;
-- dcmitype:Event;
-- dcmitype:StillImage;
-- dcmitype:InteractiveResource;
-- fabio:Journal;
-- fabio:JournalArticle;
-- fabio:Model;
-- fabio:DataManagementPlan;
-- dcmitype:PhysicalObject;
-- fabio:ConferencePoster;
-- fabio:Preprint;
-- fabio:Presentation;
-- fabio:ProjectPlan;
-- fabio:ReportDocument;
-- dcmitype:Service;
-- dcmitype:Software;
-- dcmitype:Sound;
-- fabio:TechnicalStandard;
-- fabio:Report;
-- dcmitype:Text;
-- fabio:Workflow;
-- frbr:Endeavour.
-
-All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms (dcmitype: http://purl.org/dc/dcmitype/), FaBiO (fabio: http://purl.org/spar/fabio/), and FRBR (frbr: http://purl.org/vocab/frbr/core#).
-    "@en</li>
-<li>Added: rdfs:comment "An object property permitting specification of the general type of a resource, defined from the DataCite controlled list."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource
-            datacite:hasGeneralResourceType dcmitype:Dataset .
-    "^^xsd:string</li>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An object property permitting specification of the general type of a resource, defined from the DataCite controlled list, namely: 
-
-* dcmitype:MovingImage;
-* dcmitype:Collection;
-* dcmitype:Dataset;
-* dcmitype:Event;
-* dcmitype:dcmitype:StillImage;
-* dcmitype:InteractiveResource;
-* fabio:Model;
-* dcmitype:PhysicalObject;
-* dcmitype:Service;
-* dcmitype:Software;
-* dcmitype:Sound;
-* dcmitype:Text;
-* fabio:Workflow;
-* frbr:Endeavour.
-
-All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms (dcmitype: http://purl.org/dc/dcmitype/), FaBiO (fabio: http://purl.org/spar/fabio/), and FRBR (frbr: http://purl.org/vocab/frbr/core#)."@en</li>
-</ul>
-</li>
-<li><a href="#/hasIdentifier">http://purl.org/spar/datacite/hasIdentifier</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource
-            datacite:hasIdentifier :my-resource-pri .
-    "^^xsd:string</li>
-</ul>
-</li>
-<li><a href="#/usesIdentifierScheme">http://purl.org/spar/datacite/usesIdentifierScheme</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://www.w3.org/2004/02/skos/core#scopeNote> "An identifier scheme is defined as an individual of the class datacite:IdentifierScheme."@en</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :my-resource-id
-            datacite:usesIdentifierScheme datacite:doi .
-    "^^xsd:string</li>
-<li>Added: rdfs:comment "An object property permitting specification of the identifier scheme used to provide the identifier for an entity (either a funder, a person or a resource)."@en</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:comment "An object property permitting specification of the identifier scheme used to provide the identifier for an entity – either a funder, a person or a resource – defined as an individual of the class datacite:IdentifierScheme."@en</li>
-</ul>
-</li>
-<li><a href="#/usesMetadataScheme">http://purl.org/spar/datacite/usesMetadataScheme</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://purl.org/spar/datacite/</li>
-<li>Added: <http://purl.org/vocab/vann/example> "
-        :related-document a fabio:MetadataDocument ;
-            datacite:usesMetadataScheme datacite:spar .
-    "^^xsd:string</li>
-</ul>
-</li>
-</ul></details><details><summary><u>Added object properties</u></summary>
-<ul><li><a href="#/hasRelationCharacterization">http://purl.org/spar/datacite/hasRelationCharacterization</a>
-<ul>
-<li>Added: domain http://purl.org/spar/datacite/QualifiedRelation</li>
-<li>Added: SubProperty of http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor</li>
-</ul>
-</li>
-<li><a href="#/hasRelationObject">http://purl.org/spar/datacite/hasRelationObject</a>
-<ul>
-<li>Added: SubProperty of http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor</li>
-<li>Added: domain http://purl.org/spar/datacite/QualifiedRelation</li>
-</ul>
-</li>
-<li><a href="#/hasRelationSubject">http://purl.org/spar/datacite/hasRelationSubject</a>
-<ul>
-<li>Added: domain http://purl.org/spar/datacite/QualifiedRelation</li>
-<li>Added: SubProperty of http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor</li>
-</ul>
-</li>
-<li><a href="#http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor">http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor</a>
-</li>
-</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
 </div>
 </div>
 <div id="acknowledgments">

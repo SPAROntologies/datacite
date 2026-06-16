@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://purl.org/spar/datacite#"
      xml:base="http://purl.org/spar/datacite"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mod="https://w3id.org/mod#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -11,6 +12,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:fabio="http://purl.org/spar/fabio/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vocab="https://w3id.org/widoco/vocab#"
      xmlns:owlapi="http://www.semanticweb.org/owlapi#"
      xmlns:schema="https://schema.org/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
@@ -217,6 +219,12 @@ How many identifiers are registered for each identifier scheme?
         <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2025-09-22"/>
         <owl:versionInfo>1.3.1</owl:versionInfo>
         <schema:codeRepository rdf:resource="https://github.com/SPAROntologies/datacite"/>
+        <mod:status>Published version</mod:status>
+        <vocab:introduction>
+The _DataCite Ontology_ (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. 
+
+The main intent of the DataCite Ontology is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors).                                                     
+                                 </vocab:introduction>
     </owl:Ontology>
     
 
@@ -377,6 +385,20 @@ How many identifiers are registered for each identifier scheme?
 
 
     <owl:AnnotationProperty rdf:about="https://schema.org/codeRepository"/>
+    
+
+
+    <!-- https://w3id.org/mod#status -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#status"/>
+    
+
+
+    <!-- https://w3id.org/widoco/vocab#introduction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/widoco/vocab#introduction"/>
     
 
 
