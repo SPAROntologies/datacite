@@ -388,6 +388,12 @@
   } ],
   "https://schema.org/codeRepository" : [ {
     "@id" : "https://github.com/SPAROntologies/datacite"
+  } ],
+  "https://w3id.org/mod#status" : [ {
+    "@value" : "Published version"
+  } ],
+  "https://w3id.org/widoco/vocab#introduction" : [ {
+    "@value" : "\nThe _DataCite Ontology_ (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. \n\nThe main intent of the DataCite Ontology is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors).                                                     \n                                 "
   } ]
 }, {
   "@id" : "http://purl.org/spar/datacite/AgentIdentifier",
@@ -3104,5 +3110,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/codeRepository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mod#status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/widoco/vocab#introduction",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]
