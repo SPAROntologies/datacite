@@ -202,13 +202,17 @@ How many identifiers are registered for each identifier scheme?
                                  <http://purl.org/dc/terms/issued> "2016-01-21" ;
                                  <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
                                  <http://purl.org/dc/terms/modified> "2026-05-05" ;
+                                 <http://purl.org/dc/terms/publisher> <https://ror.org/00wb4mk85> ;
                                  <http://purl.org/dc/terms/source> <https://datacite-metadata-schema.readthedocs.io/en/4.7/> ;
                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "datacite"@en ;
                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/spar/datacite"@en ;
                                  rdfs:seeAlso <http://www.sparontologies.net/ontologies/datacite> ;
+                                 owl:backwardCompatibleWith <http://purl.org/spar/datacite/2025-09-22> ;
                                  owl:priorVersion <http://purl.org/spar/datacite/2025-09-22> ;
                                  owl:versionInfo "1.3.1" ;
+                                 <http://xmlns.com/foaf/0.1/logo> <http://purl.org/spar/datacite/spar.png> ;
                                  <https://schema.org/codeRepository> <https://github.com/SPAROntologies/datacite> ;
+                                 <https://schema.org/includedInDataCatalog> <https://fairsharing.org/> ;
                                  <https://w3id.org/mod#status> "Published version" ;
                                  <https://w3id.org/widoco/vocab#introduction> """
 The _DataCite Ontology_ (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. 
@@ -264,6 +268,10 @@ The main intent of the DataCite Ontology is to provide a flexible mechanism to d
 <http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/source
 <http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
 
@@ -300,8 +308,16 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
 
 
+###  http://xmlns.com/foaf/0.1/logo
+<http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
+
+
 ###  https://schema.org/codeRepository
 <https://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/mod#status
