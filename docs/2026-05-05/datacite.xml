@@ -7,6 +7,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
@@ -212,13 +213,17 @@ How many identifiers are registered for each identifier scheme?
         <terms:issued>2016-01-21</terms:issued>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified>2026-05-05</terms:modified>
+        <terms:publisher rdf:resource="https://ror.org/00wb4mk85"/>
         <terms:source rdf:resource="https://datacite-metadata-schema.readthedocs.io/en/4.7/"/>
         <vann:preferredNamespacePrefix xml:lang="en">datacite</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri xml:lang="en">http://purl.org/spar/datacite</vann:preferredNamespaceUri>
         <rdfs:seeAlso rdf:resource="http://www.sparontologies.net/ontologies/datacite"/>
+        <owl:backwardCompatibleWith rdf:resource="http://purl.org/spar/datacite/2025-09-22"/>
         <owl:priorVersion rdf:resource="http://purl.org/spar/datacite/2025-09-22"/>
         <owl:versionInfo>1.3.1</owl:versionInfo>
+        <foaf:logo rdf:resource="http://purl.org/spar/datacite/spar.png"/>
         <schema:codeRepository rdf:resource="https://github.com/SPAROntologies/datacite"/>
+        <schema:includedInDataCatalog rdf:resource="https://fairsharing.org/"/>
         <mod:status>Published version</mod:status>
         <vocab:introduction>
 The _DataCite Ontology_ (or simply DataCite) is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. 
@@ -318,6 +323,13 @@ The main intent of the DataCite Ontology is to provide a flexible mechanism to d
     
 
 
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
     <!-- http://purl.org/dc/terms/source -->
 
 
@@ -381,10 +393,24 @@ The main intent of the DataCite Ontology is to provide a flexible mechanism to d
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/logo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
+    
+
+
     <!-- https://schema.org/codeRepository -->
 
 
     <owl:AnnotationProperty rdf:about="https://schema.org/codeRepository"/>
+    
+
+
+    <!-- https://schema.org/includedInDataCatalog -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/includedInDataCatalog"/>
     
 
 
