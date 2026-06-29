@@ -64,9 +64,8 @@ $(function(){
 <body>
 <div class="container">
 <div class="head">
-<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<div style="float:right">language <a href="doco.html"><b>en</b></a> </div>
 <h1>The DataCite Ontology</h1>
-<img src="http://purl.org/spar/datacite/spar.png" width="50/">
 <h2>Release: 2016-01-21</h2>
 
 
@@ -101,7 +100,9 @@ $(function(){
 
 <dt>Download serialization:</dt><dd><span><a href="datacite.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="datacite.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="datacite.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="datacite.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>David Shotton, Silvio Peroni. The DataCite Ontology. Revision: 1.3.1. Retrieved from: http://purl.org/spar/datacite/2026-05-05</dd>
+<dd>David Shotton, Silvio Peroni. The DataCite Ontology. Revision: 1.3.1. http://purl.org/spar/datacite.</dd>
+<dt>DOI:</dt>
+<dd><a href="http://dx.doi.org/In progress"><img src ="https://img.shields.io/badge/DOI-In progress-blue.svg" alt="In progress" /></a></dd>
 <dt>Compatible with:</dt>
 <dd><a href="http://purl.org/spar/datacite/2025-09-22">http://purl.org/spar/datacite/2025-09-22</a></dd>
 <dt>Vocabulary maintained at:</dt>
@@ -132,6 +133,7 @@ The main intent of the DataCite Ontology is to provide a flexible mechanism to d
 <table>
 <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
 <tbody>
+<tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo/&gt;</td></tr>
 <tr><td><b>co</b></td><td>&lt;http://purl.org/co/&gt;</td></tr>
 <tr><td><b>datacite</b></td><td>&lt;http://purl.org/spar/datacite/&gt;</td></tr>
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
@@ -260,6 +262,13 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#/hasRelationSubject" title="http://purl.org/spar/datacite/hasRelationSubject">has relation subject</a>
+   </li>
+   <li>
+      <a href="#/isRelationObjectOf" title="http://purl.org/spar/datacite/isRelationObjectOf">is relation object of</a>
+   </li>
+   <li>
+      <a href="#/isRelationSubjectOf"
+         title="http://purl.org/spar/datacite/isRelationSubjectOf">is relation subject of</a>
    </li>
    <li>
       <a href="#/usesIdentifierScheme"
@@ -1310,6 +1319,12 @@ This section provides details for each class and property defined by The DataCit
    <dd>
     <a href="#/hasRelationCharacterization" title="http://purl.org/spar/datacite/hasRelationCharacterization">has relation characterization</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasRelationObject" title="http://purl.org/spar/datacite/hasRelationObject">has relation object</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasRelationSubject" title="http://purl.org/spar/datacite/hasRelationSubject">has relation subject</a> <sup class="type-op" title="object property">op</sup>
    </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/isRelationObjectOf" title="http://purl.org/spar/datacite/isRelationObjectOf">is relation object of</a> <sup class="type-op" title="object property">op</sup>, <a href="#/isRelationSubjectOf" title="http://purl.org/spar/datacite/isRelationSubjectOf">is relation subject of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="/ResourceIdentifier">
@@ -1482,6 +1497,8 @@ This section provides details for each class and property defined by The DataCit
   <li><a href="#/hasRelationCharacterization" title="http://purl.org/spar/datacite/hasRelationCharacterization">has relation characterization</a></li>
   <li><a href="#/hasRelationObject" title="http://purl.org/spar/datacite/hasRelationObject">has relation object</a></li>
   <li><a href="#/hasRelationSubject" title="http://purl.org/spar/datacite/hasRelationSubject">has relation subject</a></li>
+  <li><a href="#/isRelationObjectOf" title="http://purl.org/spar/datacite/isRelationObjectOf">is relation object of</a></li>
+  <li><a href="#/isRelationSubjectOf" title="http://purl.org/spar/datacite/isRelationSubjectOf">is relation subject of</a></li>
   <li><a href="#/usesIdentifierScheme" title="http://purl.org/spar/datacite/usesIdentifierScheme">uses identifier scheme</a></li>
   <li><a href="#/usesMetadataScheme" title="http://purl.org/spar/datacite/usesMetadataScheme">uses metadata scheme</a></li>
  </ul>
@@ -1760,6 +1777,12 @@ This section provides details for each class and property defined by The DataCit
     <dd>
      <a href="#/QualifiedRelation" title="http://purl.org/spar/datacite/QualifiedRelation">qualified relation</a> <sup class="type-c" title="class">c</sup>
     </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/isRelationObjectOf" title="http://purl.org/spar/datacite/isRelationObjectOf">is relation object of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
    </dl>
   </div>
  </div>
@@ -1800,6 +1823,94 @@ This section provides details for each class and property defined by The DataCit
     </dt>
     <dd>
      <a href="#/QualifiedRelation" title="http://purl.org/spar/datacite/QualifiedRelation">qualified relation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/isRelationSubjectOf" title="http://purl.org/spar/datacite/isRelationSubjectOf">is relation subject of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/isRelationObjectOf">
+  <h3>is relation object of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spar/datacite/isRelationObjectOf</p>
+  <div class="comment">
+   <span class="markdown">An object property linking a resource that is the object in a relation to such relation in its reified form.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/spar/datacite/">http://purl.org/spar/datacite/</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>        :my-article 
+            datacite:isRelationObjectOf :relation-dataset-article .
+    </pre>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/QualifiedRelation" title="http://purl.org/spar/datacite/QualifiedRelation">qualified relation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/hasRelationObject" title="http://purl.org/spar/datacite/hasRelationObject">has relation object</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/isRelationSubjectOf">
+  <h3>is relation subject of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/spar/datacite/isRelationSubjectOf</p>
+  <div class="comment">
+   <span class="markdown">An object property linking a resource that is the subject in a relation to such relation in its reified form.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/spar/datacite/">http://purl.org/spar/datacite/</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>        :my-resource 
+            datacite:isRelationSubjectOf :relation-dataset-article .
+    </pre>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/QualifiedRelation" title="http://purl.org/spar/datacite/QualifiedRelation">qualified relation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/hasRelationSubject" title="http://purl.org/spar/datacite/hasRelationSubject">has relation subject</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -4500,6 +4611,32 @@ This section provides details for each class and property defined by The DataCit
 <!--CHANGELOG SECTION-->
    <div id="changelog"><div id="changelog">
 <h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#/hasRelationObject">http://purl.org/spar/datacite/hasRelationObject</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://purl.org/spar/datacite/isRelationObjectOf&gt; &lt;http://purl.org/spar/datacite/hasRelationObject&gt;)</li>
+</ul>
+</li>
+<li><a href="#/hasRelationSubject">http://purl.org/spar/datacite/hasRelationSubject</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://purl.org/spar/datacite/isRelationSubjectOf&gt; &lt;http://purl.org/spar/datacite/hasRelationSubject&gt;)</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#/isRelationObjectOf">http://purl.org/spar/datacite/isRelationObjectOf</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://purl.org/spar/datacite/isRelationObjectOf&gt; &lt;http://purl.org/spar/datacite/hasRelationObject&gt;)</li>
+<li>Added: Range http://purl.org/spar/datacite/QualifiedRelation</li>
+</ul>
+</li>
+<li><a href="#/isRelationSubjectOf">http://purl.org/spar/datacite/isRelationSubjectOf</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://purl.org/spar/datacite/isRelationSubjectOf&gt; &lt;http://purl.org/spar/datacite/hasRelationSubject&gt;)</li>
+<li>Added: Range http://purl.org/spar/datacite/QualifiedRelation</li>
+</ul>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
 </div>
 </div>
 <div id="acknowledgments">
