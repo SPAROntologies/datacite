@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -9,7 +10,7 @@ wgs1:lat a owl:DatatypeProperty ;
     rdfs:label "has latitude"@en ;
     vann:example """
         :inner-point a geo:Geometry ;
-                wgs:lat '20' .
+                wgs:lat "20" .
         """ ;
     vaem:rationale """
 This is used to express the WGS84 latitude of a geographical feature in decimal degrees.
@@ -18,5 +19,5 @@ This is used to express the WGS84 latitude of a geographical feature in decimal 
     rdfs:domain wgs1:SpatialThing ;
     rdfs:isDefinedBy wgs1: ;
     rdfs:range rdfs:Literal ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

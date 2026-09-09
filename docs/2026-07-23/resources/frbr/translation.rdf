@@ -9,24 +9,24 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#translation">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <vaem:rationale xml:lang="en">
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('HasTranslation') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
-        </vaem:rationale>
-    <rdfs:comment xml:lang="en">
-An expression translated in another one.
-        </rdfs:comment>
     <rdfs:label xml:lang="en">has translation</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="http://purl.org/vocab/frbr/core#translationOf"/>
-    <skos:scopeNote xml:lang="en">
-It allows to refer to a literal translation, in which the intent is to render the intellectual content of the previous expression as accurately as possible.
-        </skos:scopeNote>
     <vann:example>
         :relation-dataset-article a datacite:QualifiedRelation ;
                 datacite:hasRelationCharacterization frbr:translation .
         </vann:example>
+    <vaem:rationale xml:lang="en">
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("HasTranslation") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+        </vaem:rationale>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">
+An expression translated in another one.
+        </rdfs:comment>
+    <skos:note xml:lang="en">
+It allows to refer to a literal translation, in which the intent is to render the intellectual content of the previous expression as accurately as possible.
+        </skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
+    <owl:inverseOf rdf:resource="http://purl.org/vocab/frbr/core#translationOf"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
 </rdf:RDF>

@@ -6,6 +6,7 @@
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -18,7 +19,7 @@ datacite:hasGeneralResourceType a owl:ObjectProperty ;
                 datacite:hasGeneralResourceType dcmitype:Dataset .
     """ ;
     vaem:rationale """
-All DataCite-required general resource type terms are defined by classes in the [Dublin Core Type Vocabulary](http://purl.org/dc/dcmitype/), in [FaBiO](http://purl.org/spar/fabio) and in the [FAIR* Reviews Ontology](http://purl.org/spar/fr), with the exception of the more general `frbr:Endeavour` (mapped to 'Other').
+All DataCite-required general resource type terms are defined by classes in the [Dublin Core Type Vocabulary](http://purl.org/dc/dcmitype/), in [FaBiO](http://purl.org/spar/fabio) and in the [FAIR* Reviews Ontology](http://purl.org/spar/fr), with the exception of the more general `frbr:Endeavour` (mapped to "Other").
 
 The following list specifies ontology classes for all the allowed general resource types in the DataCite Controlled List, with the relevant DataCite general type given alphabetically in parentheses:
 
@@ -55,15 +56,15 @@ The following list specifies ontology classes for all the allowed general resour
 - `fabio:Workflow` (Workflow);
 - `frbr:Endeavour` (Other).
 
-The value 'Award' is modeled differently, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.
+The value "Award" is modeled differently, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.
 
-The value 'Instrument' is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.
+The value "Instrument" is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.
         """@en ;
     rdfs:comment "The general type of a resource, defined from the DataCite controlled list."@en ;
     rdfs:domain [ a owl:Restriction ;
             owl:onProperty datacite:hasIdentifier ;
             owl:someValuesFrom datacite:ResourceIdentifier ] ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+    rdfs:isDefinedBy datacite: ;
     rdfs:range skos:Concept ;
     rdfs:seeAlso dcmitype:Collection,
         dcmitype:Dataset,
@@ -98,5 +99,5 @@ The value 'Instrument' is modeled differently, using an instance of `schema:Acti
         fr:ReviewVersion,
         frbr:Endeavour ;
     rdfs:subPropertyOf dcterms:type ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

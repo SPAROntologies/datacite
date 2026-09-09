@@ -4,6 +4,6 @@
 
 sit:Situation a owl:Class ;
     rdfs:label "situation"@en ;
-    rdfs:comment "A view on a set of entities. It can be seen as a 'relational context', reifying a relation."@en ;
+    rdfs:comment "A view on a set of entities. It can be seen as a \"relational context\", reifying a relation."@en ;
     rdfs:isDefinedBy sit: .
 

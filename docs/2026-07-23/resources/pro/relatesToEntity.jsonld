@@ -28,7 +28,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/pro"
+        "@id": "http://purl.org/spar/pro/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -39,13 +39,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "http://purl.org/spar/tvc/withinContext"
+        "@id": "http://www.essepuntato.it/2012/04/tvc/withinContext"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

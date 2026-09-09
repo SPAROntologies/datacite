@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/cstr> <http://purl.org/vocab/vann/example> "\n        :my-resource-id \n                datacite:usesIdentifierScheme datacite:cstr ;\n                literal:hasLiteralValue \"31253.11.sciencedb.j00001.00123\" .\n        " .
-<http://purl.org/spar/datacite/cstr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/cstr> <http://purl.org/spar/fabio/hasURL> "https://www.cstr.cn/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/cstr> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/cstr> <http://www.w3.org/2000/01/rdf-schema#label> "cstr"@en .
 <http://purl.org/spar/datacite/cstr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/cstr> <http://www.w3.org/2004/02/skos/core#scopeNote> "A Common Science and Technology Resources Identifier is resolvable from the following URL: https://www.cstr.cn/<identifier>."@en .
-<http://purl.org/spar/datacite/cstr> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 <http://purl.org/spar/datacite/cstr> <http://www.w3.org/2000/01/rdf-schema#comment> "The Common Science and Technology Resources (CSTR) Identifier is an identifier based on the Chinese National Standard GB/T 32843—2016 “Science and technology resource identification”, providing a unique identification service for scientific data, papers, scientific institutions, researchers, scientific instruments, patents and other scientific and technological resources."@en .
+<http://purl.org/spar/datacite/cstr> <http://www.w3.org/2004/02/skos/core#note> "A Common Science and Technology Resources Identifier is resolvable from the following URL: https://www.cstr.cn/<identifier>."@en .
+<http://purl.org/spar/datacite/cstr> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/cstr> <http://purl.org/vocab/vann/example> "\n        :my-resource-id \n                datacite:usesIdentifierScheme datacite:cstr ;\n                literal:hasLiteralValue \"31253.11.sciencedb.j00001.00123\" .\n        " .
+<http://purl.org/spar/datacite/cstr> <http://purl.org/spar/fabio/hasURL> "https://www.cstr.cn/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/cstr> <http://www.w3.org/2000/01/rdf-schema#label> "cstr"@en .
+<http://purl.org/spar/datacite/cstr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/cstr> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

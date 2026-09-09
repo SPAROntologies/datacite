@@ -3,11 +3,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://purl.org/spar/tvc/hasValue">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="http://purl.org/spar/tvc/ValueInTime"/>
-    <rdfs:label xml:lang="en">has value</rdfs:label>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/hasValue">
+    <rdfs:range rdf:resource="http://www.essepuntato.it/2012/04/tvc/ValueInTime"/>
     <rdfs:comment xml:lang="en">An entity (e.g., a person) connected to a particular value-in-time situation.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/tvc"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/tvc/"/>
+    <rdfs:label xml:lang="en">has value</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

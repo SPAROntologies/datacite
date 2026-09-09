@@ -2,8 +2,8 @@
   {
     "@id": "http://purl.org/vocab/frbr/core#partOf",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+      "http://www.w3.org/2002/07/owl#TransitiveProperty",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://purl.org/vocab/vann/example": [
       {
@@ -13,7 +13,7 @@
     "http://www.linkedmodel.org/schema/vaem#rationale": [
       {
         "@language": "en",
-        "@value": "\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('IsPublishedIn') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "
+        "@value": "\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation (\"IsPublishedIn\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -35,8 +35,7 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

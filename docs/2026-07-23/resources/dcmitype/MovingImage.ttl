@@ -1,6 +1,7 @@
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -13,13 +14,13 @@ dcmitype:MovingImage a owl:Class ;
                 datacite:hasGeneralResourceType dcmitype:MovingImage .
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given general resource type ('Audiovisual').
+This is used as a controlled term to specify a given general resource type ("Audiovisual").
         """@en ;
     rdfs:comment "A series of visual representations imparting an impression of motion when shown in succession."@en ;
-    rdfs:isDefinedBy <http://purl.org/dc/dcmitype> ;
+    rdfs:isDefinedBy dcmitype: ;
     rdfs:subClassOf dcmitype:Image ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 Examples include animations, movies, television programs, videos, zoetropes, or visual output from a simulation. 
 Instances of the type Moving Image must also be describable as instances of the broader type Image.        
         """@en .

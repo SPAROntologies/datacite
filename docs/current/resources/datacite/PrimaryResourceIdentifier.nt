@@ -1,12 +1,12 @@
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "primary resource identifier"@en .
 <http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasIdentifier :my-resource-id .\n\n        :my-resource-id a datacite:PrimaryResourceIdentifier ;\n                literal:hasLiteralValue \"10.1371/journal.pntd.0000228.g002.x001\" ;\n                datacite:usesIdentifierScheme datacite:doi .\n        " .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3ae03b620cb34e859c211b82ae43b76ab3 .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3ae03b620cb34e859c211b82ae43b76ab3 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/spar/datacite/doi> .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/ResourceIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3ae03b620cb34e859c211b82ae43b76ab3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 <http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent primary identifiers associated with resources.\n\nThis class uses a `datacite:IdentifierScheme` that is restricted to `datacite:doi`, an individual in the `datacite:ResourceIdentifierScheme`.\n        "@en .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n16082fa6811145e08dfaeb8890637028b3 .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/ResourceIdentifier> .
+_:n16082fa6811145e08dfaeb8890637028b3 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/spar/datacite/doi> .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n16082fa6811145e08dfaeb8890637028b3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "primary resource identifier"@en .
+_:n16082fa6811145e08dfaeb8890637028b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record."@en .
-<http://purl.org/spar/datacite/PrimaryResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .

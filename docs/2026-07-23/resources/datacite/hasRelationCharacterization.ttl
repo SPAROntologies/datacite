@@ -4,6 +4,7 @@
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
@@ -65,7 +66,7 @@ It should be linked through the `datacite:hasIdentifier` property, and neither `
         """@en ;
     rdfs:comment "The specific nature or type of the reified relation."@en ;
     rdfs:domain datacite:QualifiedRelation ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+    rdfs:isDefinedBy datacite: ;
     rdfs:seeAlso dcterms:hasPart,
         dcterms:hasVersion,
         dcterms:isPartOf,
@@ -105,8 +106,8 @@ It should be linked through the `datacite:hasIdentifier` property, and neither `
         frbr:translation,
         frbr:translationOf ;
     rdfs:subPropertyOf sit:isSettingFor ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 This property uses as range an existing property via [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), according to which it becomes possible to use an object property as the object of an OWL assertion. 
 In such cases, the object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class `owl:Thing`.
         """@en .

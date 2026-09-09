@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -16,6 +17,6 @@ datacite:handle a datacite:ResourceIdentifierScheme,
                 literal:hasLiteralValue "20.1000/100" .
         """ ;
     rdfs:comment "The Handle System is a distributed computing technology that provides unique, persistent identifiers (handles) for digital resources, allowing them to be located over time regardless of URL changes."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
 

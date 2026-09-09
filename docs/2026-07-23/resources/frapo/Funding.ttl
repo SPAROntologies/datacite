@@ -5,5 +5,5 @@
 frapo:Funding a owl:Class ;
     rdfs:label "funding"@en ;
     rdfs:comment "An amount of money available to finance some project or activity."@en ;
-    rdfs:isDefinedBy <http://purl.org/cerif/frapo> .
+    rdfs:isDefinedBy frapo: .
 

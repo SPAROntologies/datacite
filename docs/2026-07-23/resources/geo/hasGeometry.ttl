@@ -1,6 +1,7 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -12,7 +13,7 @@ geo:hasGeometry a owl:ObjectProperty ;
                 geo:hasGeometry :my-dataset-location-point .
         
         :my-dataset-location-point a sf:Point ;
-                geo:asWKT 'POINT(20 45)'^^geo:wktLiteral .
+                geo:asWKT "POINT(20 45)"^^geo:wktLiteral .
         """ ;
     vaem:rationale """
 This is used to link a spatial entity to its geolocation point, which can be expressed in terms of longitude and latitude.
@@ -22,7 +23,7 @@ The actual value of the point can be defined by means of the property geo:asWKT,
         """@en ;
     rdfs:comment "A spatial representation for a given feature."@en ;
     rdfs:domain geo:Feature ;
-    rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+    rdfs:isDefinedBy geo: ;
     rdfs:range geo:Geometry ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

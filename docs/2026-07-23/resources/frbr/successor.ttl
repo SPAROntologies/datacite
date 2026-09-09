@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -14,7 +15,7 @@ frbr:successor a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:successor .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('IsContinuedBy') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsContinuedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 An expression work/expression having another one as successor.        
@@ -26,8 +27,8 @@ An expression work/expression having another one as successor.
             owl:unionOf ( frbr:Expression frbr:Work ) ] ;
     rdfs:subPropertyOf frbr:relatedEndeavour ;
     owl:inverseOf frbr:successorOf ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 The successor type of relationship involves a kind of linear progression of content from one work/expression to the other. 
 In some cases, the content of the successor may be closely connected to the content of the preceding work, which would result in a work that is referential. 
 In others, such as with loosely connected parts of a trilogy, the successor will be autonomous. 

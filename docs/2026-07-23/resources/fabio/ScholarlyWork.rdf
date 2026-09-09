@@ -4,10 +4,10 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/fabio/ScholarlyWork">
-    <rdfs:comment xml:lang="en">A work that reports scholarly activity on a particular topic, either published in written form, or delivered orally at a meeting.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Work"/>
     <rdfs:label xml:lang="en">scholarly work</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
+    <rdfs:comment xml:lang="en">A work that reports scholarly activity on a particular topic, either published in written form, or delivered orally at a meeting.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

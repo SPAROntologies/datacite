@@ -4,11 +4,11 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/pro/isHeldBy">
-    <rdfs:domain rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
     <rdfs:comment xml:lang="en">The agent holding a role in time.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pro"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pro/"/>
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
     <rdfs:label xml:lang="en">is role held by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>

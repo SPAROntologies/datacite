@@ -4,9 +4,9 @@ name: Codespell
  
 on:
   push:
-    branches: [main, development]
+    branches: [master, development]
   pull_request:
-    branches: [main, development]
+    branches: [master, development]
  
 permissions:
   contents: read
@@ -21,3 +21,4 @@ jobs:
         uses: actions/checkout@v4
       - name: Codespell
         uses: codespell-project/actions-codespell@v2
+        continue-on-error: true

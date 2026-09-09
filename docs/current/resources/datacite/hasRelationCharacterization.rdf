@@ -8,49 +8,49 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/hasRelationCharacterization">
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/describes"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCitedAsDataSourceBy"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/citesAsMetadataDocument"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/documents"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#revisionOf"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/replaces"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/hasPart"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/cites"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/citesAsDataSource"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#successorOf"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#arrangementOf"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCitedForInformationBy"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/hasVersion"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/compiles"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCitedAsMetadataDocumentBy"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/reviews"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/citesForInformation"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#arrangement"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/compiles"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/providesDataFor"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#supplementOf"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/isReplacedBy"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isDescribedBy"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCitedAsMetadataDocumentBy"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#translationOf"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/isRequiredBy"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/requires"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#partOf"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCompiledBy"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#revisionOf"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/usesDataFrom"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/documents"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#translation"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/hasVersion"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#successor"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#successorOf"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/citesAsMetadataDocument"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/hasPart"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/isPartOf"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#supplement"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#revision"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/replaces"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isDocumentedBy"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#supplementOf"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/isRequiredBy"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#translationOf"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCitedForInformationBy"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isReviewedBy"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/cites"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/providesDataFor"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/isReplacedBy"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#revision"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#supplement"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCompiledBy"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/relation"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isCitedAsDataSourceBy"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/citesAsDataSource"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/describes"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/reviews"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://purl.org/spar/datacite/QualifiedRelation"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/usesDataFrom"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/requires"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#successor"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/cito/isDescribedBy"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#translation"/>
     <rdfs:label xml:lang="en">has relation characterization</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
     <vaem:rationale xml:lang="en">
 All DataCite-required relation type terms can be specified by object properties that exist within the following ontologies: [CiTO](http://purl.org/spar/cito), [DCTerms](http://purl.org/dc/terms), [FRBR](http://purl.org/vocab/frbr/core#) and [PRISM](http://prismstandard.org/namespaces/basic/2.0/). 
 The following list specifies all the allowed values but one (i.e., “IsIdenticalTo”) for the DataCite Controlled List of relation types (given within parentheses) and provides ontology object properties for each term: 
@@ -98,15 +98,15 @@ The value “IsIdenticalTo” has a different semantics from the above object pr
 It is used to specify that the related identifier is actually another, non-primary, identifier for the first resource under consideration. 
 It should be linked through the `datacite:hasIdentifier` property, and neither `dcterms:relation` nor any of the other above ones should be specified.
         </vaem:rationale>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:comment xml:lang="en">The specific nature or type of the reified relation.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/datacite/QualifiedRelation"/>
+    <skos:note xml:lang="en">
+This property uses as range an existing property via [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), according to which it becomes possible to use an object property as the object of an OWL assertion. 
+In such cases, the object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class `owl:Thing`.
+        </skos:note>
     <vann:example>
         :relation-dataset-article a datacite:QualifiedRelation ;
                 datacite:hasRelationCharacterization cito:isCitedBy .
         </vann:example>
-    <skos:scopeNote xml:lang="en">
-This property uses as range an existing property via [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), according to which it becomes possible to use an object property as the object of an OWL assertion. 
-In such cases, the object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class `owl:Thing`.
-        </skos:scopeNote>
+    <rdfs:comment xml:lang="en">The specific nature or type of the reified relation.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

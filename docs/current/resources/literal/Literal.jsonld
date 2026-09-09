@@ -6,7 +6,7 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-dataset\n                literal:hasLiteral :my-dataset-date .\n\n        :my-dataset-date a literal:Literal ;\n                literal:hasLiteralValue '2012-07-04'^^xsd:date ;\n                dcterms:type dcterms:date .\n        "
+        "@value": "\n        :my-dataset\n                literal:hasLiteral :my-dataset-date .\n\n        :my-dataset-date a literal:Literal ;\n                literal:hasLiteralValue \"2012-07-04\"^^xsd:date ;\n                dcterms:type dcterms:date .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://www.essepuntato.it/2010/06/literalreification"
+        "@id": "http://purl.org/spar/literal/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -34,16 +34,15 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab25"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b25"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
         "@value": "\nThe literal value it represents is specified through the property `literal:hasLiteralValue`. \nEach individual of this class must always have a specified value.        \n        "
@@ -51,7 +50,7 @@
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab25",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b25",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

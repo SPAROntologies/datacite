@@ -6,13 +6,13 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :related-item\n                fabio:hasSequenceIdentifier '3' .\n        "
+        "@value": "\n        :related-item\n                fabio:hasSequenceIdentifier \"3\" .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
       {
         "@language": "en",
-        "@value": "\nThis is used to express the year a resource was published or issued in.\n\nThe type of number identifier can be expressed by specifying the class of the resource: for example, whether the related resource is a 'Book' (`fabio:Book`), a 'Chapter' (`fabio:Chapter`), a 'Report' (`fabio:ReportDocument`) or 'Other' (`frbr:Endeavour`).\n        "
+        "@value": "\nThis is used to express the year a resource was published or issued in.\n\nThe type of number identifier can be expressed by specifying the class of the resource: for example, whether the related resource is a \"Book\" (`fabio:Book`), a \"Chapter\" (`fabio:Chapter`), a \"Report\" (`fabio:ReportDocument`) or \"Other\" (`frbr:Endeavour`).\n        "
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/fabio"
+        "@id": "http://purl.org/spar/fabio/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -39,8 +39,7 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

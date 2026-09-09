@@ -7,17 +7,17 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/fundref">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.crossref.org/fundref/index.html</fabio:hasURL>
     <rdf:type rdf:resource="http://purl.org/spar/datacite/FunderIdentifierScheme"/>
-    <rdfs:comment xml:lang="en">The FundRef identifier is a unique code assigned by Fundref, a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research.</rdfs:comment>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <vann:example>
         :my-funder-id
                 datacite:usesIdentifierScheme datacite:fundref ;
                 literal:hasLiteralValue "501100000831" .
         </vann:example>
-    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.crossref.org/fundref/index.html</fabio:hasURL>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">The FundRef identifier is a unique code assigned by Fundref, a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research.</rdfs:comment>
     <rdfs:label xml:lang="en">fundref</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
   </rdf:Description>
 </rdf:RDF>

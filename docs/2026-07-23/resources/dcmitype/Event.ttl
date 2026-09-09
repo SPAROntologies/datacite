@@ -1,6 +1,7 @@
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -13,12 +14,12 @@ dcmitype:Event a owl:Class ;
                 datacite:hasGeneralResourceType dcmitype:Event .
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given general resource type ('Event').        
+This is used as a controlled term to specify a given general resource type ("Event").        
         """@en ;
     rdfs:comment "A non-persistent, time-based occurrence."@en ;
-    rdfs:isDefinedBy <http://purl.org/dc/dcmitype> ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    rdfs:isDefinedBy dcmitype: ;
+    vs:term_status reg:statusStable ;
+    skos:note """
 Metadata for an event provides descriptive information that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event. Examples include an exhibition, webcast, conference, workshop, open day, performance, battle, trial, wedding, tea party, conflagration.
         """@en .
 

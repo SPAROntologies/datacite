@@ -6,7 +6,7 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :related-item\n                prism:volume '1' . \n        "
+        "@value": "\n        :related-item\n            prism:volume \"1\" . \n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
@@ -39,11 +39,10 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
         "@value": "\nProvided for basic bibliographic citations. The content should not contain “Vol.” or other abbreviations for “Volume”; it should only be the alphanumeric volume identifier. \nThe Number portion of the issue identification is specified in the prism:number element.\n        "

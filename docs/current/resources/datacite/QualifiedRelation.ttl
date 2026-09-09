@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -20,7 +21,7 @@ datacite:QualifiedRelation a owl:Class ;
 This is used to represent qualified relations between two resources, which can be described using various properties (e.g., `dcterms:description`).
         """@en ;
     rdfs:comment "A class representing a reified relation between two resources, allowing the assignment of a specific role or type to the relationship."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+    rdfs:isDefinedBy datacite: ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( sit:Situation [ a owl:Restriction ;
                         owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -29,5 +30,5 @@ This is used to represent qualified relations between two resources, which can b
                         owl:onProperty datacite:hasRelationObject ] [ a owl:Restriction ;
                         owl:cardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onProperty datacite:hasRelationSubject ] ) ] ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

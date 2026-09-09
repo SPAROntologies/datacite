@@ -1,6 +1,7 @@
 @prefix datacite: <http://purl.org/spar/datacite/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
@@ -13,6 +14,6 @@ datacite:jst a datacite:PersonalIdentifierScheme,
                 literal:hasLiteralValue "200901000000000000" .
         """ ;
     rdfs:comment "The Japanese Science and Technology Agency (JST) identifier is a unique code assigned to scientific research products by the Japan Science and Technology Agency."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
 

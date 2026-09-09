@@ -1,6 +1,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -17,5 +18,5 @@ For example, an agent related to some resource can be specified by means of the 
         """@en ;
     rdfs:comment "An agent (eg. person, group, software or physical artifact)."@en ;
     rdfs:isDefinedBy foaf: ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

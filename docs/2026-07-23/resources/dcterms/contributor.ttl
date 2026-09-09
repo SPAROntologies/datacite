@@ -2,6 +2,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -22,7 +23,7 @@ However, the subclasses of `foaf:Agent` can be used if there are other data that
 This property should be accompanied by specific role descriptors if a particular type has been specified for the contributor by using the `pro:RoleInTime` ontological pattern.
         """@en ;
     rdfs:comment "An entity responsible for making contributions to the resource."@en ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms> ;
+    rdfs:isDefinedBy dcterms: ;
     rdfs:range foaf:Agent ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

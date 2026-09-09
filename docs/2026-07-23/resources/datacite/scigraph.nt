@@ -1,8 +1,8 @@
-<http://purl.org/spar/datacite/scigraph> <http://purl.org/spar/fabio/hasURL> "https://scigraph.springernature.com/explorer/datasets/data_at_a_glance/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2000/01/rdf-schema#label> "SciGraph ID"@en .
-<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 <http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2000/01/rdf-schema#comment> "The SciGraph ID is an unique identifier used for referring to entities in the Springer Nature SciGraph dataset."@en .
-<http://purl.org/spar/datacite/scigraph> <http://purl.org/vocab/vann/example> "\n        :my-object-id\n                datacite:usesIdentifierScheme datacite:scigraph ;\n                literal:hasLiteralValue \"013217540103.39\" .\n        " .
+<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2000/01/rdf-schema#label> "SciGraph ID"@en .
+<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/spar/datacite/scigraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/scigraph> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/scigraph> <http://purl.org/spar/fabio/hasURL> "https://scigraph.springernature.com/explorer/datasets/data_at_a_glance/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/scigraph> <http://purl.org/vocab/vann/example> "\n        :my-object-id\n                datacite:usesIdentifierScheme datacite:scigraph ;\n                literal:hasLiteralValue \"013217540103.39\" .\n        " .

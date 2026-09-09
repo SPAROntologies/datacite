@@ -7,18 +7,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/ean13">
+    <rdfs:label xml:lang="en">ean13</rdfs:label>
     <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/EAN13"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.gs1.org/</fabio:hasURL>
+    <rdfs:comment xml:lang="en">The International Article Number is a unique 13-digit barcode standard used worldwide to identify retail products.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vann:example>
         :my-resource-id
                 datacite:usesIdentifierScheme datacite:ean13 ;
                 literal:hasLiteralValue "4003994155486" .
         </vann:example>
-    <rdfs:comment xml:lang="en">The International Article Number is a unique 13-digit barcode standard used worldwide to identify retail products.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
-    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.gs1.org/</fabio:hasURL>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
-    <rdfs:label xml:lang="en">ean13</rdfs:label>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
   </rdf:Description>
 </rdf:RDF>

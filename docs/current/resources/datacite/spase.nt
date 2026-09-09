@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#comment> "The SPASE resource identifier is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group." .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/2004/02/skos/core#scopeNote> "Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://<authority><path>."@en .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#label> "spase" .
-<http://purl.org/spar/datacite/spase> <http://purl.org/vocab/vann/example> "\n        :my-object-id\n                datacite:usesIdentifierScheme datacite:spase ;\n                literal:hasLiteralValue \"spase://Example/NumericalData/MagProbe-1/Mag/PT1D\" .\n        " .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 <http://purl.org/spar/datacite/spase> <http://purl.org/spar/fabio/hasURL> "https://spase-group.org/services/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/2004/02/skos/core#note> "Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://<authority><path>."@en .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#label> "spase" .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/spase> <http://purl.org/vocab/vann/example> "\n        :my-object-id\n                datacite:usesIdentifierScheme datacite:spase ;\n                literal:hasLiteralValue \"spase://Example/NumericalData/MagProbe-1/Mag/PT1D\" .\n        " .
+<http://purl.org/spar/datacite/spase> <http://www.w3.org/2000/01/rdf-schema#comment> "The SPASE resource identifier is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group." .

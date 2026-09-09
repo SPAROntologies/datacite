@@ -5,5 +5,5 @@
 dcterms:coverage a owl:DatatypeProperty ;
     rdfs:label "has coverage"@en ;
     rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms> .
+    rdfs:isDefinedBy dcterms: .
 

@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the scheme followed by a certain identifier. \nIts value should be a named individual belonging to either `datacite:ResourceIdentifierScheme`, `datacite:AgentIdentifierScheme` (or its sub-classes) or `datacite:RightsIdentifierScheme`.\n        "@en .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to provide the identifier for an entity (either a funder, a person, a license or a resource)."@en .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/datacite/Identifier> .
 <http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to provide the identifier for an entity (either a funder, a person, a license or a resource)."@en .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "uses identifier scheme"@en .
 <http://purl.org/spar/datacite/usesIdentifierScheme> <http://purl.org/vocab/vann/example> "\n        :my-resource-id a datacite:Identifier ;\n                datacite:usesIdentifierScheme datacite:doi .\n        " .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/datacite/Identifier> .
-<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/spar/datacite/usesIdentifierScheme> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the scheme followed by a certain identifier. \nIts value should be a named individual belonging to either `datacite:ResourceIdentifierScheme`, `datacite:AgentIdentifierScheme` (or its sub-classes) or `datacite:RightsIdentifierScheme`.\n        "@en .

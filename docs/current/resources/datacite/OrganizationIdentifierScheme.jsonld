@@ -17,7 +17,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/datacite"
+        "@id": "http://purl.org/spar/datacite/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -28,7 +28,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab28"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b28"
       },
       {
         "@id": "http://purl.org/spar/datacite/AgentIdentifierScheme"
@@ -36,11 +36,10 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
         "@value": "\nThis is used to specify the identifier scheme used by an organization identifier.\n\nIndividual schemes are defined as members of this class.\n        "
@@ -48,13 +47,13 @@
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab28",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b28",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab29"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b29"
       }
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
@@ -64,7 +63,7 @@
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab29",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b29",
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
         "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"

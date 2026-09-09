@@ -4,9 +4,9 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
-    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
     <rdfs:label xml:lang="en">spatial object</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Anything spatial (being or having a shape, position or an extent).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
   </rdf:Description>
 </rdf:RDF>

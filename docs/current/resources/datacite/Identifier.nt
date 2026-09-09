@@ -1,18 +1,18 @@
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3ae03b620cb34e859c211b82ae43b76ab36 .
-_:n3ae03b620cb34e859c211b82ae43b76ab38 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3ae03b620cb34e859c211b82ae43b76ab37 .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
 <http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.essepuntato.it/2010/06/literalreification/Literal> .
-_:n3ae03b620cb34e859c211b82ae43b76ab36 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab37 <http://www.w3.org/2002/07/owl#onProperty> _:n3ae03b620cb34e859c211b82ae43b76ab38 .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/Identifier> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasIdentifier :my-resource-id .\n        \n        :my-resource-id a datacite:Identifier ;\n                literal:hasLiteralValue \"0000-2221-4444\" .\n        " .
-<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
 <http://purl.org/spar/datacite/Identifier> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent identifiers in the most generic conceptualization possible.\n\nAn identifier belongs to a particular scheme, such as those specified by individuals of the class `datacite:IdentifierScheme`.\n        "@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab37 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:n3ae03b620cb34e859c211b82ae43b76ab36 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-_:n3ae03b620cb34e859c211b82ae43b76ab37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3ae03b620cb34e859c211b82ae43b76ab36 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/datacite/Identifier> <http://purl.org/vocab/vann/example> "\n        :my-resource\n            datacite:hasIdentifier :my-resource-id .\n        \n        :my-resource-id a datacite:Identifier ;\n            literal:hasLiteralValue \"0000-2221-4444\" .\n        " .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
+_:n16082fa6811145e08dfaeb8890637028b36 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://purl.org/spar/datacite/Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."@en .
+_:n16082fa6811145e08dfaeb8890637028b37 <http://www.w3.org/2002/07/owl#onProperty> _:n16082fa6811145e08dfaeb8890637028b38 .
+_:n16082fa6811145e08dfaeb8890637028b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n16082fa6811145e08dfaeb8890637028b37 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:n16082fa6811145e08dfaeb8890637028b36 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/spar/datacite/IdentifierScheme> .
+_:n16082fa6811145e08dfaeb8890637028b36 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+_:n16082fa6811145e08dfaeb8890637028b38 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasIdentifier> .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n16082fa6811145e08dfaeb8890637028b37 .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n16082fa6811145e08dfaeb8890637028b36 .
+<http://purl.org/spar/datacite/Identifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n16082fa6811145e08dfaeb8890637028b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

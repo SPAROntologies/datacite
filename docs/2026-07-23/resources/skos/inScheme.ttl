@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -12,14 +13,14 @@ skos:inScheme a owl:ObjectProperty ;
                 skos:inScheme :my-scheme .
 
         :my-scheme a skos:ConceptScheme ;
-                skos:prefLabel 'Dewey Decimal Classification'@en .
+                skos:prefLabel "Dewey Decimal Classification"@en .
         """@en ;
     vaem:rationale """
 This is used to link a particular concept, defined as the subject for the resource under consideration, to the scheme (i.e., an individual of `skos:ConceptScheme`) that defines it. 
 Instead of creating a new concept scheme every time, one could reuse concept schemes already available in existing SKOS-based models.
         """@en ;
     rdfs:comment "A concept scheme in which a concept is included."@en ;
-    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+    rdfs:isDefinedBy skos: ;
     rdfs:range skos:ConceptScheme ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

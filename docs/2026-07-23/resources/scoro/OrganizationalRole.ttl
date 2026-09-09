@@ -6,6 +6,6 @@
 scoro:OrganizationalRole a owl:Class ;
     rdfs:label "organizational role"@en ;
     rdfs:comment "A role that an agent might hold with respect to an organization and its administration, particularly within an academic context. Individual members of this class are used to specify particular roles."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/scoro> ;
+    rdfs:isDefinedBy scoro: ;
     rdfs:subClassOf pro:Role .
 

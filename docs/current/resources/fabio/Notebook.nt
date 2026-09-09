@@ -1,5 +1,5 @@
-<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .
-<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Book> .
-<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#label> "notebook"@en .
 <http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#comment> "A book containing personal notes, typically created by writing into a physical book with blank pages."@en .
+<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#label> "notebook"@en .
+<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Book> .
 <http://purl.org/spar/fabio/Notebook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

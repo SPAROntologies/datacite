@@ -29,7 +29,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/pro"
+        "@id": "http://purl.org/spar/pro/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -45,16 +45,15 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "http://purl.org/spar/tvc/withValue"
+        "@id": "http://www.essepuntato.it/2012/04/tvc/withValue"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
         "@value": "\nThe role is specified as an instance of the class `pro:Role` or of one of its sub-classes.\n    "

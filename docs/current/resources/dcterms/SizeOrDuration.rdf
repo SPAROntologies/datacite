@@ -7,9 +7,14 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/terms/SizeOrDuration">
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vaem:rationale>
 This is used to represent a possible extent for the resource under consideration.
     </vaem:rationale>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">size or duration</rdfs:label>
+    <rdfs:comment xml:lang="en">A dimension or extent, or a time taken to play or execute.</rdfs:comment>
     <vann:example>
         :my-dataset
                 dcterms:extent :my-dataset-number-of-statements .
@@ -17,10 +22,5 @@ This is used to represent a possible extent for the resource under consideration
         :my-dataset-number-of-statements a dcterms:SizeOrDuration ;
                 rdf:value 146 .
     </vann:example>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms"/>
-    <rdfs:label xml:lang="en">size or duration</rdfs:label>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:comment xml:lang="en">A dimension or extent, or a time taken to play or execute.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

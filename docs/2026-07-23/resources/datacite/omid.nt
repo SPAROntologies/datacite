@@ -1,9 +1,9 @@
+<http://purl.org/spar/datacite/omid> <http://www.w3.org/2000/01/rdf-schema#label> "omid" .
 <http://purl.org/spar/datacite/omid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/omid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/omid> <http://www.w3.org/2004/02/skos/core#scopeNote> "The OMID is structured as follows: [[entity_type_abbreviation]]/[[supplier_prefix]][[sequential_number]] (e.g. \"br/0601\", where \"br\" is the entity type, \"060\" is the supplier prefix, and \"1\" is the sequential number)."@en .
 <http://purl.org/spar/datacite/omid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
 <http://purl.org/spar/datacite/omid> <http://www.w3.org/2000/01/rdf-schema#comment> "The OpenCitations Meta Identifier (OMID) is a persistent identifier for bibliographic resources, created and maintained by OpenCitations (http://opencitations.net)."@en .
-<http://purl.org/spar/datacite/omid> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/omid> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:omid ;\n                literal:hasLiteralValue \"br/06101801781\" .\n        " .
-<http://purl.org/spar/datacite/omid> <http://www.w3.org/2000/01/rdf-schema#label> "omid" .
+<http://purl.org/spar/datacite/omid> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://purl.org/spar/datacite/omid> <http://purl.org/spar/fabio/hasURL> "https://registry.identifiers.org/registry/omid"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/omid> <http://www.w3.org/2004/02/skos/core#note> "The OMID is structured as follows: [[entity_type_abbreviation]]/[[supplier_prefix]][[sequential_number]] (e.g. \"br/0601\", where \"br\" is the entity type, \"060\" is the supplier prefix, and \"1\" is the sequential number)."@en .
+<http://purl.org/spar/datacite/omid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/omid> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:omid ;\n                literal:hasLiteralValue \"br/06101801781\" .\n        " .

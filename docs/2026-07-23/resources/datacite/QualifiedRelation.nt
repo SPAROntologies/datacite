@@ -1,27 +1,27 @@
+_:n16082fa6811145e08dfaeb8890637028b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b45 .
 <http://purl.org/spar/datacite/QualifiedRelation> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationSubject :my-resource ;\n                datacite:hasRelationObject :my-article ;\n                datacite:hasRelationCharacterization cito:isCitedBy .\n        " .
-_:n3ae03b620cb34e859c211b82ae43b76ab42 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab42 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasRelationSubject> .
-<http://purl.org/spar/datacite/QualifiedRelation> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent qualified relations between two resources, which can be described using various properties (e.g., `dcterms:description`).\n        "@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3ae03b620cb34e859c211b82ae43b76ab40 .
-_:n3ae03b620cb34e859c211b82ae43b76ab41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3ae03b620cb34e859c211b82ae43b76ab42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3ae03b620cb34e859c211b82ae43b76ab45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3ae03b620cb34e859c211b82ae43b76ab41 .
-_:n3ae03b620cb34e859c211b82ae43b76ab46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:n3ae03b620cb34e859c211b82ae43b76ab39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3ae03b620cb34e859c211b82ae43b76ab43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab44 .
-_:n3ae03b620cb34e859c211b82ae43b76ab40 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasRelationCharacterization> .
-_:n3ae03b620cb34e859c211b82ae43b76ab46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3ae03b620cb34e859c211b82ae43b76ab42 .
+_:n16082fa6811145e08dfaeb8890637028b41 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasRelationObject> .
+_:n16082fa6811145e08dfaeb8890637028b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b44 .
+_:n16082fa6811145e08dfaeb8890637028b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b46 .
+_:n16082fa6811145e08dfaeb8890637028b42 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasRelationSubject> .
+<http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n16082fa6811145e08dfaeb8890637028b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation> .
+_:n16082fa6811145e08dfaeb8890637028b42 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:n16082fa6811145e08dfaeb8890637028b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n16082fa6811145e08dfaeb8890637028b39 <http://www.w3.org/2002/07/owl#intersectionOf> _:n16082fa6811145e08dfaeb8890637028b43 .
+_:n16082fa6811145e08dfaeb8890637028b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n16082fa6811145e08dfaeb8890637028b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n16082fa6811145e08dfaeb8890637028b41 .
+_:n16082fa6811145e08dfaeb8890637028b41 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/2002/07/owl#equivalentClass> _:n16082fa6811145e08dfaeb8890637028b39 .
 <http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "A class representing a reified relation between two resources, allowing the assignment of a specific role or type to the relationship."@en .
+<http://purl.org/spar/datacite/QualifiedRelation> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent qualified relations between two resources, which can be described using various properties (e.g., `dcterms:description`).\n        "@en .
+<http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/2000/01/rdf-schema#label> "qualified relation"@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab46 .
+_:n16082fa6811145e08dfaeb8890637028b40 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasRelationCharacterization> .
 <http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3ae03b620cb34e859c211b82ae43b76ab41 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasRelationObject> .
-<http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/2002/07/owl#equivalentClass> _:n3ae03b620cb34e859c211b82ae43b76ab39 .
-_:n3ae03b620cb34e859c211b82ae43b76ab40 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:n3ae03b620cb34e859c211b82ae43b76ab40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3ae03b620cb34e859c211b82ae43b76ab41 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:n3ae03b620cb34e859c211b82ae43b76ab39 <http://www.w3.org/2002/07/owl#intersectionOf> _:n3ae03b620cb34e859c211b82ae43b76ab43 .
-_:n3ae03b620cb34e859c211b82ae43b76ab43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation> .
-<http://purl.org/spar/datacite/QualifiedRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-_:n3ae03b620cb34e859c211b82ae43b76ab44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab45 .
+_:n16082fa6811145e08dfaeb8890637028b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n16082fa6811145e08dfaeb8890637028b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n16082fa6811145e08dfaeb8890637028b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n16082fa6811145e08dfaeb8890637028b42 .
+_:n16082fa6811145e08dfaeb8890637028b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n16082fa6811145e08dfaeb8890637028b40 .
+_:n16082fa6811145e08dfaeb8890637028b40 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:n16082fa6811145e08dfaeb8890637028b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/datacite"
+        "@id": "http://purl.org/spar/datacite/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -34,18 +34,17 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab39"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b39"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab39",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b39",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -56,20 +55,20 @@
             "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
           },
           {
-            "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab40"
+            "@id": "_:n16082fa6811145e08dfaeb8890637028b40"
           },
           {
-            "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab41"
+            "@id": "_:n16082fa6811145e08dfaeb8890637028b41"
           },
           {
-            "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab42"
+            "@id": "_:n16082fa6811145e08dfaeb8890637028b42"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab40",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b40",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -86,7 +85,7 @@
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab41",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b41",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -103,7 +102,7 @@
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab42",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b42",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

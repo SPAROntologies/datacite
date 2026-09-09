@@ -9,20 +9,20 @@
 >
   <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Text">
     <rdfs:comment xml:lang="en">A resource consisting primarily of words for reading.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype"/>
+    <rdfs:label xml:lang="en">text</rdfs:label>
     <vann:example>
         :my-resource
                 datacite:hasGeneralResourceType dcmitype:Text .
         </vann:example>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given general resource type ('Text').
+This is used as a controlled term to specify a given general resource type ("Text").
         </vaem:rationale>
-    <skos:scopeNote xml:lang="en">
+    <skos:note xml:lang="en">
 Examples include books, letters, dissertations, poems, newspapers, articles, archives of mailing lists. 
 Note that facsimiles or images of texts are still of the genre Text.
-        </skos:scopeNote>
-    <rdfs:label xml:lang="en">text</rdfs:label>
+        </skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
   </rdf:Description>
 </rdf:RDF>

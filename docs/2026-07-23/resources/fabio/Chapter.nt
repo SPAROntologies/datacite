@@ -1,9 +1,9 @@
 <http://purl.org/spar/fabio/Chapter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/fabio/Chapter> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType fabio:Chapter .\n        " .
-<http://purl.org/spar/fabio/Chapter> <http://purl.org/vocab/vann/example> "\n        :my-resource a fabio:Chapter ;\n                fabio:hasSequenceIdentifier '3' .\n        " .
-<http://purl.org/spar/fabio/Chapter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .
-<http://purl.org/spar/fabio/Chapter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .
 <http://purl.org/spar/fabio/Chapter> <http://www.w3.org/2000/01/rdf-schema#label> "chapter"@en .
-<http://purl.org/spar/fabio/Chapter> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type ('Chapter').\n\nThis is also used in combination with `fabio:hasSequenceIdentifier` to specify the sequence identifier/number type.\n        "@en .
-<http://purl.org/spar/fabio/Chapter> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/spar/fabio/Chapter> <http://purl.org/vocab/vann/example> "\n        :my-resource a fabio:Chapter ;\n                fabio:hasSequenceIdentifier \"3\" .\n        " .
+<http://purl.org/spar/fabio/Chapter> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Chapter\").\n\nThis is also used in combination with `fabio:hasSequenceIdentifier` to specify the sequence identifier/number type.\n        "@en .
+<http://purl.org/spar/fabio/Chapter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .
 <http://purl.org/spar/fabio/Chapter> <http://www.w3.org/2000/01/rdf-schema#comment> "A defined document section, forming part of or intended for inclusion within a larger document, usually with its own title or chapter number. Different chapters within a document such as a book or a report may each be independently authored, or may all be authored by a single individual or group of authors."@en .
+<http://purl.org/spar/fabio/Chapter> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/fabio/Chapter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/Chapter> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType fabio:Chapter .\n        " .

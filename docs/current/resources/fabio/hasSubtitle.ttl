@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -10,8 +11,8 @@ fabio:hasSubtitle a owl:DatatypeProperty ;
     rdfs:label "has subtitle"@en ;
     vann:example """
         :my-dataset
-                dcterms:title 'UK rainfall, June 2012'@en ;
-                fabio:hasSubtitle 'The wettest june on record'@en .
+                dcterms:title "UK rainfall, June 2012"@en ;
+                fabio:hasSubtitle "The wettest june on record"@en .
         """ ;
     vaem:rationale """
 This is used in addition to the generic title of a resource (`dcterms:title`), if appropriate.
@@ -20,8 +21,8 @@ To express the language of a title, a language-tagged literal should be used as 
 Values of language tags must follow the pattern defined by the XML schema language type, e.g.: `en`, `it`, `fr`, `cmn`, `nys`, `swh`, and so on.
         """@en ;
     rdfs:comment "A secondary title that follows the main title of a work."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dcterms:title ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

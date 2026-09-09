@@ -1,8 +1,8 @@
-<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/2000/01/rdf-schema#label> "has ending page"@en .
+<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/2000/01/rdf-schema#comment> "The last page number for the published version of the resource."@en .
+<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://purl.org/vocab/vann/example> "\n        :related-item\n                prism:endingPage \"47\" .\n        " .
 <http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://prismstandard.org/namespaces/basic/2.0/> .
 <http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the last page of a resource.\n        "@en .
-<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/2000/01/rdf-schema#comment> "The last page number for the published version of the resource."@en .
-<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://purl.org/vocab/vann/example> "\n        :related-item\n                prism:endingPage '47' .\n        " .
+<http://prismstandard.org/namespaces/basic/2.0/endingPage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

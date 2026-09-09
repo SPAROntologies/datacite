@@ -1,8 +1,8 @@
-<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A system generated unique publisher identifier for the issue of a serial publication."@en .
-<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://purl.org/vocab/vann/example> "\n        :related-item\n                prism:issueIdentifier '2' .\n        " .
-<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the issue identifier of a resource.\n        "@en .
-<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has issue identifier"@en .
 <http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://prismstandard.org/namespaces/basic/2.0/> .
-<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://purl.org/vocab/vann/example> "\n        :related-item\n                prism:issueIdentifier \"2\" .\n        " .
+<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A system generated unique publisher identifier for the issue of a serial publication."@en .
+<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has issue identifier"@en .
+<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the issue identifier of a resource.\n        "@en .
+<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://prismstandard.org/namespaces/basic/2.0/issueIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .

@@ -7,20 +7,20 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/terms/spatial">
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/coverage"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms"/>
     <rdfs:label>has spatial coverage</rdfs:label>
     <vaem:rationale xml:lang="en">
 This is used to link a resource with a geographical feature (such as its location), i.e., an individual of the class `geo:Feature`.
         </vaem:rationale>
-    <rdfs:comment xml:lang="en">Spatial characteristics of the resource.</rdfs:comment>
     <vann:example>
         :my-dataset
                 dcterms:spatial :my-dataset-location .
 
         :my-dataset-location a geo:Feature .
         </vann:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Spatial characteristics of the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
   </rdf:Description>
 </rdf:RDF>

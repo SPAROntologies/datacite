@@ -1,6 +1,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -10,7 +11,7 @@ prism:volume a owl:DatatypeProperty ;
     rdfs:label "has volume"@en ;
     vann:example """
         :related-item
-                prism:volume '1' . 
+            prism:volume "1" . 
         """ ;
     vaem:rationale """
 This is used to express the volume number of a resource.
@@ -18,8 +19,8 @@ This is used to express the volume number of a resource.
     rdfs:comment "Additional identifier for the publication where the resource appeared, providing the Volume portion of the common Volume, Number scheme."@en ;
     rdfs:isDefinedBy prism: ;
     rdfs:range rdfs:Literal ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 Provided for basic bibliographic citations. The content should not contain “Vol.” or other abbreviations for “Volume”; it should only be the alphanumeric volume identifier. 
 The Number portion of the issue identification is specified in the prism:number element.
         """@en .

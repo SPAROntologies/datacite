@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix schema: <https://schema.org/> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -21,5 +22,5 @@ More specifically, an instance of `schema:Action` is used, connected to a `frbr:
 The object that helped the agent perform the action."""@en ;
     rdfs:isDefinedBy schema: ;
     rdfs:range schema:Action ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

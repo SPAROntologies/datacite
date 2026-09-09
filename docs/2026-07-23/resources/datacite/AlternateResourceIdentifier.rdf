@@ -8,13 +8,8 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/AlternateResourceIdentifier">
-    <vaem:rationale xml:lang="en">
-This is used to represent alternate identifiers associated with resources.
-
-An alternate resource identifier belongs to a particular scheme, such as ISBN, specified by an individual that is a member of the class `datacite:ResourceIdentifierScheme`.
-        </vaem:rationale>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">alternate resource identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">An identifier other than a DOI that is used as an alternative identifier to uniquely identify a resource that is the subject of the DataCite metadata record.</rdfs:comment>
     <vann:example>
         :my-resource
                 datacite:hasIdentifier :my-resource-alt-id .
@@ -22,10 +17,15 @@ An alternate resource identifier belongs to a particular scheme, such as ISBN, s
         :my-resource-alt-id a datacite:AlternateResourceIdentifier ;
                 literal:hasLiteralValue "19381256" .
         </vann:example>
-    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:disjointWith rdf:resource="http://purl.org/spar/datacite/PrimaryResourceIdentifier"/>
-    <rdfs:label xml:lang="en">alternate resource identifier</rdfs:label>
-    <rdfs:comment xml:lang="en">An identifier other than a DOI that is used as an alternative identifier to uniquely identify a resource that is the subject of the DataCite metadata record.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vaem:rationale xml:lang="en">
+This is used to represent alternate identifiers associated with resources.
+
+An alternate resource identifier belongs to a particular scheme, such as ISBN, specified by an individual that is a member of the class `datacite:ResourceIdentifierScheme`.
+        </vaem:rationale>
   </rdf:Description>
 </rdf:RDF>

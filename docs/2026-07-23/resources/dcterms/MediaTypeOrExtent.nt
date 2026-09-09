@@ -1,7 +1,7 @@
 <http://purl.org/dc/terms/MediaTypeOrExtent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/terms/MediaTypeOrExtent> <http://purl.org/vocab/vann/example> "\n        datacite:spar\n                dcterms:format <https://w3id.org/spar/mediatype/text/turtle> .\n\n        <https://w3id.org/spar/mediatype/text/turtle> a dcterms:MediaTypeOrExtent .\n    " .
-<http://purl.org/dc/terms/MediaTypeOrExtent> <http://www.w3.org/2000/01/rdf-schema#comment> "A media type or extent."@en .
-<http://purl.org/dc/terms/MediaTypeOrExtent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
-<http://purl.org/dc/terms/MediaTypeOrExtent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
 <http://purl.org/dc/terms/MediaTypeOrExtent> <http://www.w3.org/2000/01/rdf-schema#label> "media type or extent"@en .
+<http://purl.org/dc/terms/MediaTypeOrExtent> <http://purl.org/vocab/vann/example> "\n        datacite:spar\n                dcterms:format <https://w3id.org/spar/mediatype/text/turtle> .\n\n        <https://w3id.org/spar/mediatype/text/turtle> a dcterms:MediaTypeOrExtent .\n    " .
+<http://purl.org/dc/terms/MediaTypeOrExtent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 <http://purl.org/dc/terms/MediaTypeOrExtent> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent the particular format in which the metadata in a metadata document are stored. \n\nInstead of creating a new media type every time, it is strongly suggested to reuse those already available in existing datasets, such as the “Media type as Linked Open Data” dataset (https://w3id.org/spar/mediatype).\n    " .
+<http://purl.org/dc/terms/MediaTypeOrExtent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/terms/MediaTypeOrExtent> <http://www.w3.org/2000/01/rdf-schema#comment> "A media type or extent."@en .

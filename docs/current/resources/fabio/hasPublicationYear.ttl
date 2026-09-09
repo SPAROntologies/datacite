@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -11,17 +12,17 @@ fabio:hasPublicationYear a owl:DatatypeProperty ;
     rdfs:label "has publication year"@en ;
     vann:example """
         :my-dataset
-                fabio:hasPublicationYear '2012'^^xsd:gYear .
+                fabio:hasPublicationYear "2012"^^xsd:gYear .
         """ ;
     vaem:rationale """
 This is used to express the year a resource was published or issued in.
         """@en ;
     rdfs:comment "The year of publication of a work."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dcterms:issued ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 A sub-property of the generic `dcterms:issued` that accepts values with the `xsd:gYear` datatype.
         """@en .
 

@@ -6,16 +6,16 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-resource\n                datacite:hasGeneralResourceType fabio:Chapter .\n        "
+        "@value": "\n        :my-resource a fabio:Chapter ;\n                fabio:hasSequenceIdentifier \"3\" .\n        "
       },
       {
-        "@value": "\n        :my-resource a fabio:Chapter ;\n                fabio:hasSequenceIdentifier '3' .\n        "
+        "@value": "\n        :my-resource\n                datacite:hasGeneralResourceType fabio:Chapter .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
       {
         "@language": "en",
-        "@value": "\nThis is used as a controlled term to specify a given general resource type ('Chapter').\n\nThis is also used in combination with `fabio:hasSequenceIdentifier` to specify the sequence identifier/number type.\n        "
+        "@value": "\nThis is used as a controlled term to specify a given general resource type (\"Chapter\").\n\nThis is also used in combination with `fabio:hasSequenceIdentifier` to specify the sequence identifier/number type.\n        "
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -26,7 +26,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/fabio"
+        "@id": "http://purl.org/spar/fabio/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -42,8 +42,7 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

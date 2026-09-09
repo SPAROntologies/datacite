@@ -1,10 +1,10 @@
-<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
-<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://www.w3.org/2004/02/skos/core#prefLabel> <http://purl.org/vocab/vann/example> "\n        :my-concept a skos:Concept ;\n                skos:prefLabel 'Knowledge'@en . \n        " .
-<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2004/02/skos/core#scopeNote> "A resource has no more than one value of `skos:prefLabel` per language tag, and no more than one value of `skos:prefLabel` without language tag."@en .
-<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "The preferred lexical label for a resource, in a given language."@en .
-<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the label of a subject (modelled as an instance of `skos:Concept`) or a subject scheme (`skos:ConceptScheme`).\n        "@en .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://purl.org/vocab/vann/example> "\n        :my-concept a skos:Concept ;\n                skos:prefLabel \"Knowledge\"@en . \n        " .
 <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#label> "has preferred label"@en .
-<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the label of a subject (modelled as an instance of `skos:Concept`) or a subject scheme (`skos:ConceptScheme`).\n        "@en .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2004/02/skos/core#note> "A resource has no more than one value of `skos:prefLabel` per language tag, and no more than one value of `skos:prefLabel` without language tag."@en .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "The preferred lexical label for a resource, in a given language."@en .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .

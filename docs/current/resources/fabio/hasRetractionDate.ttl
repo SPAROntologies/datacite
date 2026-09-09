@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -12,17 +13,17 @@ fabio:hasRetractionDate a owl:DatatypeProperty,
     rdfs:label "has retraction date"@en ;
     vann:example """
         :my-dataset-retraction-date 
-                literal:hasLiteralValue '2020-07-04'^^xsd:date ;
+                literal:hasLiteralValue "2020-07-04"^^xsd:date ;
                 dcterms:type fabio:hasRetractionDate .        
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given date type ('Withdrawn').
+This is used as a controlled term to specify a given date type ("Withdrawn").
 
 This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "The date on which something, for example a claim or a journal article, is retracted."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:range xsd:dateTime ;
     rdfs:subPropertyOf dcterms:date ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

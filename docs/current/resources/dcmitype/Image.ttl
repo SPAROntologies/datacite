@@ -5,5 +5,5 @@
 dcmitype:Image a owl:Class ;
     rdfs:label "image"@en ;
     rdfs:comment "A visual representation other than text."@en ;
-    rdfs:isDefinedBy <http://purl.org/dc/dcmitype> .
+    rdfs:isDefinedBy dcmitype: .
 

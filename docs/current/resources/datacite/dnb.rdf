@@ -8,18 +8,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/dnb">
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
-    <rdfs:comment xml:lang="en">The Deutsche Nationalbibliothek (DNB) catalogue number is a unique identifier assigned to every entry in the DNB catalogue.</rdfs:comment>
+    <skos:note xml:lang="en">A DNB catalogue number is resolvable from the following URL: https://d-nb.info/&lt;identifier&gt;.</skos:note>
     <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://d-nb.info/</fabio:hasURL>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vann:example>
         :my-resource-id
                 datacite:usesIdentifierScheme datacite:dnb ;
                 literal:hasLiteralValue "gnd/7749153-1" .
         </vann:example>
-    <skos:scopeNote xml:lang="en">A DNB catalogue number is resolvable from the following URL: https://d-nb.info/&lt;identifier&gt;.</skos:scopeNote>
     <rdfs:label xml:lang="en">dnb</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <rdfs:comment xml:lang="en">The Deutsche Nationalbibliothek (DNB) catalogue number is a unique identifier assigned to every entry in the DNB catalogue.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

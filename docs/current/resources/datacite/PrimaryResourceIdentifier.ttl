@@ -1,6 +1,7 @@
 @prefix datacite: <http://purl.org/spar/datacite/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -21,10 +22,10 @@ This is used to represent primary identifiers associated with resources.
 This class uses a `datacite:IdentifierScheme` that is restricted to `datacite:doi`, an individual in the `datacite:ResourceIdentifierScheme`.
         """@en ;
     rdfs:comment "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+    rdfs:isDefinedBy datacite: ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:hasValue datacite:doi ;
             owl:onProperty datacite:usesIdentifierScheme ],
         datacite:ResourceIdentifier ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

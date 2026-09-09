@@ -1,45 +1,45 @@
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#domain> _:n3ae03b620cb34e859c211b82ae43b76ab2 .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/BookChapter> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "The general type of a resource, defined from the DataCite controlled list."@en .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Journal> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.linkedmodel.org/schema/vaem#rationale> "\nAll DataCite-required general resource type terms are defined by classes in the [Dublin Core Type Vocabulary](http://purl.org/dc/dcmitype/), in [FaBiO](http://purl.org/spar/fabio) and in the [FAIR* Reviews Ontology](http://purl.org/spar/fr), with the exception of the more general `frbr:Endeavour` (mapped to 'Other').\n\nThe following list specifies ontology classes for all the allowed general resource types in the DataCite Controlled List, with the relevant DataCite general type given alphabetically in parentheses:\n\n- `dcmitype:MovingImage` (Audiovisual);\n- `fabio:Book` (Book);\n- `fabio:BookChapter` (BookChapter);\n- `dcmitype:Collection` (Collection);\n- `fabio:LaboratoryNotebook` (ComputationalNotebook);\n- `fabio:ConferencePaper` (ConferencePaper);\n- `fabio:ConferenceProceedings` (ConferenceProceeding);\n- `fabio:ResourcePaper` (DataPaper);\n- `dcmitype:Dataset` (Dataset);\n- `fabio:Thesis` (Dissertation);\n- `dcmitype:Event` (Event);\n- `dcmitype:StillImage` (Image);\n- `dcmitype:InteractiveResource` (InteractiveResource);\n- `fabio:Journal` (Journal);\n- `fabio:JournalArticle` (JournalArticle);\n- `fabio:Model` (Model);\n- `fabio:DataManagementPlan` (OutputManagementPlan);\n- `fr:ReviewVersion` (PeerReview);\n- `dcmitype:PhysicalObject` (PhysicalObject);\n- `fabio:ConferencePoster` (Poster);\n- `fabio:Preprint` (Preprint);\n- `fabio:Presentation` (Presentation);\n- `fabio:ProjectPlan` (Project);\n- `fabio:ReportDocument` (Report);\n- `dcmitype:Service` (Service);\n- `dcmitype:Software` (Software);\n- `dcmitype:Sound` (Sound);\n- `fabio:TechnicalStandard` (Standard);\n- `fabio:Report` (StudyRegistration);\n- `dcmitype:Text` (Text);\n- `fabio:Workflow` (Workflow);\n- `frbr:Endeavour` (Other).\n\nThe value 'Award' is modeled differently, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.\n\nThe value 'Instrument' is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.\n        "@en .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Event> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/MovingImage> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Sound> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ResourcePaper> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/InteractiveResource> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Service> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ReportDocument> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ConferenceProceedings> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Presentation> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Workflow> .
+_:n16082fa6811145e08dfaeb8890637028b2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Model> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Dataset> .
 <http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Collection> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ConferencePoster> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fr/ReviewVersion> .
-_:n3ae03b620cb34e859c211b82ae43b76ab2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/TechnicalStandard> .
 <http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/vocab/frbr/core#Endeavour> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:Dataset .\n    " .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ConferenceProceedings> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Thesis> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/StillImage> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Report> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fr/ReviewVersion> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ResourcePaper> .
+_:n16082fa6811145e08dfaeb8890637028b2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/InteractiveResource> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Software> .
+_:n16082fa6811145e08dfaeb8890637028b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "The general type of a resource, defined from the DataCite controlled list."@en .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/MovingImage> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ConferencePaper> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/JournalArticle> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Text> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Journal> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Workflow> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/DataManagementPlan> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ConferencePoster> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "has general resource type"@en .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Preprint> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Service> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ProjectPlan> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Presentation> .
 <http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/PhysicalObject> .
 <http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Software> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Book> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ProjectPlan> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/DataManagementPlan> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Model> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/JournalArticle> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Dataset> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "has general resource type"@en .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ConferencePaper> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/StillImage> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Thesis> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Sound> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#domain> _:n16082fa6811145e08dfaeb8890637028b2 .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/ReportDocument> .
 <http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/LaboratoryNotebook> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Report> .
-_:n3ae03b620cb34e859c211b82ae43b76ab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Text> .
-_:n3ae03b620cb34e859c211b82ae43b76ab2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
-<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Preprint> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.linkedmodel.org/schema/vaem#rationale> "\nAll DataCite-required general resource type terms are defined by classes in the [Dublin Core Type Vocabulary](http://purl.org/dc/dcmitype/), in [FaBiO](http://purl.org/spar/fabio) and in the [FAIR* Reviews Ontology](http://purl.org/spar/fr), with the exception of the more general `frbr:Endeavour` (mapped to \"Other\").\n\nThe following list specifies ontology classes for all the allowed general resource types in the DataCite Controlled List, with the relevant DataCite general type given alphabetically in parentheses:\n\n- `dcmitype:MovingImage` (Audiovisual);\n- `fabio:Book` (Book);\n- `fabio:BookChapter` (BookChapter);\n- `dcmitype:Collection` (Collection);\n- `fabio:LaboratoryNotebook` (ComputationalNotebook);\n- `fabio:ConferencePaper` (ConferencePaper);\n- `fabio:ConferenceProceedings` (ConferenceProceeding);\n- `fabio:ResourcePaper` (DataPaper);\n- `dcmitype:Dataset` (Dataset);\n- `fabio:Thesis` (Dissertation);\n- `dcmitype:Event` (Event);\n- `dcmitype:StillImage` (Image);\n- `dcmitype:InteractiveResource` (InteractiveResource);\n- `fabio:Journal` (Journal);\n- `fabio:JournalArticle` (JournalArticle);\n- `fabio:Model` (Model);\n- `fabio:DataManagementPlan` (OutputManagementPlan);\n- `fr:ReviewVersion` (PeerReview);\n- `dcmitype:PhysicalObject` (PhysicalObject);\n- `fabio:ConferencePoster` (Poster);\n- `fabio:Preprint` (Preprint);\n- `fabio:Presentation` (Presentation);\n- `fabio:ProjectPlan` (Project);\n- `fabio:ReportDocument` (Report);\n- `dcmitype:Service` (Service);\n- `dcmitype:Software` (Software);\n- `dcmitype:Sound` (Sound);\n- `fabio:TechnicalStandard` (Standard);\n- `fabio:Report` (StudyRegistration);\n- `dcmitype:Text` (Text);\n- `fabio:Workflow` (Workflow);\n- `frbr:Endeavour` (Other).\n\nThe value \"Award\" is modeled differently, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.\n\nThe value \"Instrument\" is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.\n        "@en .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:Dataset .\n    " .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/Event> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/BookChapter> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/TechnicalStandard> .

@@ -12,7 +12,7 @@
     "http://www.linkedmodel.org/schema/vaem#rationale": [
       {
         "@language": "en",
-        "@value": "\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('IsSupplementedBy') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "
+        "@value": "\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation (\"IsSupplementedBy\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab16"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b16"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -39,7 +39,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab19"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b19"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
@@ -54,11 +54,10 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
         "@value": "\nThe supplement relationship type involves works/expressions that are intended to be used in conjunction with another work/expression. \nSome of these, such as indices, concordances, teachers' guides, glosses, and instruction manuals for electronic resources will be so closely associated with the content of the related work/expression that they are useless without the other work/expression.\n        "
@@ -66,7 +65,7 @@
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab19",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b16",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -84,7 +83,7 @@
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab16",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],

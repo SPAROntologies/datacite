@@ -1,8 +1,8 @@
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://www.w3.org/2004/02/skos/core#notation> <http://purl.org/vocab/vann/example> "\n        :my-concept a skos:Concept ;\n                skos:notation \"123456\" .\n        " .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#comment> "A string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#label> "has notation"@en .
 <http://www.w3.org/2004/02/skos/core#notation> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to assign a classification code, used in a related subject scheme, to a subject of the resource.\n        "@en .
 <http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
-<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#label> "has notation"@en .
-<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#comment> "A string of characters such as 'T58.5' or '303.4833' used to uniquely identify a concept within the scope of a given concept scheme."@en .
-<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://www.w3.org/2004/02/skos/core#notation> <http://purl.org/vocab/vann/example> "\n        :my-concept a skos:Concept ;\n                skos:notation '123456' .\n        " .

@@ -12,7 +12,7 @@
     "http://www.linkedmodel.org/schema/vaem#rationale": [
       {
         "@language": "en",
-        "@value": "\nThis is used as a controlled term to specify a given general resource type ('Journal').\n        "
+        "@value": "\nThis is used as a controlled term to specify a given general resource type (\"Journal\").\n        "
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/fabio"
+        "@id": "http://purl.org/spar/fabio/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -39,11 +39,10 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
         "@value": "\nPrinted and electronic manifestations of the same journal are usually identified by separate print and electronic International Standard Serial Numbers (ISSN or eISSN, respectively), that identifies the journal as a whole, not to individual issues of it.\n        "

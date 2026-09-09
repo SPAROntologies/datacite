@@ -8,20 +8,20 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Collection">
-    <skos:scopeNote xml:lang="en">
-A collection is described as a group; its parts may also be separately described.
-        </skos:scopeNote>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:label xml:lang="en">collection</rdfs:label>
-    <rdfs:comment xml:lang="en">An aggregation of resources.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given general resource type ('Collection').
+This is used as a controlled term to specify a given general resource type ("Collection").
         </vaem:rationale>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">An aggregation of resources.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
     <vann:example>
         :my-resource
                 datacite:hasGeneralResourceType dcmitype:Collection .
         </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">collection</rdfs:label>
+    <skos:note xml:lang="en">
+A collection is described as a group; its parts may also be separately described.
+        </skos:note>
   </rdf:Description>
 </rdf:RDF>

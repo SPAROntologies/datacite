@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -16,6 +17,6 @@ datacite:eissn a datacite:ResourceIdentifierScheme,
                 literal:hasLiteralValue "1460-2105" .
         """ ;
     rdfs:comment "The Electronic International Standard Serial Number (eISSN) is an eight-digit identifier specifically for electronic versions of serials, such as online journals, databases, or websites."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
 

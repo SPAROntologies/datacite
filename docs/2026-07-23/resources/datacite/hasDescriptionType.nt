@@ -1,17 +1,17 @@
-_:n3ae03b620cb34e859c211b82ae43b76ab8 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasDescription> .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#label> "has description type"@en .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasDescription :my-resource-additional-info .\n\n        :my-resource-additional-info\n                datacite:hasDescriptionType datacite:abstract .\n        " .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#domain> _:n3ae03b620cb34e859c211b82ae43b76ab6 .
-_:n3ae03b620cb34e859c211b82ae43b76ab6 <http://www.w3.org/2002/07/owl#onProperty> _:n3ae03b620cb34e859c211b82ae43b76ab8 .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the type of description used to describe a resource, defined as an individual of the class `datacite:DescriptionType` from the DataCite controlled list.\n\nIndividuals include: 'Abstract' (`datacite:abstract`), 'Methods' (`datacite:methods`), 'Series Information' (`datacite:series-information`), 'Table Of Content' (`datacite:table-of-content`) and 'Other' (`datacite:other`).\n        "@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3ae03b620cb34e859c211b82ae43b76ab7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:n3ae03b620cb34e859c211b82ae43b76ab7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/DescriptionType> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#domain> _:n16082fa6811145e08dfaeb8890637028b6 .
 <http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
-_:n3ae03b620cb34e859c211b82ae43b76ab6 <http://www.w3.org/2002/07/owl#allValuesFrom> _:n3ae03b620cb34e859c211b82ae43b76ab7 .
+_:n16082fa6811145e08dfaeb8890637028b6 <http://www.w3.org/2002/07/owl#allValuesFrom> _:n16082fa6811145e08dfaeb8890637028b7 .
+_:n16082fa6811145e08dfaeb8890637028b6 <http://www.w3.org/2002/07/owl#onProperty> _:n16082fa6811145e08dfaeb8890637028b8 .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the type of description used to describe a resource, defined as an individual of the class `datacite:DescriptionType` from the DataCite controlled list.\n\nIndividuals include: \"Abstract\" (`datacite:abstract`), \"Methods\" (`datacite:methods`), \"Series Information\" (`datacite:series-information`), \"Table Of Content\" (`datacite:table-of-content`) and \"Other\" (`datacite:other`).\n        "@en .
+_:n16082fa6811145e08dfaeb8890637028b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/DescriptionType> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#label> "has description type"@en .
+_:n16082fa6811145e08dfaeb8890637028b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasDescription :my-resource-additional-info .\n\n        :my-resource-additional-info\n                datacite:hasDescriptionType datacite:abstract .\n        " .
+_:n16082fa6811145e08dfaeb8890637028b7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n16082fa6811145e08dfaeb8890637028b8 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasDescription> .
+_:n16082fa6811145e08dfaeb8890637028b7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
 <http://purl.org/spar/datacite/hasDescriptionType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of description used to describe a resource."@en .

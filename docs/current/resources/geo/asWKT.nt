@@ -1,9 +1,9 @@
-<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#label> "as WKT"@en .
-<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> .
-<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#comment> "The WKT serialization of a geometry."@en .
+<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#wktLiteral> .
-<http://www.opengis.net/ont/geosparql#asWKT> <http://purl.org/vocab/vann/example> "\n        :my-dataset-location a geo:Feature ;\n                geo:hasGeometry :my-dataset-location-point .\n        \n        :my-dataset-location-point a sf:Point ;\n                geo:asWKT 'POINT(20 45)'^^geo:wktLiteral .\n        " .
+<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#comment> "The WKT serialization of a geometry."@en .
+<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.opengis.net/ont/geosparql#asWKT> <http://purl.org/vocab/vann/example> "\n        :my-dataset-location a geo:Feature ;\n                geo:hasGeometry :my-dataset-location-point .\n        \n        :my-dataset-location-point a sf:Point ;\n                geo:asWKT \"POINT(20 45)\"^^geo:wktLiteral .\n        " .
+<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
 <http://www.opengis.net/ont/geosparql#asWKT> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express actual value of a point by specifying its coordinates in `geo:wktLiteral` format.\n        "@en .

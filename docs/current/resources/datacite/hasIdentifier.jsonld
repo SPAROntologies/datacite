@@ -2,8 +2,8 @@
   {
     "@id": "http://purl.org/spar/datacite/hasIdentifier",
     "@type": [
-      "http://www.w3.org/2002/07/owl#InverseFunctionalProperty",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#InverseFunctionalProperty"
     ],
     "http://purl.org/vocab/vann/example": [
       {
@@ -24,7 +24,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/datacite"
+        "@id": "http://purl.org/spar/datacite/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -40,8 +40,7 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

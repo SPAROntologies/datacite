@@ -1,29 +1,5 @@
 [
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab54",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-    ],
-    "http://www.w3.org/2002/07/owl#members": [
-      {
-        "@list": [
-          {
-            "@id": "http://purl.org/spar/datacite/FunderIdentifier"
-          },
-          {
-            "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
-          },
-          {
-            "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
-          },
-          {
-            "@id": "http://purl.org/spar/datacite/RightsIdentifier"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "http://purl.org/spar/datacite/PersonalIdentifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -47,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/datacite"
+        "@id": "http://purl.org/spar/datacite/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -58,21 +34,20 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab24"
+        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
       },
       {
-        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b24"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab24",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b24",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -84,6 +59,30 @@
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b54",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/datacite/FunderIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/RightsIdentifier"
+          }
+        ]
       }
     ]
   }

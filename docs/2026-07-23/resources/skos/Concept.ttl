@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -9,12 +10,12 @@ skos:Concept a owl:Class ;
     rdfs:label "concept"@en ;
     vann:example """
         :my-concept a skos:Concept ;
-                skos:prefLabel 'Knowledge'@en . 
+                skos:prefLabel "Knowledge"@en . 
         """ ;
     vaem:rationale """
 This is used to represent subjects.
         """@en ;
     rdfs:comment "An idea or notion; a unit of thought."@en ;
-    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy skos: ;
+    vs:term_status reg:statusStable .
 

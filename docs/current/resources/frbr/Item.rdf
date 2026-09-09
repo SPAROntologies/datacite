@@ -4,8 +4,8 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Item">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
     <rdfs:label xml:lang="en">item</rdfs:label>
     <rdfs:comment xml:lang="en">
 A single exemplar of a manifestation.

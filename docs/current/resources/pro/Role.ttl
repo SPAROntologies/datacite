@@ -3,6 +3,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
@@ -51,7 +52,7 @@ The remaining two, i.e., “RelatedPerson” and “ResearchGroup”, can be spe
 Note that many other individuals not required for DataCite metadata also exist within these [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) classes, e.g., `pro:copy-editor` and `scoro:principal-investigator`, and new individuals can easily be added to those ontologies, giving great flexibility.
         """@en ;
     rdfs:comment "A role an agent may have."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/pro> ;
+    rdfs:isDefinedBy pro: ;
     rdfs:seeAlso frapo:ResearchGroup,
         pro:distributor,
         pro:editor,
@@ -73,8 +74,8 @@ Note that many other individuals not required for DataCite metadata also exist w
         scoro:supervisor,
         scoro:workpackage-leader,
         foaf:Person ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 Since roles have contexts and time constraints that are important to take into account (for example, a person can be author of one paper and reviewer of another, while another person will be editor of a journal only for a defined period, not for ever), the [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) ontologies permit these contexts to be specified, using the Time-indexed Value in Context ([TVC](http://www.essepuntato.it/2012/04/tvc/)) ontological design pattern.  
 
 Thus, the domain of `pro:withRole` is not `foaf:Agent`, but rather a member of the class `pro:RoleInTime`, which itself is the range of the property `pro:holdsRoleInTime`, for which the domain is `foaf:Agent` (i.e., our contributor).

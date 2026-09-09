@@ -1,22 +1,22 @@
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-_:n3ae03b620cb34e859c211b82ae43b76ab56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/PersonalIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab56 .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that is used to uniquely identify a resource."@en .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasIdentifier :my-resource-id .\n\n        :my-resource-id a datacite:ResourceIdentifier ;\n                literal:hasLiteralValue \"10.3457/1098.a45\" .\n    " .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab57 .
-_:n3ae03b620cb34e859c211b82ae43b76ab58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3ae03b620cb34e859c211b82ae43b76ab49 .
-_:n3ae03b620cb34e859c211b82ae43b76ab55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/FunderIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3ae03b620cb34e859c211b82ae43b76ab58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/RightsIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab49 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-_:n3ae03b620cb34e859c211b82ae43b76ab54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:n16082fa6811145e08dfaeb8890637028b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/RightsIdentifier> .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n16082fa6811145e08dfaeb8890637028b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n16082fa6811145e08dfaeb8890637028b49 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
 <http://purl.org/spar/datacite/ResourceIdentifier> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent identifiers associated with resources.\n\nAn alternate resource identifier belongs to a particular scheme, such as ISBN, specified by an individual that is a member of the class `datacite:ResourceIdentifierScheme`.\n        "@en .
-<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/Identifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab54 <http://www.w3.org/2002/07/owl#members> _:n3ae03b620cb34e859c211b82ae43b76ab55 .
-_:n3ae03b620cb34e859c211b82ae43b76ab57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/ResourceIdentifier> .
+_:n16082fa6811145e08dfaeb8890637028b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b57 .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+_:n16082fa6811145e08dfaeb8890637028b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b58 .
+_:n16082fa6811145e08dfaeb8890637028b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/ResourceIdentifier> .
+_:n16082fa6811145e08dfaeb8890637028b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/PersonalIdentifier> .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that is used to uniquely identify a resource."@en .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "resource identifier"@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab58 .
-_:n3ae03b620cb34e859c211b82ae43b76ab49 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+_:n16082fa6811145e08dfaeb8890637028b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:n16082fa6811145e08dfaeb8890637028b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n16082fa6811145e08dfaeb8890637028b54 <http://www.w3.org/2002/07/owl#members> _:n16082fa6811145e08dfaeb8890637028b55 .
+_:n16082fa6811145e08dfaeb8890637028b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/FunderIdentifier> .
+_:n16082fa6811145e08dfaeb8890637028b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b56 .
+_:n16082fa6811145e08dfaeb8890637028b49 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/Identifier> .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n16082fa6811145e08dfaeb8890637028b49 .
+<http://purl.org/spar/datacite/ResourceIdentifier> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasIdentifier :my-resource-id .\n\n        :my-resource-id a datacite:ResourceIdentifier ;\n                literal:hasLiteralValue \"10.3457/1098.a45\" .\n    " .

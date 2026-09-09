@@ -7,19 +7,19 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/table-of-content">
+    <rdfs:comment xml:lang="en">A table of content giving information about the content of a resource, appearing before the body text. Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number.</rdfs:comment>
     <rdfs:label xml:lang="en">table of content</rdfs:label>
+    <vaem:rationale xml:lang="en">
+This is used to represent the description type "Table Of Content".
+        </vaem:rationale>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/DescriptionType"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/doco/TableOfContents"/>
     <vann:example>
         :my-resource-additional-info
                 datacite:hasDescriptionType datacite:table-of-content .
         </vann:example>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://purl.org/spar/datacite/DescriptionType"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
-    <rdfs:comment xml:lang="en">A table of content giving information about the content of a resource, appearing before the body text. Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number.</rdfs:comment>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/doco/TableOfContents"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <vaem:rationale xml:lang="en">
-This is used to represent the description type 'Table Of Content'.
-        </vaem:rationale>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
   </rdf:Description>
 </rdf:RDF>

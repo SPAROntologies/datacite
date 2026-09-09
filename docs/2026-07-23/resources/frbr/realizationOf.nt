@@ -1,7 +1,7 @@
-<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A work realized throgh an expression."@en .
 <http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core#> .
-<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is realization of"@en .
-<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
 <http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is realization of"@en .
 <http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/vocab/frbr/core#realizationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "An expression that realizes a work."@en .

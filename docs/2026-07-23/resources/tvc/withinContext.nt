@@ -1,5 +1,5 @@
-<http://purl.org/spar/tvc/withinContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific context within which the fact of the entity having the value is relevant."@en .
-<http://purl.org/spar/tvc/withinContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/spar/tvc/withinContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/tvc/ValueInTime> .
-<http://purl.org/spar/tvc/withinContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/tvc> .
-<http://purl.org/spar/tvc/withinContext> <http://www.w3.org/2000/01/rdf-schema#label> "within context"@en .
+<http://www.essepuntato.it/2012/04/tvc/withinContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/tvc/> .
+<http://www.essepuntato.it/2012/04/tvc/withinContext> <http://www.w3.org/2000/01/rdf-schema#label> "within context"@en .
+<http://www.essepuntato.it/2012/04/tvc/withinContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.essepuntato.it/2012/04/tvc/ValueInTime> .
+<http://www.essepuntato.it/2012/04/tvc/withinContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.essepuntato.it/2012/04/tvc/withinContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific context within which the fact of the entity having the value is relevant."@en .

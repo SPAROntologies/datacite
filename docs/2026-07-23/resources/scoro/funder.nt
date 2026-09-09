@@ -1,8 +1,8 @@
-<http://purl.org/spar/scoro/funder> <http://www.linkedmodel.org/schema/vaem#rationale> "\nA funding agent is represented as an instance of `foaf:Agent`, related to the resource through the pattern defined in the Publishing Roles Ontology (PRO). \nAccording to said pattern, a `foaf:Agent` holds some role (`pro:RoleInTime`) characterized by a type (`pro:withRole`) - which, in this case, is `scoro:funder` - and related to the resource via `pro:relatesToEntity`.\n        "@en .
-<http://purl.org/spar/scoro/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .
-<http://purl.org/spar/scoro/funder> <http://www.w3.org/2000/01/rdf-schema#label> "funder"@en .
-<http://purl.org/spar/scoro/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/scoro/funder> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/scoro/funder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
-<http://purl.org/spar/scoro/funder> <http://purl.org/vocab/vann/example> "\n        :european-commission a foaf:Agent ;\n                pro:holdsRoleInTIme :european-commission-funding .\n        \n        :european-commission-funding a pro:RoleInTime ;\n                pro:withRole scoro:funder ;\n                pro:relatesToEntity :my-dataset .\n        " .
 <http://purl.org/spar/scoro/funder> <http://www.w3.org/2000/01/rdf-schema#comment> "The role held by an agent of providing funds, for example for a research project."@en .
+<http://purl.org/spar/scoro/funder> <http://www.linkedmodel.org/schema/vaem#rationale> "\nA funding agent is represented as an instance of `foaf:Agent`, related to the resource through the pattern defined in the Publishing Roles Ontology (PRO). \nAccording to said pattern, a `foaf:Agent` holds some role (`pro:RoleInTime`) characterized by a type (`pro:withRole`) - which, in this case, is `scoro:funder` - and related to the resource via `pro:relatesToEntity`.\n        "@en .
+<http://purl.org/spar/scoro/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/funder> <http://www.w3.org/2000/01/rdf-schema#label> "funder"@en .
+<http://purl.org/spar/scoro/funder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/funder> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/scoro/funder> <http://purl.org/vocab/vann/example> "\n        :european-commission a foaf:Agent ;\n                pro:holdsRoleInTIme :european-commission-funding .\n        \n        :european-commission-funding a pro:RoleInTime ;\n                pro:withRole scoro:funder ;\n                pro:relatesToEntity :my-dataset .\n        " .
+<http://purl.org/spar/scoro/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/FinancialRole> .

@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -17,7 +18,7 @@ datacite:ror a datacite:OrganizationIdentifierScheme,
                 literal:hasLiteralValue "00wb4mk85" .
         """ ;
     rdfs:comment "The Research Organization Registry (ROR) Community identifier is a unique code assigned to research organizations."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote "A ROR identifier is resolvable from the following URL: https://ror.org/<identifier>."@en .
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A ROR identifier is resolvable from the following URL: https://ror.org/<identifier>."@en .
 

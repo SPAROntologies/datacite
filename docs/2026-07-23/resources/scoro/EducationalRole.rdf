@@ -4,10 +4,10 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/scoro/EducationalRole">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">educational role</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
     <rdfs:comment xml:lang="en">A role that an agent might hold with respect to an educational organization or activity. Individual members of this class are used to specify particular educational roles.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

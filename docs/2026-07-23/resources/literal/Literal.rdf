@@ -9,19 +9,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://www.essepuntato.it/2010/06/literalreification/Literal">
-    <rdfs:comment xml:lang="en">A reified literal.</rdfs:comment>
-    <rdfs:label xml:lang="en">literal</rdfs:label>
-    <skos:scopeNote xml:lang="en">
+    <owl:equivalentClass rdf:nodeID="n16082fa6811145e08dfaeb8890637028b25"/>
+    <skos:note xml:lang="en">
 The literal value it represents is specified through the property `literal:hasLiteralValue`. 
 Each individual of this class must always have a specified value.        
-        </skos:scopeNote>
-    <owl:equivalentClass rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab25"/>
+        </skos:note>
+    <rdfs:label xml:lang="en">literal</rdfs:label>
     <vann:example>
         :my-dataset
                 literal:hasLiteral :my-dataset-date .
 
         :my-dataset-date a literal:Literal ;
-                literal:hasLiteralValue '2012-07-04'^^xsd:date ;
+                literal:hasLiteralValue "2012-07-04"^^xsd:date ;
                 dcterms:type dcterms:date .
         </vann:example>
     <vaem:rationale xml:lang="en">
@@ -30,13 +29,14 @@ It is linked to the resource via the property `literal:hasLiteral`.
 The value is contained in the reified literal and is expressed through the data property `literal:hasLiteralValue`. 
 Other information, such as the type of value (e.g., the date type), is expressed via the punning mechanism that allows one to use properties as individuals, and linked to the reified literal with an appropriate property (e.g., `dcterms:type`, `dcterms:dateAccepted`, `fabio:hasDateCollected`, etc.).        
         </vaem:rationale>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:isDefinedBy rdf:resource="http://www.essepuntato.it/2010/06/literalreification"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">A reified literal.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/literal/"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab25">
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
     <owl:onProperty rdf:resource="http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
 </rdf:RDF>

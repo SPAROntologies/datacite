@@ -1,9 +1,9 @@
+<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#label> "ean13"@en .
 <http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/EAN13> .
-<http://purl.org/spar/datacite/ean13> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:ean13 ;\n                literal:hasLiteralValue \"4003994155486\" .\n        " .
-<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
 <http://purl.org/spar/datacite/ean13> <http://purl.org/spar/fabio/hasURL> "http://www.gs1.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Article Number is a unique 13-digit barcode standard used worldwide to identify retail products."@en .
 <http://purl.org/spar/datacite/ean13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#label> "ean13"@en .
-<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/ean13> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/ean13> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:ean13 ;\n                literal:hasLiteralValue \"4003994155486\" .\n        " .
 <http://purl.org/spar/datacite/ean13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .

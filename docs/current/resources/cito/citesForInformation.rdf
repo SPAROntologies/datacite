@@ -8,19 +8,19 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/cito/citesForInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <vaem:rationale xml:lang="en">
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('References') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("References") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         </vaem:rationale>
-    <rdfs:label xml:lang="en">cites for information</rdfs:label>
     <vann:example>
         :relation-dataset-article a datacite:QualifiedRelation ;
                 datacite:hasRelationCharacterization cito:citesForInformation .
         </vann:example>
-    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as a source of information on the subject under discussion.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedForInformationBy"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as a source of information on the subject under discussion.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <rdfs:label xml:lang="en">cites for information</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>

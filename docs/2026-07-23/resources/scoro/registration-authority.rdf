@@ -7,15 +7,12 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/scoro/registration-authority">
-    <rdfs:label xml:lang="en">registration authority</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro"/>
-    <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given agent role type ('Registration Authority').
-        </vaem:rationale>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">registration authority</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
     <rdfs:comment xml:lang="en">The role of an agent with responsibility for registering and maintaining international standards, internet domain names, patents, controlled vocabularies and other similar entities required for reliable international cooperatative activities.  For example, the International DOI Foundation (IDF) is the Registration Authority for DOIs.</rdfs:comment>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
     <vann:example>
         :international-doi-foundation
                 pro:holdsRoleInTime :registration-authority-for-my-dataset .
@@ -24,5 +21,8 @@ This is used as a controlled term to specify a given agent role type ('Registrat
                 pro:relatesToEntity :my-dataset ;
                 pro:withRole scoro:registration-authority .
         </vann:example>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given agent role type ("Registration Authority").
+        </vaem:rationale>
   </rdf:Description>
 </rdf:RDF>

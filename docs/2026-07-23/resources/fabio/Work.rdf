@@ -4,10 +4,10 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Work">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
-    <rdfs:label xml:lang="en">work</rdfs:label>
-    <rdfs:comment xml:lang="en">A subclass of FRBR Work, restricted to works that are published or potentially publishable, and that contain or are referred to by bibliographic references, or entities used to define bibliographic references.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">work</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+    <rdfs:comment xml:lang="en">A subclass of FRBR Work, restricted to works that are published or potentially publishable, and that contain or are referred to by bibliographic references, or entities used to define bibliographic references.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

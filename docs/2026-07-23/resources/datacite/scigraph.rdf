@@ -7,17 +7,17 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/scigraph">
-    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://scigraph.springernature.com/explorer/datasets/data_at_a_glance/</fabio:hasURL>
+    <rdfs:comment xml:lang="en">The SciGraph ID is an unique identifier used for referring to entities in the Springer Nature SciGraph dataset.</rdfs:comment>
     <rdfs:label xml:lang="en">SciGraph ID</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:comment xml:lang="en">The SciGraph ID is an unique identifier used for referring to entities in the Springer Nature SciGraph dataset.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://scigraph.springernature.com/explorer/datasets/data_at_a_glance/</fabio:hasURL>
     <vann:example>
         :my-object-id
                 datacite:usesIdentifierScheme datacite:scigraph ;
                 literal:hasLiteralValue "013217540103.39" .
         </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
   </rdf:Description>
 </rdf:RDF>

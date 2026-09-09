@@ -7,18 +7,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#notation">
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+        :my-concept a skos:Concept ;
+                skos:notation "123456" .
+        </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:comment xml:lang="en">A string of characters such as "T58.5" or "303.4833" used to uniquely identify a concept within the scope of a given concept scheme.</rdfs:comment>
+    <rdfs:label xml:lang="en">has notation</rdfs:label>
     <vaem:rationale xml:lang="en">
 This is used to assign a classification code, used in a related subject scheme, to a subject of the resource.
         </vaem:rationale>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
-    <rdfs:label xml:lang="en">has notation</rdfs:label>
-    <rdfs:comment xml:lang="en">A string of characters such as 'T58.5' or '303.4833' used to uniquely identify a concept within the scope of a given concept scheme.</rdfs:comment>
-    <vann:example>
-        :my-concept a skos:Concept ;
-                skos:notation '123456' .
-        </vann:example>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 </rdf:RDF>

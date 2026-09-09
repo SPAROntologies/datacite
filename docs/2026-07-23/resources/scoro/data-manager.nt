@@ -1,8 +1,8 @@
-<http://purl.org/spar/scoro/data-manager> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni\n                pro:holdsRoleInTime :data-manager-for-my-dataset .\n        \n        :data-manager-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:data-manager .\n        " .
-<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/2000/01/rdf-schema#label> "data manager"@en .
-<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
-<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
-<http://purl.org/spar/scoro/data-manager> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type ('Data Manager').\n        "@en .
 <http://purl.org/spar/scoro/data-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/data-manager> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni\n                pro:holdsRoleInTime :data-manager-for-my-dataset .\n        \n        :data-manager-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:data-manager .\n        " .
+<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/2000/01/rdf-schema#label> "data manager"@en .
+<http://purl.org/spar/scoro/data-manager> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type (\"Data Manager\").\n        "@en .
 <http://purl.org/spar/scoro/data-manager> <http://www.w3.org/2000/01/rdf-schema#comment> "The role a person has of being a data manager, responsible for day-to-day management, maintenance and back-up of data, for example those arising from the research project or held in a repository."@en .
+<http://purl.org/spar/scoro/data-manager> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro/> .

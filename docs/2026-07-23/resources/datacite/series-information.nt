@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/series-information> <http://purl.org/vocab/vann/example> "\n        :my-resource-additional-info\n                datacite:hasDescriptionType datacite:series-information .\n        " .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#label> "series information"@en .
-<http://purl.org/spar/datacite/series-information> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent the description type 'Series Information'.\n        "@en .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to charactierize a description of a resource that is part of a series."@en .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/series-information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
 <http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Periodical> .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
+<http://purl.org/spar/datacite/series-information> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent the description type \"Series Information\".\n        "@en .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#label> "series information"@en .
+<http://purl.org/spar/datacite/series-information> <http://purl.org/vocab/vann/example> "\n        :my-resource-additional-info\n                datacite:hasDescriptionType datacite:series-information .\n        " .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/series-information> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to charactierize a description of a resource that is part of a series."@en .

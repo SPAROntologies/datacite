@@ -1,6 +1,7 @@
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -13,12 +14,12 @@ dcmitype:Software a owl:Class ;
                 datacite:hasGeneralResourceType dcmitype:Software .
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given general resource type ('Software').
+This is used as a controlled term to specify a given general resource type ("Software").
         """@en ;
     rdfs:comment "A computer program in source or compiled form."@en ;
-    rdfs:isDefinedBy <http://purl.org/dc/dcmitype> ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    rdfs:isDefinedBy dcmitype: ;
+    vs:term_status reg:statusStable ;
+    skos:note """
 Examples include a C source file, MS-Windows .exe executable, or Perl script.        
         """@en .
 

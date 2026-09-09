@@ -4,9 +4,9 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://purl.org/co/List">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/co"/>
-    <rdfs:label xml:lang="en">list</rdfs:label>
     <rdfs:comment xml:lang="en">An ordered array of items, that can be present in multiple copies.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/co"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">list</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

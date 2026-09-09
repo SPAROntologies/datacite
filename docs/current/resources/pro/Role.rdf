@@ -8,33 +8,44 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/pro/Role">
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/workpackage-leader"/>
-    <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/host-institution"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/distributor"/>
+    <vann:example>
+        :silvio-peroni
+                pro:holdsRoleInTime :contact-person-for-my-dataset .
+        
+        :contact-person-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:contact-person .
+
+        scoro:contact-person a pro:Role .
+        </vann:example>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/contact-person"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/sponsor"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/supervisor"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/cerif/frapo/ResearchGroup"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/data-creator"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/rights-holder"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/producer"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/project-member"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/project-leader"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/researcher"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/workpackage-leader"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/data-manager"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/data-curator"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/registrar"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/data-manager"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/rights-holder"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/project-member"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/project-manager"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/translator"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/registration-authority"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/contact-person"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/researcher"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/project-leader"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/host-institution"/>
     <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/editor"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pro"/>
-    <skos:scopeNote xml:lang="en">
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/data-creator"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/distributor"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/registration-authority"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/cerif/frapo/ResearchGroup"/>
+    <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/supervisor"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/translator"/>
+    <skos:note xml:lang="en">
 Since roles have contexts and time constraints that are important to take into account (for example, a person can be author of one paper and reviewer of another, while another person will be editor of a journal only for a defined period, not for ever), the [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) ontologies permit these contexts to be specified, using the Time-indexed Value in Context ([TVC](http://www.essepuntato.it/2012/04/tvc/)) ontological design pattern.  
 
 Thus, the domain of `pro:withRole` is not `foaf:Agent`, but rather a member of the class `pro:RoleInTime`, which itself is the range of the property `pro:holdsRoleInTime`, for which the domain is `foaf:Agent` (i.e., our contributor).
-        </skos:scopeNote>
+        </skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pro/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vaem:rationale xml:lang="en">
 All but three of the allowed values in the DataCite controlled list terms for contributor type are defined by individual members of the class `pro:Role` in [PRO](http://purl.org/spar/pro), or of its sub-classes in [SCORO](http://purl.org/spar/scoro):
 
@@ -64,19 +75,8 @@ The remaining two, i.e., “RelatedPerson” and “ResearchGroup”, can be spe
 
 Note that many other individuals not required for DataCite metadata also exist within these [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) classes, e.g., `pro:copy-editor` and `scoro:principal-investigator`, and new individuals can easily be added to those ontologies, giving great flexibility.
         </vaem:rationale>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <vann:example>
-        :silvio-peroni
-                pro:holdsRoleInTime :contact-person-for-my-dataset .
-        
-        :contact-person-for-my-dataset a pro:RoleInTime ;
-                pro:relatesToEntity :my-dataset ;
-                pro:withRole scoro:contact-person .
-
-        scoro:contact-person a pro:Role .
-        </vann:example>
-    <rdfs:label xml:lang="en">role</rdfs:label>
     <rdfs:comment xml:lang="en">A role an agent may have.</rdfs:comment>
+    <rdfs:label xml:lang="en">role</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>

@@ -6,6 +6,6 @@
 scoro:EducationalRole a owl:Class ;
     rdfs:label "educational role"@en ;
     rdfs:comment "A role that an agent might hold with respect to an educational organization or activity. Individual members of this class are used to specify particular educational roles."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/scoro> ;
+    rdfs:isDefinedBy scoro: ;
     rdfs:subClassOf pro:Role .
 

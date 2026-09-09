@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix schema: <https://schema.org/> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -24,5 +25,5 @@ The execution of the action may produce a result.
 Specific action sub-type documentation specifies the exact expectation of each argument/role.        
         """@en ;
     rdfs:isDefinedBy schema: ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

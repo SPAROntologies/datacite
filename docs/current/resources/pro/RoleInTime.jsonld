@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/pro"
+        "@id": "http://purl.org/spar/pro/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -34,16 +34,15 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://purl.org/spar/tvc/ValueInTime"
+        "@id": "http://www.essepuntato.it/2012/04/tvc/ValueInTime"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
         "@value": "\nA role in time describes always:\n* a particular role R;\n* a particular agent A holding R;\n* a particular time interval T in which A holds R (optional);\n* one or more entities (e.g. a particular bibliographic entity or a specific institution) that defines a context for R held by A. (At least one contextual entity should be specified for a particular role).\n        "

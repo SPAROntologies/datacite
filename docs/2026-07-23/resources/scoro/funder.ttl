@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -21,6 +22,6 @@ A funding agent is represented as an instance of `foaf:Agent`, related to the re
 According to said pattern, a `foaf:Agent` holds some role (`pro:RoleInTime`) characterized by a type (`pro:withRole`) - which, in this case, is `scoro:funder` - and related to the resource via `pro:relatesToEntity`.
         """@en ;
     rdfs:comment "The role held by an agent of providing funds, for example for a research project."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/scoro> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
 

@@ -7,11 +7,20 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b28">
+    <owl:onProperty rdf:nodeID="n16082fa6811145e08dfaeb8890637028b29"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/OrganizationIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/datacite/OrganizationIdentifierScheme">
-    <rdfs:subClassOf rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab28"/>
+    <skos:note xml:lang="en">
+This is used to specify the identifier scheme used by an organization identifier.
+
+Individual schemes are defined as members of this class.
+        </skos:note>
+    <rdfs:label xml:lang="en">organization identifier scheme</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="n16082fa6811145e08dfaeb8890637028b28"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
-    <rdfs:comment xml:lang="en">The identifier scheme used to identify an organization.</rdfs:comment>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
     <vann:example>
         :my-organization a foaf:Organization ;
                 datacite:hasIdentifier :my-organization-id .
@@ -21,21 +30,12 @@
 
         datacite:ror a datacite:OrganizationIdentifierScheme .
         </vann:example>
-    <skos:scopeNote xml:lang="en">
-This is used to specify the identifier scheme used by an organization identifier.
-
-Individual schemes are defined as members of this class.
-        </skos:scopeNote>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
-    <rdfs:label xml:lang="en">organization identifier scheme</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">The identifier scheme used to identify an organization.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab28">
-    <owl:onProperty rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab29"/>
-    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/OrganizationIdentifier"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab29">
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b29">
     <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
   </rdf:Description>
 </rdf:RDF>

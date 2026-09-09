@@ -8,18 +8,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/research-gate">
-    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.researchgate.net</fabio:hasURL>
-    <rdfs:comment xml:lang="en">The ResearchGate profile identifier is a unique code for researchers registered in the ResearchGate platform.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:label xml:lang="en">research gate</rdfs:label>
-    <skos:scopeNote xml:lang="en">A ResearchGate profile identifier is resolvable from the following URL: https://www.researchgate.net/profile/&lt;identifier&gt;.</skos:scopeNote>
     <vann:example>
         :david-shotton-id
                 datacite:usesIdentifierScheme datacite:research-gate ;
                 literal:hasLiteralValue "David-Shotton-2" .
         </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">The ResearchGate profile identifier is a unique code for researchers registered in the ResearchGate platform.</rdfs:comment>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.researchgate.net</fabio:hasURL>
+    <skos:note xml:lang="en">A ResearchGate profile identifier is resolvable from the following URL: https://www.researchgate.net/profile/&lt;identifier&gt;.</skos:note>
+    <rdfs:label xml:lang="en">research gate</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

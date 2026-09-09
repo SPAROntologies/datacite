@@ -8,19 +8,19 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/terms/requires">
-    <vaem:rationale xml:lang="en">
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('Requires') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
-        </vaem:rationale>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    <rdfs:comment xml:lang="en">A related resource that is required by the described resource to support its function, delivery, or coherence.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://purl.org/dc/terms/isRequiredBy"/>
     <rdfs:label xml:lang="en">requires</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <vaem:rationale xml:lang="en">
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Requires") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+        </vaem:rationale>
     <vann:example>
         :relation-dataset-article a datacite:QualifiedRelation ;
                 datacite:hasRelationCharacterization dcterms:requires .
         </vann:example>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <owl:inverseOf rdf:resource="http://purl.org/dc/terms/isRequiredBy"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdfs:comment xml:lang="en">A related resource that is required by the described resource to support its function, delivery, or coherence.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

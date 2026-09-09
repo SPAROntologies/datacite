@@ -1,6 +1,7 @@
 @prefix cito: <http://purl.org/spar/cito/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -12,11 +13,11 @@ cito:describes a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:describes .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('Describes') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Describes") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity describes the cited entity."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/cito> ;
+    rdfs:isDefinedBy cito: ;
     rdfs:subPropertyOf cito:cites ;
     owl:inverseOf cito:isDescribedBy ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

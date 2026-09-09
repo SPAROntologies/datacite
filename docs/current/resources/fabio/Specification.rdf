@@ -4,10 +4,10 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Specification">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio"/>
-    <rdfs:label xml:lang="en">specification</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Work"/>
-    <rdfs:comment xml:lang="en">An explicit description of, or set of requirements to be satisfied by, a material, product, resource, service or standard.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
+    <rdfs:comment xml:lang="en">An explicit description of, or set of requirements to be satisfied by, a material, product, resource, service or standard.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Work"/>
+    <rdfs:label xml:lang="en">specification</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

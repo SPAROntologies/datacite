@@ -8,19 +8,19 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/cito/documents">
-    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isDocumentedBy"/>
+    <rdfs:comment>The citing entity documents information about the cited entity.</rdfs:comment>
+    <rdfs:label xml:lang="en">documents</rdfs:label>
     <vaem:rationale xml:lang="en">
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('Documents') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Documents") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         </vaem:rationale>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
     <vann:example>
         :relation-dataset-article a datacite:QualifiedRelation ;
                 datacite:hasRelationCharacterization cito:documents .
         </vann:example>
-    <rdfs:label xml:lang="en">documents</rdfs:label>
-    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isDocumentedBy"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment>The citing entity documents information about the cited entity.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

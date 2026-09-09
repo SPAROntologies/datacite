@@ -1,6 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -21,7 +22,7 @@ The format should be defined as an individual of the class `dcterms:MediaTypeOrE
 Instead of creating a new media type every time, it is strongly suggested to reuse those already available in existing datasets, such as the “Media type as Linked Open Data” dataset (https://w3id.org/spar/mediatype).
         """@en ;
     rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms> ;
+    rdfs:isDefinedBy dcterms: ;
     rdfs:range dcterms:MediaTypeOrExtent ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

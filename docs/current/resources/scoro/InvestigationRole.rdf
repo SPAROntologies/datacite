@@ -5,9 +5,9 @@
 >
   <rdf:Description rdf:about="http://purl.org/spar/scoro/InvestigationRole">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to an investigation. Individual members of this class are used to specify particular roles.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro"/>
     <rdfs:label xml:lang="en">investigation role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
+    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to an investigation. Individual members of this class are used to specify particular roles.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

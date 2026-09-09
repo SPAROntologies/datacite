@@ -7,19 +7,19 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/cerif/frapo/ResearchGroup">
-    <rdfs:comment xml:lang="en">A group of people, usually within a university department or a research institute, and typically under a single group leader, dedicated to working together to undertake research on one or more topics. May also be called a research unit.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
     <vann:example>
         :my-research-group a frapo:ResearchGroup .
         </vann:example>
-    <rdfs:label xml:lang="en">research group</rdfs:label>
     <vaem:rationale xml:lang="en">
 This is used to represent the role of research group, conceptualised as a group of people working together in research.
 
 For example, a research group related to some resource can be specified as a type (by means of the property `rdf:type`) by means of the class `frapo:ResearchGroup`.
         </vaem:rationale>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdfs:comment xml:lang="en">A group of people, usually within a university department or a research institute, and typically under a single group leader, dedicated to working together to undertake research on one or more topics. May also be called a research unit.</rdfs:comment>
+    <rdfs:label xml:lang="en">research group</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
   </rdf:Description>
 </rdf:RDF>

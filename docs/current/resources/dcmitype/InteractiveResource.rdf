@@ -8,20 +8,20 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/dcmitype/InteractiveResource">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <skos:scopeNote xml:lang="en">
-Examples include forms on Web pages, applets, multimedia learning objects, chat services, or virtual reality environments.        
-        </skos:scopeNote>
     <rdfs:label xml:lang="en">interactive resource</rdfs:label>
-    <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given general resource type ('Interactive Resource').
-        </vaem:rationale>
+    <skos:note xml:lang="en">
+Examples include forms on Web pages, applets, multimedia learning objects, chat services, or virtual reality environments.        
+        </skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
     <rdfs:comment xml:lang="en">A resource requiring interaction from the user to be understood, executed, or experienced.</rdfs:comment>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vann:example>
         :my-resource
                 datacite:hasGeneralResourceType dcmitype:InteractiveResource .
         </vann:example>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given general resource type ("Interactive Resource").
+        </vaem:rationale>
   </rdf:Description>
 </rdf:RDF>

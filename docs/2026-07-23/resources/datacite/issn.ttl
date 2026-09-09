@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -16,6 +17,6 @@ datacite:issn a datacite:ResourceIdentifierScheme,
                 literal:hasLiteralValue "2049-3630" .
         """ ;
     rdfs:comment "The International Standard Serial Number (ISSN) is an eight-digit code to uniquely identify a periodical publication, such as a magazine."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
 

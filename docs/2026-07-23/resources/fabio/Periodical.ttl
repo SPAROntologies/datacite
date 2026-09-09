@@ -5,6 +5,6 @@
 fabio:Periodical a owl:Class ;
     rdfs:label "periodical"@en ;
     rdfs:comment "A publication issued on a regular and ongoing basis as a series of issues, each issue comprising separate periodical items, for example editorials, articles, news items and/or other writings."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:Book .
 

@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/rrid> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/rrid> <http://purl.org/vocab/vann/example> "\n        :my-resource-id \n                datacite:usesIdentifierScheme datacite:rrid ;\n                literal:hasLiteralValue \"RRID:AB_262044\" .\n        " .
-<http://purl.org/spar/datacite/rrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
-<http://purl.org/spar/datacite/rrid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/rrid> <http://www.w3.org/2000/01/rdf-schema#comment> "The Research Resource IDentifier (RRID) is a character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases."@en .
 <http://purl.org/spar/datacite/rrid> <http://www.w3.org/2000/01/rdf-schema#label> "rrid"@en .
-<http://purl.org/spar/datacite/rrid> <http://www.w3.org/2004/02/skos/core#scopeNote> "An RRID name is divided into two parts, the authority and a local identifier, separated by an underscore."@en .
+<http://purl.org/spar/datacite/rrid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/rrid> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/rrid> <http://purl.org/vocab/vann/example> "\n        :my-resource-id \n                datacite:usesIdentifierScheme datacite:rrid ;\n                literal:hasLiteralValue \"RRID:AB_262044\" .\n        " .
+<http://purl.org/spar/datacite/rrid> <http://www.w3.org/2000/01/rdf-schema#comment> "The Research Resource IDentifier (RRID) is a character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases."@en .
 <http://purl.org/spar/datacite/rrid> <http://purl.org/spar/fabio/hasURL> "https://scicrunch.org/resolver"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/rrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/rrid> <http://www.w3.org/2004/02/skos/core#note> "An RRID name is divided into two parts, the authority and a local identifier, separated by an underscore."@en .
+<http://purl.org/spar/datacite/rrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .

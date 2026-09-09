@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -23,8 +24,8 @@ The domain of `pro:withRole` is not `foaf:Agent`, but rather a member of the cla
         """@en ;
     rdfs:comment "An organization representing the context for a time-indexed situation (e.g. relating the role of member to the institution of which that person is a member)."@en ;
     rdfs:domain pro:RoleInTime ;
-    rdfs:isDefinedBy <http://purl.org/spar/pro> ;
+    rdfs:isDefinedBy pro: ;
     rdfs:range foaf:Organization ;
     rdfs:subPropertyOf pro:relatesToEntity ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

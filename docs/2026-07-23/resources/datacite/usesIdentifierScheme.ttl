@@ -1,6 +1,7 @@
 @prefix datacite: <http://purl.org/spar/datacite/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -17,7 +18,7 @@ Its value should be a named individual belonging to either `datacite:ResourceIde
         """@en ;
     rdfs:comment "The identifier scheme used to provide the identifier for an entity (either a funder, a person, a license or a resource)."@en ;
     rdfs:domain datacite:Identifier ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+    rdfs:isDefinedBy datacite: ;
     rdfs:range datacite:IdentifierScheme ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

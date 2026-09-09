@@ -1,6 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -12,7 +13,7 @@ dcterms:subject a owl:ObjectProperty ;
                 dcterms:subject :my-concept .
 
         :my-concept a skos:Concept ;
-                skos:prefLabel 'Knowledge'@en . 
+                skos:prefLabel "Knowledge"@en . 
         """ ;
     vaem:rationale """
 This property should always be used with a [SKOS](http://www.w3.org/2004/02/skos/core#) concept. 
@@ -20,6 +21,6 @@ If possible, one could specify a more specific property rather than the general 
 Instead of creating a new concept every time, one could reuse concepts already available in existing SKOS-based models.
         """@en ;
     rdfs:comment "A topic of the resource."@en ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy dcterms: ;
+    vs:term_status reg:statusStable .
 

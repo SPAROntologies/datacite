@@ -1,8 +1,8 @@
-<http://purl.org/dc/terms/title> <http://purl.org/vocab/vann/example> "\n        :my-dataset \n                dcterms:title 'UK rainfall, June 2012'@en .\n        " .
-<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#comment> "A name given to the resource."@en .
-<http://purl.org/dc/terms/title> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the title of a resource if no particular type has been specified for the title otherwise.\n        "@en .
-<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "has title"@en .
-<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
-<http://purl.org/dc/terms/title> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/dc/terms/title> <http://purl.org/vocab/vann/example> "\n        :my-dataset \n                dcterms:title \"UK rainfall, June 2012\"@en .\n        " .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "has title"@en .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#comment> "A name given to the resource."@en .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/title> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the title of a resource if no particular type has been specified for the title otherwise.\n        "@en .

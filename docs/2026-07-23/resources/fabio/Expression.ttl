@@ -2,6 +2,7 @@
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -18,10 +19,10 @@ While not mandatory, the use of [FaBiO](http://purl.org/spar/fabio) entities is 
 If there is no specific [FaBiO](http://purl.org/spar/fabio) Expression class that matches the resource under consideration, use of the most abstract class, i.e., `fabio:Expression`, is suggested.
         """@en ;
     rdfs:comment "A subclass of [FRBR](http://purl.org/spar/frbr) Expression, restricted to expressions of `fabio:Work`."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf frbr:Expression ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 For your latest research paper, the preprint submitted to the publisher, and the final published version to which the publisher assigned a unique digital object identifier, are both expressions of the same work.
     
 A `fabio:Expression` can only have part or be part of another `fabio:Expression`. 

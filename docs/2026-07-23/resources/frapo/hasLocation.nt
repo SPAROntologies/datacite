@@ -1,8 +1,8 @@
-<http://purl.org/cerif/frapo/hasLocation> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to provide a textual description for the location under consideration.\n        "@en .
-<http://purl.org/cerif/frapo/hasLocation> <http://purl.org/vocab/vann/example> "\n        :my-dataset-location \n                frapo:hasLocation 'The common area between Tuscany and Liguria' .\n        " .
 <http://purl.org/cerif/frapo/hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location"@en .
-<http://purl.org/cerif/frapo/hasLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo> .
+<http://purl.org/cerif/frapo/hasLocation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://purl.org/cerif/frapo/hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://purl.org/cerif/frapo/hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/cerif/frapo/hasLocation> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to provide a textual description for the location under consideration.\n        "@en .
+<http://purl.org/cerif/frapo/hasLocation> <http://purl.org/vocab/vann/example> "\n        :my-dataset-location \n            frapo:hasLocation \"The common area between Tuscany and Liguria\" .\n        " .
 <http://purl.org/cerif/frapo/hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A relevant location, which might be geographical (e.g. _New York City_) or local (e.g. _Freezer B, second shelf_)."@en .
-<http://purl.org/cerif/frapo/hasLocation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/cerif/frapo/hasLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

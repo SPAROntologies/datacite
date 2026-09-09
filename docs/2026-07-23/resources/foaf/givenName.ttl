@@ -1,6 +1,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -9,7 +10,7 @@ foaf:givenName a owl:DatatypeProperty ;
     rdfs:label "has given name"@en ;
     vann:example """
         :david-shotton a foaf:Person ;
-                foaf:givenName 'David'@en .
+                foaf:givenName "David"@en .
         """ ;
     vaem:rationale """
 This property expresses the personal or first name of an agent involved with the resource (e.g., creator, contributor, etc.). 
@@ -19,5 +20,5 @@ The agent must be a `foaf:Person`.
     rdfs:domain foaf:Person ;
     rdfs:isDefinedBy foaf: ;
     rdfs:range rdfs:Literal ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

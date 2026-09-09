@@ -8,18 +8,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/ror">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <skos:note xml:lang="en">A ROR identifier is resolvable from the following URL: https://ror.org/&lt;identifier&gt;.</skos:note>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ror.org/</fabio:hasURL>
     <rdfs:label xml:lang="en">ror</rdfs:label>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
+    <rdfs:comment xml:lang="en">The Research Organization Registry (ROR) Community identifier is a unique code assigned to research organizations.</rdfs:comment>
     <rdf:type rdf:resource="http://purl.org/spar/datacite/OrganizationIdentifierScheme"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vann:example>
         :my-organization-id 
                 datacite:usesIdentifierScheme datacite:ror ;
                 literal:hasLiteralValue "00wb4mk85" .
         </vann:example>
-    <skos:scopeNote xml:lang="en">A ROR identifier is resolvable from the following URL: https://ror.org/&lt;identifier&gt;.</skos:scopeNote>
-    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ror.org/</fabio:hasURL>
-    <rdfs:comment xml:lang="en">The Research Organization Registry (ROR) Community identifier is a unique code assigned to research organizations.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

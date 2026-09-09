@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/gitlab> <http://purl.org/vocab/vann/example> "\n        :my-person-id \n                datacite:usesIdentifierScheme datacite:gitlab ;\n                literal:hasLiteralValue \"gitlab-org\" .\n        " .
-<http://purl.org/spar/datacite/gitlab> <http://purl.org/spar/fabio/hasURL> "https://docs.gitlab.com/ee/user/profile/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2000/01/rdf-schema#label> "GitLab user account"@en .
-<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
 <http://purl.org/spar/datacite/gitlab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2004/02/skos/core#scopeNote> "A GitLab user account is resolvable from the following URL: https://gitlab.com/<identifier>."@en .
+<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/gitlab> <http://purl.org/spar/fabio/hasURL> "https://docs.gitlab.com/ee/user/profile/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2000/01/rdf-schema#comment> "The GitLab user account is a unique identifier assigned to GitLab users."@en .
+<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2004/02/skos/core#note> "A GitLab user account is resolvable from the following URL: https://gitlab.com/<identifier>."@en .
+<http://purl.org/spar/datacite/gitlab> <http://www.w3.org/2000/01/rdf-schema#label> "GitLab user account"@en .
+<http://purl.org/spar/datacite/gitlab> <http://purl.org/vocab/vann/example> "\n        :my-person-id \n                datacite:usesIdentifierScheme datacite:gitlab ;\n                literal:hasLiteralValue \"gitlab-org\" .\n        " .

@@ -6,7 +6,7 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :david-shotton a foaf:Person ;\n                foaf:givenName 'David'@en .\n        "
+        "@value": "\n        :david-shotton a foaf:Person ;\n                foaf:givenName \"David\"@en .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
@@ -44,8 +44,7 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

@@ -1,6 +1,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -9,15 +10,15 @@ fabio:hasSequenceIdentifier a owl:DatatypeProperty ;
     rdfs:label "has sequence identifier"@en ;
     vann:example """
         :related-item
-                fabio:hasSequenceIdentifier '3' .
+                fabio:hasSequenceIdentifier "3" .
         """ ;
     vaem:rationale """
 This is used to express the year a resource was published or issued in.
 
-The type of number identifier can be expressed by specifying the class of the resource: for example, whether the related resource is a 'Book' (`fabio:Book`), a 'Chapter' (`fabio:Chapter`), a 'Report' (`fabio:ReportDocument`) or 'Other' (`frbr:Endeavour`).
+The type of number identifier can be expressed by specifying the class of the resource: for example, whether the related resource is a "Book" (`fabio:Book`), a "Chapter" (`fabio:Chapter`), a "Report" (`fabio:ReportDocument`) or "Other" (`frbr:Endeavour`).
         """@en ;
     rdfs:comment "A literal (for example a number or a letter) that identifies the sequence position of a work within a particular context, for example a book in a book series, a chapter in a document, a volume in a journal."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:range rdfs:Literal ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

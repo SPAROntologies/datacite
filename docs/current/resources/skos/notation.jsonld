@@ -6,7 +6,7 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-concept a skos:Concept ;\n                skos:notation '123456' .\n        "
+        "@value": "\n        :my-concept a skos:Concept ;\n                skos:notation \"123456\" .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
@@ -18,12 +18,12 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A string of characters such as 'T58.5' or '303.4833' used to uniquely identify a concept within the scope of a given concept scheme."
+        "@value": "A string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://www.w3.org/2004/02/skos/core"
+        "@id": "http://www.w3.org/2004/02/skos/core#"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -39,8 +39,7 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

@@ -1,5 +1,5 @@
-<http://purl.org/spar/fabio/Periodical> <http://www.w3.org/2000/01/rdf-schema#comment> "A publication issued on a regular and ongoing basis as a series of issues, each issue comprising separate periodical items, for example editorials, articles, news items and/or other writings."@en .
+<http://purl.org/spar/fabio/Periodical> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/Periodical> <http://www.w3.org/2000/01/rdf-schema#label> "periodical"@en .
 <http://purl.org/spar/fabio/Periodical> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Book> .
 <http://purl.org/spar/fabio/Periodical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/fabio/Periodical> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .
-<http://purl.org/spar/fabio/Periodical> <http://www.w3.org/2000/01/rdf-schema#label> "periodical"@en .
+<http://purl.org/spar/fabio/Periodical> <http://www.w3.org/2000/01/rdf-schema#comment> "A publication issued on a regular and ongoing basis as a series of issues, each issue comprising separate periodical items, for example editorials, articles, news items and/or other writings."@en .

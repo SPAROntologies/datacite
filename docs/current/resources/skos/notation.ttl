@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -9,13 +10,13 @@ skos:notation a owl:DatatypeProperty ;
     rdfs:label "has notation"@en ;
     vann:example """
         :my-concept a skos:Concept ;
-                skos:notation '123456' .
+                skos:notation "123456" .
         """ ;
     vaem:rationale """
 This is used to assign a classification code, used in a related subject scheme, to a subject of the resource.
         """@en ;
-    rdfs:comment "A string of characters such as 'T58.5' or '303.4833' used to uniquely identify a concept within the scope of a given concept scheme."@en ;
-    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+    rdfs:comment "A string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
+    rdfs:isDefinedBy skos: ;
     rdfs:range rdfs:Literal ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

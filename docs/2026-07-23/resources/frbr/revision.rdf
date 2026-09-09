@@ -9,24 +9,24 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#revision">
-    <rdfs:comment xml:lang="en">
-An expression revised in another one.
-        </rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    <vaem:rationale xml:lang="en">
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('IsPreviousVersionOf') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
-        </vaem:rationale>
-    <rdfs:label xml:lang="en">has revision</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/vocab/frbr/core#revisionOf"/>
     <vann:example>
         :relation-dataset-article a datacite:QualifiedRelation ;
                 datacite:hasRelationCharacterization frbr:revision .
         </vann:example>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
-    <owl:inverseOf rdf:resource="http://purl.org/vocab/frbr/core#revisionOf"/>
-    <skos:scopeNote xml:lang="en">
+    <skos:note xml:lang="en">
 A revision has the intent to alter or update the content of the prior expression, but without changing the content so much that it becomes a new work.
-        </skos:scopeNote>
+        </skos:note>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">has revision</rdfs:label>
+    <vaem:rationale xml:lang="en">
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsPreviousVersionOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+        </vaem:rationale>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    <rdfs:comment xml:lang="en">
+An expression revised in another one.
+        </rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

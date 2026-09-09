@@ -1,6 +1,7 @@
 @prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -10,14 +11,14 @@ literal:hasLiteralValue a owl:DatatypeProperty,
     rdfs:label "has literal value"@en ;
     vann:example """
         :my-literal a literal:Literal ;
-                literal:hasLiteralValue '0000-0002-0799-1527'^^rdfs:Literal .
+                literal:hasLiteralValue "0000-0002-0799-1527"^^rdfs:Literal .
         """ ;
     vaem:rationale """
 This is used to express the actual content of a reified literal (modelled via the class `literal:Literal`).
         """@en ;
     rdfs:comment "The value that a reified literal represents."@en ;
     rdfs:domain literal:Literal ;
-    rdfs:isDefinedBy <http://www.essepuntato.it/2010/06/literalreification> ;
+    rdfs:isDefinedBy <http://purl.org/spar/literal/> ;
     rdfs:range rdfs:Literal ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

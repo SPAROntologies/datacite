@@ -4,10 +4,10 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Notebook">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Book"/>
-    <rdfs:label xml:lang="en">notebook</rdfs:label>
     <rdfs:comment xml:lang="en">A book containing personal notes, typically created by writing into a physical book with blank pages.</rdfs:comment>
+    <rdfs:label xml:lang="en">notebook</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Book"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>

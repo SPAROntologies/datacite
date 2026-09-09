@@ -6,7 +6,7 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-dataset \n                dcterms:title 'UK rainfall, June 2012'@en ;\n                prism:alternateTitle 'Rainfall on UK in June 2012'@en .\n        "
+        "@value": "\n    :my-dataset \n        dcterms:title \"UK rainfall, June 2012\"@en ;\n        prism:alternateTitle \"Rainfall on UK in June 2012\"@en .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
@@ -39,8 +39,7 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

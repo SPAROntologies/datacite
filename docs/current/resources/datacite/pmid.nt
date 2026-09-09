@@ -1,8 +1,8 @@
-<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2000/01/rdf-schema#label> "pmid"@en .
-<http://purl.org/spar/datacite/pmid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
 <http://purl.org/spar/datacite/pmid> <http://www.w3.org/2000/01/rdf-schema#comment> "The PubMed Identifier (PMID) is a bibliographic identifier for the PubMed database."@en .
-<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/pmid> <http://purl.org/spar/fabio/hasURL> "http://www.ncbi.nlm.nih.gov/pubmed/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/pmid> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:pmid ;\n                literal:hasLiteralValue \"29943802\" .\n        " .
+<http://purl.org/spar/datacite/pmid> <http://purl.org/spar/fabio/hasURL> "http://www.ncbi.nlm.nih.gov/pubmed/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/pmid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/pmid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/pmid> <http://www.w3.org/2000/01/rdf-schema#label> "pmid"@en .

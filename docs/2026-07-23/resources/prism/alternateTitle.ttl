@@ -1,6 +1,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -8,9 +9,9 @@
 prism:alternateTitle a owl:DatatypeProperty ;
     rdfs:label "has alternate title"@en ;
     vann:example """
-        :my-dataset 
-                dcterms:title 'UK rainfall, June 2012'@en ;
-                prism:alternateTitle 'Rainfall on UK in June 2012'@en .
+    :my-dataset 
+        dcterms:title "UK rainfall, June 2012"@en ;
+        prism:alternateTitle "Rainfall on UK in June 2012"@en .
         """ ;
     vaem:rationale """
 This is used in addition to the generic title (`dcterms:title`), if appropriate.
@@ -21,5 +22,5 @@ Values of language tags must follow the pattern defined by the XML schema langua
     rdfs:comment "An alternate title or alternate headline for a resource that may be used in a table of contents, a popup etc. and can vary with platform."@en ;
     rdfs:isDefinedBy prism: ;
     rdfs:range rdfs:Literal ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

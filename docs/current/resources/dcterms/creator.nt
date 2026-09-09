@@ -1,9 +1,9 @@
-<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
-<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
-<http://purl.org/dc/terms/creator> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/dc/terms/creator> <http://purl.org/vocab/vann/example> "\n        :my-dataset \n                dcterms:creator :david-shotton .\n        \n        :david-shotton a foaf:Agent .\n        " .
 <http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/contributor> .
-<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for making the resource."@en .
-<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#label> "has creator" .
 <http://purl.org/dc/terms/creator> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis property allows one to link a resource with the agent responsible for its creation. \nWhile the type of such agent could be either a person (`foaf:Person`) or an organization (`foaf:Organization`), the use of `foaf:Agent` is preferred since it is more generic. \nHowever, the subclasses of `foaf:Agent` can be used if there are other data that allow one to do so – e.g., if the agent has an ORCID specified one can choose to use `foaf:Person` instead.\n        "@en .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for making the resource."@en .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#label> "has creator" .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/creator> <http://purl.org/vocab/vann/example> "\n        :my-dataset \n            dcterms:creator :david-shotton .\n        \n        :david-shotton a foaf:Agent .\n        " .

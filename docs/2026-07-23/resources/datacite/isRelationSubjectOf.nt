@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the qualified relation (modelled via the class `datacite:QualifiedRelation`) between two resources aving one of these as its object.\n        "@en .
-<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2000/01/rdf-schema#label> "is relation subject of"@en .
 <http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation in its reified form linked to a resource that is the subject in such a relation."@en .
+<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasRelationSubject> .
+<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/QualifiedRelation> .
+<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the qualified relation (modelled via the class `datacite:QualifiedRelation`) between two resources aving one of these as its object.\n        "@en .
 <http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/spar/datacite/isRelationSubjectOf> <http://purl.org/vocab/vann/example> "\n        :my-dataset \n                datacite:isRelationSubjectOf :relation-dataset-article .\n        " .
-<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/hasRelationSubject> .
-<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/datacite/QualifiedRelation> .
-<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2000/01/rdf-schema#label> "is relation subject of"@en .
-<http://purl.org/spar/datacite/isRelationSubjectOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .

@@ -1,8 +1,8 @@
-<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/2000/01/rdf-schema#label> "registration authority"@en .
-<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
-<http://purl.org/spar/scoro/registration-authority> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type ('Registration Authority').\n        "@en .
 <http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/2000/01/rdf-schema#label> "registration authority"@en .
+<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro/> .
 <http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/2000/01/rdf-schema#comment> "The role of an agent with responsibility for registering and maintaining international standards, internet domain names, patents, controlled vocabularies and other similar entities required for reliable international cooperatative activities.  For example, the International DOI Foundation (IDF) is the Registration Authority for DOIs."@en .
-<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
 <http://purl.org/spar/scoro/registration-authority> <http://purl.org/vocab/vann/example> "\n        :international-doi-foundation\n                pro:holdsRoleInTime :registration-authority-for-my-dataset .\n        \n        :registration-authority-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:registration-authority .\n        " .
+<http://purl.org/spar/scoro/registration-authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/registration-authority> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type (\"Registration Authority\").\n        "@en .

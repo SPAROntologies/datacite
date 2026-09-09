@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -17,9 +18,9 @@ scoro:registration-authority a scoro:OrganizationalRole,
                 pro:withRole scoro:registration-authority .
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given agent role type ('Registration Authority').
+This is used as a controlled term to specify a given agent role type ("Registration Authority").
         """@en ;
     rdfs:comment "The role of an agent with responsibility for registering and maintaining international standards, internet domain names, patents, controlled vocabularies and other similar entities required for reliable international cooperatative activities.  For example, the International DOI Foundation (IDF) is the Registration Authority for DOIs."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/scoro> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
 

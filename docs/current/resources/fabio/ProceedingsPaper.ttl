@@ -5,6 +5,6 @@
 fabio:ProceedingsPaper a owl:Class ;
     rdfs:label "proceedings paper"@en ;
     rdfs:comment "A paper, typically the realization of a research paper reporting original research findings, usually published within an academic proceedings volume."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:Expression .
 

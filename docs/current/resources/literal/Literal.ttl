@@ -1,6 +1,7 @@
 @prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -14,7 +15,7 @@ literal:Literal a owl:Class ;
                 literal:hasLiteral :my-dataset-date .
 
         :my-dataset-date a literal:Literal ;
-                literal:hasLiteralValue '2012-07-04'^^xsd:date ;
+                literal:hasLiteralValue "2012-07-04"^^xsd:date ;
                 dcterms:type dcterms:date .
         """ ;
     vaem:rationale """
@@ -24,12 +25,12 @@ The value is contained in the reified literal and is expressed through the data 
 Other information, such as the type of value (e.g., the date type), is expressed via the punning mechanism that allows one to use properties as individuals, and linked to the reified literal with an appropriate property (e.g., `dcterms:type`, `dcterms:dateAccepted`, `fabio:hasDateCollected`, etc.).        
         """@en ;
     rdfs:comment "A reified literal."@en ;
-    rdfs:isDefinedBy <http://www.essepuntato.it/2010/06/literalreification> ;
+    rdfs:isDefinedBy <http://purl.org/spar/literal/> ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty literal:hasLiteralValue ] ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 The literal value it represents is specified through the property `literal:hasLiteralValue`. 
 Each individual of this class must always have a specified value.        
         """@en .

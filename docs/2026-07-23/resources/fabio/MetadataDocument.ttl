@@ -1,6 +1,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -23,7 +24,7 @@ In addition to specifying a metadata scheme, in this case the metadata document 
 Each metadata scheme is an individual of the class `datacite:MetadataScheme`.
         """@en ;
     rdfs:comment "A document that contains metadata information describing one or more characteristics of an entity."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:Expression ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

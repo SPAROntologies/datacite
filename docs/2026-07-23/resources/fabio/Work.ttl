@@ -6,6 +6,6 @@
 fabio:Work a owl:Class ;
     rdfs:label "work"@en ;
     rdfs:comment "A subclass of FRBR Work, restricted to works that are published or potentially publishable, and that contain or are referred to by bibliographic references, or entities used to define bibliographic references."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf frbr:Work .
 

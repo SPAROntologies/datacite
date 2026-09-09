@@ -8,20 +8,20 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Sound">
-    <skos:scopeNote xml:lang="en">
-Examples include a C source file, MS-Windows .exe executable, or Perl script.        
-        </skos:scopeNote>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given general resource type ("Sound").
+        </vaem:rationale>
     <rdfs:comment xml:lang="en">A resource primarily intended to be heard.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype"/>
     <vann:example>
         :my-resource
                 datacite:hasGeneralResourceType dcmitype:Sound .
         </vann:example>
+    <skos:note xml:lang="en">
+Examples include a C source file, MS-Windows .exe executable, or Perl script.        
+        </skos:note>
     <rdfs:label xml:lang="en">sound</rdfs:label>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given general resource type ('Sound').
-        </vaem:rationale>
   </rdf:Description>
 </rdf:RDF>

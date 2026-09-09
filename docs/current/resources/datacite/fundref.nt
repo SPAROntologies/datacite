@@ -1,8 +1,8 @@
-<http://purl.org/spar/datacite/fundref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#comment> "The FundRef identifier is a unique code assigned by Fundref, a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research."@en .
-<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/fundref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/FunderIdentifierScheme> .
 <http://purl.org/spar/datacite/fundref> <http://purl.org/vocab/vann/example> "\n        :my-funder-id\n                datacite:usesIdentifierScheme datacite:fundref ;\n                literal:hasLiteralValue \"501100000831\" .\n        " .
+<http://purl.org/spar/datacite/fundref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://purl.org/spar/datacite/fundref> <http://purl.org/spar/fabio/hasURL> "http://www.crossref.org/fundref/index.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#comment> "The FundRef identifier is a unique code assigned by Fundref, a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research."@en .
 <http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#label> "fundref"@en .
-<http://purl.org/spar/datacite/fundref> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .

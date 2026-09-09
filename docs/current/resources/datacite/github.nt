@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/github> <http://www.w3.org/2004/02/skos/core#scopeNote> "A GitHub username is resolvable from the following URL: https://github.com/<identifier>."@en .
-<http://purl.org/spar/datacite/github> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/github> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#comment> "The GitHub username is a unique identifier assigned to GitHub users."@en .
-<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#label> "github"@en .
-<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/github> <http://purl.org/spar/fabio/hasURL> "https://github.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/github> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#comment> "The GitHub username is a unique identifier assigned to GitHub users."@en .
+<http://purl.org/spar/datacite/github> <http://purl.org/spar/fabio/hasURL> "https://github.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/2000/01/rdf-schema#label> "github"@en .
+<http://purl.org/spar/datacite/github> <http://www.w3.org/2004/02/skos/core#note> "A GitHub username is resolvable from the following URL: https://github.com/<identifier>."@en .
 <http://purl.org/spar/datacite/github> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni-id\n                datacite:usesIdentifierScheme datacite:github ;\n                literal:hasLiteralValue \"essepuntato\" .\n        " .

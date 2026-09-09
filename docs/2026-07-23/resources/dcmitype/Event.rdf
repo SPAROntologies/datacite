@@ -8,20 +8,20 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Event">
-    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given general resource type ("Event").        
+        </vaem:rationale>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+Metadata for an event provides descriptive information that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event. Examples include an exhibition, webcast, conference, workshop, open day, performance, battle, trial, wedding, tea party, conflagration.
+        </skos:note>
+    <rdfs:label xml:lang="en">event</rdfs:label>
+    <rdfs:comment xml:lang="en">A non-persistent, time-based occurrence.</rdfs:comment>
     <vann:example>
         :my-resource
                 datacite:hasGeneralResourceType dcmitype:Event .
         </vann:example>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given general resource type ('Event').        
-        </vaem:rationale>
-    <rdfs:label xml:lang="en">event</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype"/>
-    <skos:scopeNote xml:lang="en">
-Metadata for an event provides descriptive information that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event. Examples include an exhibition, webcast, conference, workshop, open day, performance, battle, trial, wedding, tea party, conflagration.
-        </skos:scopeNote>
-    <rdfs:comment xml:lang="en">A non-persistent, time-based occurrence.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
   </rdf:Description>
 </rdf:RDF>

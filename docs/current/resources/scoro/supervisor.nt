@@ -1,8 +1,8 @@
-<http://purl.org/spar/scoro/supervisor> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni\n                pro:holdsRoleInTime :supervisor-for-my-dataset .\n        \n        :supervisor-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:supervisor .\n        " .
-<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/2000/01/rdf-schema#comment> "The role of a person who guides and oversees the research activities of a team member, or who formally supervises a student during that student's research project undertaken as part of a degree course at a university."@en .
-<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/EducationalRole> .
-<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
-<http://purl.org/spar/scoro/supervisor> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type ('Supervisor').\n        "@en .
 <http://purl.org/spar/scoro/supervisor> <http://www.w3.org/2000/01/rdf-schema#label> "supervisor"@en .
+<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/EducationalRole> .
+<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/supervisor> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type (\"Supervisor\").\n        "@en .
+<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/2000/01/rdf-schema#comment> "The role of a person who guides and oversees the research activities of a team member, or who formally supervises a student during that student's research project undertaken as part of a degree course at a university."@en .
+<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/supervisor> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/scoro/supervisor> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni\n                pro:holdsRoleInTime :supervisor-for-my-dataset .\n        \n        :supervisor-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:supervisor .\n        " .

@@ -1,8 +1,8 @@
-<http://purl.org/dc/dcmitype/PhysicalObject> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:PhysicalObject .\n        " .
-<http://purl.org/dc/dcmitype/PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcmitype> .
 <http://purl.org/dc/dcmitype/PhysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/dcmitype/PhysicalObject> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/dc/dcmitype/PhysicalObject> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type ('Physical Object').\n        "@en .
+<http://purl.org/dc/dcmitype/PhysicalObject> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Physical Object\").\n        "@en .
+<http://purl.org/dc/dcmitype/PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcmitype/> .
 <http://purl.org/dc/dcmitype/PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#label> "physical object"@en .
-<http://purl.org/dc/dcmitype/PhysicalObject> <http://www.w3.org/2004/02/skos/core#scopeNote> "\nNote that digital representations of, or surrogates for, these objects should use Image, Text or one of the other types.     \n        "@en .
 <http://purl.org/dc/dcmitype/PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An inanimate, three-dimensional object or substance."@en .
+<http://purl.org/dc/dcmitype/PhysicalObject> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/dcmitype/PhysicalObject> <http://www.w3.org/2004/02/skos/core#note> "\nNote that digital representations of, or surrogates for, these objects should use Image, Text or one of the other types.     \n        "@en .
+<http://purl.org/dc/dcmitype/PhysicalObject> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:PhysicalObject .\n        " .

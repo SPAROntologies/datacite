@@ -1,6 +1,7 @@
 @prefix datacite: <http://purl.org/spar/datacite/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -20,11 +21,11 @@ This is used to represent identifiers associated with agents, generally modelled
 An agent identifier belongs to a particular identifier scheme, specified by an individual within the class `datacite:AgentIdentifierScheme` (or any of its subclasses).
         """@en ;
     rdfs:comment "An identifier that uniquely identities an individual agent."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+    rdfs:isDefinedBy datacite: ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom datacite:AgentIdentifier ;
             owl:onProperty datacite:usesIdentifierScheme ],
         datacite:Identifier ;
     owl:disjointWith datacite:ResourceIdentifier ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

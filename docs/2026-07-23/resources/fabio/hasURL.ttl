@@ -2,6 +2,7 @@
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -11,14 +12,14 @@ fabio:hasURL a owl:DatatypeProperty ;
     rdfs:label "has URL"@en ;
     vann:example """
         datacite:orcid a datacite:PersonalIdentifierScheme ;
-                fabio:hasURL 'http://orcid.org'^^xsd:anyURI .
+                fabio:hasURL "http://orcid.org"^^xsd:anyURI .
         """ ;
     vaem:rationale """
 This is used to specify the URL of a certain resource, including subject terms, subject schemes, identifier schemes, and so on.
         """@en ;
     rdfs:comment "An identifier, in form of an HTTP Universal Resource Locator (URL), for a particular resource on the World Wide Web."@en ;
     rdfs:domain frbr:Endeavour ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:range xsd:anyURI ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

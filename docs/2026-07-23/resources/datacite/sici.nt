@@ -1,8 +1,8 @@
-<http://purl.org/spar/datacite/sici> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
 <http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#comment> "The Serial Item and Contribution Identifier (SICI) is a code used to uniquely identify specific volumes, articles or other identifiable parts of a serial."@en .
-<http://purl.org/spar/datacite/sici> <http://purl.org/spar/fabio/hasURL> "http://en.wikipedia.org/wiki/Serial_Item_and_Contribution_Identifier"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/sici> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#label> "sici"@en .
-<http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/sici> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/sici> <http://purl.org/vocab/vann/example> "\n        :my-object-id\n                datacite:usesIdentifierScheme datacite:sici ;\n                literal:hasLiteralValue \"0002-8231(199412)45:10<737:TIODIM>2.3.TX;2-M\" .\n        " .
-<http://purl.org/spar/datacite/sici> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/spar/datacite/sici> <http://www.w3.org/2000/01/rdf-schema#label> "sici"@en .
+<http://purl.org/spar/datacite/sici> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/sici> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/sici> <http://purl.org/spar/fabio/hasURL> "http://en.wikipedia.org/wiki/Serial_Item_and_Contribution_Identifier"^^<http://www.w3.org/2001/XMLSchema#anyURI> .

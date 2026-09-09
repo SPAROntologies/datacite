@@ -1,9 +1,9 @@
-<http://purl.org/spar/fabio/hasSubtitle> <http://purl.org/vocab/vann/example> "\n        :my-dataset\n                dcterms:title 'UK rainfall, June 2012'@en ;\n                fabio:hasSubtitle 'The wettest june on record'@en .\n        " .
-<http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2000/01/rdf-schema#comment> "A secondary title that follows the main title of a work."@en .
 <http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/title> .
 <http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://purl.org/spar/fabio/hasSubtitle> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in addition to the generic title of a resource (`dcterms:title`), if appropriate.\n\nTo express the language of a title, a language-tagged literal should be used as value. \nValues of language tags must follow the pattern defined by the XML schema language type, e.g.: `en`, `it`, `fr`, `cmn`, `nys`, `swh`, and so on.\n        "@en .
+<http://purl.org/spar/fabio/hasSubtitle> <http://purl.org/vocab/vann/example> "\n        :my-dataset\n                dcterms:title \"UK rainfall, June 2012\"@en ;\n                fabio:hasSubtitle \"The wettest june on record\"@en .\n        " .
+<http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
 <http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2000/01/rdf-schema#label> "has subtitle"@en .
-<http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/fabio/hasSubtitle> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in addition to the generic title of a resource (`dcterms:title`), if appropriate.\n\nTo express the language of a title, a language-tagged literal should be used as value. \nValues of language tags must follow the pattern defined by the XML schema language type, e.g.: `en`, `it`, `fr`, `cmn`, `nys`, `swh`, and so on.\n        "@en .
+<http://purl.org/spar/fabio/hasSubtitle> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

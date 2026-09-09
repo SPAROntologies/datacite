@@ -1,10 +1,10 @@
-<http://purl.org/spar/fabio/hasPublicationYear> <http://purl.org/vocab/vann/example> "\n        :my-dataset\n                fabio:hasPublicationYear '2012'^^xsd:gYear .\n        " .
-<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2000/01/rdf-schema#label> "has publication year"@en .
-<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://purl.org/spar/fabio/hasPublicationYear> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the year a resource was published or issued in.\n        "@en .
-<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2000/01/rdf-schema#comment> "The year of publication of a work."@en .
-<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2004/02/skos/core#scopeNote> "\nA sub-property of the generic `dcterms:issued` that accepts values with the `xsd:gYear` datatype.\n        "@en .
 <http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/issued> .
+<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2004/02/skos/core#note> "\nA sub-property of the generic `dcterms:issued` that accepts values with the `xsd:gYear` datatype.\n        "@en .
+<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2000/01/rdf-schema#comment> "The year of publication of a work."@en .
+<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/spar/fabio/hasPublicationYear> <http://purl.org/vocab/vann/example> "\n        :my-dataset\n                fabio:hasPublicationYear \"2012\"^^xsd:gYear .\n        " .
+<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2000/01/rdf-schema#label> "has publication year"@en .

@@ -28,7 +28,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/pro"
+        "@id": "http://purl.org/spar/pro/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -44,7 +44,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "http://purl.org/spar/tvc/hasValue"
+        "@id": "http://www.essepuntato.it/2012/04/tvc/hasValue"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
@@ -54,11 +54,10 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
         "@value": "\nThe full minimum pattern to express the role of some agent is: \n        foaf:Agent \n                pro:holdsRoleInTime [ \n                        a pro:RoleInTime ; \n                        pro:withRole pro:Role \n                        ] . \nPRO permits one to specify the time period over which a role is held, and the other contextual entities to which that agent's role relates.\n        "

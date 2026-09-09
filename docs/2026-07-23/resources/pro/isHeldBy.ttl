@@ -7,6 +7,6 @@ pro:isHeldBy a owl:ObjectProperty ;
     rdfs:label "is role held by"@en ;
     rdfs:comment "The agent holding a role in time."@en ;
     rdfs:domain pro:RoleInTime ;
-    rdfs:isDefinedBy <http://purl.org/spar/pro> ;
+    rdfs:isDefinedBy pro: ;
     rdfs:range foaf:Agent .
 

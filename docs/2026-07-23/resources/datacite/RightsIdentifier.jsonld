@@ -17,7 +17,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/datacite"
+        "@id": "http://purl.org/spar/datacite/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -33,11 +33,10 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
         "@value": "\nThis is used to represent identifiers associated with rights.\n\nA rights identifier belongs to a particular scheme, such as SPDX, specified by an individual within the class `datacite:RightsIdentifierScheme`.\n        "
@@ -45,7 +44,7 @@
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab54",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b54",
     "@type": [
       "http://www.w3.org/2002/07/owl#AllDisjointClasses"
     ],

@@ -7,14 +7,10 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/scoro/data-curator">
-    <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given agent role type ('Data Curator').
-        </vaem:rationale>
-    <rdfs:label xml:lang="en">data curator</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro"/>
-    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:comment xml:lang="en">The role a person has of being a data curator, responsible reviewing, enhancing, cleaning, or standardizing data and their associated metadata, for example those arising from the research project, and for their long-term preservation.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">data curator</rdfs:label>
     <vann:example>
         :silvio-peroni
                 pro:holdsRoleInTime :data-curator-for-my-dataset .
@@ -23,6 +19,10 @@ This is used as a controlled term to specify a given agent role type ('Data Cura
                 pro:relatesToEntity :my-dataset ;
                 pro:withRole scoro:data-curator .
         </vann:example>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdfs:comment xml:lang="en">The role a person has of being a data curator, responsible reviewing, enhancing, cleaning, or standardizing data and their associated metadata, for example those arising from the research project, and for their long-term preservation.</rdfs:comment>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given agent role type ("Data Curator").
+        </vaem:rationale>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
   </rdf:Description>
 </rdf:RDF>

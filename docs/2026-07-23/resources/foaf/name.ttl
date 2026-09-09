@@ -1,6 +1,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -9,7 +10,7 @@ foaf:name a owl:DatatypeProperty ;
     rdfs:label "has name"@en ;
     vann:example """
         :david-shotton a foaf:Person ;
-                foaf:name 'David Shotton'@en .
+                foaf:name "David Shotton"@en .
         """ ;
     vaem:rationale """
 This is the most generic [FOAF](http://xmlns.com/foaf/0.1/) property for names.
@@ -24,5 +25,5 @@ The language of a name is expressed via a language-tagged literal, whose value m
     rdfs:isDefinedBy foaf: ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf rdfs:label ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

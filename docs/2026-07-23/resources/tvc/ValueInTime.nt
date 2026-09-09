@@ -1,4 +1,4 @@
-<http://purl.org/spar/tvc/ValueInTime> <http://www.w3.org/2000/01/rdf-schema#label> "value in time"@en .
-<http://purl.org/spar/tvc/ValueInTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/tvc/ValueInTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A time-indexed situation that represents a hub linking the entity having a particular value, the value itself and the temporal and contextual extents from which the entity-value relationship depends."@en .
-<http://purl.org/spar/tvc/ValueInTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/tvc> .
+<http://www.essepuntato.it/2012/04/tvc/ValueInTime> <http://www.w3.org/2000/01/rdf-schema#label> "value in time"@en .
+<http://www.essepuntato.it/2012/04/tvc/ValueInTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/tvc/> .
+<http://www.essepuntato.it/2012/04/tvc/ValueInTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A time-indexed situation that represents a hub linking the entity having a particular value, the value itself and the temporal and contextual extents from which the entity-value relationship depends."@en .
+<http://www.essepuntato.it/2012/04/tvc/ValueInTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

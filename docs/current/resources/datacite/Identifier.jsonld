@@ -6,7 +6,7 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-resource\n                datacite:hasIdentifier :my-resource-id .\n        \n        :my-resource-id a datacite:Identifier ;\n                literal:hasLiteralValue \"0000-2221-4444\" .\n        "
+        "@value": "\n        :my-resource\n            datacite:hasIdentifier :my-resource-id .\n        \n        :my-resource-id a datacite:Identifier ;\n            literal:hasLiteralValue \"0000-2221-4444\" .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/datacite"
+        "@id": "http://purl.org/spar/datacite/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -34,24 +34,48 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab36"
-      },
-      {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab37"
-      },
-      {
         "@id": "http://www.essepuntato.it/2010/06/literalreification/Literal"
+      },
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b37"
+      },
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b36"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab36",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b37",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b38"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b38",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasIdentifier"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b36",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -69,31 +93,6 @@
       {
         "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
         "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab37",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab38"
-      }
-    ]
-  },
-  {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab38",
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/datacite/hasIdentifier"
       }
     ]
   }

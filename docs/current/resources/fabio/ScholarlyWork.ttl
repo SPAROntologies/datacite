@@ -5,6 +5,6 @@
 fabio:ScholarlyWork a owl:Class ;
     rdfs:label "scholarly work"@en ;
     rdfs:comment "A work that reports scholarly activity on a particular topic, either published in written form, or delivered orally at a meeting."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:Work .
 

@@ -1,6 +1,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -10,17 +11,17 @@
 prism:edition a owl:DatatypeProperty ;
     rdfs:label "has edition"@en ;
     vann:example """
-        :related-item
-                prism:edition '3' .
-        """ ;
+    :related-item
+        prism:edition "3" .
+    """ ;
     vaem:rationale """
 This is used to express the edition number or string of a resource.
         """@en ;
     rdfs:comment "An identifier for one of several alternate issues of a magazine or other resource."@en ;
     rdfs:isDefinedBy prism: ;
     rdfs:range xsd:string ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 An issue of a magazine may be produced in multiple editions, with each edition providing content customized for a particular demographic or geographic group. 
 Fortune, for example, is produced in a Domestic edition, a European edition, and an Asian edition. 
 While much of the content overlaps, there is some content that is unique to each edition.

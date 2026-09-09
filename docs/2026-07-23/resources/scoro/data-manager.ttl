@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -17,9 +18,9 @@ scoro:data-manager a scoro:OrganizationalRole,
                 pro:withRole scoro:data-manager .
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given agent role type ('Data Manager').
+This is used as a controlled term to specify a given agent role type ("Data Manager").
         """@en ;
     rdfs:comment "The role a person has of being a data manager, responsible for day-to-day management, maintenance and back-up of data, for example those arising from the research project or held in a repository."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/scoro> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
 

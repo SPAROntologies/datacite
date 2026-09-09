@@ -1,6 +1,7 @@
 @prefix datacite: <http://purl.org/spar/datacite/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -17,7 +18,7 @@ This is used to specify the subject of a qualified relation (modelled via the cl
         """@en ;
     rdfs:comment "The resource that is the subject of a reified relation."@en ;
     rdfs:domain datacite:QualifiedRelation ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+    rdfs:isDefinedBy datacite: ;
     rdfs:subPropertyOf sit:isSettingFor ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

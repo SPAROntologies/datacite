@@ -7,18 +7,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/terms/hasVersion">
+    <rdfs:comment xml:lang="en">A related resource that is a version, edition, or adaptation of the described resource.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdfs:label xml:lang="en">has version</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vaem:rationale xml:lang="en">
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("HasVersion") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+        </vaem:rationale>
     <vann:example>
         :relation-dataset-article a datacite:QualifiedRelation ;
                 datacite:hasRelationCharacterization dcterms:hasVersion .
         </vann:example>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:label xml:lang="en">has version</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    <rdfs:comment xml:lang="en">A related resource that is a version, edition, or adaptation of the described resource.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms"/>
-    <vaem:rationale xml:lang="en">
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('HasVersion') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
-        </vaem:rationale>
   </rdf:Description>
 </rdf:RDF>

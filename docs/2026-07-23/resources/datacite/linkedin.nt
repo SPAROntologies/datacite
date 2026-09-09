@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2004/02/skos/core#scopeNote> "A LinkedIn personal profile identifier is resolvable from the following URL: https://www.linkedin.com/in/<identifier>."@en .
-<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2000/01/rdf-schema#label> "linkedin"@en .
-<http://purl.org/spar/datacite/linkedin> <http://purl.org/spar/fabio/hasURL> "https://www.linkedin.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2004/02/skos/core#note> "A LinkedIn personal profile identifier is resolvable from the following URL: https://www.linkedin.com/in/<identifier>."@en .
 <http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2000/01/rdf-schema#comment> "The LinkedIn personal profile identifier is an unique identifier assigned to a LinkedIn user."@en .
-<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/linkedin> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni-id\n                datacite:usesIdentifierScheme datacite:linkedin ;\n                literal:hasLiteralValue \"essepuntato\" .\n        " .
+<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/2000/01/rdf-schema#label> "linkedin"@en .
+<http://purl.org/spar/datacite/linkedin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/spar/datacite/linkedin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite/linkedin> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni-id\n                datacite:usesIdentifierScheme datacite:linkedin ;\n                literal:hasLiteralValue \"essepuntato\" .\n        " .
+<http://purl.org/spar/datacite/linkedin> <http://purl.org/spar/fabio/hasURL> "https://www.linkedin.com/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .

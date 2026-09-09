@@ -1,7 +1,7 @@
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "concept"@en .
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent subjects.\n        "@en .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://purl.org/vocab/vann/example> "\n        :my-concept a skos:Concept ;\n                skos:prefLabel 'Knowledge'@en . \n        " .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://purl.org/vocab/vann/example> "\n        :my-concept a skos:Concept ;\n                skos:prefLabel \"Knowledge\"@en . \n        " .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#comment> "An idea or notion; a unit of thought."@en .
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

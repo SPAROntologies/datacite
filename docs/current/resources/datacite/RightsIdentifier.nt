@@ -1,18 +1,18 @@
-<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "rights identifier"@en .
+_:n16082fa6811145e08dfaeb8890637028b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/RightsIdentifier> .
+<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/RightsIdentifier> <http://purl.org/vocab/vann/example> "\n        :my-resource-rights \n                datacite:hasIdentifier :my-resource-rights-id .\n\n        :my-resource-rights-id a datacite:RightsIdentifier ;\n                literal:hasLiteralValue \"CC-BY-1.0\" .\n        " .
-_:n3ae03b620cb34e859c211b82ae43b76ab56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/PersonalIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab56 .
 <http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identifies a license."@en .
-<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-_:n3ae03b620cb34e859c211b82ae43b76ab56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab57 .
-_:n3ae03b620cb34e859c211b82ae43b76ab58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:n3ae03b620cb34e859c211b82ae43b76ab55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/FunderIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/RightsIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:n3ae03b620cb34e859c211b82ae43b76ab57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/ResourceIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab54 <http://www.w3.org/2002/07/owl#members> _:n3ae03b620cb34e859c211b82ae43b76ab55 .
-_:n3ae03b620cb34e859c211b82ae43b76ab57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab58 .
-<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n16082fa6811145e08dfaeb8890637028b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b57 .
+_:n16082fa6811145e08dfaeb8890637028b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b58 .
+_:n16082fa6811145e08dfaeb8890637028b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2004/02/skos/core#note> "\nThis is used to represent identifiers associated with rights.\n\nA rights identifier belongs to a particular scheme, such as SPDX, specified by an individual within the class `datacite:RightsIdentifierScheme`.\n        "@en .
+_:n16082fa6811145e08dfaeb8890637028b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/PersonalIdentifier> .
 <http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/Identifier> .
-<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2004/02/skos/core#scopeNote> "\nThis is used to represent identifiers associated with rights.\n\nA rights identifier belongs to a particular scheme, such as SPDX, specified by an individual within the class `datacite:RightsIdentifierScheme`.\n        "@en .
+<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/RightsIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "rights identifier"@en .
+_:n16082fa6811145e08dfaeb8890637028b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:n16082fa6811145e08dfaeb8890637028b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n16082fa6811145e08dfaeb8890637028b54 <http://www.w3.org/2002/07/owl#members> _:n16082fa6811145e08dfaeb8890637028b55 .
+_:n16082fa6811145e08dfaeb8890637028b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/FunderIdentifier> .
+_:n16082fa6811145e08dfaeb8890637028b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b56 .

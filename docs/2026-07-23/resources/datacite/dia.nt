@@ -1,7 +1,7 @@
-<http://purl.org/spar/datacite/dia> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/dia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/dia> <http://purl.org/spar/fabio/hasURL> "https://web.archive.org/web/20090615073141/http://www.surffoundation.nl/en/pages/default.aspx"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/dia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/dia> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/dia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/dia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
 <http://purl.org/spar/datacite/dia> <http://www.w3.org/2000/01/rdf-schema#label> "dia"@en .
-<http://purl.org/spar/datacite/dia> <http://purl.org/spar/fabio/hasURL> "https://web.archive.org/web/20090615073141/http://www.surffoundation.nl/en/pages/default.aspx"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/spar/datacite/dia> <http://www.w3.org/2000/01/rdf-schema#comment> "The Digital Author Identification system assigns a unique number to all authors in the Netherlands research system."@en .

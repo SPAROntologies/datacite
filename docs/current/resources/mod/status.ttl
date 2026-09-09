@@ -1,5 +1,0 @@
-@prefix mod: <https://w3id.org/mod#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-
-mod:status a owl:AnnotationProperty .
-

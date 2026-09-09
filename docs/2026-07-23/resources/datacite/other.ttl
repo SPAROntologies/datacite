@@ -1,6 +1,7 @@
 @prefix datacite: <http://purl.org/spar/datacite/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -13,9 +14,9 @@ datacite:other a datacite:DescriptionType,
                 datacite:hasDescriptionType datacite:other .
         """ ;
     vaem:rationale """
-This is used to represent the description type 'Other'.
+This is used to represent the description type "Other".
         """@en ;
     rdfs:comment "A catch-all description type required by the DataCite Metadata Schema to characterize description types that are not abstracts, series information or tables of content."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
 

@@ -1,9 +1,9 @@
 <http://purl.org/spar/datacite/gepris> <http://purl.org/spar/fabio/hasURL> "http://gepris.dfg.de"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2004/02/skos/core#scopeNote> "A GEPRIS person identifier is resolvable from the following URL: http://gepris.dfg.de/gepris/person/<identifier>."@en .
-<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#label> "gepris"@en .
+<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#comment> "The GEPRIS person identifier is a unique, numerical identifier assigned to researchers and investigators in the GEPRIS database."@en .
 <http://purl.org/spar/datacite/gepris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/spar/datacite/gepris> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
-<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#comment> "The GEPRIS person identifier is a unique, numerical identifier assigned to researchers and investigators in the GEPRIS database."@en .
-<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2004/02/skos/core#note> "A GEPRIS person identifier is resolvable from the following URL: http://gepris.dfg.de/gepris/person/<identifier>."@en .
+<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2000/01/rdf-schema#label> "gepris"@en .
 <http://purl.org/spar/datacite/gepris> <http://purl.org/vocab/vann/example> "\n        :david-aitken-id\n                datacite:usesIdentifierScheme datacite:gepris ;\n                literal:hasLiteralValue \"209346727\" .\n        " .
+<http://purl.org/spar/datacite/gepris> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

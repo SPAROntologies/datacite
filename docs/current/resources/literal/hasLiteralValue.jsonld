@@ -7,7 +7,7 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-literal a literal:Literal ;\n                literal:hasLiteralValue '0000-0002-0799-1527'^^rdfs:Literal .\n        "
+        "@value": "\n        :my-literal a literal:Literal ;\n                literal:hasLiteralValue \"0000-0002-0799-1527\"^^rdfs:Literal .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
@@ -29,7 +29,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://www.essepuntato.it/2010/06/literalreification"
+        "@id": "http://purl.org/spar/literal/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -45,8 +45,7 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

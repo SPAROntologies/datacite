@@ -9,15 +9,15 @@
   <rdf:Description rdf:about="http://purl.org/spar/datacite/igsn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
+    <rdfs:comment xml:lang="en">The International Generic Sample Number (IGSN) is a code that uniquely identifies samples from our natural environment and related features-of-interest.</rdfs:comment>
     <rdfs:label xml:lang="en">igsn</rdfs:label>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
     <vann:example>
         :my-resource-id 
                 datacite:usesIdentifierScheme datacite:igsn ;
                 literal:hasLiteralValue "AU124" .
         </vann:example>
-    <rdfs:comment xml:lang="en">The International Generic Sample Number (IGSN) is a code that uniquely identifies samples from our natural environment and related features-of-interest.</rdfs:comment>
     <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://igsn.org/</fabio:hasURL>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
 </rdf:RDF>

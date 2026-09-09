@@ -1,5 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -17,9 +18,9 @@ scoro:registrar a scoro:OrganizationalRole,
                 pro:withRole scoro:registrar .
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given agent role type ('Registration Agency').
+This is used as a controlled term to specify a given agent role type ("Registration Agency").
         """@en ;
     rdfs:comment "The role held by an agent responsible for maintaining official records, for example the records of student enrollment and academic standing held by a college or university, or the records of securities owned by a financial institution."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/scoro> ;
-    vs:term_status "stable"@en .
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
 

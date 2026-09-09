@@ -7,6 +7,15 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/scoro/rights-holder">
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given agent role type ("Rights Holder").
+        </vaem:rationale>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/copyright-owner"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/patent-holder"/>
+    <rdfs:comment xml:lang="en">The role held by an agent who holds, owns and manages the legal rights to a project or activity and its products and outcomes, for example the exploitation, licensing and intellectual property rights.</rdfs:comment>
+    <rdfs:label xml:lang="en">rights holder</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
     <vann:example>
         :silvio-peroni
                 pro:holdsRoleInTime :rights-holder-for-my-dataset .
@@ -15,16 +24,7 @@
                 pro:relatesToEntity :my-dataset ;
                 pro:withRole scoro:rights-holder .
         </vann:example>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/scoro/patent-holder"/>
-    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/copyright-owner"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro"/>
-    <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given agent role type ('Rights Holder').
-        </vaem:rationale>
-    <rdfs:label xml:lang="en">rights holder</rdfs:label>
-    <rdfs:comment xml:lang="en">The role held by an agent who holds, owns and manages the legal rights to a project or activity and its products and outcomes, for example the exploitation, licensing and intellectual property rights.</rdfs:comment>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
 </rdf:RDF>

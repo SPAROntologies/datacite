@@ -7,7 +7,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "An expression that realizes a work."
+        "@value": "A work realized throgh an expression."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [

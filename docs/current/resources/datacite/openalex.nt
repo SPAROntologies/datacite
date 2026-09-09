@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#comment> "The OpenAlex ID is a unique identifier assigned to each entity included in OpenAlex."@en .
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#label> "OpenAlex ID"@en .
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
-<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2004/02/skos/core#scopeNote> "An OpenAlex ID has two parts. The first part is the base, that is always https://openalex.org/. The second part is the key, i.e. the unique primary key that identifies a given resource in our database. The key starts with a letter that tells us the kind of entity: W(ork), A(uthor), V(enue), I(nstitution), or C(oncept). In addition, the IDs are not case-sensitive, so w2741809807 is just as valid as W2741809807."@en .
-<http://purl.org/spar/datacite/openalex> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:openalex ;\n                literal:hasLiteralValue \"w1995055324\" .\n        " .
 <http://purl.org/spar/datacite/openalex> <http://purl.org/spar/fabio/hasURL> "https://docs.openalex.org/about-the-data"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2004/02/skos/core#note> "An OpenAlex ID has two parts. The first part is the base, that is always https://openalex.org/. The second part is the key, i.e. the unique primary key that identifies a given resource in our database. The key starts with a letter that tells us the kind of entity: W(ork), A(uthor), V(enue), I(nstitution), or C(oncept). In addition, the IDs are not case-sensitive, so w2741809807 is just as valid as W2741809807."@en .
+<http://purl.org/spar/datacite/openalex> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:openalex ;\n                literal:hasLiteralValue \"w1995055324\" .\n        " .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#label> "OpenAlex ID"@en .
+<http://purl.org/spar/datacite/openalex> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .

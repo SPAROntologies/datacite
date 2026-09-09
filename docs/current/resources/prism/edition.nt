@@ -1,9 +1,9 @@
-<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2004/02/skos/core#scopeNote> "\nAn issue of a magazine may be produced in multiple editions, with each edition providing content customized for a particular demographic or geographic group. \nFortune, for example, is produced in a Domestic edition, a European edition, and an Asian edition. \nWhile much of the content overlaps, there is some content that is unique to each edition.\n    "@en .
-<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://prismstandard.org/namespaces/basic/2.0/edition> <http://purl.org/vocab/vann/example> "\n    :related-item\n        prism:edition \"3\" .\n    " .
+<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2004/02/skos/core#note> "\nAn issue of a magazine may be produced in multiple editions, with each edition providing content customized for a particular demographic or geographic group. \nFortune, for example, is produced in a Domestic edition, a European edition, and an Asian edition. \nWhile much of the content overlaps, there is some content that is unique to each edition.\n    "@en .
 <http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the edition number or string of a resource.\n        "@en .
 <http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2000/01/rdf-schema#label> "has edition"@en .
-<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for one of several alternate issues of a magazine or other resource."@en .
-<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://prismstandard.org/namespaces/basic/2.0/edition> <http://purl.org/vocab/vann/example> "\n        :related-item\n                prism:edition '3' .\n        " .
+<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://prismstandard.org/namespaces/basic/2.0/> .
+<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for one of several alternate issues of a magazine or other resource."@en .
+<http://prismstandard.org/namespaces/basic/2.0/edition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

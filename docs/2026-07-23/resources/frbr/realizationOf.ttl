@@ -4,7 +4,7 @@
 
 frbr:realizationOf a owl:ObjectProperty ;
     rdfs:label "is realization of"@en ;
-    rdfs:comment "An expression that realizes a work."@en ;
+    rdfs:comment "A work realized throgh an expression."@en ;
     rdfs:domain frbr:Expression ;
     rdfs:isDefinedBy frbr: ;
     rdfs:range frbr:Work ;

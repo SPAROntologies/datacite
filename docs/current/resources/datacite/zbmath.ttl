@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -17,7 +18,7 @@ datacite:zbmath a datacite:PersonalIdentifierScheme,
                 literal:hasLiteralValue "peroni.silvio" .
         """ ;
     rdfs:comment "The zbMATH author identifier is a unique identifier used for a person in the Zentralblatt MATH database."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote "A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:<identifier>."@en .
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:<identifier>."@en .
 

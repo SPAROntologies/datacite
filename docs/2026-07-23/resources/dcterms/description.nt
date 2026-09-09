@@ -1,8 +1,8 @@
-<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms> .
-<http://purl.org/dc/terms/description> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/dc/terms/description> <http://purl.org/vocab/vann/example> "\n        :my-dataset-date-created\n                dcterms:description 'The creation date might be subject to change.'@en .\n        " .
 <http://purl.org/dc/terms/description> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to associate additional information to a date (modelled as an instance of `literal:Literal`).\n        "@en .
-<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#comment> "An account of the resource."@en .
-<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/terms/description> <http://purl.org/vocab/vann/example> "\n        :my-dataset-date-created\n            dcterms:description \"The creation date might be subject to change.\"@en .\n        " .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#comment> "An account of the resource."@en .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .

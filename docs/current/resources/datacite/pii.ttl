@@ -1,6 +1,7 @@
 @prefix datacite: <http://purl.org/spar/datacite/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
@@ -13,7 +14,7 @@ datacite:pii a datacite:ResourceIdentifierScheme,
                 literal:hasLiteralValue "S0960-894X(96)00515-X" .
         """ ;
     rdfs:comment "The Publisher Item Identifier is a unique identifier used by several scientific journal publishers to identify documents."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+    rdfs:isDefinedBy datacite: ;
     rdfs:seeAlso <http://en.wikipedia.org/wiki/Publisher_Item_Identifier> ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

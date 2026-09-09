@@ -1,5 +1,5 @@
 <http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/2000/01/rdf-schema#comment> "A role that an agent might hold with respect to an investigation. Individual members of this class are used to specify particular roles."@en .
-<http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
-<http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro> .
 <http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/2000/01/rdf-schema#label> "investigation role"@en .
+<http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/pro/Role> .
+<http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/InvestigationRole> <http://www.w3.org/2000/01/rdf-schema#comment> "A role that an agent might hold with respect to an investigation. Individual members of this class are used to specify particular roles."@en .

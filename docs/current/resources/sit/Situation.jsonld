@@ -7,7 +7,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A view on a set of entities. It can be seen as a 'relational context', reifying a relation."
+        "@value": "A view on a set of entities. It can be seen as a \"relational context\", reifying a relation."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [

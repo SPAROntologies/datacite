@@ -7,25 +7,23 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab22">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b22">
     <owl:allValuesFrom rdf:resource="http://purl.org/spar/datacite/FunderIdentifierScheme"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab56">
-    <rdf:first rdf:resource="http://purl.org/spar/datacite/PersonalIdentifier"/>
-    <rdf:rest rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab57"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/datacite/FunderIdentifier">
+    <rdfs:comment xml:lang="en">An identifier that uniquely identities a funding agency.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <rdfs:label xml:lang="en">funder identifier</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="n16082fa6811145e08dfaeb8890637028b22"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifier"/>
-    <rdfs:subClassOf rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab22"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vaem:rationale xml:lang="en">
 This is used to represent identifiers associated with funding agencies, modelled as instances of `foaf:Organization`.
 
 A funder identifier belongs to a particular scheme, such as FundRef, specified by an individual within the class `datacite:FunderIdentifierScheme`.
         </vaem:rationale>
-    <rdfs:label xml:lang="en">funder identifier</rdfs:label>
     <vann:example>
         :my-funder a foaf:Organization ;
                 datacite:hasIdentifier :my-funder-id .
@@ -33,24 +31,26 @@ A funder identifier belongs to a particular scheme, such as FundRef, specified b
         :my-funder-id a datacite:FunderIdentifier ;
                 literal:hasLiteralValue "10.13039/5011000059696" .
         </vann:example>
-    <rdfs:comment xml:lang="en">An identifier that uniquely identities a funding agency.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab55">
-    <rdf:rest rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab56"/>
-    <rdf:first rdf:resource="http://purl.org/spar/datacite/FunderIdentifier"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab58">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b58">
     <rdf:first rdf:resource="http://purl.org/spar/datacite/RightsIdentifier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab54">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-    <owl:members rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab55"/>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b56">
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b57"/>
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/PersonalIdentifier"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab57">
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b57">
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b58"/>
     <rdf:first rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
-    <rdf:rest rdf:nodeID="n3ae03b620cb34e859c211b82ae43b76ab58"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b54">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="n16082fa6811145e08dfaeb8890637028b55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b55">
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/FunderIdentifier"/>
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b56"/>
   </rdf:Description>
 </rdf:RDF>

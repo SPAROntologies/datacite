@@ -7,25 +7,25 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="https://schema.org/Action">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
-    <vaem:rationale xml:lang="en">
-This is used to model the fact that a related source is an instrument.
-More specifically, an instance of `schema:Action` is used, connected to a `frbr:Endeavour` via the property `schema:instrument`.
-        </vaem:rationale>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:label xml:lang="en">action</rdfs:label>
     <rdfs:comment xml:lang="en">
 An action performed by a direct agent and indirect participants upon a direct object. 
 Optionally happens at a location with the help of an inanimate instrument. 
 The execution of the action may produce a result. 
 Specific action sub-type documentation specifies the exact expectation of each argument/role.        
         </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">action</rdfs:label>
+    <vaem:rationale xml:lang="en">
+This is used to model the fact that a related source is an instrument.
+More specifically, an instance of `schema:Action` is used, connected to a `frbr:Endeavour` via the property `schema:instrument`.
+        </vaem:rationale>
     <vann:example>
         :my-analysis-action a schema:Action ;
                 schema:instrument :my-resource .  
 
         :my-resource a frbr:Endeavour .      
         </vann:example>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
 </rdf:RDF>

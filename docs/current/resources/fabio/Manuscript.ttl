@@ -4,7 +4,7 @@
 
 fabio:Manuscript a owl:Class ;
     rdfs:label "manuscript"@en ;
-    rdfs:comment "A textual work prepared 'by hand', such as a typescript or word-processed pre-publication draft of a research paper or a report, or a work not otherwise reproduced in multiple copies."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:comment "A textual work prepared \"by hand\", such as a typescript or word-processed pre-publication draft of a research paper or a report, or a work not otherwise reproduced in multiple copies."@en ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:Expression .
 

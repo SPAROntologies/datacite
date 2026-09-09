@@ -1,11 +1,11 @@
-_:n3ae03b620cb34e859c211b82ae43b76ab1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#comment> "The list of the creators of a certain resource."@en .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> .
-<http://purl.org/spar/datacite/hasCreatorList> <http://purl.org/vocab/vann/example> "\n        :my-resource \n                datacite:hasCreatorList [\n                        a co:List ;\n                        co:firstItem :david-shotton ;\n                        co:item :silvio-peroni ;\n                        co:lastItem :sebastian-barzaghi\n                ] .\n        " .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#domain> _:n3ae03b620cb34e859c211b82ae43b76ab1 .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
-<http://purl.org/spar/datacite/hasCreatorList> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to associate an ordered author list to a resource. \nThe list is modelled as an instance of the class `co:List`, which permits the specification of an ordered sequence of elements (in this case, a series of authors) via the usage of properties such as `co:firstItem`, `co:item` and `co:lastItem`.\n        "@en .
 <http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#label> "has creator list"@en .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n16082fa6811145e08dfaeb8890637028b1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> .
+_:n16082fa6811145e08dfaeb8890637028b1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
 <http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:n3ae03b620cb34e859c211b82ae43b76ab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#comment> "The list of the creators of a certain resource."@en .
+_:n16082fa6811145e08dfaeb8890637028b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to associate an ordered author list to a resource. \nThe list is modelled as an instance of the class `co:List`, which permits the specification of an ordered sequence of elements (in this case, a series of authors) via the usage of properties such as `co:firstItem`, `co:item` and `co:lastItem`.\n        "@en .
+<http://purl.org/spar/datacite/hasCreatorList> <http://purl.org/vocab/vann/example> "\n        :my-resource \n                datacite:hasCreatorList [\n                        a co:List ;\n                        co:firstItem :david-shotton ;\n                        co:item :silvio-peroni ;\n                        co:lastItem :sebastian-barzaghi\n                ] .\n        " .
+<http://purl.org/spar/datacite/hasCreatorList> <http://www.w3.org/2000/01/rdf-schema#domain> _:n16082fa6811145e08dfaeb8890637028b1 .

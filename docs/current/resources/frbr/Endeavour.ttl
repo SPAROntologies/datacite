@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -25,5 +26,5 @@ This is also used to represent the type of the sequence identifier/number associ
     rdfs:isDefinedBy frbr: ;
     owl:equivalentClass [ a owl:Class ;
             owl:unionOf ( frbr:Expression frbr:Item frbr:Manifestation frbr:Work ) ] ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

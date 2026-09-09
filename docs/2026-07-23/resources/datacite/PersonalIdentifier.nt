@@ -1,22 +1,22 @@
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3ae03b620cb34e859c211b82ae43b76ab24 .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
-_:n3ae03b620cb34e859c211b82ae43b76ab56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/PersonalIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab56 .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab24 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
-_:n3ae03b620cb34e859c211b82ae43b76ab56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab57 .
-_:n3ae03b620cb34e859c211b82ae43b76ab58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/FunderIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/RightsIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:n3ae03b620cb34e859c211b82ae43b76ab57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/ResourceIdentifier> .
-_:n3ae03b620cb34e859c211b82ae43b76ab54 <http://www.w3.org/2002/07/owl#members> _:n3ae03b620cb34e859c211b82ae43b76ab55 .
-_:n3ae03b620cb34e859c211b82ae43b76ab57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3ae03b620cb34e859c211b82ae43b76ab58 .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://purl.org/vocab/vann/example> "\n        :david-shotton a foaf:Person ;\n                datacite:hasIdentifier :david-shotton-id .\n\n        :david-shotton-id a datacite:PersonalIdentifier ;\n                literal:hasLiteralValue \"0000-0001-5506-523X\" .\n        " .
-<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "personal identifier"@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab24 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+_:n16082fa6811145e08dfaeb8890637028b24 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/usesIdentifierScheme> .
 <http://purl.org/spar/datacite/PersonalIdentifier> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent identifiers associated with people, modelled as instances of `foaf:Person`.\n\nA personal identifier belongs to a particular identifier scheme, such as ORCID, specified by an individual within the class `datacite:PersonalIdentifierScheme`.\n        "@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://purl.org/vocab/vann/example> "\n        :david-shotton a foaf:Person ;\n                datacite:hasIdentifier :david-shotton-id .\n\n        :david-shotton-id a datacite:PersonalIdentifier ;\n                literal:hasLiteralValue \"0000-0001-5506-523X\" .\n        " .
 <http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identifies an individual person."@en .
+_:n16082fa6811145e08dfaeb8890637028b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/RightsIdentifier> .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+_:n16082fa6811145e08dfaeb8890637028b24 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifier> .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n16082fa6811145e08dfaeb8890637028b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b57 .
+_:n16082fa6811145e08dfaeb8890637028b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b58 .
+_:n16082fa6811145e08dfaeb8890637028b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/ResourceIdentifier> .
+_:n16082fa6811145e08dfaeb8890637028b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/PersonalIdentifier> .
+_:n16082fa6811145e08dfaeb8890637028b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:n16082fa6811145e08dfaeb8890637028b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n16082fa6811145e08dfaeb8890637028b24 .
+_:n16082fa6811145e08dfaeb8890637028b54 <http://www.w3.org/2002/07/owl#members> _:n16082fa6811145e08dfaeb8890637028b55 .
+_:n16082fa6811145e08dfaeb8890637028b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/spar/datacite/FunderIdentifier> .
+_:n16082fa6811145e08dfaeb8890637028b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b56 .
+<http://purl.org/spar/datacite/PersonalIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n16082fa6811145e08dfaeb8890637028b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

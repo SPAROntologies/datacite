@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -17,7 +18,7 @@ datacite:orcid a datacite:AgentIdentifierScheme,
                 literal:hasLiteralValue "0000-0001-5506-523X" .
         """ ;
     rdfs:comment "The Open Researcher and Contributor Identifier (ORCID) is a unique identifier for individuals to use as they engage in research, scholarship, and innovation activities."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote "An ORCID is resolvable from the following URL: http://orcid.org/<identifier>."@en .
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "An ORCID is resolvable from the following URL: http://orcid.org/<identifier>."@en .
 

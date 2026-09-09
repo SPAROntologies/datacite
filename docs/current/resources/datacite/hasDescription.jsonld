@@ -23,12 +23,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab4"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b4"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/datacite"
+        "@id": "http://purl.org/spar/datacite/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -39,34 +39,17 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab5"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b5"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/spar/datacite/hasIdentifier"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
-      }
-    ]
-  },
-  {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab5",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b5",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -79,6 +62,22 @@
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "http://purl.org/spar/datacite/hasDescriptionType"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasIdentifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
       }
     ]
   }

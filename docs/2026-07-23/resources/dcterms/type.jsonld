@@ -6,7 +6,7 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-dataset\n                literal:hasLiteral :my-dataset-date .\n\n        :my-dataset-date \n                literal:hasLiteralValue '2012-07-04'^^xsd:date ;\n                dcterms:type dcterms:date .\n        "
+        "@value": "\n        :my-dataset\n                literal:hasLiteral :my-dataset-date .\n\n        :my-dataset-date \n                literal:hasLiteralValue \"2012-07-04\"^^xsd:date ;\n                dcterms:type dcterms:date .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/dc/terms"
+        "@id": "http://purl.org/dc/terms/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -34,19 +34,22 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
-        "@id": "http://purl.org/dc/terms/modified"
+        "@id": "http://purl.org/dc/terms/available"
       },
       {
-        "@id": "http://purl.org/dc/terms/dateAccepted"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/hasRetractionDate"
+        "@id": "http://purl.org/dc/terms/issued"
       },
       {
         "@id": "http://purl.org/dc/terms/dateCopyrighted"
       },
       {
-        "@id": "http://purl.org/spar/fabio/hasDateCollected"
+        "@id": "http://purl.org/dc/terms/valid"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/modified"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/temporal"
       },
       {
         "@id": "http://purl.org/dc/terms/created"
@@ -55,25 +58,21 @@
         "@id": "http://purl.org/dc/terms/date"
       },
       {
-        "@id": "http://purl.org/dc/terms/available"
+        "@id": "http://purl.org/spar/fabio/hasRetractionDate"
       },
       {
-        "@id": "http://purl.org/dc/terms/temporal"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/valid"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/issued"
+        "@id": "http://purl.org/dc/terms/dateAccepted"
       },
       {
         "@id": "http://purl.org/dc/terms/dateSubmitted"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/hasDateCollected"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

@@ -1,8 +1,8 @@
-<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
-<http://xmlns.com/foaf/0.1/Organization> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent agents that are organizations.\n\nFor example, an organization related to some resource can be specified by means of the class `foaf:Organization`.\n        "@en .
-<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization."@en .
-<http://xmlns.com/foaf/0.1/Organization> <http://purl.org/vocab/vann/example> "\n        :university-of-oxford a foaf:Organization .\n        " .
-<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
 <http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "organization"@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
 <http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization."@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent agents that are organizations.\n\nFor example, an organization related to some resource can be specified by means of the class `foaf:Organization`.\n        "@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+<http://xmlns.com/foaf/0.1/Organization> <http://purl.org/vocab/vann/example> "\n        :university-of-oxford a foaf:Organization .\n        " .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

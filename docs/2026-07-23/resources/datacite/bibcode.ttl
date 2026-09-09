@@ -2,6 +2,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -17,9 +18,9 @@ datacite:bibcode a datacite:ResourceIdentifierScheme,
                 literal:hasLiteralValue "1974AJ.....79..819H" .
         """ ;
     rdfs:comment "The Bibliographic Code (BIBCODE) is a 19 ASCII characters identifier which describes a journal article."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note """
 The format was originally adopted by the SIMBAD and NED projects, and follows the syntax "YYYYJJJJJVVVVMPPPPA", where:
 
 * YYYY: Year of publication;

@@ -1,6 +1,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix scoro: <http://purl.org/spar/scoro/> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -18,11 +19,11 @@ scoro:rights-holder a scoro:OrganizationalRole,
                 pro:withRole scoro:rights-holder .
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given agent role type ('Rights Holder').
+This is used as a controlled term to specify a given agent role type ("Rights Holder").
         """@en ;
     rdfs:comment "The role held by an agent who holds, owns and manages the legal rights to a project or activity and its products and outcomes, for example the exploitation, licensing and intellectual property rights."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/scoro> ;
+    rdfs:isDefinedBy scoro: ;
     rdfs:seeAlso pro:copyright-owner,
         scoro:patent-holder ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

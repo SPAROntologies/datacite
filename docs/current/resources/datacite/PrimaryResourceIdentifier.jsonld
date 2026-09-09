@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/spar/datacite"
+        "@id": "http://purl.org/spar/datacite/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -34,7 +34,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab3"
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b3"
       },
       {
         "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
@@ -42,13 +42,12 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   },
   {
-    "@id": "_:n3ae03b620cb34e859c211b82ae43b76ab3",
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

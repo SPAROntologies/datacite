@@ -1,8 +1,8 @@
 <http://purl.org/dc/dcmitype/Text> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource consisting primarily of words for reading."@en .
-<http://purl.org/dc/dcmitype/Text> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcmitype> .
-<http://purl.org/dc/dcmitype/Text> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:Text .\n        " .
-<http://purl.org/dc/dcmitype/Text> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type ('Text').\n        "@en .
-<http://purl.org/dc/dcmitype/Text> <http://www.w3.org/2004/02/skos/core#scopeNote> "\nExamples include books, letters, dissertations, poems, newspapers, articles, archives of mailing lists. \nNote that facsimiles or images of texts are still of the genre Text.\n        "@en .
 <http://purl.org/dc/dcmitype/Text> <http://www.w3.org/2000/01/rdf-schema#label> "text"@en .
+<http://purl.org/dc/dcmitype/Text> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/dcmitype/Text> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:Text .\n        " .
+<http://purl.org/dc/dcmitype/Text> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Text\").\n        "@en .
+<http://purl.org/dc/dcmitype/Text> <http://www.w3.org/2004/02/skos/core#note> "\nExamples include books, letters, dissertations, poems, newspapers, articles, archives of mailing lists. \nNote that facsimiles or images of texts are still of the genre Text.\n        "@en .
 <http://purl.org/dc/dcmitype/Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/dcmitype/Text> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
+<http://purl.org/dc/dcmitype/Text> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcmitype/> .

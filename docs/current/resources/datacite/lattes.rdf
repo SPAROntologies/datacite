@@ -8,18 +8,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/lattes">
-    <rdfs:comment xml:lang="en">The Lattes Platform number is an identifier for a Lattes Platform entry related to a person or group.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
-    <rdfs:label xml:lang="en">lattes</rdfs:label>
     <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://lattes.cnpq.br/</fabio:hasURL>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
     <vann:example>
         :marcos-bagno-id
                 datacite:usesIdentifierScheme datacite:lattes ;
                 literal:hasLiteralValue "9975840620597737" .
         </vann:example>
-    <skos:scopeNote xml:lang="en">A Lattes Platform number is resolvable from the following URL: http://lattes.cnpq.br/&lt;identifier&gt;.</skos:scopeNote>
-    <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">lattes</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">The Lattes Platform number is an identifier for a Lattes Platform entry related to a person or group.</rdfs:comment>
+    <skos:note xml:lang="en">A Lattes Platform number is resolvable from the following URL: http://lattes.cnpq.br/&lt;identifier&gt;.</skos:note>
   </rdf:Description>
 </rdf:RDF>

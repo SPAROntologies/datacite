@@ -2,6 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -18,7 +19,7 @@ datacite:hasDescriptionType a owl:ObjectProperty ;
     vaem:rationale """
 This is used to specify the type of description used to describe a resource, defined as an individual of the class `datacite:DescriptionType` from the DataCite controlled list.
 
-Individuals include: 'Abstract' (`datacite:abstract`), 'Methods' (`datacite:methods`), 'Series Information' (`datacite:series-information`), 'Table Of Content' (`datacite:table-of-content`) and 'Other' (`datacite:other`).
+Individuals include: "Abstract" (`datacite:abstract`), "Methods" (`datacite:methods`), "Series Information" (`datacite:series-information`), "Table Of Content" (`datacite:table-of-content`) and "Other" (`datacite:other`).
         """@en ;
     rdfs:comment "The type of description used to describe a resource."@en ;
     rdfs:domain [ a owl:Restriction ;
@@ -26,8 +27,8 @@ Individuals include: 'Abstract' (`datacite:abstract`), 'Methods' (`datacite:meth
                     owl:onProperty datacite:hasIdentifier ;
                     owl:someValuesFrom datacite:ResourceIdentifier ] ;
             owl:onProperty [ owl:inverseOf datacite:hasDescription ] ] ;
-    rdfs:isDefinedBy <http://purl.org/spar/datacite> ;
+    rdfs:isDefinedBy datacite: ;
     rdfs:range datacite:DescriptionType ;
     rdfs:subPropertyOf dcterms:type ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

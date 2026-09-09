@@ -7,6 +7,9 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/scoro/data-manager">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vann:example>
         :silvio-peroni
                 pro:holdsRoleInTime :data-manager-for-my-dataset .
@@ -15,14 +18,11 @@
                 pro:relatesToEntity :my-dataset ;
                 pro:withRole scoro:data-manager .
         </vann:example>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
     <rdfs:label xml:lang="en">data manager</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro"/>
-    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given agent role type ('Data Manager').
+This is used as a controlled term to specify a given agent role type ("Data Manager").
         </vaem:rationale>
     <rdfs:comment xml:lang="en">The role a person has of being a data manager, responsible for day-to-day management, maintenance and back-up of data, for example those arising from the research project or held in a repository.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
   </rdf:Description>
 </rdf:RDF>

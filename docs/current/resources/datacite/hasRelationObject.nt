@@ -1,9 +1,9 @@
-<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#label> "has relation object"@en .
-<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#comment> "The resource that is the object of a reified relation."@en .
-<http://purl.org/spar/datacite/hasRelationObject> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the object of a qualified relation (modelled via the class `datacite:QualifiedRelation`) between two resources.\n        "@en .
-<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
 <http://purl.org/spar/datacite/hasRelationObject> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationObject :my-article .\n        " .
-<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/datacite/QualifiedRelation> .
-<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor> .
 <http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#comment> "The resource that is the object of a reified relation."@en .
+<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/datacite/QualifiedRelation> .
+<http://purl.org/spar/datacite/hasRelationObject> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the object of a qualified relation (modelled via the class `datacite:QualifiedRelation`) between two resources.\n        "@en .
+<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#label> "has relation object"@en .
+<http://purl.org/spar/datacite/hasRelationObject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor> .

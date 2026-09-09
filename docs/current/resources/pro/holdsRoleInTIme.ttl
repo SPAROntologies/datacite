@@ -2,8 +2,9 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pro: <http://purl.org/spar/pro/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix tvc: <http://purl.org/spar/tvc/> .
+@prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -25,12 +26,12 @@ The domain of `pro:withRole` is not `foaf:Agent`, but rather a member of the cla
         """@en ;
     rdfs:comment "A role that an agent holds."@en ;
     rdfs:domain foaf:Agent ;
-    rdfs:isDefinedBy <http://purl.org/spar/pro> ;
+    rdfs:isDefinedBy pro: ;
     rdfs:range pro:RoleInTime ;
     rdfs:subPropertyOf tvc:hasValue ;
     owl:inverseOf pro:isHeldBy ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 The full minimum pattern to express the role of some agent is: 
         foaf:Agent 
                 pro:holdsRoleInTime [ 

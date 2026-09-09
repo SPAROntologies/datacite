@@ -1,9 +1,9 @@
-<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2004/02/skos/core#scopeNote> "\nExamples include animations, movies, television programs, videos, zoetropes, or visual output from a simulation. \nInstances of the type Moving Image must also be describable as instances of the broader type Image.        \n        "@en .
-<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcmitype> .
-<http://purl.org/dc/dcmitype/MovingImage> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:MovingImage .\n        " .
-<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2000/01/rdf-schema#comment> "A series of visual representations imparting an impression of motion when shown in succession."@en .
-<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/Image> .
-<http://purl.org/dc/dcmitype/MovingImage> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type ('Audiovisual').\n        "@en .
+<http://purl.org/dc/dcmitype/MovingImage> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Audiovisual\").\n        "@en .
 <http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2000/01/rdf-schema#label> "moving image"@en .
+<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2000/01/rdf-schema#comment> "A series of visual representations imparting an impression of motion when shown in succession."@en .
+<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/dcmitype/MovingImage> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:MovingImage .\n        " .
+<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2004/02/skos/core#note> "\nExamples include animations, movies, television programs, videos, zoetropes, or visual output from a simulation. \nInstances of the type Moving Image must also be describable as instances of the broader type Image.        \n        "@en .
+<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcmitype/> .
+<http://purl.org/dc/dcmitype/MovingImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/Image> .

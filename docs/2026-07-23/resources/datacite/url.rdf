@@ -6,16 +6,16 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/url">
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite"/>
+    <rdfs:comment xml:lang="en">The Uniform Resource Locator (URL) is a unique identifier for a resource retrievable on the World Wide Web.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <vann:example>
         :my-resource-id ;
                 datacite:usesIdentifierScheme datacite:url ;
                 literal:hasLiteralValue "https://www.sparontologies.net/" .
         </vann:example>
-    <rdfs:comment xml:lang="en">The Uniform Resource Locator (URL) is a unique identifier for a resource retrievable on the World Wide Web.</rdfs:comment>
-    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <rdfs:label xml:lang="en">url</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

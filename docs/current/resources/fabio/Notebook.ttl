@@ -5,6 +5,6 @@
 fabio:Notebook a owl:Class ;
     rdfs:label "notebook"@en ;
     rdfs:comment "A book containing personal notes, typically created by writing into a physical book with blank pages."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:Book .
 

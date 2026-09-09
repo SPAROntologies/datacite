@@ -1,13 +1,13 @@
-<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .
-<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-_:n3ae03b620cb34e859c211b82ae43b76ab9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/fabio/Report> .
-<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3ae03b620cb34e859c211b82ae43b76ab9 .
-_:n3ae03b620cb34e859c211b82ae43b76ab9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/spar/fabio/ReportDocument> <http://purl.org/vocab/vann/example> "\n        :my-resource \n                datacite:hasGeneralResourceType fabio:ReportDocument .\n        " .
 <http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2000/01/rdf-schema#label> "report document"@en .
-<http://purl.org/spar/fabio/ReportDocument> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type ('Report').\n\nThis is also used in combination with `fabio:hasSequenceIdentifier` to specify the sequence identifier/number type.\n        "@en .
-<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/spar/fabio/ReportDocument> <http://purl.org/vocab/vann/example> "\n        :my-report-document a fabio:ReportDocument ;\n                fabio:hasSequenceIdentifier '3' .\n        " .
-_:n3ae03b620cb34e859c211b82ae43b76ab9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/frbr/core#realizationOf> .
-<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .
+<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n16082fa6811145e08dfaeb8890637028b9 .
 <http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "The realization of a report, usually in printed form."@en .
+_:n16082fa6811145e08dfaeb8890637028b9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/fabio/Report> .
+<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .
+<http://purl.org/spar/fabio/ReportDocument> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Report\").\n\nThis is also used in combination with `fabio:hasSequenceIdentifier` to specify the sequence identifier/number type.\n        "@en .
+<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+_:n16082fa6811145e08dfaeb8890637028b9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/vocab/frbr/core#realizationOf> .
+<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/ReportDocument> <http://purl.org/vocab/vann/example> "\n        :my-resource \n                datacite:hasGeneralResourceType fabio:ReportDocument .\n        " .
+<http://purl.org/spar/fabio/ReportDocument> <http://purl.org/vocab/vann/example> "\n        :my-report-document a fabio:ReportDocument ;\n                fabio:hasSequenceIdentifier \"3\" .\n        " .
+_:n16082fa6811145e08dfaeb8890637028b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/fabio/ReportDocument> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

@@ -6,6 +6,6 @@
 fabio:Manifestation a owl:Class ;
     rdfs:label "manifestation"@en ;
     rdfs:comment "A subclass of FRBR Manifestation, restricted to manifestations of fabio:Expression. fabio:Manifestation specifically applies to electronic (digital) as well as to physical manifestations of expressions."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf frbr:Manifestation .
 

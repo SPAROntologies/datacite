@@ -5,6 +5,6 @@
 fabio:Article a owl:Class ;
     rdfs:label "article"@en ;
     rdfs:comment "The realization of a piece of writing on a particular topic, usually published within a periodical publication (e.g. journal, magazine and newspaper)."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:Expression .
 

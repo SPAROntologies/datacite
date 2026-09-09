@@ -1,6 +1,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -12,10 +13,10 @@ fabio:ConferencePaper a owl:Class ;
                 datacite:hasGeneralResourceType fabio:ConferencePaper .
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given general resource type ('Conference Paper').
+This is used as a controlled term to specify a given general resource type ("Conference Paper").
         """@en ;
     rdfs:comment "A paper, typically the realization of a research paper reporting original research findings, usually published within a conference proceedings volume."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:ProceedingsPaper ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

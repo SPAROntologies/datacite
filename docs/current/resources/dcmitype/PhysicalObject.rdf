@@ -8,20 +8,20 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/dcmitype/PhysicalObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given general resource type ("Physical Object").
+        </vaem:rationale>
+    <skos:note xml:lang="en">
+Note that digital representations of, or surrogates for, these objects should use Image, Text or one of the other types.     
+        </skos:note>
+    <rdfs:label xml:lang="en">physical object</rdfs:label>
+    <rdfs:comment xml:lang="en">An inanimate, three-dimensional object or substance.</rdfs:comment>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
     <vann:example>
         :my-resource
                 datacite:hasGeneralResourceType dcmitype:PhysicalObject .
         </vann:example>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <vs:term_status xml:lang="en">stable</vs:term_status>
-    <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given general resource type ('Physical Object').
-        </vaem:rationale>
-    <rdfs:label xml:lang="en">physical object</rdfs:label>
-    <skos:scopeNote xml:lang="en">
-Note that digital representations of, or surrogates for, these objects should use Image, Text or one of the other types.     
-        </skos:scopeNote>
-    <rdfs:comment xml:lang="en">An inanimate, three-dimensional object or substance.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

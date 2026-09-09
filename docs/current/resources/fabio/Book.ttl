@@ -1,6 +1,7 @@
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -13,15 +14,15 @@ fabio:Book a owl:Class ;
         """,
         """
         :my-resource a fabio:Book ;
-                fabio:hasSequenceIdentifier '3' .
+                fabio:hasSequenceIdentifier "3" .
         """ ;
     vaem:rationale """
-This is used as a controlled term to specify a given general resource type ('Book').
+This is used as a controlled term to specify a given general resource type ("Book").
 
 This is also used in combination with `fabio:hasSequenceIdentifier` to specify the sequence identifier/number type.
         """@en ;
-    rdfs:comment "A non-serial document that is complete in one volume or a designated finite number of volumes. A book published by a publisher is usually identified by an International Standard Book Number (ISBN), and may be manifested as a physical printed publication on paper bound in a hard or soft cover, or in electronic format as an 'e-book'."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:comment "A non-serial document that is complete in one volume or a designated finite number of volumes. A book published by a publisher is usually identified by an International Standard Book Number (ISBN), and may be manifested as a physical printed publication on paper bound in a hard or soft cover, or in electronic format as an \"e-book\"."@en ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:Expression ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

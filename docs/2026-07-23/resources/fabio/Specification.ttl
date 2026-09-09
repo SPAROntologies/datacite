@@ -5,6 +5,6 @@
 fabio:Specification a owl:Class ;
     rdfs:label "specification"@en ;
     rdfs:comment "An explicit description of, or set of requirements to be satisfied by, a material, product, resource, service or standard."@en ;
-    rdfs:isDefinedBy <http://purl.org/spar/fabio> ;
+    rdfs:isDefinedBy fabio: ;
     rdfs:subClassOf fabio:Work .
 

@@ -4,10 +4,10 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Manifestation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Manifestation"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">manifestation</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Manifestation"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
     <rdfs:comment xml:lang="en">A subclass of FRBR Manifestation, restricted to manifestations of fabio:Expression. fabio:Manifestation specifically applies to electronic (digital) as well as to physical manifestations of expressions.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

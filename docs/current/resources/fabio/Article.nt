@@ -1,5 +1,5 @@
-<http://purl.org/spar/fabio/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .
-<http://purl.org/spar/fabio/Article> <http://www.w3.org/2000/01/rdf-schema#label> "article"@en .
+<http://purl.org/spar/fabio/Article> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
 <http://purl.org/spar/fabio/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/Article> <http://www.w3.org/2000/01/rdf-schema#label> "article"@en .
+<http://purl.org/spar/fabio/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .
 <http://purl.org/spar/fabio/Article> <http://www.w3.org/2000/01/rdf-schema#comment> "The realization of a piece of writing on a particular topic, usually published within a periodical publication (e.g. journal, magazine and newspaper)."@en .
-<http://purl.org/spar/fabio/Article> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .

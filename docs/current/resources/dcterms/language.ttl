@@ -1,6 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -12,7 +13,7 @@ dcterms:language a owl:ObjectProperty ;
                 dcterms:language :my-dataset-en .
 
         :my-dataset-en a dcterms:LinguisticSystem ;
-                dcterms:description 'en'^^dcterms:RFC5646 . 
+                dcterms:description "en"^^dcterms:RFC5646 . 
         """ ;
     vaem:rationale """
 The language should always be specified by means of appropriate individuals belonging to the class `dcterms:LinguisticSystem`, and its value should be specified according to a standardised language code as specified in RFC 5646 (http://www.ietf.org/rfc/rfc5646.txt). 
@@ -22,7 +23,7 @@ The language code can be associated by means of the property `dcterms:descriptio
 It is possible, of course, to use directly the resources specified in http://lexvo.org/id/iso639-3/ for languages (e.g., http://lexvo.org/id/iso639-3/eng for English), instead of defining new ones.
         """@en ;
     rdfs:comment "A language of the resource."@en ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms> ;
+    rdfs:isDefinedBy dcterms: ;
     rdfs:range dcterms:LinguisticSystem ;
-    vs:term_status "stable"@en .
+    vs:term_status reg:statusStable .
 

@@ -1,8 +1,8 @@
-<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has sequence identifier"@en .
-<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://purl.org/vocab/vann/example> "\n        :related-item\n                fabio:hasSequenceIdentifier \"3\" .\n        " .
 <http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://purl.org/vocab/vann/example> "\n        :related-item\n                fabio:hasSequenceIdentifier '3' .\n        " .
-<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the year a resource was published or issued in.\n\nThe type of number identifier can be expressed by specifying the class of the resource: for example, whether the related resource is a 'Book' (`fabio:Book`), a 'Chapter' (`fabio:Chapter`), a 'Report' (`fabio:ReportDocument`) or 'Other' (`frbr:Endeavour`).\n        "@en .
 <http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A literal (for example a number or a letter) that identifies the sequence position of a work within a particular context, for example a book in a book series, a chapter in a document, a volume in a journal."@en .
-<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en .
-<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has sequence identifier"@en .
+<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the year a resource was published or issued in.\n\nThe type of number identifier can be expressed by specifying the class of the resource: for example, whether the related resource is a \"Book\" (`fabio:Book`), a \"Chapter\" (`fabio:Chapter`), a \"Report\" (`fabio:ReportDocument`) or \"Other\" (`frbr:Endeavour`).\n        "@en .
+<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/fabio/hasSequenceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

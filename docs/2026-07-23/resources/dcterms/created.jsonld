@@ -2,18 +2,18 @@
   {
     "@id": "http://purl.org/dc/terms/created",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty",
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-dataset-creation-date \n                literal:hasLiteralValue '2012-06-04'^^xsd:date ;\n                dcterms:type dcterms:created .        \n        "
+        "@value": "\n        :my-dataset-creation-date \n                literal:hasLiteralValue \"2012-06-04\"^^xsd:date ;\n                dcterms:type dcterms:created .        \n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
       {
         "@language": "en",
-        "@value": "\nThis is used as a controlled term to specify a given date type ('Created').\n\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.\n        "
+        "@value": "\nThis is used as a controlled term to specify a given date type (\"Created\").\n\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.\n        "
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -24,7 +24,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "http://purl.org/dc/terms"
+        "@id": "http://purl.org/dc/terms/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -45,8 +45,7 @@
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
-        "@language": "en",
-        "@value": "stable"
+        "@id": "http://purl.org/linked-data/registry#statusStable"
       }
     ]
   }

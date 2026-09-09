@@ -1,6 +1,7 @@
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -13,7 +14,7 @@ frbr:revision a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:revision .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ('IsPreviousVersionOf') as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsPreviousVersionOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 An expression revised in another one.
@@ -21,8 +22,8 @@ An expression revised in another one.
     rdfs:isDefinedBy frbr: ;
     rdfs:subPropertyOf frbr:relatedEndeavour ;
     owl:inverseOf frbr:revisionOf ;
-    vs:term_status "stable"@en ;
-    skos:scopeNote """
+    vs:term_status reg:statusStable ;
+    skos:note """
 A revision has the intent to alter or update the content of the prior expression, but without changing the content so much that it becomes a new work.
         """@en .
 
