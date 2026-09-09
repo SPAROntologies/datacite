@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+scoro:data-curator a scoro:OrganizationalRole,
+        owl:NamedIndividual ;
+    rdfs:label "data curator"@en ;
+    vann:example """
+        :silvio-peroni
+                pro:holdsRoleInTime :data-curator-for-my-dataset .
+        
+        :data-curator-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:data-curator .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given agent role type ("Data Curator").
+        """@en ;
+    rdfs:comment "The role a person has of being a data curator, responsible reviewing, enhancing, cleaning, or standardizing data and their associated metadata, for example those arising from the research project, and for their long-term preservation."@en ;
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
+

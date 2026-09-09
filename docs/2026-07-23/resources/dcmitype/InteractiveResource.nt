@@ -1,0 +1,8 @@
+<http://purl.org/dc/dcmitype/InteractiveResource> <http://www.w3.org/2000/01/rdf-schema#label> "interactive resource"@en .
+<http://purl.org/dc/dcmitype/InteractiveResource> <http://www.w3.org/2004/02/skos/core#note> "\nExamples include forms on Web pages, applets, multimedia learning objects, chat services, or virtual reality environments.        \n        "@en .
+<http://purl.org/dc/dcmitype/InteractiveResource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcmitype/> .
+<http://purl.org/dc/dcmitype/InteractiveResource> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/dcmitype/InteractiveResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource requiring interaction from the user to be understood, executed, or experienced."@en .
+<http://purl.org/dc/dcmitype/InteractiveResource> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:InteractiveResource .\n        " .
+<http://purl.org/dc/dcmitype/InteractiveResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/dcmitype/InteractiveResource> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Interactive Resource\").\n        "@en .

@@ -1,0 +1,15 @@
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> _:n16082fa6811145e08dfaeb8890637028b5 .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n16082fa6811145e08dfaeb8890637028b4 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasIdentifier> .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity used to describe a resource."@en .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+_:n16082fa6811145e08dfaeb8890637028b5 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> _:n16082fa6811145e08dfaeb8890637028b4 .
+<http://purl.org/spar/datacite/hasDescription> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to allow the specification of another resource that provides additional information about the resource under consideration.\n        "@en .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
+<http://purl.org/spar/datacite/hasDescription> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasDescription :my-resource-additional-info .\n\n        :my-resource-additional-info\n                literal:hasLiteralValue \"This dataset contains data about stuff.\" .\n        " .
+<http://purl.org/spar/datacite/hasDescription> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n16082fa6811145e08dfaeb8890637028b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n16082fa6811145e08dfaeb8890637028b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:n16082fa6811145e08dfaeb8890637028b5 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/datacite/hasDescriptionType> .
+_:n16082fa6811145e08dfaeb8890637028b4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .

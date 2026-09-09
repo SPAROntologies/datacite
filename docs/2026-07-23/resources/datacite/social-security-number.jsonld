@@ -1,0 +1,36 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/social-security-number",
+    "@type": [
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-person-id\n                datacite:usesIdentifierScheme datacite:sici ;\n                literal:hasLiteralValue \"999-00-9999\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The United States of America social security number is a nine-digit number issued to U.S. residents."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "social security number"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

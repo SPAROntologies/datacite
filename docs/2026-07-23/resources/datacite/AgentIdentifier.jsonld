@@ -1,0 +1,70 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/AgentIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :silvio-peroni a foaf:Agent ;\n                datacite:hasIdentifier :silvio-peroni-id .\n\n        :silvio-peroni-id a datacite:AgentIdentifier ;\n                literal:hasLiteralValue \"essepuntato\" .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to represent identifiers associated with agents, generally modelled as instances of `foaf:Agent` or its sub-classes (`foaf:Person` and `foaf:Organization`).\n\nAn agent identifier belongs to a particular identifier scheme, specified by an individual within the class `datacite:AgentIdentifierScheme` (or any of its subclasses).\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An identifier that uniquely identities an individual agent."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "agent identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b35"
+      },
+      {
+        "@id": "http://purl.org/spar/datacite/Identifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b35",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
+    ]
+  }
+]

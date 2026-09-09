@@ -1,0 +1,23 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+skos:ConceptScheme a owl:Class ;
+    rdfs:label "concept scheme"@en ;
+    vann:example """
+        :my-scheme a skos:ConceptScheme ;
+                skos:prefLabel "Dewey Decimal Classification"@en .
+        """ ;
+    vaem:rationale """
+This is used to represent subject schemes that classify subjects in some way.
+        """@en ;
+    rdfs:comment "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
+    rdfs:isDefinedBy skos: ;
+    owl:disjointWith skos:Concept ;
+    vs:term_status reg:statusStable ;
+    skos:note "A concept scheme may be defined to include concepts from different sources."@en .
+

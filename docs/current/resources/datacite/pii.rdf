@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/pii">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <rdfs:label xml:lang="en">pii</rdfs:label>
+    <rdfs:comment xml:lang="en">The Publisher Item Identifier is a unique identifier used by several scientific journal publishers to identify documents.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Publisher_Item_Identifier"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:pii ;
+                literal:hasLiteralValue "S0960-894X(96)00515-X" .
+        </vann:example>
+  </rdf:Description>
+</rdf:RDF>

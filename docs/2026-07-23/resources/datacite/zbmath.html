@@ -1,0 +1,554 @@
+<!doctype html><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><title>LODE 2.0 - Semantic Artefact Viewer</title><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css rel=stylesheet><link href=../../static/style.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css rel=stylesheet><body><div class="container-fluid px-4 py-4"><details class=metadata-accordion><summary class=metadata-accordion-summary><div class=resource-frontmatter><h1 class=resource-title>zbmath</h1><div class=resource-meta-line><span class="resource-meta-uri font-monospace text-truncate">http://purl.org/spar/datacite/zbmath</span><a title="Go to Resource" class=resource-meta-link href=http://purl.org/spar/datacite/zbmath target=_blank> <i class="bi bi-box-arrow-up-right"></i> </a></div><p class=resource-subtitle>as defined in <span class=resource-subtitle-ontology> The DataCite Ontology (DataCite) </span> <button title="Show/hide ontology metadata" class=metadata-accordion-toggle onclick=toggleMetadataAccordion(event) type=button><i class="bi bi-chevron-down"></i></button></div></summary> <div class=p-3><section class=metadata-block><dl class="row mb-0 lead fs-6"><dt class="text-capitalize fs-7 fw-bold">bibliographic citation<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">David Shotton, Silvio Peroni. The DataCite Ontology. Revision: 2.0.0. http://purl.org/spar/datacite.</div></div></div><dt class="text-capitalize fs-7 fw-bold">changes<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">
+* **v2.0.0**:
+Added new documentation, including annotation properties (e.g., `bibo:doi`, `schema:codeRepository`, etc.), term properties (e.g., `vann:example`, `vs:term_status`, etc.), exemplary competency questions with their respective SPARQL queries, and a Grafoo diagram.
+Added classes and proprerties, reused from existing ontologies (e.g., `foaf:Person`, `dcterms:creator`, etc.) and previously only documented in a separate document for mapping the DataCite metadata schema properties to the DataCite Ontology patterns.
+    </div></div></div><dt class="text-capitalize fs-7 fw-bold">code repository<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite target=_blank>https://github.com/SPAROntologies/datacite</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">contributor<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Jan Ashton (https://orcid.org/0000-0003-4676-5263)</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Amy J. Barton</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Sara El-Gebali (https://orcid.org/0000-0003-1378-5495)</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Roman Baum (https://orcid.org/0000-0001-5246-9351)</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Egbert Gramsbergen (https://orcid.org/0000-0003-4937-0347)</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Marie-Christine Jacquemot (https://orcid.org/0000-0002-6316-1472)</div></div></div><dt class="text-capitalize fs-7 fw-bold">created<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2016-01-21</div></div></div><dt class="text-capitalize fs-7 fw-bold">creator<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">David Shotton (https://orcid.org/0000-0001-5506-523X)</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">Silvio Peroni (https://orcid.org/0000-0003-0530-4305)</div></div></div><dt class="text-capitalize fs-7 fw-bold">date<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2022-09-15</div></div></div><dt class="text-capitalize fs-7 fw-bold">description<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">
+The **_DataCite Ontology (DataCite)_** is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. 
+
+Based on the [DataCite2RDF mapping document](https://doi.org/10.6084/m9.figshare.2075356.v2) realised to support DataCite metadata to be published in RDF, the DataCite Ontology has been enriched with terms from existing vocabularies that have been reused wherever possible, including:
+_[DCTerms](http://purl.org/dc/terms) (Dublin Core Metadata Terms)_, _[FOAF](http://xmlns.com/foaf/spec/) (Friend of a Friend Vocabulary)_, _[SKOS](http://www.w3.org/2004/02/skos/core) (Simple Knowledge Organization System)_, _[CO](http://purl.org/co) (Collections Ontology)_, _[Literal Reification](http://www.essepuntato.it/2010/06/literalreification)_ ontology pattern, _[PRISM](http://prismstandard.org/namespaces/basic/2.0/) (Publishing Requirements for Industry Standard Metadata)_, and _[GeoSPARQL](http://www.opengeospatial.org/standards/geosparql)_. 
+Additionally, these have been supplemented by terms from _[FRBR](http://purl.org/vocab/frbr/core) (Functional Requirements for Bibliographic Records)_, and from the following _[SPAR](http://www.sparontologies.net) (Semantic Publishing and Referencing)_ Ontologies: _[CiTO](http://purl.org/spar/cito) (Citation Typing Ontology)_, _[FaBiO](http://purl.org/spar/fabio) (FRBR-aligned Bibliographic Ontology)_, _[FRAPO](http://purl.org/cerif/frapo/) (Funding, Research Administration and Projects Ontology)_, _[PRO](http://purl.org/spar/pro) (Publishing Roles Ontology)_, _[SCoRO](http://purl.org/spar/scoro) (Scholarly Contributions and Roles Ontology)_, and, of course, the [DataCite Ontology](http://purl.org/spar/datacite/) itself.
+
+![The architecture of the DataCite Ontology.](datacite.png)
+
+The main intent of the DataCite Ontology is to provide a flexible mechanism to define identifiers for bibliographic resources (e.g., papers and datasets) and related entities (e.g., authors). To this end, DataCite uses the object property `datacite:hasIdentifier`, which has as its object a member of the class `datacite:Identifier` or of one of its sub-classes (`datacite:ResourceIdentifier`, `datacite:AgentIdentifier` or `datacite:RightsIdentifier`). 
+In turn, `datacite:AgentIdentifier` is further sub-classed by three additional classes, i.e., `datacite:PersonalIdentifier`, `datacite:OrganizationIdentifier`, and `datacite:FunderIdentifier`. 
+The exact nature of the identifier is then defined using the second DataCite object property `datacite:usesIdentifierScheme`, which has as its object the class `datacite:IdentifierScheme` or one of its sub-classes: `datacite:ResourceIdentifierScheme`, `datacite:AgentIdentifierScheme` or `datacite:RightsIdentifierScheme`. `datacite:AgentIdentifierScheme` is further sub-classed by three additional classes, i.e., `datacite:PersonalIdentifierScheme`, `datacite:OrganizationIdentifierScheme`, and `datacite:FunderIdentifierScheme`.
+This provides a robust method for defining identifiers, since each specific identifier is defined as an individual member of its appropriate identifier scheme class. Of course, existing identifier schemes have been already defined within the ontology. For instance:
+
+* `datacite:doi` is an individual member of the class `datacite:ResourceIdentifierScheme` specifying a DataCite Digital Object Identifier (DOI);
+* `datacite:orcid` is an individual member of the class `datacite:PersonalIdentifierScheme` specifying an Open Researcher and Contributor Identifier (ORCID);
+* `datacite:fundref` is an individual member of the class `datacite:FunderIdentifierScheme` specifying a FundRef Funder Identifier;
+* `datacite:spdx` is an individual member of the class `datacite:RightsIdentifierScheme` specifying a System Package Data Exchange identifier (SPDX).
+
+As need arises, new identifiers can be added later as new members of each class, without having to modify the structure of the DataCite Ontology. In addition, some members, i.e., `datacite:local-resource-identifier-scheme`, `datacite:local-personal-identifier-scheme`, `datacite:local-organization-identifier-scheme` and `datacite:local-funder-identifier-scheme`, have been already added to permit the use of local identifiers.
+
+![The more general metadata that can be assigned to a resource.](general_metadata.png)
+
+The class `owl:Thing`, representing a resource, is linked to `foaf:Agent` through the object properties `dcterms:creator`, `dcterms:publisher`, and `dcterms:contributor` to establish roles related to the creation and publishing of the resource.
+The `foaf:Agent` class acts as a broader category, with `foaf:Person` and `foaf:Organization` as its subclasses. 
+To associate textual metadata, the resource uses a suite of properties such as `dcterms:title`, `prism:volume`, `prism:edition`, and `fabio:hasPublicationYear`.
+Additionally, agents&#39; identity information is captured using `foaf:name`, and both `foaf:givenName` and `foaf:familyName` if the agent is a `foaf:Person`.
+
+![The general pattern involving agents.](agents.png)
+
+To establish identifiers for agents, their classes are connected to `datacite:OrganizationIdentifier` and `datacite:PersonalIdentifier` via the `datacite:hasIdentifier` property.
+These identifiers express their specific values by linking to the `rdfs:Literal` datatype using `literal:hasLiteralValue`.
+Additionally, they specify their classification systems by using `datacite:usesIdentifierScheme` to connect to `datacite:OrganizationIdentifierScheme` and `datacite:PersonalIdentifierScheme`. 
+These schemes may resolve to web addresses by linking to the `xsd:anyURI` datatype via the `fabio:hasURL` property. 
+
+![The specific pattern involving contributors.](contributors.png)
+
+The specific role of a contributor is expressed by using the `pro:RoleInTime` pattern offered by [PRO](http://purl.org/spar/pro), according to which a `foaf:Agent` holds some role in a given period of time, in relation to a certain resource. 
+Contributor types are defined by individual members of the class `pro:Role`, or of its sub-classes in [SCoRO](http://purl.org/spar/scoro).
+
+![The specific pattern involving affiliations.](affiliations.png)
+
+Affiliation follows the same pattern: someone&#39;s affiliation is a relationship of membership or belonging that the person can have with respect to a particular organization (i.e., an individual of the class `foaf:Organization`). 
+Such an affiliation may be specified in the document with respect to which that agent is an author or contributor. 
+A particular individual of [SCoRO](http://purl.org/spar/scoro), i.e., `scoro:affiliate` (belonging to the class `scoro:OrganizationalRole`, a subclass of `pro:Role`) is used to express such an affiliation.
+
+![The specific pattern involving funders.](funders.png)
+
+Funders are expressed in a similar way, using `scoro:funder` as named individual characterising the role covered by the agent.
+Moreover, this pattern allows the specification of the grant or award number associated with the funding awarded by some funder agent. 
+More specifically, a `foaf:Agent` awards (`frapo:awards`) a grant (`frapo:Grant`) with a certain number associated to it (`frapo:hasGrantNumber`).
+
+![The specific pattern involving subjects.](subjects.png)
+
+Subjects of a resource are represented as instances of `skos:Concept` associated to a resource via the property `dcterms:subject`.
+If possible, one could specify a more specific property rather than the general `dcterms:subject`, such as `fabio:hasSubjectTerm` and `fabio:hasSubjectDiscipline`.
+It is possible to use the property `skos:notation` to assign a classification code (a string of characters used to uniquely identify a concept within the scope of a given concept scheme), used in a related subject scheme, to a subject of the resource.
+A subject can be associated to a scheme (`skos:ConceptScheme`) that defines it via the property `skos:inScheme`.
+Both subjects&#39; and subject schemes&#39; labels are defined through the property `skos:prefLabel` and their URLs through the property `fabio:hasURL`.
+
+![The specific pattern involving dates.](dates.png)
+
+In this pattern, the date must be expressed as a reified literal through the class `literal:Literal`, linked to the resource via the property `literal:hasLiteral`. 
+The date value is contained in the reified literal and is expressed through the data property `literal:hasLiteralValue`. 
+The type of the date is expressed via [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), a mechanism according to which an object property can be used as the object of an OWL assertion by being considered simultaneously both as a normal property and also as a named individual of the class `owl:Thing`.
+In this case, the property is linked to the reified literal via `dcterms:type`.
+Additional information related to the date is expressed as a simple text string, linked to the reified literal representing the date via `dcterms:description`.
+
+![The specific pattern involving general resource types.](resource_types.png)
+
+This pattern allows the association of a particular resource with a resource type. 
+While not mandatory, the use of [FaBiO](http://purl.org/spar/fabio) entities, in particular `fabio:Expression` and its sub-classes, is strongly recommended. 
+General resource type terms are defined by classes in the [Dublin Core Type Vocabulary](http://purl.org/dc/dcmitype), in [FaBiO](http://purl.org/spar/fabio) and in the [FAIR* Reviews Ontology]((http://purl.org/spar/fr)), with the exception of the more general `frbr:Endeavour` (mapped to &#34;Other&#34;).
+If there is no specific `fabio:Expression` subclass that matches the resource under consideration, use of the most abstract class, i.e., `fabio:Expression`, is suggested.
+The value &#34;Award&#34; is modeled differently, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.
+The value &#34;Instrument&#34; is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.
+
+![The specific pattern involving rights.](rights.png)
+
+This pattern is used to associate a rights statement (i.e., an individual of the class `dcterms:RightsStatement`) to the resource under consideration. 
+The text of the statement can be specified by means of the property `literal:hasLiteralValue`.
+The property `fabio:hasURL` is used to add the URL of the rights statement or license.
+A rights statement can be identified by a `datacite:RightsIdentifier` belonging to a particular scheme (an individual belonging to `datacite:RightsIdentifierScheme`).
+
+![The specific pattern involving descriptions.](descriptions.png)
+
+The class `datacite:DescriptionType`, and the object properties `datacite:hasDescription` and `datacite:hasDescriptionType`, have also been defined in order to link an entity to another item representing an entity description of a particular type. 
+This is defined using the property `datacite:hasDescriptionType`, which must have as its object one of the members of the class `datacite:DescriptionType`, i.e., `datacite:abstract`, `datacite:methods`, `datacite:other`, `datacite:series-information` and `datacite:table-of-content`. 
+In this way, it is possible to associate written documents (e.g. journal articles or data articles) as descriptions of datasets.
+
+![The specific pattern involving qualified relations.](relation.png)
+
+With the DataCite Ontology, it is possible to represent situations where a given relation between two entities needs to be qualified in some way, e.g. with a description that specifies the nature of said relation.
+This is provided by the class `datacite:QualifiedRelation`, which represents a certain relationship existing between two entities. 
+The qualified relation is linked with one entity (more specifically, the subject of the relation) via the object property `datacite:hasRelationSubject`, and with the other (the object of the relation) via the object property `datacite:hasRelationObject`.
+The type of relation itself is defined via the property `datacite:hasRelationCharacterization`, which links a qualified relation to its characterization made by using an object property such as `dcterms:relation`, `cito:cites`, or `frbr:partOf`. 
+This usage involves the [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) mechanism.
+
+![The specific pattern involving metadata documents.](metadata_document.png)
+
+It is also possible to provide a link between a resource, such as a dataset, and the document describing its metadata by means of [CiTO](http://purl.org/spar/cito), using the property `cito:citesAsMetadataDocument`, and [FaBiO](http://purl.org/spar/fabio), by means of the class `fabio:MetadataDocument`. 
+In addition to these entities, the DataCite Ontology provides appropriate classes (i.e., `datacite:MetadataScheme`) and properties (i.e., `datacite:hasMetadataScheme`) to specify the particular scheme followed for creating the resource metadata exemplified in the metadata document.
+
+![The specific pattern involving geographical information.](spatial.png)
+
+This pattern links the resource with a geographical feature, i.e., an individual of the class `geo:Feature`.
+It is possible to specify a point (i.e., an individual of the class `sf:Point`) defining the location of the resource under consideration.
+It is also possible to specify a polygon (i.e., an individual of the class `sf:Polygon`) defining the geographical box related to the resource under consideration.
+The actual value of both can be defined by means of the property `geo:asWKT`, which allows the specification of the coordinates.
+Moreover, a `sf:Polygon` can contain other instances of `geo:Feature`, which can be expressed via the property `geo:sfContains`.
+The properties `wgs:lat` and `wgs:long` are used to express latitude and longitude of any geographical future in decimal degrees.
+The property `frapo:hasLocation` provides a textual description for the location under consideration.
+
+## Examples of use
+
+In the following subsections, we introduce some examples to showcase how to use the DataCite Ontology. 
+
+The prefixes that are used in all the examples provided below are defined as follows:
+
+    @prefix : &lt;http://www.sparontologies.net/example/&gt; .
+    @prefix co: &lt;http://purl.org/co/&gt; .
+    @prefix datacite: &lt;http://purl.org/spar/datacite/&gt; .
+    @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+    @prefix fabio: &lt;http://purl.org/spar/fabio/&gt; .
+    @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+    @prefix literal: &lt;http://www.essepuntato.it/2010/06/literalreification/&gt; .
+    @prefix orcid: &lt;http://orcid.org/&gt; .
+    @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+    @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+    @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+    @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+    @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+### Datasets&#39; DOIs and authors&#39; ORCIDs 
+
+DataCite allows one to associate identifiers to a bibliographic entity (e.g., a dataset, a person, an article) specifying their exact nature by means of the object property `datacite:usesIdentifierScheme`. 
+In addition, it is also possible, through the object property `datacite:hasDescription`, to link an entity to another item representing an entity description of a particular type. 
+This is defined using the property `datacite:hasDescriptionType`, which must have as its object one of the members of the class `datacite:DescriptionType`, i.e., `datacite:abstract`, `datacite:other`, `datacite:series-information`, `datacite:methods`, and `datacite:table-of-content`. 
+In this way, it is possible to associate written documents (e.g., journal articles) as descriptions of datasets.
+
+    &lt;http://dx.doi.org/10.5061/dryad.15v26&gt; a fabio:Dataset ;
+        datacite:hasIdentifier :dataset-doi ;
+        dcterms:creator
+            orcid:0000-0002-5159-9717 ,
+            orcid:0000-0002-7811-3617 ;
+        datacite:hasDescription
+            &lt;http://dx.doi.org/10.1098/rsbl.2015.0486&gt; .
+
+    &lt;http://dx.doi.org/10.1098/rsbl.2015.0486&gt;
+        a fabio:JournalArticle ;
+        datacite:hasIdentifier :paper-doi ;
+        dcterms:creator
+            orcid:0000-0002-5159-9717 ,
+            orcid:0000-0002-7811-3617 ;
+        datacite:hasDescriptionType datacite:other .
+
+    :paper-doi a datacite:PrimaryResourceIdentifier ;
+        literal:hasLiteralValue &#34;10.1098/rsbl.2015.0486&#34; ;
+        datacite:usesIdentifierScheme datacite:doi .
+
+    :dataset-doi a datacite:PrimaryResourceIdentifier ;
+        literal:hasLiteralValue &#34;10.5061/dryad.mq8r2&#34; ;
+        datacite:usesIdentifierScheme datacite:doi .
+
+    orcid:0000-0002-5159-9717 a foaf:Person ;
+        foaf:name &#34;Nidhi Seethapathi&#34; ;
+        datacite:hasIdentifier :seethapathi-orcid .
+
+    :seethapathi-orcid a datacite:PersonalIdentifier ;
+        literal:hasLiteralValue &#34;0000-0002-5159-9717&#34; ;
+        datacite:usesIdentifierScheme datacite:orcid .
+
+    orcid:0000-0002-7811-3617 a foaf:Person ;
+        foaf:name &#34;Manoj Srinivasan&#34; ;
+        datacite:hasIdentifier :srinivasan-orcid .
+
+    :srinivasan-orcid a datacite:PersonalIdentifier ;
+        literal:hasLiteralValue &#34;0000-0002-7811-3617&#34; ;
+        datacite:usesIdentifierScheme datacite:orcid .
+
+## Competency Questions
+
+The DataCite Ontology can be used for answering several questions related to the identification, attribution, and discoverability of research products. 
+
+In the following subsections, some of them are introduced together with their respective SPARQL queries. 
+The prefixes that are used in all the SPARQL queries provided below are defined as follows:
+
+    PREFIX datacite: &lt;http://purl.org/spar/datacite/&gt;
+    PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+    PREFIX fabio: &lt;http://purl.org/spar/fabio/&gt;
+    PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+    PREFIX literal: &lt;http://www.essepuntato.it/2010/06/literalreification/&gt;
+
+### CQ1
+
+Which article provides the description for a specific dataset identified by the DOI &#34;10.5061/dryad.mq8r2&#34;?
+
+    SELECT ?article ?article_doi
+    WHERE {
+        ?dataset_id literal:hasLiteralValue &#34;10.5061/dryad.mq8r2&#34; .
+        ?dataset datacite:hasIdentifier ?dataset_id ;
+            a fabio:Dataset ;
+            datacite:hasDescription ?article .
+        
+        ?article datacite:hasIdentifier ?paper_id .
+        ?paper_id literal:hasLiteralValue ?article_doi .
+    }
+
+### CQ2
+
+Who are the creators associated with both the dataset and the article?
+
+    SELECT DISTINCT ?name ?orcid_uri
+    WHERE {
+        ?dataset a fabio:Dataset ;
+                dcterms:creator ?orcid_uri .
+        
+        ?article a fabio:JournalArticle ;
+                dcterms:creator ?orcid_uri .
+                
+        ?orcid_uri foaf:name ?name .
+    }
+
+### CQ3
+
+What are the names and ORCID iDs of all researchers mentioned in the graph?
+
+    SELECT ?name ?orcid_value
+    WHERE {
+        ?person a foaf:Person ;
+                foaf:name ?name ;
+                datacite:hasIdentifier ?id_node .
+        
+        ?id_node datacite:usesIdentifierScheme datacite:orcid ;
+                literal:hasLiteralValue ?orcid_value .
+    }
+
+### CQ4
+
+List all resources that have a description type categorized as &#34;other&#34;.
+
+    SELECT ?resource
+    WHERE {
+        ?resource datacite:hasDescriptionType datacite:other .
+    }
+
+### CQ5
+
+How many identifiers are registered for each identifier scheme?
+
+    SELECT ?scheme (COUNT(?id_node) AS ?count)
+    WHERE {
+        ?id_node datacite:usesIdentifierScheme ?scheme .
+    }
+    GROUP BY ?scheme
+
+</div></div></div><dt class="text-capitalize fs-7 fw-bold">doi<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">https://doi.org/10.25504/FAIRsharing.c06f1e</div></div></div><dt class="text-capitalize fs-7 fw-bold">has date issued<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2016-01-21</div></div></div><dt class="text-capitalize fs-7 fw-bold">has date modified<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2026-07-23</div></div></div><dt class="text-capitalize fs-7 fw-bold">image<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/metadata_document.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/metadata_document.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/subjects.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/subjects.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/contributors.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/contributors.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/datacite.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/datacite.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/funders.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/funders.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/general_metadata.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/general_metadata.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/resource_types.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/resource_types.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/relation.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/relation.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/rights.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/rights.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/agents.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/agents.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/descriptions.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/descriptions.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/affiliations.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/affiliations.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/spatial.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/spatial.png</a></div></div><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/current/dates.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/current/dates.png</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">imports<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://www.essepuntato.it/2010/06/literalreification/ target=_blank>http://www.essepuntato.it/2010/06/literalreification/</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">included in data catalog<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://fairsharing.org/ target=_blank>https://fairsharing.org/</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">is backward compatible with<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://purl.org/spar/datacite/2026-05-05 target=_blank>http://purl.org/spar/datacite/2026-05-05</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">keywords<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">scholarly publishing</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">open science</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">semantic publishing</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">metascience</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">identifiers</div></div><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">DataCite metadata schema</div></div></div><dt class="text-capitalize fs-7 fw-bold">license<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://creativecommons.org/licenses/by/4.0/ target=_blank>http://creativecommons.org/licenses/by/4.0/</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">logo<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/spar.png target=_blank>https://github.com/SPAROntologies/datacite/blob/master/spar.png</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">preferred namespace prefix<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">datacite</div></div></div><dt class="text-capitalize fs-7 fw-bold">preferred namespace uri<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">http://purl.org/spar/datacite</div></div></div><dt class="text-capitalize fs-7 fw-bold">prior version<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://purl.org/spar/datacite/2026-05-05 target=_blank>http://purl.org/spar/datacite/2026-05-05</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">publisher<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://ror.org/00wb4mk85 target=_blank>https://ror.org/00wb4mk85</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">see also<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://www.sparontologies.net/ontologies/datacite target=_blank>http://www.sparontologies.net/ontologies/datacite</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">source<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=https://github.com/SPAROntologies/datacite/blob/master/docs/cq.md target=_blank>https://github.com/SPAROntologies/datacite/blob/master/docs/cq.md</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">status<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://purl.org/ontology/bibo/status/published target=_blank>http://purl.org/ontology/bibo/status/published</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">title<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">The DataCite Ontology (DataCite)</div></div></div><dt class="text-capitalize fs-7 fw-bold">version<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div><a title="Go to Resource" href=http://purl.org/spar/datacite/2026-07-23 target=_blank>http://purl.org/spar/datacite/2026-07-23</a></div></div></div><dt class="text-capitalize fs-7 fw-bold">version info<dd class="m-0 p-0"><div class="d-flex flex-column"><div class=ms-5><div class="markdown-with-badge metadata_p text-dark render-markdown inline-markdown">2.0.0</div></div></div><dt class="text-capitalize fs-7 fw-bold">Other visualisation<dd class=ms-5><a class="btn btn-sm btn-outline-dark me-2" href="https://service.tib.eu/webvowl/#iri=http://purl.org/spar/datacite" target=_blank><i class="bi bi-share"></i> WebVOWL</a> <a class="btn btn-sm btn-outline-dark" href=http://purl.org/spar/datacite target=_blank><i class="bi bi-file-code"></i> Source</a></dl></section></div></details><section class="metadata-block export-block"><dl class="mb-0 pb-3"><dt class="fs-7 fw-bold mb-1">Export<dd class=ms-5><a class="btn btn-sm btn-outline-dark me-2" href=zbmath.ttl> <i class="bi bi-filetype-raw"></i> Turtle </a> <a class="btn btn-sm btn-outline-dark me-2" href=zbmath.rdf> <i class="bi bi-file-code"></i> RDF/XML </a> <a class="btn btn-sm btn-outline-dark me-2" href=zbmath.jsonld> <i class="bi bi-filetype-json"></i> JSON-LD </a> <a class="btn btn-sm btn-outline-dark me-2" href=zbmath.nt> <i class="bi bi-file-text"></i> N-Triples </a></dl></section><div class="anchor-offset mb-5"><div class="card mb-2 anchor-offset" id=id_d2859a66888eb16ec8edfd61505b5efb_Individual><div class="card-header bg-white pt-2 px-1 d-flex justify-content-between align-items-center"><h4 class="fw-bold mb-0"><div class=d-inline-block>zbmath</div> <sup class="badge bg-light text-secondary ni" title="Named Individual">ni</sup></h4></div><div class="card-body p-0"><div class="description p-3"><p class=mb-1><span class="text-dark fw-bold">IRI:</span> http://purl.org/spar/datacite/zbmath <a title="Go to resource documentation" class=ms-2 href=../datacite/zbmath.html><i class="bi bi-box-arrow-up-right"></i></a><div><h6 class="text-dark fw-bold pb-0 mb-0">comment</h6><div class=ms-2><div><div class="markdown-with-badge text-dark render-markdown inline-markdown me-1"
+                                            data-md="The zbMATH author identifier is a unique identifier used for a person in the Zentralblatt MATH database.">The zbMATH author identifier is a unique identifier used for a person in the Zentralblatt MATH database.
+                                        </div> <sup class="badge text-secondary lan" title=English>en</sup></div></div></div></div><div class="attribute p-3 border-top border-bottom bg-light-subtle"><div class=mb-1><h6 class="fw-bold text-dark pb-0 mb-0">is defined by</h6><div class=ms-2><div class=d-inline-block><span class=external-ref title=http://purl.org/spar/datacite/>http://purl.org/spar/datacite/</span></div></div></div><div class=mb-1><h6 class="fw-bold text-dark pb-0 mb-0">label</h6><div class=ms-2><div class="markdown-with-badge text-dark mb-0 render-markdown inline-markdown "
+                                            data-md="zbmath">zbmath</div> <sup class="badge text-secondary lan" title=English>en</sup></div></div><div class=mb-1><h6 class="fw-bold text-dark pb-0 mb-0">type</h6><div class=ms-2><div class=d-inline-block><a href=../datacite/PersonalIdentifierScheme.html title=http://purl.org/spar/datacite/PersonalIdentifierScheme>personal identifier scheme</a><sup class="badge text-secondary c" title=Class>c</sup></div></div></div></div><div class="p-3 statement"><div><h6 class="fw-bold text-dark pb-0 mb-0">has URL</h6><div class=ms-2><div class="d-flex flex-column gap-1"><div><div><div class="markdown-with-badge  render-markdown inline-markdown"
+                title="None"
+                data-md="https://zbmath.org/">
+                    https://zbmath.org/
+                </div></div></div></div></div></div><div><h6 class="fw-bold text-dark pb-0 mb-0">term status</h6><div class=ms-2><div class="d-flex flex-column gap-1"><div><a class=external-ref href=http://purl.org/linked-data/registry#statusStable rel=noopener target=_blank title=http://purl.org/linked-data/registry#statusStable>status stable<i class="bi bi-box-arrow-up-right ms-1"></i></a></div></div></div></div><div><h6 class="fw-bold text-dark pb-0 mb-0">example</h6><div class=ms-2><div class="d-flex flex-column gap-1"><div><div><div class="markdown-with-badge  render-markdown inline-markdown"
+                title="None"
+                data-md="
+        :silvio-peroni-id 
+                datacite:usesIdentifierScheme datacite:zbmath ;
+                literal:hasLiteralValue &#34;peroni.silvio&#34; .
+        ">
+                    
+        :silvio-peroni-id 
+                datacite:usesIdentifierScheme datacite:zbmath ;
+                literal:hasLiteralValue &#34;peroni.silvio&#34; .
+        
+                </div></div></div></div></div></div><div><h6 class="fw-bold text-dark pb-0 mb-0">note</h6><div class=ms-2><div class="d-flex flex-column gap-1"><div><div><div class="markdown-with-badge  render-markdown inline-markdown"
+                title="None"
+                data-md="A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:&lt;identifier&gt;.">
+                    A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:&lt;identifier&gt;.
+                </div> <sup class="badge text-secondary lan" title=English>en</sup></div></div></div></div></div></div><div class="card-footer bg-white py-0"><div class="accordion accordion-flush prov-accordion" id=id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_acc><div class=accordion-item><h2 class="accordion-header d-flex justify-content-end" id=id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_head><button class="accordion-button collapsed py-1 px-2 small fw-bold text-uppercase text-primary w-auto" title="RDF provenance" aria-controls=id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov aria-expanded=false data-bs-target=#id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov data-bs-toggle=collapse type=button><span>RDF provenance</span> <i class="bi bi-code"></i></button></h2><div class="accordion-collapse collapse" aria-labelledby=id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_head data-bs-parent=#id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_acc id=id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov><div class="accordion-body p-2"><ul class="nav nav-tabs nav-tabs-sm justify-content-end small mb-0" role=tablist><li class=nav-item role=presentation><button class="nav-link active py-1 px-2" data-bs-target=#id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_1 data-bs-toggle=tab role=tab type=button>Turtle</button><li class=nav-item role=presentation><button class="nav-link py-1 px-2" data-bs-target=#id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_2 data-bs-toggle=tab role=tab type=button>RDF/XML</button><li class=nav-item role=presentation><button class="nav-link py-1 px-2" data-bs-target=#id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_3 data-bs-toggle=tab role=tab type=button>JSON-LD</button><li class=nav-item role=presentation><button class="nav-link py-1 px-2" data-bs-target=#id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_4 data-bs-toggle=tab role=tab type=button>N-Triples</button></ul><div class=tab-content><div class="tab-pane fade show active" id=id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_1 role=tabpanel><pre class="mb-0 small"><code>@prefix datacite: &lt;http://purl.org/spar/datacite/> .
+@prefix fabio: &lt;http://purl.org/spar/fabio/> .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: &lt;http://purl.org/linked-data/registry#> .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: &lt;http://purl.org/vocab/vann/> .
+@prefix vs: &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#> .
+
+datacite:zbmath a datacite:PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "zbmath"@en ;
+    fabio:hasURL "https://zbmath.org/"^^xsd:anyURI ;
+    vann:example """
+        :silvio-peroni-id 
+                datacite:usesIdentifierScheme datacite:zbmath ;
+                literal:hasLiteralValue "peroni.silvio" .
+        """ ;
+    rdfs:comment "The zbMATH author identifier is a unique identifier used for a person in the Zentralblatt MATH database."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:&lt;identifier>."@en .
+
+</code></pre></div><div class="tab-pane fade" id=id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_2 role=tabpanel><pre class="mb-0 small"><code>&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  &lt;rdf:Description rdf:about="http://purl.org/spar/datacite/zbmath">
+    &lt;rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    &lt;rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    &lt;rdfs:comment xml:lang="en">The zbMATH author identifier is a unique identifier used for a person in the Zentralblatt MATH database.&lt;/rdfs:comment>
+    &lt;rdfs:label xml:lang="en">zbmath&lt;/rdfs:label>
+    &lt;rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    &lt;fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://zbmath.org/&lt;/fabio:hasURL>
+    &lt;vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    &lt;vann:example>
+        :silvio-peroni-id 
+                datacite:usesIdentifierScheme datacite:zbmath ;
+                literal:hasLiteralValue "peroni.silvio" .
+        &lt;/vann:example>
+    &lt;skos:note xml:lang="en">A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:&amp;lt;identifier&amp;gt;.&lt;/skos:note>
+  &lt;/rdf:Description>
+&lt;/rdf:RDF>
+</code></pre></div><div class="tab-pane fade" id=id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_3 role=tabpanel><pre class="mb-0 small"><code>[
+  {
+    "@id": "http://purl.org/spar/datacite/zbmath",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://zbmath.org/"
+      }
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :silvio-peroni-id \n                datacite:usesIdentifierScheme datacite:zbmath ;\n                literal:hasLiteralValue \"peroni.silvio\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The zbMATH author identifier is a unique identifier used for a person in the Zentralblatt MATH database."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "zbmath"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:&lt;identifier>."
+      }
+    ]
+  }
+]</code></pre></div><div class="tab-pane fade" id=id_d2859a66888eb16ec8edfd61505b5efb_Individual_prov_4 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/zbmath> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#NamedIndividual> .
+&lt;http://purl.org/spar/datacite/zbmath> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+&lt;http://purl.org/spar/datacite/zbmath> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "The zbMATH author identifier is a unique identifier used for a person in the Zentralblatt MATH database."@en .
+&lt;http://purl.org/spar/datacite/zbmath> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> .
+&lt;http://purl.org/spar/datacite/zbmath> &lt;http://www.w3.org/2000/01/rdf-schema#label> "zbmath"@en .
+&lt;http://purl.org/spar/datacite/zbmath> &lt;http://purl.org/spar/fabio/hasURL> "https://zbmath.org/"^^&lt;http://www.w3.org/2001/XMLSchema#anyURI> .
+&lt;http://purl.org/spar/datacite/zbmath> &lt;http://www.w3.org/2004/02/skos/core#note> "A zbMATH author identifier is resolvable from the following URL: https://zbmath.org/authors/?q=ai:&lt;identifier>."@en .
+&lt;http://purl.org/spar/datacite/zbmath> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> .
+&lt;http://purl.org/spar/datacite/zbmath> &lt;http://purl.org/vocab/vann/example> "\n        :silvio-peroni-id \n                datacite:usesIdentifierScheme datacite:zbmath ;\n                literal:hasLiteralValue \"peroni.silvio\" .\n        " .
+</code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../index.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
+
+                // Security hooks
+                DOMPurify.addHook('afterSanitizeAttributes', function(node) {
+                    if (node.tagName === 'A') {
+                        node.setAttribute('target', '_blank');
+                        node.setAttribute('rel', 'noopener noreferrer');
+                    }
+                    if (node.tagName === 'IMG') {
+                        node.setAttribute('class', 'img-fluid border rounded mt-2 mb-2');
+                    }
+                });
+
+                marked.use({
+                    gfm: true,
+                    breaks: false // So line breaks not be added
+                });
+
+                const mdElements = document.querySelectorAll('.render-markdown');
+
+                mdElements.forEach(function(el) {
+                    try {
+                        let rawText = el.dataset.md ?? el.textContent;
+
+                        // Rimuove solo righe vuote iniziali/finali, preserva l'indentazione delle righe
+                        rawText = rawText.replace(/^([ \t]*\n)+/, '').replace(/(\n[ \t]*)+$/, '');
+                        // 2. Strip ANY XML namespace prefix (Turns <html:div> into <div>, </xhtml:p> into </p>)
+                        let cleanText = rawText.replace(/<(\/?)[a-zA-Z0-9_-]+:([a-zA-Z0-9]+)/gi, '<$1$2');
+
+                        // 3. Strip xmlns attributes
+                        cleanText = cleanText.replace(/ xmlns(:[a-zA-Z0-9_-]+)?="[^"]*"/gi, '');
+
+                        let rawHTML = "";
+
+                        // 4. Smart Routing
+                        if (el.tagName === 'SPAN' || el.tagName === 'A') {
+                            rawHTML = marked.parseInline(cleanText);
+                        } else {
+                            rawHTML = marked.parse(cleanText);
+                        }
+
+                        // 5. Sanitize
+                        const cleanHTML = DOMPurify.sanitize(rawHTML, {
+                            ADD_TAGS: ['img'],
+                            ADD_ATTR: ['target', 'src', 'alt', 'title', 'class']
+                        });
+
+                        el.innerHTML = cleanHTML;
+                    } catch (e) {
+                        console.error("Error rendering markdown/html:", e);
+                    }
+                });
+            });
+
+            function exportGraph(mime, ext, navQs, resource) {
+                let qs = navQs;
+                if (resource) qs += "&resource=" + encodeURIComponent(resource);
+                fetch(`/extract?${qs}`, { headers: { "Accept": mime } })
+                    .then(r => { if (!r.ok) throw new Error(r.status); return r.blob(); })
+                    .then(blob => {
+                        const a = document.createElement("a");
+                        const slug = resource ? resource.split(/[#/]/).pop() : "ontology";
+                        a.href = URL.createObjectURL(blob);
+                        a.download = `${slug}.${ext}`;
+                        a.click();
+                        URL.revokeObjectURL(a.href);
+                    })
+                    .catch(e => alert("Export failed: " + e.message));
+            }
+
+            function toggleMetadataAccordion(event) {
+                event.preventDefault();   // blocca il comportamento nativo/bubbling incoerente
+                event.stopPropagation();  // evita il doppio-toggle se il summary lo cattura comunque
+                const details = event.currentTarget.closest('details.metadata-accordion');
+                if (details) details.open = !details.open;
+            }
+            
+            /* SEARCHBAR */
+            (function () {
+                const wrap = document.getElementById('toc-float-search');
+                const toggle = document.getElementById('toc-float-search-toggle');
+                const input = document.getElementById('toc-float-search-input');
+                const countEl = document.getElementById('toc-float-search-count');
+                const prevBtn = document.getElementById('toc-float-search-prev');
+                const nextBtn = document.getElementById('toc-float-search-next');
+                if (!wrap || !toggle || !input) return;
+
+                const cards = Array.from(document.querySelectorAll('.container-fluid .card[id]'));
+                let matches = [];
+                let current = -1;
+
+                function updateCount() {
+                    countEl.textContent = matches.length ? `${current + 1}/${matches.length}` : (input.value ? '0/0' : '');
+                }
+
+                function clearHighlight() {
+                    cards.forEach(c => c.classList.remove('toc-search-current'));
+                }
+
+                function goTo(index) {
+                    if (!matches.length) return;
+                    current = (index + matches.length) % matches.length;
+                    clearHighlight();
+                    const card = matches[current];
+                    card.classList.add('toc-search-current');
+                    card.scrollIntoView({ block: 'start' });
+                    updateCount();
+                }
+
+                function runSearch() {
+                    const q = input.value.trim().toLowerCase();
+                    clearHighlight();
+
+                    // Sidebar: dim + disable non-matching
+                    const sidebar = document.getElementById('toc-sidebar');
+                    if (sidebar) {
+                        sidebar.querySelectorAll('.toc-sidebar-section').forEach(section => {
+                            let anyMatch = false;
+                            section.querySelectorAll('.toc-sidebar-list li').forEach(li => {
+                                const match = !q || li.textContent.toLowerCase().includes(q);
+                                li.classList.toggle('toc-search-dim', !match);
+                                if (match) anyMatch = true;
+                            });
+                            section.classList.toggle('toc-search-dim', q.length > 0 && !anyMatch);
+                            if (q && anyMatch) section.open = true;
+                        });
+                    }
+
+                    if (!q) {
+                        matches = [];
+                        current = -1;
+                        updateCount();
+                        return;
+                    }
+                    matches = cards.filter(card => {
+                        const label = card.querySelector('.card-header h4')?.textContent.toLowerCase() || '';
+                        return label.includes(q);
+                    });
+                    current = -1;
+                    updateCount();
+                    if (matches.length) goTo(0);
+                }
+
+                toggle.addEventListener('click', function () {
+                    const open = wrap.classList.toggle('open');
+                    if (open) {
+                        input.focus();
+                    } else {
+                        input.value = '';
+                        runSearch();
+                    }
+                });
+
+                input.addEventListener('input', runSearch);
+
+                input.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (e.shiftKey) goTo(current - 1);
+                        else goTo(current + 1);
+                    }
+                });
+
+                prevBtn.addEventListener('click', () => goTo(current - 1));
+                nextBtn.addEventListener('click', () => goTo(current + 1));
+            })();</script></div>

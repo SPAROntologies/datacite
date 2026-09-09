@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+scoro:researcher a scoro:InvestigationRole,
+        owl:NamedIndividual ;
+    rdfs:label "researcher"@en ;
+    vann:example """
+        :silvio-peroni
+                pro:holdsRoleInTime :researcher-for-my-dataset .
+        
+        :researcher-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:researcher .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given agent role type ("Researcher").
+        """@en ;
+    rdfs:comment "The role a person has of being a researcher involved in a research investigation, for example by conducting experiments, collecting and analyzing data, or undertaking formal study."@en ;
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
+

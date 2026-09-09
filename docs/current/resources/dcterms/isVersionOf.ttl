@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcterms:isVersionOf a owl:ObjectProperty ;
+    rdfs:label "is version of"@en ;
+    vann:example """
+        :relation-dataset-article a datacite:QualifiedRelation ;
+                datacite:hasRelationCharacterization dcterms:isVersionOf .
+        """ ;
+    vaem:rationale """
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsVersionOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+        """@en ;
+    rdfs:comment "A related resource of which the described resource is a version, edition, or adaptation."@en ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:subPropertyOf dcterms:relation ;
+    owl:inverseOf dcterms:hasVersion ;
+    vs:term_status reg:statusStable .
+

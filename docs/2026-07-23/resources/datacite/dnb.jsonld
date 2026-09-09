@@ -1,0 +1,48 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/dnb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://d-nb.info/"
+      }
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:dnb ;\n                literal:hasLiteralValue \"gnd/7749153-1\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Deutsche Nationalbibliothek (DNB) catalogue number is a unique identifier assigned to every entry in the DNB catalogue."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "dnb"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "A DNB catalogue number is resolvable from the following URL: https://d-nb.info/<identifier>."
+      }
+    ]
+  }
+]

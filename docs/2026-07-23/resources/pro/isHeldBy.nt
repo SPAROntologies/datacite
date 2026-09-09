@@ -1,0 +1,6 @@
+<http://purl.org/spar/pro/isHeldBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The agent holding a role in time."@en .
+<http://purl.org/spar/pro/isHeldBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro/> .
+<http://purl.org/spar/pro/isHeldBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/spar/pro/isHeldBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pro/RoleInTime> .
+<http://purl.org/spar/pro/isHeldBy> <http://www.w3.org/2000/01/rdf-schema#label> "is role held by"@en .
+<http://purl.org/spar/pro/isHeldBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

@@ -1,0 +1,10 @@
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fabio:ProceedingsPaper a owl:Class ;
+    rdfs:label "proceedings paper"@en ;
+    rdfs:comment "A paper, typically the realization of a research paper reporting original research findings, usually published within an academic proceedings volume."@en ;
+    rdfs:isDefinedBy fabio: ;
+    rdfs:subClassOf fabio:Expression .
+

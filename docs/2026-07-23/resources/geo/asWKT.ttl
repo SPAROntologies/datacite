@@ -1,0 +1,26 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+geo:asWKT a owl:DatatypeProperty ;
+    rdfs:label "as WKT"@en ;
+    vann:example """
+        :my-dataset-location a geo:Feature ;
+                geo:hasGeometry :my-dataset-location-point .
+        
+        :my-dataset-location-point a sf:Point ;
+                geo:asWKT "POINT(20 45)"^^geo:wktLiteral .
+        """ ;
+    vaem:rationale """
+This is used to express actual value of a point by specifying its coordinates in `geo:wktLiteral` format.
+        """@en ;
+    rdfs:comment "The WKT serialization of a geometry."@en ;
+    rdfs:domain geo:Geometry ;
+    rdfs:isDefinedBy geo: ;
+    rdfs:range geo:wktLiteral ;
+    vs:term_status reg:statusStable .
+

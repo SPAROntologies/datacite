@@ -1,0 +1,41 @@
+[
+  {
+    "@id": "https://schema.org/Action",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-analysis-action a schema:Action ;\n                schema:instrument :my-resource .  \n\n        :my-resource a frbr:Endeavour .      \n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to model the fact that a related source is an instrument.\nMore specifically, an instance of `schema:Action` is used, connected to a `frbr:Endeavour` via the property `schema:instrument`.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "\nAn action performed by a direct agent and indirect participants upon a direct object. \nOptionally happens at a location with the help of an inanimate instrument. \nThe execution of the action may produce a result. \nSpecific action sub-type documentation specifies the exact expectation of each argument/role.        \n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://schema.org/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "action"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

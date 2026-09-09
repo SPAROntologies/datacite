@@ -1,0 +1,42 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/urn",
+    "@type": [
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "http://datatracker.ietf.org/wg/urn/charter/"
+      }
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource-id ;\n                datacite:usesIdentifierScheme datacite:urn ;\n                literal:hasLiteralValue \"urn:isbn:9780141036144\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Uniform Resource Name (URN) is a unique identifier for a resource, following the URN scheme."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "urn"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

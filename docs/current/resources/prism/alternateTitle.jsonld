@@ -1,0 +1,46 @@
+[
+  {
+    "@id": "http://prismstandard.org/namespaces/basic/2.0/alternateTitle",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n    :my-dataset \n        dcterms:title \"UK rainfall, June 2012\"@en ;\n        prism:alternateTitle \"Rainfall on UK in June 2012\"@en .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used in addition to the generic title (`dcterms:title`), if appropriate.\n        \nTo express the language of a title, a language-tagged literal should be used as value. \nValues of language tags must follow the pattern defined by the XML schema language type, e.g.: `en`, `it`, `fr`, `cmn`, `nys`, `swh`, and so on.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An alternate title or alternate headline for a resource that may be used in a table of contents, a popup etc. and can vary with platform."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://prismstandard.org/namespaces/basic/2.0/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has alternate title"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

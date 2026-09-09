@@ -1,0 +1,22 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:pmid a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "pmid"@en ;
+    fabio:hasURL "http://www.ncbi.nlm.nih.gov/pubmed/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:pmid ;
+                literal:hasLiteralValue "29943802" .
+        """ ;
+    rdfs:comment "The PubMed Identifier (PMID) is a bibliographic identifier for the PubMed database."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

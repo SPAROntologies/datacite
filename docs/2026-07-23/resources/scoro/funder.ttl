@@ -1,0 +1,27 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+scoro:funder a scoro:FinancialRole,
+        owl:NamedIndividual ;
+    rdfs:label "funder"@en ;
+    vann:example """
+        :european-commission a foaf:Agent ;
+                pro:holdsRoleInTIme :european-commission-funding .
+        
+        :european-commission-funding a pro:RoleInTime ;
+                pro:withRole scoro:funder ;
+                pro:relatesToEntity :my-dataset .
+        """ ;
+    vaem:rationale """
+A funding agent is represented as an instance of `foaf:Agent`, related to the resource through the pattern defined in the Publishing Roles Ontology (PRO). 
+According to said pattern, a `foaf:Agent` holds some role (`pro:RoleInTime`) characterized by a type (`pro:withRole`) - which, in this case, is `scoro:funder` - and related to the resource via `pro:relatesToEntity`.
+        """@en ;
+    rdfs:comment "The role held by an agent of providing funds, for example for a research project."@en ;
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
+

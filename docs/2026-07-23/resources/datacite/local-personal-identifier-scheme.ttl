@@ -1,0 +1,18 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:local-personal-identifier-scheme a datacite:PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "local personal identifier scheme"@en ;
+    vann:example """
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:local-personal-identifier-scheme ;
+                literal:hasLiteralValue "GTSBBR85K932P23H" .
+        """ ;
+    rdfs:comment "A personal identifier scheme that provides local personal identifiers that are unique in their local environment and understood by the person submitting the metadata."@en ;
+    vs:term_status reg:statusStable .
+

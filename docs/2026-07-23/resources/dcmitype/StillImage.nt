@@ -1,0 +1,9 @@
+<http://purl.org/dc/dcmitype/StillImage> <http://www.w3.org/2000/01/rdf-schema#label> "still image"@en .
+<http://purl.org/dc/dcmitype/StillImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/Image> .
+<http://purl.org/dc/dcmitype/StillImage> <http://www.w3.org/2000/01/rdf-schema#comment> "A static visual representation."@en .
+<http://purl.org/dc/dcmitype/StillImage> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:StillImage .        \n        " .
+<http://purl.org/dc/dcmitype/StillImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/dcmitype/StillImage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/dcmitype/StillImage> <http://www.w3.org/2004/02/skos/core#note> "\nExamples include paintings, drawings, graphic designs, plans and maps. Recommended best practice is to assign the type Text to images of textual materials. Instances of the type Still Image must also be describable as instances of the broader type Image.        \n        "@en .
+<http://purl.org/dc/dcmitype/StillImage> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Image\").\n        "@en .
+<http://purl.org/dc/dcmitype/StillImage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcmitype/> .

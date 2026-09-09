@@ -1,0 +1,8 @@
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/2000/01/rdf-schema#label> "isbn"@en .
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Standard Book Number (ISBN) is a unique 13-digit commercial identifier for books and monographic publications."@en .
+<http://purl.org/spar/datacite/isbn> <http://purl.org/spar/fabio/hasURL> "http://www.isbn-international.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/isbn> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:isbn ;\n                literal:hasLiteralValue \"978-81-7525-766-5\" .\n        " .
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/isbn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

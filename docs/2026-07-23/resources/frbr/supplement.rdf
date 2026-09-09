@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#supplement">
+    <vaem:rationale xml:lang="en">
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsSupplementedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+        </vaem:rationale>
+    <rdfs:domain rdf:nodeID="n16082fa6811145e08dfaeb8890637028b16"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
+    <skos:note xml:lang="en">
+The supplement relationship type involves works/expressions that are intended to be used in conjunction with another work/expression. 
+Some of these, such as indices, concordances, teachers' guides, glosses, and instruction manuals for electronic resources will be so closely associated with the content of the related work/expression that they are useless without the other work/expression.
+        </skos:note>
+    <rdfs:range rdf:nodeID="n16082fa6811145e08dfaeb8890637028b19"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+        :relation-dataset-article a datacite:QualifiedRelation ;
+                datacite:hasRelationCharacterization frbr:supplement .
+        </vann:example>
+    <rdfs:label xml:lang="en">has supplement</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    <rdfs:comment xml:lang="en">
+An expression work/expression having another one as supplement.
+        </rdfs:comment>
+    <owl:inverseOf rdf:resource="http://purl.org/vocab/frbr/core#supplementOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b18">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b17">
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b18"/>
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n16082fa6811145e08dfaeb8890637028b20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b20">
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b21"/>
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b21">
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b16">
+    <owl:unionOf rdf:nodeID="n16082fa6811145e08dfaeb8890637028b17"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

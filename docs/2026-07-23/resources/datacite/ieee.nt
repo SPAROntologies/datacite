@@ -1,0 +1,9 @@
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/2004/02/skos/core#note> "A IEEE Xplore author ID is resolvable from the following URL: https://ieeexplore.ieee.org/author/<identifier>."@en .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/2000/01/rdf-schema#label> "ieee"@en .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/ieee> <http://purl.org/spar/fabio/hasURL> "https://ieeexplore.ieee.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/ieee> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni-id \n                datacite:usesIdentifierScheme datacite:ieee ;\n                literal:hasLiteralValue \"37542690500\" .\n        " .
+<http://purl.org/spar/datacite/ieee> <http://www.w3.org/2000/01/rdf-schema#comment> "The IEEE Xplore author ID is a unique identifier assigned to authors in IEEE Xplore."@en .

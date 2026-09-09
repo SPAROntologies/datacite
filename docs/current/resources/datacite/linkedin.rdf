@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/linkedin">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">A LinkedIn personal profile identifier is resolvable from the following URL: https://www.linkedin.com/in/&lt;identifier&gt;.</skos:note>
+    <rdfs:comment xml:lang="en">The LinkedIn personal profile identifier is an unique identifier assigned to a LinkedIn user.</rdfs:comment>
+    <rdfs:label xml:lang="en">linkedin</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
+    <vann:example>
+        :silvio-peroni-id
+                datacite:usesIdentifierScheme datacite:linkedin ;
+                literal:hasLiteralValue "essepuntato" .
+        </vann:example>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.linkedin.com/</fabio:hasURL>
+  </rdf:Description>
+</rdf:RDF>

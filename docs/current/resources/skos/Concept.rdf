@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">concept</rdfs:label>
+    <vaem:rationale xml:lang="en">
+This is used to represent subjects.
+        </vaem:rationale>
+    <vann:example>
+        :my-concept a skos:Concept ;
+                skos:prefLabel "Knowledge"@en . 
+        </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+    <rdfs:comment xml:lang="en">An idea or notion; a unit of thought.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

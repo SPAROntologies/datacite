@@ -1,0 +1,48 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/bibcode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://adsabs.harvard.edu/abs_doc/help_pages/data.html"
+      }
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource-id \n                datacite:usesIdentifierScheme datacite:bibcode ;\n                literal:hasLiteralValue \"1974AJ.....79..819H\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Bibliographic Code (BIBCODE) is a 19 ASCII characters identifier which describes a journal article."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "bibcode"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "\nThe format was originally adopted by the SIMBAD and NED projects, and follows the syntax \"YYYYJJJJJVVVVMPPPPA\", where:\n\n* YYYY: Year of publication;\n* JJJJJ: A standard abbreviation for the journal (e.g. ApJ, AJ, MNRAS, Sci, PASP, etc.). A list of abbreviations is available;\n* VVVV: The volume number (for a serial) or an abbreviation that specifies what type of publication it is (e.g. conf for conference proceedings, meet for Meeting proceedings, book for a book, coll for colloquium proceedings, proc for any other type of proceedings);\n* M: Qualifier for publication;\n* E: Electronic Abstract (usually a counter, not a page number);\n* L: Letter;\n* P: Pink page;\n* Q-Z: Unduplicating character for identical codes;\n* PPPP: Page number. Note that for page numbers greater than 9999, the page number is continued in the m column;\n* A: The first letter of the last name of the first author.\n        "
+      }
+    ]
+  }
+]

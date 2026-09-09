@@ -1,0 +1,13 @@
+_:n16082fa6811145e08dfaeb8890637028b52 <http://www.w3.org/2002/07/owl#onProperty> _:n16082fa6811145e08dfaeb8890637028b53 .
+_:n16082fa6811145e08dfaeb8890637028b53 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "resource identifier scheme"@en .
+_:n16082fa6811145e08dfaeb8890637028b52 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/ResourceIdentifier> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/IdentifierScheme> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a resource."@en .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n16082fa6811145e08dfaeb8890637028b52 .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the identifier scheme used by a resource identifier.\n\nIndividual schemes are defines as members of this class. \nFor DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier (`datacite:doi`).\n        "@en .
+_:n16082fa6811145e08dfaeb8890637028b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/ResourceIdentifierScheme> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasIdentifier :my-resource-id .\n\n        :my-resource-id a datacite:ResourceIdentifier ;\n                datacite:usesIdentifierScheme datacite:doi .\n        \n        datacite:doi a datacite:ResourceIdentifierScheme .\n        " .

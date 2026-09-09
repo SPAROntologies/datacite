@@ -1,0 +1,22 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+prism:endingPage a owl:DatatypeProperty ;
+    rdfs:label "has ending page"@en ;
+    vann:example """
+        :related-item
+                prism:endingPage "47" .
+        """ ;
+    vaem:rationale """
+This is used to express the last page of a resource.
+        """@en ;
+    rdfs:comment "The last page number for the published version of the resource."@en ;
+    rdfs:isDefinedBy prism: ;
+    rdfs:range rdfs:Literal ;
+    vs:term_status reg:statusStable .
+

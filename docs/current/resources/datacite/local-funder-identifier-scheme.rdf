@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/local-funder-identifier-scheme">
+    <vann:example>
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:local-funder-identifier-scheme ;
+                literal:hasLiteralValue "EU35922" .
+        </vann:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/FunderIdentifierScheme"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">local funder identifier scheme</rdfs:label>
+    <rdfs:comment xml:lang="en">A funder identifier scheme that provides local funder identifiers that are unique in their local environment and understood by the person submitting the metadata.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

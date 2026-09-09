@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/ProjectRole">
+    <rdfs:label xml:lang="en">project role</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to a project. Individual members of this class are used to specify particular roles.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
+  </rdf:Description>
+</rdf:RDF>

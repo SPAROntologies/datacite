@@ -1,0 +1,9 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+geo:SpatialObject a owl:Class ;
+    rdfs:label "spatial object"@en ;
+    rdfs:comment "Anything spatial (being or having a shape, position or an extent)."@en ;
+    rdfs:isDefinedBy geo: .
+

@@ -1,0 +1,26 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcterms:publisher a owl:AnnotationProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has publisher" ;
+    vann:example """
+        :my-dataset 
+                dcterms:publisher :my-dataset-publisher .
+
+        :my-dataset-publisher a foaf:Agent .
+        """ ;
+    vaem:rationale """
+According to this property, a publisher is a proper agent (`foaf:Agent`) related to the resource it is published on (`dcterms:publisher`). 
+        """@en ;
+    rdfs:comment "An entity responsible for making the resource available."@en ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range foaf:Agent ;
+    vs:term_status reg:statusStable .
+

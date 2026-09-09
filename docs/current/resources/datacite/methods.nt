@@ -1,0 +1,9 @@
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#comment> "A description in a research paper documenting the specialized methods used in the work described."@en .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/DescriptionType> .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/methods> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent the description type \"Methods\".\n        "@en .
+<http://purl.org/spar/datacite/methods> <http://purl.org/vocab/vann/example> "\n        :my-resource-additional-info\n                datacite:hasDescriptionType datacite:methods .\n        " .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/deo/Methods> .
+<http://purl.org/spar/datacite/methods> <http://www.w3.org/2000/01/rdf-schema#label> "methods"@en .

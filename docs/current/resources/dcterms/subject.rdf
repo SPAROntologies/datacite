@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/subject">
+    <rdfs:label>has subject</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">A topic of the resource.</rdfs:comment>
+    <vaem:rationale xml:lang="en">
+This property should always be used with a [SKOS](http://www.w3.org/2004/02/skos/core#) concept. 
+If possible, one could specify a more specific property rather than the general `dcterms:subject`, such as `fabio:hasSubjectTerm` and `fabio:hasSubjectDiscipline`. 
+Instead of creating a new concept every time, one could reuse concepts already available in existing SKOS-based models.
+        </vaem:rationale>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <vann:example>
+        :my-dataset 
+                dcterms:subject :my-concept .
+
+        :my-concept a skos:Concept ;
+                skos:prefLabel "Knowledge"@en . 
+        </vann:example>
+  </rdf:Description>
+</rdf:RDF>

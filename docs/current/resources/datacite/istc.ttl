@@ -1,0 +1,22 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:istc a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "istc"@en ;
+    fabio:hasURL "http://www.istc-international.org/html/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:istc ;
+                literal:hasLiteralValue "A02-2009-000004BE-A" .
+        """ ;
+    rdfs:comment "The International Standard Text Code (ISTC) is a standard designed to uniquely identify textual works."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

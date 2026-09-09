@@ -1,0 +1,8 @@
+<http://prismstandard.org/namespaces/basic/2.0/alternateTitle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://prismstandard.org/namespaces/basic/2.0/> .
+<http://prismstandard.org/namespaces/basic/2.0/alternateTitle> <http://www.w3.org/2000/01/rdf-schema#label> "has alternate title"@en .
+<http://prismstandard.org/namespaces/basic/2.0/alternateTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://prismstandard.org/namespaces/basic/2.0/alternateTitle> <http://purl.org/vocab/vann/example> "\n    :my-dataset \n        dcterms:title \"UK rainfall, June 2012\"@en ;\n        prism:alternateTitle \"Rainfall on UK in June 2012\"@en .\n        " .
+<http://prismstandard.org/namespaces/basic/2.0/alternateTitle> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://prismstandard.org/namespaces/basic/2.0/alternateTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "An alternate title or alternate headline for a resource that may be used in a table of contents, a popup etc. and can vary with platform."@en .
+<http://prismstandard.org/namespaces/basic/2.0/alternateTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://prismstandard.org/namespaces/basic/2.0/alternateTitle> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in addition to the generic title (`dcterms:title`), if appropriate.\n        \nTo express the language of a title, a language-tagged literal should be used as value. \nValues of language tags must follow the pattern defined by the XML schema language type, e.g.: `en`, `it`, `fr`, `cmn`, `nys`, `swh`, and so on.\n        "@en .

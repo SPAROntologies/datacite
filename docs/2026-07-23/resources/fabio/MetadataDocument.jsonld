@@ -1,0 +1,46 @@
+[
+  {
+    "@id": "http://purl.org/spar/fabio/MetadataDocument",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-metadata-document a fabio:MetadataDocument ;\n                datacite:hasIdentifier :my-metadata-document-id ;\n                datacite:usesMetadataScheme datacite:spar .        \n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to represent a document describing the metadata of a resource (e.g., a dataset).\nThe link between the resource and this document is provided using the [CiTO](http://purl.org/spar/cito) property `cito:citesAsMetadataDocument`.\nThe particular scheme followed for creating the resource metadata exemplified in the metadata document is expressed via the property `datacite:hasMetadataScheme` and the class `datacite:MetadataScheme`.\n\nThis is also used when the relation type between two resources involves the association of metadata to one by the other.\nIt is possible to specify a metadata scheme used by the particular metadata document under consideration to describe the metadata of the subject resource  or of the related resource.\nIn addition to specifying a metadata scheme, in this case the metadata document can also be characterised by means of the class `fabio:MetatadaDocument`.\nEach metadata scheme is an individual of the class `datacite:MetadataScheme`.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A document that contains metadata information describing one or more characteristics of an entity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/fabio/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "metadata document"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/spar/fabio/Expression"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

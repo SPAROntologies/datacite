@@ -1,0 +1,9 @@
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/terms/publisher> <http://purl.org/vocab/vann/example> "\n        :my-dataset \n                dcterms:publisher :my-dataset-publisher .\n\n        :my-dataset-publisher a foaf:Agent .\n        " .
+<http://purl.org/dc/terms/publisher> <http://www.linkedmodel.org/schema/vaem#rationale> "\nAccording to this property, a publisher is a proper agent (`foaf:Agent`) related to the resource it is published on (`dcterms:publisher`). \n        "@en .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for making the resource available."@en .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "has publisher" .

@@ -1,0 +1,24 @@
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#successorOf> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#comment> "\nAn expression work/expression having another one as successor.        \n        "@en .
+_:n16082fa6811145e08dfaeb8890637028b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:n16082fa6811145e08dfaeb8890637028b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b15 .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#label> "has successor"@en .
+<http://purl.org/vocab/frbr/core#successor> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationCharacterization frbr:successor .\n        " .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#domain> _:n16082fa6811145e08dfaeb8890637028b10 .
+_:n16082fa6811145e08dfaeb8890637028b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n16082fa6811145e08dfaeb8890637028b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation (\"IsContinuedBy\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "@en .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#range> _:n16082fa6811145e08dfaeb8890637028b13 .
+_:n16082fa6811145e08dfaeb8890637028b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b12 .
+_:n16082fa6811145e08dfaeb8890637028b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:n16082fa6811145e08dfaeb8890637028b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2004/02/skos/core#note> "\nThe successor type of relationship involves a kind of linear progression of content from one work/expression to the other. \nIn some cases, the content of the successor may be closely connected to the content of the preceding work, which would result in a work that is referential. \nIn others, such as with loosely connected parts of a trilogy, the successor will be autonomous. \nSerial publications that result from the merger or split of their predecessors and stand on their own without requiring reference to the predecessor are also examples of autonomous works that fall within the successor relationship type. \nIf there exists a relation of this kind among two different expressions, then they always refer to different works.        \n        "@en .
+_:n16082fa6811145e08dfaeb8890637028b13 <http://www.w3.org/2002/07/owl#unionOf> _:n16082fa6811145e08dfaeb8890637028b14 .
+_:n16082fa6811145e08dfaeb8890637028b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/vocab/frbr/core#successor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core#> .
+_:n16082fa6811145e08dfaeb8890637028b10 <http://www.w3.org/2002/07/owl#unionOf> _:n16082fa6811145e08dfaeb8890637028b11 .
+_:n16082fa6811145e08dfaeb8890637028b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:n16082fa6811145e08dfaeb8890637028b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .

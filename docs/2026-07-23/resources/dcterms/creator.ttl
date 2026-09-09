@@ -1,0 +1,28 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcterms:creator a owl:ObjectProperty ;
+    rdfs:label "has creator" ;
+    vann:example """
+        :my-dataset 
+            dcterms:creator :david-shotton .
+        
+        :david-shotton a foaf:Agent .
+        """ ;
+    vaem:rationale """
+This property allows one to link a resource with the agent responsible for its creation. 
+While the type of such agent could be either a person (`foaf:Person`) or an organization (`foaf:Organization`), the use of `foaf:Agent` is preferred since it is more generic. 
+However, the subclasses of `foaf:Agent` can be used if there are other data that allow one to do so – e.g., if the agent has an ORCID specified one can choose to use `foaf:Person` instead.
+        """@en ;
+    rdfs:comment "An entity responsible for making the resource."@en ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range foaf:Agent ;
+    rdfs:subPropertyOf dcterms:contributor ;
+    vs:term_status reg:statusStable .
+

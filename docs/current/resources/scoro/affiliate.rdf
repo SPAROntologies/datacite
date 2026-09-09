@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/affiliate">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
+    <rdfs:comment xml:lang="en">The role an agent has of being affiliated to some organization or institution in a context of some entity or activity, for example a document, a project or an internship.</rdfs:comment>
+    <rdfs:label xml:lang="en">affiliate</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+        :david-shotton
+                pro:holdsRoleInTime :shotton-affiliation-for-my-dataset .
+
+        :shotton-affiliation-for-my-dataset a pro:RoleInTime ;
+                pro:withRole scoro:affiliate .
+        </vann:example>
+    <vaem:rationale xml:lang="en">
+Someone's affiliation is a relationship of membership or belonging that the person can have with respect to a particular organization (i.e., an individual of the class `foaf:Organization`). 
+Such an affiliation may be specified in the document with respect to which that agent is an author or contributor. 
+This individual is used to express such an affiliation. 
+The domain of `pro:withRole` is not `foaf:Agent`, but rather a member of the class `pro:RoleInTime`, which itself is the range of the property `pro:holdsRoleInTime`, for which the domain is `foaf:Agent` (i.e., our contributor).
+        </vaem:rationale>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+  </rdf:Description>
+</rdf:RDF>

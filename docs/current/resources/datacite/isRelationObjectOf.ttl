@@ -1,0 +1,23 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:isRelationObjectOf a owl:ObjectProperty ;
+    rdfs:label "is relation object of"@en ;
+    vann:example """
+        :my-article 
+                datacite:isRelationObjectOf :relation-dataset-article .
+        """ ;
+    vaem:rationale """
+This is used to specify the qualified relation (modelled via the class `datacite:QualifiedRelation`) between two resources aving one of these as its object.
+        """@en ;
+    rdfs:comment "A relation in its reified form linked to a resource that is the object in such a relation."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:range datacite:QualifiedRelation ;
+    owl:inverseOf datacite:hasRelationObject ;
+    vs:term_status reg:statusStable .
+

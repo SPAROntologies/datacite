@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcterms:description a owl:DatatypeProperty ;
+    rdfs:label "has description"@en ;
+    vann:example """
+        :my-dataset-date-created
+            dcterms:description "The creation date might be subject to change."@en .
+        """ ;
+    vaem:rationale """
+This is used to associate additional information to a date (modelled as an instance of `literal:Literal`).
+        """@en ;
+    rdfs:comment "An account of the resource."@en ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range rdfs:Literal ;
+    vs:term_status reg:statusStable .
+

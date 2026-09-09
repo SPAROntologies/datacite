@@ -1,0 +1,121 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/QualifiedRelation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationSubject :my-resource ;\n                datacite:hasRelationObject :my-article ;\n                datacite:hasRelationCharacterization cito:isCitedBy .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to represent qualified relations between two resources, which can be described using various properties (e.g., `dcterms:description`).\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A class representing a reified relation between two resources, allowing the assignment of a specific role or type to the relationship."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "qualified relation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b39"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b39",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"
+          },
+          {
+            "@id": "_:n16082fa6811145e08dfaeb8890637028b40"
+          },
+          {
+            "@id": "_:n16082fa6811145e08dfaeb8890637028b41"
+          },
+          {
+            "@id": "_:n16082fa6811145e08dfaeb8890637028b42"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b40",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasRelationCharacterization"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b41",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasRelationObject"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b42",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasRelationSubject"
+      }
+    ]
+  }
+]

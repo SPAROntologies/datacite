@@ -1,0 +1,23 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:ean13 a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "ean13"@en ;
+    fabio:hasURL "http://www.gs1.org/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:ean13 ;
+                literal:hasLiteralValue "4003994155486" .
+        """ ;
+    rdfs:comment "The International Article Number is a unique 13-digit barcode standard used worldwide to identify retail products."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/EAN13> ;
+    vs:term_status reg:statusStable .
+

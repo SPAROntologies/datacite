@@ -1,0 +1,31 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/local-funder-identifier-scheme",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/FunderIdentifierScheme"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:local-funder-identifier-scheme ;\n                literal:hasLiteralValue \"EU35922\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A funder identifier scheme that provides local funder identifiers that are unique in their local environment and understood by the person submitting the metadata."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "local funder identifier scheme"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

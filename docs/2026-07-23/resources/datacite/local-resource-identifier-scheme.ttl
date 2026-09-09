@@ -1,0 +1,18 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:local-resource-identifier-scheme a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "local resource identifier scheme"@en ;
+    vann:example """
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:local-resource-identifier-scheme ;
+                literal:hasLiteralValue "ZZ84555back" .
+        """ ;
+    rdfs:comment "A resource identifier scheme that provides local resource identifiers that are unique in their local environment and understood by the person submitting the metadata."@en ;
+    vs:term_status reg:statusStable .
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/contact-person">
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">The role of a person who serves as the primary contact and information provider for third parties wishing to find out more about an organization or an activity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given agent role type ("Contact Person").
+        </vaem:rationale>
+    <vann:example>
+        :silvio-peroni
+                pro:holdsRoleInTime :contact-person-for-my-dataset .
+        
+        :contact-person-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:contact-person .
+        </vann:example>
+    <rdfs:label xml:lang="en">contact person</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

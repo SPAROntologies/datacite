@@ -1,0 +1,45 @@
+[
+  {
+    "@id": "http://purl.org/dc/terms/format",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        datacite:spar\n                dcterms:format <https://w3id.org/spar/mediatype/text/turtle> .\n\n        <https://w3id.org/spar/mediatype/text/turtle> a dcterms:MediaTypeOrExtent .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis should be used if the type of the relation between two resources refers to the association of metadata by one to the other.\nThis allows to declare the particular format in which the metadata in the metadata document are stored. \nThe format should be defined as an individual of the class `dcterms:MediaTypeOrExtent`.\n\nInstead of creating a new media type every time, it is strongly suggested to reuse those already available in existing datasets, such as the “Media type as Linked Open Data” dataset (https://w3id.org/spar/mediatype).\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The file format, physical medium, or dimensions of the resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/dc/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "has format"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/dc/terms/MediaTypeOrExtent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

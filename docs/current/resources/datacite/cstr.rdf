@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/cstr">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The Common Science and Technology Resources (CSTR) Identifier is an identifier based on the Chinese National Standard GB/T 32843—2016 “Science and technology resource identification”, providing a unique identification service for scientific data, papers, scientific institutions, researchers, scientific instruments, patents and other scientific and technological resources.</rdfs:comment>
+    <skos:note xml:lang="en">A Common Science and Technology Resources Identifier is resolvable from the following URL: https://www.cstr.cn/&lt;identifier&gt;.</skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vann:example>
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:cstr ;
+                literal:hasLiteralValue "31253.11.sciencedb.j00001.00123" .
+        </vann:example>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.cstr.cn/</fabio:hasURL>
+    <rdfs:label xml:lang="en">cstr</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+</rdf:RDF>

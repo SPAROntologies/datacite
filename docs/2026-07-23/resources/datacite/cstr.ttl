@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:cstr a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "cstr"@en ;
+    fabio:hasURL "https://www.cstr.cn/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:cstr ;
+                literal:hasLiteralValue "31253.11.sciencedb.j00001.00123" .
+        """ ;
+    rdfs:comment "The Common Science and Technology Resources (CSTR) Identifier is an identifier based on the Chinese National Standard GB/T 32843—2016 “Science and technology resource identification”, providing a unique identification service for scientific data, papers, scientific institutions, researchers, scientific instruments, patents and other scientific and technological resources."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A Common Science and Technology Resources Identifier is resolvable from the following URL: https://www.cstr.cn/<identifier>."@en .
+

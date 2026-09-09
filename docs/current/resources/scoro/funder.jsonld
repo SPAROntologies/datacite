@@ -1,0 +1,42 @@
+[
+  {
+    "@id": "http://purl.org/spar/scoro/funder",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/scoro/FinancialRole"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :european-commission a foaf:Agent ;\n                pro:holdsRoleInTIme :european-commission-funding .\n        \n        :european-commission-funding a pro:RoleInTime ;\n                pro:withRole scoro:funder ;\n                pro:relatesToEntity :my-dataset .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nA funding agent is represented as an instance of `foaf:Agent`, related to the resource through the pattern defined in the Publishing Roles Ontology (PRO). \nAccording to said pattern, a `foaf:Agent` holds some role (`pro:RoleInTime`) characterized by a type (`pro:withRole`) - which, in this case, is `scoro:funder` - and related to the resource via `pro:relatesToEntity`.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The role held by an agent of providing funds, for example for a research project."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/scoro/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "funder"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

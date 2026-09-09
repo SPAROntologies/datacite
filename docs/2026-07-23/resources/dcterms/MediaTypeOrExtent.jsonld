@@ -1,0 +1,40 @@
+[
+  {
+    "@id": "http://purl.org/dc/terms/MediaTypeOrExtent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        datacite:spar\n                dcterms:format <https://w3id.org/spar/mediatype/text/turtle> .\n\n        <https://w3id.org/spar/mediatype/text/turtle> a dcterms:MediaTypeOrExtent .\n    "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@value": "\nThis is used to represent the particular format in which the metadata in a metadata document are stored. \n\nInstead of creating a new media type every time, it is strongly suggested to reuse those already available in existing datasets, such as the “Media type as Linked Open Data” dataset (https://w3id.org/spar/mediatype).\n    "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A media type or extent."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/dc/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "media type or extent"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

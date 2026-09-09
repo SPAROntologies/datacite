@@ -1,0 +1,21 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:spar a datacite:MetadataScheme,
+        owl:NamedIndividual ;
+    rdfs:label "SPAR Ontologies"@en ;
+    fabio:hasURL "http://www.sparontologies.net"^^xsd:anyURI ;
+    vann:example """
+        :related-document a fabio:MetadataDocument ;
+                datacite:usesMetadataScheme datacite:spar .
+        """ ;
+    rdfs:comment "The Semantic Publishing and Referencing Ontologies, a.k.a. SPAR Ontologies, form a suite of orthogonal and complementary OWL 2 DL ontology modules for the creation of comprehensive machine-readable RDF metadata for every aspect of semantic publishing and referencing: document description, bibliographic resource identifiers, types of citations and related contexts, bibliographic references, document parts and status, agents' roles and contributions, bibliometric data and workflow processes."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

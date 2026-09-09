@@ -1,0 +1,5 @@
+<http://purl.org/spar/fabio/ScholarlyWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/ScholarlyWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> .
+<http://purl.org/spar/fabio/ScholarlyWork> <http://www.w3.org/2000/01/rdf-schema#label> "scholarly work"@en .
+<http://purl.org/spar/fabio/ScholarlyWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/ScholarlyWork> <http://www.w3.org/2000/01/rdf-schema#comment> "A work that reports scholarly activity on a particular topic, either published in written form, or delivered orally at a meeting."@en .

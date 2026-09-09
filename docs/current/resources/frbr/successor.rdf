@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#successor">
+    <owl:inverseOf rdf:resource="http://purl.org/vocab/frbr/core#successorOf"/>
+    <rdfs:comment xml:lang="en">
+An expression work/expression having another one as successor.        
+        </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    <rdfs:label xml:lang="en">has successor</rdfs:label>
+    <vann:example>
+        :relation-dataset-article a datacite:QualifiedRelation ;
+                datacite:hasRelationCharacterization frbr:successor .
+        </vann:example>
+    <rdfs:domain rdf:nodeID="n16082fa6811145e08dfaeb8890637028b10"/>
+    <vaem:rationale xml:lang="en">
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsContinuedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+        </vaem:rationale>
+    <rdfs:range rdf:nodeID="n16082fa6811145e08dfaeb8890637028b13"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">
+The successor type of relationship involves a kind of linear progression of content from one work/expression to the other. 
+In some cases, the content of the successor may be closely connected to the content of the preceding work, which would result in a work that is referential. 
+In others, such as with loosely connected parts of a trilogy, the successor will be autonomous. 
+Serial publications that result from the merger or split of their predecessors and stand on their own without requiring reference to the predecessor are also examples of autonomous works that fall within the successor relationship type. 
+If there exists a relation of this kind among two different expressions, then they always refer to different works.        
+        </skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b14">
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n16082fa6811145e08dfaeb8890637028b14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b11">
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b15">
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b12">
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b10">
+    <owl:unionOf rdf:nodeID="n16082fa6811145e08dfaeb8890637028b11"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

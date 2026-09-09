@@ -1,0 +1,36 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/national-insurance-number",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-person-id\n                datacite:usesIdentifierScheme datacite:national-insurance-number ;\n                literal:hasLiteralValue \"QQ123456C\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The United Kingdom National Insurance Number is a code used to uniquely identify in the tax system, banking, social welfare, online government services and electoral registration."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "national insurance number"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

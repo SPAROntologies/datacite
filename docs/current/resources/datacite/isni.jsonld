@@ -1,0 +1,49 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/isni",
+    "@type": [
+      "http://purl.org/spar/datacite/OrganizationIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "http://www.isni.org/"
+      }
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :david-shotton-id\n                datacite:usesIdentifierScheme datacite:isni ;\n                literal:hasLiteralValue \"0000000117402098\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The International Standard Name Identifier (ISNI) is an identifier system for uniquely identifying the public identities of contributors to media content."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isni"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "An ISNI is resolvable from the following URL: http://www.isni.org/<identifier>."
+      }
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+<http://purl.org/spar/fabio/ProceedingsPaper> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/ProceedingsPaper> <http://www.w3.org/2000/01/rdf-schema#comment> "A paper, typically the realization of a research paper reporting original research findings, usually published within an academic proceedings volume."@en .
+<http://purl.org/spar/fabio/ProceedingsPaper> <http://www.w3.org/2000/01/rdf-schema#label> "proceedings paper"@en .
+<http://purl.org/spar/fabio/ProceedingsPaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/ProceedingsPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .

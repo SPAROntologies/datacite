@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:crossref a datacite:OrganizationIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "crossref"@en ;
+    fabio:hasURL "https://crossref.org/"^^xsd:anyURI ;
+    vann:example """
+        :my-organization-id 
+                datacite:usesIdentifierScheme datacite:crossref ;
+                literal:hasLiteralValue "20280" .
+        """ ;
+    rdfs:comment "The Crossref member identifier is a unique numerical ID automatically assigned to each organization when they join Crossref to manage their account and content registration."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A Crossref member identifier is resolvable from the following URL: https://api.crossref.org/members/<identifier>."@en .
+

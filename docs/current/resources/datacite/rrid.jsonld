@@ -1,0 +1,48 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/rrid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://scicrunch.org/resolver"
+      }
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource-id \n                datacite:usesIdentifierScheme datacite:rrid ;\n                literal:hasLiteralValue \"RRID:AB_262044\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Research Resource IDentifier (RRID) is a character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "rrid"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "An RRID name is divided into two parts, the authority and a local identifier, separated by an underscore."
+      }
+    ]
+  }
+]

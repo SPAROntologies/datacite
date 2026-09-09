@@ -1,0 +1,8 @@
+<http://purl.org/spar/scoro/registrar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/registrar> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/scoro/registrar> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni\n                pro:holdsRoleInTime :registrar-for-my-dataset .\n        \n        :registrar-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:registrar .\n        " .
+<http://purl.org/spar/scoro/registrar> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type (\"Registration Agency\").\n        "@en .
+<http://purl.org/spar/scoro/registrar> <http://www.w3.org/2000/01/rdf-schema#comment> "The role held by an agent responsible for maintaining official records, for example the records of student enrollment and academic standing held by a college or university, or the records of securities owned by a financial institution."@en .
+<http://purl.org/spar/scoro/registrar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> .
+<http://purl.org/spar/scoro/registrar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/registrar> <http://www.w3.org/2000/01/rdf-schema#label> "registrar"@en .

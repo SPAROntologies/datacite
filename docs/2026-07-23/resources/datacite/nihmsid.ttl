@@ -1,0 +1,22 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:nihmsid a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "nihmsid"@en ;
+    fabio:hasURL "http://nexus.od.nih.gov/all/2009/09/01/nih-public-access-update-clarifying-use-of-the-nih-manuscript-submission-id-nihmsid/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:nihmsid ;
+                literal:hasLiteralValue "NIHMS44135" .
+        """ ;
+    rdfs:comment "The NIH Manuscript Submission Identifier (NIHMSID) is a preliminary article identifier that applies only to manuscripts deposited through the NIHMS system."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

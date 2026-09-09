@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:spdx a datacite:RightsIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "spdx"@en ;
+    fabio:hasURL "https://spdx.org/licenses/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-rights-id 
+                datacite:usesIdentifierScheme datacite:spdx ;
+                literal:hasLiteralValue "CC-BY-1.0" .
+        """ ;
+    rdfs:comment "The SPDX License List is a list of commonly found licenses and exceptions used in free and open source and other collaborative software or documentation."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A SPDX identifier is resolvable from the following URL: https://spdx.org/licenses/<identifier>."@en .
+

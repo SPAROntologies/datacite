@@ -1,0 +1,69 @@
+[
+  {
+    "@id": "http://www.essepuntato.it/2010/06/literalreification/Literal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-dataset\n                literal:hasLiteral :my-dataset-date .\n\n        :my-dataset-date a literal:Literal ;\n                literal:hasLiteralValue \"2012-07-04\"^^xsd:date ;\n                dcterms:type dcterms:date .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nA reified literal can be used to express cases such as a date that can have a description attached to it.\nIt is linked to the resource via the property `literal:hasLiteral`. \nThe value is contained in the reified literal and is expressed through the data property `literal:hasLiteralValue`. \nOther information, such as the type of value (e.g., the date type), is expressed via the punning mechanism that allows one to use properties as individuals, and linked to the reified literal with an appropriate property (e.g., `dcterms:type`, `dcterms:dateAccepted`, `fabio:hasDateCollected`, etc.).        \n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A reified literal."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/literal/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "literal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b25"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "\nThe literal value it represents is specified through the property `literal:hasLiteralValue`. \nEach individual of this class must always have a specified value.        \n        "
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b25",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue"
+      }
+    ]
+  }
+]

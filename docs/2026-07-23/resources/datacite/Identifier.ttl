@@ -1,0 +1,36 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:Identifier a owl:Class ;
+    rdfs:label "identifier"@en ;
+    vann:example """
+        :my-resource
+            datacite:hasIdentifier :my-resource-id .
+        
+        :my-resource-id a datacite:Identifier ;
+            literal:hasLiteralValue "0000-2221-4444" .
+        """ ;
+    vaem:rationale """
+This is used to represent identifiers in the most generic conceptualization possible.
+
+An identifier belongs to a particular scheme, such as those specified by individuals of the class `datacite:IdentifierScheme`.
+        """@en ;
+    rdfs:comment "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass datacite:IdentifierScheme ;
+            owl:onProperty datacite:usesIdentifierScheme ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty [ owl:inverseOf datacite:hasIdentifier ] ],
+        literal:Literal ;
+    vs:term_status reg:statusStable .
+

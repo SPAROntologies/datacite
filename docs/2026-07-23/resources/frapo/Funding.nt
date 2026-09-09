@@ -1,0 +1,4 @@
+<http://purl.org/cerif/frapo/Funding> <http://www.w3.org/2000/01/rdf-schema#comment> "An amount of money available to finance some project or activity."@en .
+<http://purl.org/cerif/frapo/Funding> <http://www.w3.org/2000/01/rdf-schema#label> "funding"@en .
+<http://purl.org/cerif/frapo/Funding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

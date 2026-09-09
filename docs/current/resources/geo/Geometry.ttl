@@ -1,0 +1,10 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+geo:Geometry a owl:Class ;
+    rdfs:label "geometry"@en ;
+    rdfs:comment "A coherent set of direct positions in space."@en ;
+    rdfs:isDefinedBy geo: ;
+    rdfs:subClassOf geo:SpatialObject .
+

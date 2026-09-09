@@ -1,0 +1,51 @@
+[
+  {
+    "@id": "http://www.opengis.net/ont/geosparql#sfContains",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-dataset-location\n                geo:hasGeometry :my-dataset-location-polygon .\n\n        :my-dataset-location-polygon a sf:Polygon ;\n                geo:asWKT\n                        \"POLYGON ((30 10, 40 40, 20 40, 30 10))\"^^geo:wktLiteral ;\n                geo:sfContains :inner-point .\n\n        :inner-point a geo:Geometry ;\n                geo:asWKT \"POINT(20 20)\"^^geo:wktLiteral .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to specify a polygon (i.e., an individual of the class `sf:Polygon`) defining the geographical box related to the resource under consideration. \nThe actual value of the polygon can be defined by means of the property `geo:asWKT`, which allows the specification of the coordinates related with the polygon.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A thing spatially contains another thing."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#SpatialObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "contains"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#SpatialObject"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

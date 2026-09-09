@@ -1,0 +1,8 @@
+<http://prismstandard.org/namespaces/basic/2.0/startingPage> <http://purl.org/vocab/vann/example> "\n        :related-item\n            prism:startingPage \"27\" .\n        " .
+<http://prismstandard.org/namespaces/basic/2.0/startingPage> <http://www.w3.org/2000/01/rdf-schema#comment> "The first page number for the published version of the resource."@en .
+<http://prismstandard.org/namespaces/basic/2.0/startingPage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://prismstandard.org/namespaces/basic/2.0/startingPage> <http://www.w3.org/2000/01/rdf-schema#label> "has starting page"@en .
+<http://prismstandard.org/namespaces/basic/2.0/startingPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://prismstandard.org/namespaces/basic/2.0/startingPage> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the first page of a resource.\n        "@en .
+<http://prismstandard.org/namespaces/basic/2.0/startingPage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://prismstandard.org/namespaces/basic/2.0/> .
+<http://prismstandard.org/namespaces/basic/2.0/startingPage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .

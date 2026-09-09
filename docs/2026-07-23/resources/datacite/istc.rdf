@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/istc">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.istc-international.org/html/</fabio:hasURL>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:istc ;
+                literal:hasLiteralValue "A02-2009-000004BE-A" .
+        </vann:example>
+    <rdfs:label xml:lang="en">istc</rdfs:label>
+    <rdfs:comment xml:lang="en">The International Standard Text Code (ISTC) is a standard designed to uniquely identify textual works.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,62 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/hasCreatorList",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource \n                datacite:hasCreatorList [\n                        a co:List ;\n                        co:firstItem :david-shotton ;\n                        co:item :silvio-peroni ;\n                        co:lastItem :sebastian-barzaghi\n                ] .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to associate an ordered author list to a resource. \nThe list is modelled as an instance of the class `co:List`, which permits the specification of an ordered sequence of elements (in this case, a series of authors) via the usage of properties such as `co:firstItem`, `co:item` and `co:lastItem`.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The list of the creators of a certain resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has creator list"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/co/List"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasIdentifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+      }
+    ]
+  }
+]

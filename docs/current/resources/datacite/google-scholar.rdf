@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/google-scholar">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <skos:note xml:lang="en">A Google Scholar author identifier is resolvable from the following URL: https://scholar.google.com/citations?user=&lt;identifier&gt;.</skos:note>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://scholar.google.com/</fabio:hasURL>
+    <rdfs:comment xml:lang="en">The Google Scholar author identifier is a unique identifier assigned to authors signed to Google Scholar. </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">google scholar</rdfs:label>
+    <vann:example>
+        :david-shotton-id 
+                datacite:usesIdentifierScheme datacite:google-scholar ;
+                literal:hasLiteralValue "YyvE-_oAAAAJ" .
+        </vann:example>
+  </rdf:Description>
+</rdf:RDF>

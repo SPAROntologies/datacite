@@ -1,0 +1,79 @@
+[
+  {
+    "@id": "http://purl.org/dc/terms/type",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-dataset\n                literal:hasLiteral :my-dataset-date .\n\n        :my-dataset-date \n                literal:hasLiteralValue \"2012-07-04\"^^xsd:date ;\n                dcterms:type dcterms:date .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nIn DataCite, since it is possible to attach information to dates, these must be modelled as entities themselves. \nThe date itself is a `literal:Literal`, with its actual value expressed via `literal:hasLiteralValue` and its type (represented by the property it would be used otherwise if the date were not reified) through `dcterms:type`.\nThe properties that can be used in combination with OWL 2 punning to express a particular type for the date are the following:\n\n- `dcterms:dateAccepted` (Accepted)\n- `dcterms:available` (Available)\n- `dcterms:dateCopyrighted` (Copyrighted)\n- `fabio:hasDateCollected` (Collected)\n- `dcterms:temporal` (Coverage)\n- `dcterms:created` (Created)\n- `dcterms:issued` (Issued)\n- `dcterms:dateSubmitted` (Submitted)\n- `dcterms:modified` (Updated)\n- `dcterms:valid` (Valid)\n- `fabio:hasRetractionDate` (Withdrawn)\n\nThe value associated with one of these data properties should be provided in conformity with one of three alternative XML Schema datatypes, i.e., `xsd:date`, `xsd:gYear` or `xsd:dateTime`.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The nature or genre of the resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/dc/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://purl.org/dc/terms/available"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/issued"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/dateCopyrighted"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/valid"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/modified"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/temporal"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/created"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/date"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/hasRetractionDate"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/dateAccepted"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/dateSubmitted"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/hasDateCollected"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

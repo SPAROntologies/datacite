@@ -1,0 +1,7 @@
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is cited by"@en .
+<http://purl.org/spar/cito/isCitedBy> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationCharacterization cito:isCitedBy .\n        " .
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity (the subject of the RDF triple) is cited by the citing entity (the object of the triple)."@en .
+<http://purl.org/spar/cito/isCitedBy> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation (\"IsCitedBy\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "@en .
+<http://purl.org/spar/cito/isCitedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .

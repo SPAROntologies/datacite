@@ -1,0 +1,9 @@
+<http://purl.org/spar/datacite/math-genealogy> <http://purl.org/spar/fabio/hasURL> "https://mathgenealogy.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/math-genealogy> <http://purl.org/vocab/vann/example> "\n        :gustav-dirichlet-id\n                datacite:usesIdentifierScheme datacite:math-genealogy ;\n                literal:hasLiteralValue \"17946\" .\n        " .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/2000/01/rdf-schema#label> "math genealogy"@en .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/2000/01/rdf-schema#comment> "The Mathematics Genealogy Project identifier is an identifier for mathematicians and computer scientists at the Mathematics Genealogy Project."@en .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/2004/02/skos/core#note> "A Mathematics Genealogy Project identifier is resolvable from the following URL: https://mathgenealogy.org/id.php?id=<identifier>."@en .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/math-genealogy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

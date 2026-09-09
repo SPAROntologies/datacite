@@ -1,0 +1,26 @@
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcmitype:Text a owl:Class ;
+    rdfs:label "text"@en ;
+    vann:example """
+        :my-resource
+                datacite:hasGeneralResourceType dcmitype:Text .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given general resource type ("Text").
+        """@en ;
+    rdfs:comment "A resource consisting primarily of words for reading."@en ;
+    rdfs:isDefinedBy dcmitype: ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+Examples include books, letters, dissertations, poems, newspapers, articles, archives of mailing lists. 
+Note that facsimiles or images of texts are still of the genre Text.
+        """@en .
+

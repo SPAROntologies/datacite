@@ -1,0 +1,173 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/hasRelationCharacterization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationCharacterization cito:isCitedBy .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nAll DataCite-required relation type terms can be specified by object properties that exist within the following ontologies: [CiTO](http://purl.org/spar/cito), [DCTerms](http://purl.org/dc/terms), [FRBR](http://purl.org/vocab/frbr/core#) and [PRISM](http://prismstandard.org/namespaces/basic/2.0/). \nThe following list specifies all the allowed values but one (i.e., “IsIdenticalTo”) for the DataCite Controlled List of relation types (given within parentheses) and provides ontology object properties for each term: \n\n- `cito:isCitedBy` (IsCitedBy);\n- `cito:cites` (Cites);\n- `frbr:supplementOf` (IsSupplementTo);\n- `frbr:supplement` (IsSupplementedBy);\n- `frbr:successor` (IsContinuedBy);\n- `frbr:successorOf` (Continues);\n- `cito:isDescribedBy` (IsDescribedBy);\n- `cito:describes` (Describes);\n- `cito:citesAsMetadataDocument` (HasMetadata);\n- `cito:isCitedAsMetadataDocumentBy` (IsMetadataFor);\n- `dcterms:hasVersion` (HasVersion);\n- `dcterms:isVersionOf` (IsVersionOf);\n- `frbr:revision` (IsPreviousVersionOf);\n- `frbr:revisionOf` (IsNewVersionOf);\n- `dcterms:isPartOf` (IsPartOf);\n- `dcterms:hasPart` (HasPart);\n- `frbr:partOf` (IsPublishedIn);\n- `cito:isCitedForInformationBy` (IsReferencedBy);\n- `cito:citesForInformation` (References);\n- `cito:isDocumentedBy` (IsDocumentedBy);\n- `cito:documents` (Documents);\n- `cito:isCompiledBy` (IsCompiledBy);\n- `cito:compiles` (Compiles);\n- `frbr:arrangementOf` (IsVariantFormOf);\n- `frbr:arrangement` (IsOriginalFormOf);\n- `cito:isReviewedBy` (IsReviewedBy);\n- `cito:reviews` (Reviews);\n- `cito:citesAsDataSource` (IsDerivedFrom);\n- `cito:isCitedAsDataSourceBy` (IsSourceOf);\n- `dcterms:isRequiredBy` (IsRequiredBy);\n- `dcterms:requires` (Requires);\n- `dcterms:isReplacedBy` (IsObsoletedBy);\n- `dcterms:replaces` (Obsoletes);\n- `cito:providesDataFor` (IsCollectedBy);\n- `cito:usesDataFrom` (Collects);\n- `frbr:translationOf` (IsTranslationOf);\n- `frbr:translation` (HasTranslation);\n- `dcterms:relation` (Other);\n\nThe value “IsIdenticalTo” has a different semantics from the above object properties. \nIt is used to specify that the related identifier is actually another, non-primary, identifier for the first resource under consideration. \nIt should be linked through the `datacite:hasIdentifier` property, and neither `dcterms:relation` nor any of the other above ones should be specified.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The specific nature or type of the reified relation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/spar/datacite/QualifiedRelation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has relation characterization"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://purl.org/spar/cito/isCitedBy"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/describes"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isCitedAsDataSourceBy"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/citesAsMetadataDocument"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/documents"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/isVersionOf"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#revisionOf"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/replaces"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/hasPart"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/cites"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/citesAsDataSource"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#successorOf"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#partOf"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#arrangementOf"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/hasVersion"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/compiles"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isCitedAsMetadataDocumentBy"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/reviews"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/citesForInformation"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#arrangement"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isDocumentedBy"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/isPartOf"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#supplementOf"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/isRequiredBy"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#translationOf"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isCitedForInformationBy"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isReviewedBy"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/providesDataFor"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/isReplacedBy"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#revision"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#supplement"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isCompiledBy"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/relation"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/usesDataFrom"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/requires"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#successor"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isDescribedBy"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#translation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "\nThis property uses as range an existing property via [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), according to which it becomes possible to use an object property as the object of an OWL assertion. \nIn such cases, the object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class `owl:Thing`.\n        "
+      }
+    ]
+  }
+]

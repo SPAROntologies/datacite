@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+scoro:project-member a scoro:OrganizationalRole,
+        owl:NamedIndividual ;
+    rdfs:label "project member"@en ;
+    vann:example """
+        :silvio-peroni
+                pro:holdsRoleInTime :project-memeber-for-my-dataset .
+        
+        :project-member-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:project-member .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given agent role type ("Project Member").
+        """@en ;
+    rdfs:comment "The role a person has of being a member of a project such as a research project."@en ;
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
+

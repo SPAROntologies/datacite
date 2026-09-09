@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:math-genealogy a datacite:PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "math genealogy"@en ;
+    fabio:hasURL "https://mathgenealogy.org/"^^xsd:anyURI ;
+    vann:example """
+        :gustav-dirichlet-id
+                datacite:usesIdentifierScheme datacite:math-genealogy ;
+                literal:hasLiteralValue "17946" .
+        """ ;
+    rdfs:comment "The Mathematics Genealogy Project identifier is an identifier for mathematicians and computer scientists at the Mathematics Genealogy Project."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A Mathematics Genealogy Project identifier is resolvable from the following URL: https://mathgenealogy.org/id.php?id=<identifier>."@en .
+

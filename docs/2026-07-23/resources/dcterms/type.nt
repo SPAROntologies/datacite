@@ -1,0 +1,19 @@
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/available> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/issued> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/dateCopyrighted> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/valid> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/type> <http://purl.org/vocab/vann/example> "\n        :my-dataset\n                literal:hasLiteral :my-dataset-date .\n\n        :my-dataset-date \n                literal:hasLiteralValue \"2012-07-04\"^^xsd:date ;\n                dcterms:type dcterms:date .\n        " .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/modified> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/temporal> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/terms/type> <http://www.linkedmodel.org/schema/vaem#rationale> "\nIn DataCite, since it is possible to attach information to dates, these must be modelled as entities themselves. \nThe date itself is a `literal:Literal`, with its actual value expressed via `literal:hasLiteralValue` and its type (represented by the property it would be used otherwise if the date were not reified) through `dcterms:type`.\nThe properties that can be used in combination with OWL 2 punning to express a particular type for the date are the following:\n\n- `dcterms:dateAccepted` (Accepted)\n- `dcterms:available` (Available)\n- `dcterms:dateCopyrighted` (Copyrighted)\n- `fabio:hasDateCollected` (Collected)\n- `dcterms:temporal` (Coverage)\n- `dcterms:created` (Created)\n- `dcterms:issued` (Issued)\n- `dcterms:dateSubmitted` (Submitted)\n- `dcterms:modified` (Updated)\n- `dcterms:valid` (Valid)\n- `fabio:hasRetractionDate` (Withdrawn)\n\nThe value associated with one of these data properties should be provided in conformity with one of three alternative XML Schema datatypes, i.e., `xsd:date`, `xsd:gYear` or `xsd:dateTime`.\n        "@en .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#comment> "The nature or genre of the resource."@en .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/created> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#label> "has type"@en .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/date> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/hasRetractionDate> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/dateAccepted> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/dateSubmitted> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/hasDateCollected> .

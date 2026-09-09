@@ -1,0 +1,13 @@
+_:n16082fa6811145e08dfaeb8890637028b28 <http://www.w3.org/2002/07/owl#onProperty> _:n16082fa6811145e08dfaeb8890637028b29 .
+_:n16082fa6811145e08dfaeb8890637028b28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/OrganizationIdentifier> .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2004/02/skos/core#note> "\nThis is used to specify the identifier scheme used by an organization identifier.\n\nIndividual schemes are defined as members of this class.\n        "@en .
+_:n16082fa6811145e08dfaeb8890637028b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "organization identifier scheme"@en .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n16082fa6811145e08dfaeb8890637028b28 .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://purl.org/vocab/vann/example> "\n        :my-organization a foaf:Organization ;\n                datacite:hasIdentifier :my-organization-id .\n\n        :my-organization-id a datacite:OrganizationIdentifier ;\n                datacite:usesIdentifierScheme datacite:ror .\n\n        datacite:ror a datacite:OrganizationIdentifierScheme .\n        " .
+_:n16082fa6811145e08dfaeb8890637028b29 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/OrganizationIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify an organization."@en .

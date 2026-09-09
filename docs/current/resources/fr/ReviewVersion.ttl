@@ -1,0 +1,21 @@
+@prefix fr: <http://purl.org/spar/fr/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+fr:ReviewVersion a owl:Class ;
+    rdfs:label "review version"@en ;
+    vann:example """
+        :my-resource
+                datacite:hasGeneralResourceType fr:ReviewVersion .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given general resource type ("Peer Review").
+        """@en ;
+    rdfs:comment "A version of a given review, defining its content and rating, which may vary over the time."@en ;
+    rdfs:isDefinedBy fr: ;
+    vs:term_status reg:statusStable .
+

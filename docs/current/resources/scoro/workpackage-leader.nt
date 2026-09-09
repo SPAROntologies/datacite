@@ -1,0 +1,8 @@
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/ProjectRole> .
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/2000/01/rdf-schema#comment> "The role a person or institution has of being leader for a workpackage or sub-project within a project such as a research project, with responsibility for ensuring that the proposed work is undertaken and documented, the generated data are properly curated and archived, and the results are published and reported to the funding agency."@en .
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type (\"Workpackage Leader\").\n        "@en .
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/2000/01/rdf-schema#label> "workpackage leader"@en .
+<http://purl.org/spar/scoro/workpackage-leader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/workpackage-leader> <http://purl.org/vocab/vann/example> "\n        :silvio-peroni\n                pro:holdsRoleInTime :workpackage-leader-for-my-dataset .\n        \n        :workpackage-leader-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:workpackage-leader .\n        " .

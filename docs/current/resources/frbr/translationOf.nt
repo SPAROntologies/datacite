@@ -1,0 +1,8 @@
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation (\"IsTranslationOf\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "@en .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "\nThe original expression of a translated one.\n        "@en .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core#> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#translationOf> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationCharacterization frbr:translationOf .\n        " .
+<http://purl.org/vocab/frbr/core#translationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is translation of"@en .

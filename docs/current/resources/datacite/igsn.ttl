@@ -1,0 +1,22 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:igsn a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "igsn"@en ;
+    fabio:hasURL "http://igsn.org/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:igsn ;
+                literal:hasLiteralValue "AU124" .
+        """ ;
+    rdfs:comment "The International Generic Sample Number (IGSN) is a code that uniquely identifies samples from our natural environment and related features-of-interest."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

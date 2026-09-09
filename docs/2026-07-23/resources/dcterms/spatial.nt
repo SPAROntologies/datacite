@@ -1,0 +1,8 @@
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/coverage> .
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial coverage" .
+<http://purl.org/dc/terms/spatial> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to link a resource with a geographical feature (such as its location), i.e., an individual of the class `geo:Feature`.\n        "@en .
+<http://purl.org/dc/terms/spatial> <http://purl.org/vocab/vann/example> "\n        :my-dataset\n                dcterms:spatial :my-dataset-location .\n\n        :my-dataset-location a geo:Feature .\n        " .
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial characteristics of the resource."@en .
+<http://purl.org/dc/terms/spatial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .

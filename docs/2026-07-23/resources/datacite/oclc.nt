@@ -1,0 +1,9 @@
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/2000/01/rdf-schema#label> "oclc"@en .
+<http://purl.org/spar/datacite/oclc> <http://purl.org/spar/fabio/hasURL> "https://www.worldcat.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/oclc> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:oclc ;\n                literal:hasLiteralValue \"1587443818\" .\n        " .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/2004/02/skos/core#note> "An OCLC control number is resolvable from the following URL: https://www.worldcat.org/oclc/<identifier>."@en .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/2000/01/rdf-schema#comment> "The OCLC control number is a unique identifier assigned by OCLC to each bibliographic record input into WorldCat."@en .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/oclc> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

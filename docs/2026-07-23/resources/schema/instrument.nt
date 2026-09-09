@@ -1,0 +1,8 @@
+<https://schema.org/instrument> <http://www.w3.org/2000/01/rdf-schema#label> "instrument"@en .
+<https://schema.org/instrument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> .
+<https://schema.org/instrument> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Action> .
+<https://schema.org/instrument> <http://purl.org/vocab/vann/example> "\n        :my-analysis-action a schema:Action ;\n                schema:instrument :my-resource .\n        \n        :my-resource a frbr:Endeavour .\n        " .
+<https://schema.org/instrument> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to model the fact that a related source is an instrument.\nMore specifically, an instance of `schema:Action` is used, connected to a `frbr:Endeavour` via the property `schema:instrument`.\n        "@en .
+<https://schema.org/instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.org/instrument> <http://www.w3.org/2000/01/rdf-schema#comment> "\nThe object that helped the agent perform the action."@en .
+<https://schema.org/instrument> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

@@ -1,0 +1,7 @@
+<http://purl.org/spar/datacite/nii> <http://purl.org/vocab/vann/example> "\n        :shizumu-nomura-id\n                datacite:usesIdentifierScheme datacite:nii ;\n                literal:hasLiteralValue \"9000363887724\" .\n        " .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/2000/01/rdf-schema#comment> "The National Individual Identifier (NII) is a unique number assigned to citizens, residents and visitors for tracking and verification purposes."@en .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/nii> <http://www.w3.org/2000/01/rdf-schema#label> "nii"@en .

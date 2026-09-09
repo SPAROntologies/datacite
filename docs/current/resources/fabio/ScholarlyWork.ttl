@@ -1,0 +1,10 @@
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fabio:ScholarlyWork a owl:Class ;
+    rdfs:label "scholarly work"@en ;
+    rdfs:comment "A work that reports scholarly activity on a particular topic, either published in written form, or delivered orally at a meeting."@en ;
+    rdfs:isDefinedBy fabio: ;
+    rdfs:subClassOf fabio:Work .
+

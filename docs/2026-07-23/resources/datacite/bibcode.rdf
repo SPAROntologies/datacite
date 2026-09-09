@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/bibcode">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <skos:note xml:lang="en">
+The format was originally adopted by the SIMBAD and NED projects, and follows the syntax "YYYYJJJJJVVVVMPPPPA", where:
+
+* YYYY: Year of publication;
+* JJJJJ: A standard abbreviation for the journal (e.g. ApJ, AJ, MNRAS, Sci, PASP, etc.). A list of abbreviations is available;
+* VVVV: The volume number (for a serial) or an abbreviation that specifies what type of publication it is (e.g. conf for conference proceedings, meet for Meeting proceedings, book for a book, coll for colloquium proceedings, proc for any other type of proceedings);
+* M: Qualifier for publication;
+* E: Electronic Abstract (usually a counter, not a page number);
+* L: Letter;
+* P: Pink page;
+* Q-Z: Unduplicating character for identical codes;
+* PPPP: Page number. Note that for page numbers greater than 9999, the page number is continued in the m column;
+* A: The first letter of the last name of the first author.
+        </skos:note>
+    <vann:example>
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:bibcode ;
+                literal:hasLiteralValue "1974AJ.....79..819H" .
+        </vann:example>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://adsabs.harvard.edu/abs_doc/help_pages/data.html</fabio:hasURL>
+    <rdfs:label xml:lang="en">bibcode</rdfs:label>
+    <rdfs:comment xml:lang="en">The Bibliographic Code (BIBCODE) is a 19 ASCII characters identifier which describes a journal article.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

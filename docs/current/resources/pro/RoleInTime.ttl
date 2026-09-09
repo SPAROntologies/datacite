@@ -1,0 +1,39 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pro:RoleInTime a owl:Class ;
+    rdfs:label "role in time"@en ;
+    vann:example """
+        :david-shotton a foaf:Person ;
+                pro:holdsRoleInTime :shotton-affiliation-for-my-dataset .
+
+        :shotton-affiliation-for-my-dataset a pro:RoleInTime ;
+                pro:withRole scoro:affiliate ;
+                pro:relatesToOrganization :university-of-oxford ;
+                pro:relatesToEntity :my-dataset .
+        """ ;
+    vaem:rationale """
+According to this class, someone's affiliation is a relationship of membership or belonging that the person can have with respect to a particular organization (i.e., an individual of the class `foaf:Organization`). 
+Such an affiliation may be specified in the document with respect to which that agent is an author or contributor. 
+A particular individual of [SCoRO](http://purl.org/spar/scoro), i.e., `scoro:affiliate` (belonging to the class `scoro:OrganizationalRole`) is used to express such an affiliation. 
+The domain of `pro:withRole` is not `foaf:Agent`, but rather a member of the class `pro:RoleInTime`, which itself is the range of the property `pro:holdsRoleInTime`, for which the domain is `foaf:Agent` (i.e., our contributor).
+        """@en ;
+    rdfs:comment "A particular situation that describe a role an agent may have, that can be restricted to a particular time interval."@en ;
+    rdfs:isDefinedBy pro: ;
+    rdfs:subClassOf tvc:ValueInTime ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+A role in time describes always:
+* a particular role R;
+* a particular agent A holding R;
+* a particular time interval T in which A holds R (optional);
+* one or more entities (e.g. a particular bibliographic entity or a specific institution) that defines a context for R held by A. (At least one contextual entity should be specified for a particular role).
+        """@en .
+

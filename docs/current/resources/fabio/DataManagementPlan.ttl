@@ -1,0 +1,22 @@
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+fabio:DataManagementPlan a owl:Class ;
+    rdfs:label "data management plan"@en ;
+    vann:example """
+        :my-data-management-plan
+                datacite:hasGeneralResourceType fabio:DataManagementPlan .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given general resource type ("Output Management Plan").
+        """@en ;
+    rdfs:comment "A structured document giving information about how data arising from a research project or other endeavour is to be manages, preserved and shared."@en ;
+    rdfs:isDefinedBy fabio: ;
+    rdfs:subClassOf fabio:Expression ;
+    vs:term_status reg:statusStable .
+

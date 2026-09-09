@@ -1,0 +1,29 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:RightsIdentifierScheme a owl:Class ;
+    rdfs:label "rights identifier scheme"@en ;
+    vann:example """
+        :my-resource-rights 
+                datacite:hasIdentifier :my-resource-rights-id .
+
+        :my-resource-rights-id a datacite:RightsIdentifier ;
+                datacite:usesIdentifierScheme datacite:spdx .
+
+        datacite:spdx a datacite:RightsIdentifierScheme .
+        """ ;
+    rdfs:comment "The identifier scheme used to identify a license."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:subClassOf datacite:IdentifierScheme ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+This is used to specify the identifier scheme used by a rights identifier.
+
+Individual schemes are defined as members of this class.
+        """@en .
+

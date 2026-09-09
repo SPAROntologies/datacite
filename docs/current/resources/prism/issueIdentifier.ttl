@@ -1,0 +1,22 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+prism:issueIdentifier a owl:DatatypeProperty ;
+    rdfs:label "has issue identifier"@en ;
+    vann:example """
+        :related-item
+                prism:issueIdentifier "2" .
+        """ ;
+    vaem:rationale """
+This is used to express the issue identifier of a resource.
+        """@en ;
+    rdfs:comment "A system generated unique publisher identifier for the issue of a serial publication."@en ;
+    rdfs:isDefinedBy prism: ;
+    rdfs:range rdfs:Literal ;
+    vs:term_status reg:statusStable .
+

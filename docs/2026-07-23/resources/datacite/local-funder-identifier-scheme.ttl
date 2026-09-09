@@ -1,0 +1,18 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:local-funder-identifier-scheme a datacite:FunderIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "local funder identifier scheme"@en ;
+    vann:example """
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:local-funder-identifier-scheme ;
+                literal:hasLiteralValue "EU35922" .
+        """ ;
+    rdfs:comment "A funder identifier scheme that provides local funder identifiers that are unique in their local environment and understood by the person submitting the metadata."@en ;
+    vs:term_status reg:statusStable .
+

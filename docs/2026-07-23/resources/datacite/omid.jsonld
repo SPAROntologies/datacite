@@ -1,0 +1,47 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/omid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/IdentifierScheme"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://registry.identifiers.org/registry/omid"
+      }
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:omid ;\n                literal:hasLiteralValue \"br/06101801781\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The OpenCitations Meta Identifier (OMID) is a persistent identifier for bibliographic resources, created and maintained by OpenCitations (http://opencitations.net)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "omid"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "The OMID is structured as follows: [[entity_type_abbreviation]]/[[supplier_prefix]][[sequential_number]] (e.g. \"br/0601\", where \"br\" is the entity type, \"060\" is the supplier prefix, and \"1\" is the sequential number)."
+      }
+    ]
+  }
+]

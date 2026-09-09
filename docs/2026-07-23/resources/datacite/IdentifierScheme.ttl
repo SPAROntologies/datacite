@@ -1,0 +1,29 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:IdentifierScheme a owl:Class ;
+    rdfs:label "identifier scheme"@en ;
+    vann:example """
+        :my-resource
+                datacite:hasIdentifier :my-resource-id .
+
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:wikidata ;
+                literal:hasLiteralValue "Q113333457" .
+
+        datacite:wikidata a datacite:IdentifierScheme .
+        """ ;
+    vaem:rationale """
+This is used to specify the identifier scheme used by an identifier.
+
+Individual schemes are defined as members of this class.
+        """@en ;
+    rdfs:comment "The identifier scheme used to identify an entity such as a funding agency, a person or a resource."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

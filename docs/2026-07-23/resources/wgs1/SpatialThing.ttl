@@ -1,0 +1,9 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wgs1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+wgs1:SpatialThing a owl:Class ;
+    rdfs:label "spatial thing"@en ;
+    rdfs:comment "Anything with spatial extent."@en ;
+    rdfs:isDefinedBy wgs1: .
+

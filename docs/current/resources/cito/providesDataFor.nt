@@ -1,0 +1,9 @@
+<http://purl.org/spar/cito/providesDataFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> .
+<http://purl.org/spar/cito/providesDataFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/spar/cito/providesDataFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/usesDataFrom> .
+<http://purl.org/spar/cito/providesDataFor> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity presents data that are used in work described in the citing entity."@en .
+<http://purl.org/spar/cito/providesDataFor> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationCharacterization cito:providesDataFor .\n        " .
+<http://purl.org/spar/cito/providesDataFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/cito/> .
+<http://purl.org/spar/cito/providesDataFor> <http://www.w3.org/2000/01/rdf-schema#label> "provides data for"@en .
+<http://purl.org/spar/cito/providesDataFor> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/cito/providesDataFor> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation (\"IsCollectedBy\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "@en .

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Software">
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given general resource type ("Software").
+        </vaem:rationale>
+    <rdfs:comment xml:lang="en">A computer program in source or compiled form.</rdfs:comment>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">software</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:note xml:lang="en">
+Examples include a C source file, MS-Windows .exe executable, or Perl script.        
+        </skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+    <vann:example>
+        :my-resource
+                datacite:hasGeneralResourceType dcmitype:Software .
+        </vann:example>
+  </rdf:Description>
+</rdf:RDF>

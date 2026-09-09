@@ -1,0 +1,22 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:scigraph a datacite:IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "SciGraph ID"@en ;
+    fabio:hasURL "https://scigraph.springernature.com/explorer/datasets/data_at_a_glance/"^^xsd:anyURI ;
+    vann:example """
+        :my-object-id
+                datacite:usesIdentifierScheme datacite:scigraph ;
+                literal:hasLiteralValue "013217540103.39" .
+        """ ;
+    rdfs:comment "The SciGraph ID is an unique identifier used for referring to entities in the Springer Nature SciGraph dataset."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

@@ -1,0 +1,34 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:QualifiedRelation a owl:Class ;
+    rdfs:label "qualified relation"@en ;
+    vann:example """
+        :relation-dataset-article a datacite:QualifiedRelation ;
+                datacite:hasRelationSubject :my-resource ;
+                datacite:hasRelationObject :my-article ;
+                datacite:hasRelationCharacterization cito:isCitedBy .
+        """ ;
+    vaem:rationale """
+This is used to represent qualified relations between two resources, which can be described using various properties (e.g., `dcterms:description`).
+        """@en ;
+    rdfs:comment "A class representing a reified relation between two resources, allowing the assignment of a specific role or type to the relationship."@en ;
+    rdfs:isDefinedBy datacite: ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( sit:Situation [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty datacite:hasRelationCharacterization ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty datacite:hasRelationObject ] [ a owl:Restriction ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onProperty datacite:hasRelationSubject ] ) ] ;
+    vs:term_status reg:statusStable .
+

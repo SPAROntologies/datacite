@@ -1,0 +1,9 @@
+@prefix co: <http://purl.org/co/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+co:List a owl:Class ;
+    rdfs:label "list"@en ;
+    rdfs:comment "An ordered array of items, that can be present in multiple copies."@en ;
+    rdfs:isDefinedBy <http://purl.org/co> .
+

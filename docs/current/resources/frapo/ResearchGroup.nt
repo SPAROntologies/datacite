@@ -1,0 +1,8 @@
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Group> .
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/ResearchGroup> <http://purl.org/vocab/vann/example> "\n        :my-research-group a frapo:ResearchGroup .\n        " .
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent the role of research group, conceptualised as a group of people working together in research.\n\nFor example, a research group related to some resource can be specified as a type (by means of the property `rdf:type`) by means of the class `frapo:ResearchGroup`.\n        "@en .
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of people, usually within a university department or a research institute, and typically under a single group leader, dedicated to working together to undertake research on one or more topics. May also be called a research unit."@en .
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.w3.org/2000/01/rdf-schema#label> "research group"@en .
+<http://purl.org/cerif/frapo/ResearchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

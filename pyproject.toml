@@ -7,4 +7,6 @@ requires-python = ">=3.11"
 dependencies = [
     "codespell>=2.4.2",
     "markdown>=3.10.2",
+    "rdflib>=7.6.0",
+    "requests>=2.34.2",
 ]

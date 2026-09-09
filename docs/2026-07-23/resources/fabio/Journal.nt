@@ -1,0 +1,9 @@
+<http://purl.org/spar/fabio/Journal> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/fabio/Journal> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Journal\").\n        "@en .
+<http://purl.org/spar/fabio/Journal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/Journal> <http://www.w3.org/2000/01/rdf-schema#comment> "A scholarly periodical primarily devoted to the publication of original research papers."@en .
+<http://purl.org/spar/fabio/Journal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/Journal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Periodical> .
+<http://purl.org/spar/fabio/Journal> <http://www.w3.org/2000/01/rdf-schema#label> "journal"@en .
+<http://purl.org/spar/fabio/Journal> <http://purl.org/vocab/vann/example> "\n        :my-journal\n                datacite:hasGeneralResourceType fabio:Journal .\n        " .
+<http://purl.org/spar/fabio/Journal> <http://www.w3.org/2004/02/skos/core#note> "\nPrinted and electronic manifestations of the same journal are usually identified by separate print and electronic International Standard Serial Numbers (ISSN or eISSN, respectively), that identifies the journal as a whole, not to individual issues of it.\n        "@en .

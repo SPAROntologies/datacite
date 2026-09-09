@@ -1,0 +1,22 @@
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+fabio:Report a owl:Class ;
+    rdfs:label "report"@en ;
+    vann:example """
+        :my-report 
+                datacite:hasGeneralResourceType fabio:Report .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given general resource type ("Study Registration").
+        """@en ;
+    rdfs:comment "A formal factual, methodological, statistical, technical or research report issued by an individual, group, agency, government body or other institution."@en ;
+    rdfs:isDefinedBy fabio: ;
+    rdfs:subClassOf fabio:Work ;
+    vs:term_status reg:statusStable .
+

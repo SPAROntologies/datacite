@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pro:editor a pro:PublishingRole,
+        owl:NamedIndividual ;
+    rdfs:label "editor"@en ;
+    vann:example """
+        :silvio-peroni
+                pro:holdsRoleInTime :editor-for-my-dataset .
+        
+        :editor-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole pro:editor .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given agent role type ("Editor").
+        """@en ;
+    rdfs:comment "The role of a person who selects and prepares for publication material created and submitted by authors, having oversight of its content, format and presentation."@en ;
+    rdfs:isDefinedBy pro: ;
+    vs:term_status reg:statusStable .
+

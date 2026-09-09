@@ -1,0 +1,31 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:usesMetadataScheme a owl:ObjectProperty ;
+    rdfs:label "uses metadata scheme"@en ;
+    vann:example """
+        :related-document a fabio:MetadataDocument ;
+                datacite:usesMetadataScheme datacite:spar .
+
+        datacite:spar a datacite:MetadataScheme .
+        """ ;
+    vaem:rationale """
+This is used to represent the particular scheme followed for creating the resource metadata exemplified in the metadata document, via the property `datacite:hasMetadataScheme` and the class `datacite:MetadataScheme`.
+
+This is also used when the relation type between two resources involves the association of metadata to one by the other.
+It is possible to specify a metadata scheme used by the particular metadata document under consideration to describe the metadata of the subject resource  or of the related resource.
+In addition to specifying a metadata scheme, in this case the metadata document can also be characterised by means of the class `fabio:MetatadaDocument`.
+Each metadata scheme is an individual of the class `datacite:MetadataScheme`.
+        """@en ;
+    rdfs:comment "The link between a metadata document and the scheme followed for creating metadata."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:range datacite:MetadataScheme ;
+    rdfs:seeAlso fabio:MetadataDocument ;
+    vs:term_status reg:statusStable .
+

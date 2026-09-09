@@ -1,0 +1,32 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+geo:sfContains a owl:ObjectProperty ;
+    rdfs:label "contains"@en ;
+    vann:example """
+        :my-dataset-location
+                geo:hasGeometry :my-dataset-location-polygon .
+
+        :my-dataset-location-polygon a sf:Polygon ;
+                geo:asWKT
+                        "POLYGON ((30 10, 40 40, 20 40, 30 10))"^^geo:wktLiteral ;
+                geo:sfContains :inner-point .
+
+        :inner-point a geo:Geometry ;
+                geo:asWKT "POINT(20 20)"^^geo:wktLiteral .
+        """ ;
+    vaem:rationale """
+This is used to specify a polygon (i.e., an individual of the class `sf:Polygon`) defining the geographical box related to the resource under consideration. 
+The actual value of the polygon can be defined by means of the property `geo:asWKT`, which allows the specification of the coordinates related with the polygon.
+        """@en ;
+    rdfs:comment "A thing spatially contains another thing."@en ;
+    rdfs:domain geo:SpatialObject ;
+    rdfs:isDefinedBy geo: ;
+    rdfs:range geo:SpatialObject ;
+    vs:term_status reg:statusStable .
+

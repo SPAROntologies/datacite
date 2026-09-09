@@ -1,0 +1,30 @@
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+frbr:Endeavour a owl:Class ;
+    rdfs:label "endeavour"@en ;
+    vann:example """
+        :related-document
+                datacite:hasGeneralResourceType frbr:Endeavour .
+        """ ;
+    vaem:rationale """
+This is used to represent a resource having a generic, unspecified type, in combination with the property `datacite:hasGeneralResourceType`.
+
+This is also used to represent a resource being an award, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.
+
+This is also used to represent a resource being an instrument, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.
+
+This is also used to represent the type of the sequence identifier/number associated to a resource, using it in combination with the properties `rdf:type` and `fabio:hasSequenceIdentifier`.
+        """@en ;
+    rdfs:comment "The different aspects of user interests in the products of intellectual or artistic artifact."@en ;
+    rdfs:isDefinedBy frbr: ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf ( frbr:Expression frbr:Item frbr:Manifestation frbr:Work ) ] ;
+    vs:term_status reg:statusStable .
+

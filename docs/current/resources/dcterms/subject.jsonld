@@ -1,0 +1,40 @@
+[
+  {
+    "@id": "http://purl.org/dc/terms/subject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-dataset \n                dcterms:subject :my-concept .\n\n        :my-concept a skos:Concept ;\n                skos:prefLabel \"Knowledge\"@en . \n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis property should always be used with a [SKOS](http://www.w3.org/2004/02/skos/core#) concept. \nIf possible, one could specify a more specific property rather than the general `dcterms:subject`, such as `fabio:hasSubjectTerm` and `fabio:hasSubjectDiscipline`. \nInstead of creating a new concept every time, one could reuse concepts already available in existing SKOS-based models.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A topic of the resource."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/dc/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "has subject"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

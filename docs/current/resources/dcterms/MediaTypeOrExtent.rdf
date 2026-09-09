@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/MediaTypeOrExtent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">media type or extent</rdfs:label>
+    <vann:example>
+        datacite:spar
+                dcterms:format &lt;https://w3id.org/spar/mediatype/text/turtle&gt; .
+
+        &lt;https://w3id.org/spar/mediatype/text/turtle&gt; a dcterms:MediaTypeOrExtent .
+    </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <vaem:rationale>
+This is used to represent the particular format in which the metadata in a metadata document are stored. 
+
+Instead of creating a new media type every time, it is strongly suggested to reuse those already available in existing datasets, such as the “Media type as Linked Open Data” dataset (https://w3id.org/spar/mediatype).
+    </vaem:rationale>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">A media type or extent.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,8 @@
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/infouri> <http://purl.org/spar/fabio/hasURL> "http://info-uri.info/registry/docs/misc/faq.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/2000/01/rdf-schema#label> "infouri"@en .
+<http://purl.org/spar/datacite/infouri> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:isbn ;\n                literal:hasLiteralValue \"info:ddc/22/eng//004.678\" .\n        " .
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/2000/01/rdf-schema#comment> "The Info URI scheme is a standardized method for identifying information assets that have public identifiers (like ISBNs, DOIs, or LCCNs) but lack a native URI representation."@en .
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/infouri> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

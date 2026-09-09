@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/dblp-record">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dblp.org/</fabio:hasURL>
+    <rdfs:label xml:lang="en">dblp record</rdfs:label>
+    <rdfs:comment xml:lang="en">The DBLP publication identifier is a unique key that identifies a specific publication record, conference, or journal registered on DBLP.</rdfs:comment>
+    <skos:note xml:lang="en">A DBLP publication identifier is resolvable from the following URL: https://dblp.org/rec/&lt;identifier&gt;.</skos:note>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vann:example>
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:dblp-record ;
+                literal:hasLiteralValue "conf/semweb/BarzaghiHMP24" .
+        </vann:example>
+  </rdf:Description>
+</rdf:RDF>

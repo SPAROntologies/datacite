@@ -1,0 +1,5 @@
+<http://www.essepuntato.it/2012/04/tvc/withValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/tvc/> .
+<http://www.essepuntato.it/2012/04/tvc/withValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.essepuntato.it/2012/04/tvc/withValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value had by the entity taking part to the situation."@en .
+<http://www.essepuntato.it/2012/04/tvc/withValue> <http://www.w3.org/2000/01/rdf-schema#label> "with value"@en .
+<http://www.essepuntato.it/2012/04/tvc/withValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.essepuntato.it/2012/04/tvc/ValueInTime> .

@@ -1,0 +1,25 @@
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcmitype:Service a owl:Class ;
+    rdfs:label "service"@en ;
+    vann:example """
+        :my-resource
+                datacite:hasGeneralResourceType dcmitype:Service .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given general resource type ("Service").
+        """@en ;
+    rdfs:comment "    A system that provides one or more functions."@en ;
+    rdfs:isDefinedBy dcmitype: ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+Examples include a photocopying service, a banking service, an authentication service, interlibrary loans, a Z39.50 or Web server.        
+        """@en .
+

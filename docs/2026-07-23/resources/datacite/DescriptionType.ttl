@@ -1,0 +1,32 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:DescriptionType a owl:Class ;
+    rdfs:label "description type"@en ;
+    vann:example """
+        :my-resource-additional-info
+                datacite:hasDescriptionType datacite:abstract .
+
+        datacite:abstract a datacite:DescriptionType .
+        """ ;
+    vaem:rationale """
+This is used to represent the type of a description providing additional information about a resource.
+Individual members of the class conform to the five values allowed in the DataCite controlled list, namely: 
+
+* `datacite:abstract`;
+* `datacite:methods`;
+* `datacite:series-information`;
+* `datacite:table-of-content`;
+* `datacite:other`.
+    """@en ;
+    rdfs:comment "The type of description given to a resource described by the DataCite Metadata schema."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:subClassOf skos:Concept ;
+    vs:term_status reg:statusStable .
+

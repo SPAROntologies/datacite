@@ -1,0 +1,7 @@
+<http://purl.org/spar/fabio/BookChapter> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific chapter focused on engineering methodologies within a scholarly handbook."@en .
+<http://purl.org/spar/fabio/BookChapter> <http://www.w3.org/2000/01/rdf-schema#label> "book chapter"@en .
+<http://purl.org/spar/fabio/BookChapter> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/fabio/BookChapter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/BookChapter> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Book Chapter\").\n        "@en .
+<http://purl.org/spar/fabio/BookChapter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/BookChapter> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType fabio:BookChapter .\n        " .

@@ -1,0 +1,42 @@
+[
+  {
+    "@id": "http://purl.org/spar/scoro/data-creator",
+    "@type": [
+      "http://purl.org/spar/scoro/OrganizationalRole",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :silvio-peroni\n                pro:holdsRoleInTime :data-creator-for-my-dataset .\n        \n        :data-creator-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:data-creator .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used as a controlled term to specify a given agent role type (\"Data Collector\").\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The role a person has of being a creator, originator, gatherer or collector of new data."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/scoro/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "data creator"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

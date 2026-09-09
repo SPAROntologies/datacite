@@ -1,0 +1,22 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:infouri a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "infouri"@en ;
+    fabio:hasURL "http://info-uri.info/registry/docs/misc/faq.html"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:isbn ;
+                literal:hasLiteralValue "info:ddc/22/eng//004.678" .
+        """ ;
+    rdfs:comment "The Info URI scheme is a standardized method for identifying information assets that have public identifiers (like ISBNs, DOIs, or LCCNs) but lack a native URI representation."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

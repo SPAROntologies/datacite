@@ -1,0 +1,29 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+foaf:name a owl:DatatypeProperty ;
+    rdfs:label "has name"@en ;
+    vann:example """
+        :david-shotton a foaf:Person ;
+                foaf:name "David Shotton"@en .
+        """ ;
+    vaem:rationale """
+This is the most generic [FOAF](http://xmlns.com/foaf/0.1/) property for names.
+While two more specific properties are also available for people (`foaf:givenName` and `foaf:familyName`), the coverage of `foaf:name` guarantees its application to any agent (people, organizations, etc.). 
+However, those more specific properties could additionally or alternatively be used if the creator is indeed a `foaf:Person`.
+
+The name type (e.g., organizational or personal) is expressed by specifying whether the agent involved is a person (`foaf:Person`) or an organization (`foaf:Organization`).
+
+The language of a name is expressed via a language-tagged literal, whose value must follow the pattern defined by the XML schema language type (e.g., `en`, `it`, `fr`, `cmn`, `nys`, `swh`, and so on). 
+        """@en ;
+    rdfs:comment "A name for some thing."@en ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf rdfs:label ;
+    vs:term_status reg:statusStable .
+

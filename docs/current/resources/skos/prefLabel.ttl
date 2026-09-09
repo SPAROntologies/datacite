@@ -1,0 +1,24 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+skos:prefLabel a owl:DatatypeProperty ;
+    rdfs:label "has preferred label"@en ;
+    vann:example """
+        :my-concept a skos:Concept ;
+                skos:prefLabel "Knowledge"@en . 
+        """ ;
+    vaem:rationale """
+This is used to specify the label of a subject (modelled as an instance of `skos:Concept`) or a subject scheme (`skos:ConceptScheme`).
+        """@en ;
+    rdfs:comment "The preferred lexical label for a resource, in a given language."@en ;
+    rdfs:isDefinedBy skos: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf rdfs:label ;
+    vs:term_status reg:statusStable ;
+    skos:note "A resource has no more than one value of `skos:prefLabel` per language tag, and no more than one value of `skos:prefLabel` without language tag."@en .
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/fabio/MetadataDocument">
+    <rdfs:label xml:lang="en">metadata document</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Expression"/>
+    <vaem:rationale xml:lang="en">
+This is used to represent a document describing the metadata of a resource (e.g., a dataset).
+The link between the resource and this document is provided using the [CiTO](http://purl.org/spar/cito) property `cito:citesAsMetadataDocument`.
+The particular scheme followed for creating the resource metadata exemplified in the metadata document is expressed via the property `datacite:hasMetadataScheme` and the class `datacite:MetadataScheme`.
+
+This is also used when the relation type between two resources involves the association of metadata to one by the other.
+It is possible to specify a metadata scheme used by the particular metadata document under consideration to describe the metadata of the subject resource  or of the related resource.
+In addition to specifying a metadata scheme, in this case the metadata document can also be characterised by means of the class `fabio:MetatadaDocument`.
+Each metadata scheme is an individual of the class `datacite:MetadataScheme`.
+        </vaem:rationale>
+    <rdfs:comment xml:lang="en">A document that contains metadata information describing one or more characteristics of an entity.</rdfs:comment>
+    <vann:example>
+        :my-metadata-document a fabio:MetadataDocument ;
+                datacite:hasIdentifier :my-metadata-document-id ;
+                datacite:usesMetadataScheme datacite:spar .        
+        </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
+  </rdf:Description>
+</rdf:RDF>

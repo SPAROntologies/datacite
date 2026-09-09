@@ -1,0 +1,10 @@
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fabio:Article a owl:Class ;
+    rdfs:label "article"@en ;
+    rdfs:comment "The realization of a piece of writing on a particular topic, usually published within a periodical publication (e.g. journal, magazine and newspaper)."@en ;
+    rdfs:isDefinedBy fabio: ;
+    rdfs:subClassOf fabio:Expression .
+

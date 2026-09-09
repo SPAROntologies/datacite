@@ -1,0 +1,50 @@
+[
+  {
+    "@id": "http://purl.org/spar/scoro/rights-holder",
+    "@type": [
+      "http://purl.org/spar/scoro/OrganizationalRole",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :silvio-peroni\n                pro:holdsRoleInTime :rights-holder-for-my-dataset .\n        \n        :rights-holder-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:rights-holder .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used as a controlled term to specify a given agent role type (\"Rights Holder\").\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The role held by an agent who holds, owns and manages the legal rights to a project or activity and its products and outcomes, for example the exploitation, licensing and intellectual property rights."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/scoro/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "rights holder"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://purl.org/spar/pro/copyright-owner"
+      },
+      {
+        "@id": "http://purl.org/spar/scoro/patent-holder"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

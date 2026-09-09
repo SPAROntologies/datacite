@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/github">
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The GitHub username is a unique identifier assigned to GitHub users.</rdfs:comment>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/</fabio:hasURL>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">github</rdfs:label>
+    <skos:note xml:lang="en">A GitHub username is resolvable from the following URL: https://github.com/&lt;identifier&gt;.</skos:note>
+    <vann:example>
+        :silvio-peroni-id
+                datacite:usesIdentifierScheme datacite:github ;
+                literal:hasLiteralValue "essepuntato" .
+        </vann:example>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+scoro:sponsor a scoro:FinancialRole,
+        owl:NamedIndividual ;
+    rdfs:label "sponsor"@en ;
+    vann:example """
+        :silvio-peroni
+                pro:holdsRoleInTime :sponsor-for-my-dataset .
+        
+        :sponsor-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:sponsor .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given agent role type ("Sponsor").
+        """@en ;
+    rdfs:comment "The role held by an agent that provides funds or support for a person, project or activity, often in return for access to the exploitable commercial potential associated with that person’s work, or that project or activity’s output, for example through equity sharing or publicity."@en ;
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
+

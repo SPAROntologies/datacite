@@ -1,0 +1,22 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+cito:cites a owl:ObjectProperty ;
+    rdfs:label "cites"@en ;
+    vann:example """
+        :relation-dataset-article a datacite:QualifiedRelation ;
+                datacite:hasRelationCharacterization cito:cites .
+        """ ;
+    vaem:rationale """
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Cites") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+        """@en ;
+    rdfs:comment "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en ;
+    rdfs:isDefinedBy cito: ;
+    owl:inverseOf cito:isCitedBy ;
+    vs:term_status reg:statusStable .
+

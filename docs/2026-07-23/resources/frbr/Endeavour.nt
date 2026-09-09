@@ -1,0 +1,18 @@
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2002/07/owl#equivalentClass> _:n16082fa6811145e08dfaeb8890637028b30 .
+_:n16082fa6811145e08dfaeb8890637028b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Manifestation> .
+_:n16082fa6811145e08dfaeb8890637028b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:n16082fa6811145e08dfaeb8890637028b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core#> .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:n16082fa6811145e08dfaeb8890637028b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b32 .
+_:n16082fa6811145e08dfaeb8890637028b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://purl.org/vocab/vann/example> "\n        :related-document\n                datacite:hasGeneralResourceType frbr:Endeavour .\n        " .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2000/01/rdf-schema#comment> "The different aspects of user interests in the products of intellectual or artistic artifact."@en .
+_:n16082fa6811145e08dfaeb8890637028b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b33 .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent a resource having a generic, unspecified type, in combination with the property `datacite:hasGeneralResourceType`.\n\nThis is also used to represent a resource being an award, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.\n\nThis is also used to represent a resource being an instrument, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.\n\nThis is also used to represent the type of the sequence identifier/number associated to a resource, using it in combination with the properties `rdf:type` and `fabio:hasSequenceIdentifier`.\n        "@en .
+_:n16082fa6811145e08dfaeb8890637028b30 <http://www.w3.org/2002/07/owl#unionOf> _:n16082fa6811145e08dfaeb8890637028b31 .
+<http://purl.org/vocab/frbr/core#Endeavour> <http://www.w3.org/2000/01/rdf-schema#label> "endeavour"@en .
+_:n16082fa6811145e08dfaeb8890637028b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n16082fa6811145e08dfaeb8890637028b34 .
+_:n16082fa6811145e08dfaeb8890637028b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n16082fa6811145e08dfaeb8890637028b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Item> .

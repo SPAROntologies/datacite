@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcterms:title a owl:DatatypeProperty ;
+    rdfs:label "has title"@en ;
+    vann:example """
+        :my-dataset 
+                dcterms:title "UK rainfall, June 2012"@en .
+        """ ;
+    vaem:rationale """
+This is used to specify the title of a resource if no particular type has been specified for the title otherwise.
+        """@en ;
+    rdfs:comment "A name given to the resource."@en ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range rdfs:Literal ;
+    vs:term_status reg:statusStable .
+

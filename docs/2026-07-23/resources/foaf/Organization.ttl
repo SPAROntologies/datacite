@@ -1,0 +1,23 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+foaf:Organization a owl:Class ;
+    rdfs:label "organization"@en ;
+    vann:example """
+        :university-of-oxford a foaf:Organization .
+        """ ;
+    vaem:rationale """
+This is used to represent agents that are organizations.
+
+For example, an organization related to some resource can be specified by means of the class `foaf:Organization`.
+        """@en ;
+    rdfs:comment "An organization."@en ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subClassOf foaf:Agent ;
+    vs:term_status reg:statusStable .
+

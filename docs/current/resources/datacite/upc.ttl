@@ -1,0 +1,13 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:upc a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "upc"@en ;
+    rdfs:comment "The Universal Product Code (UPC) is a unique number used to identify products and their manufacturers."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

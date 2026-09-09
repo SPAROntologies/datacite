@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:abstract a datacite:DescriptionType,
+        owl:NamedIndividual ;
+    rdfs:label "abstract"@en ;
+    vann:example """
+        :my-resource-additional-info
+                datacite:hasDescriptionType datacite:abstract .
+        """ ;
+    vaem:rationale """
+This is used to represent the description type "Abstract".
+        """@en ;
+    rdfs:comment "A brief summary of a textual work, appearing at the beginning of the work and designed to act as the point-of-entry that will help the reader quickly to obtain an overview of the work's contents."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:seeAlso fabio:Abstract ;
+    vs:term_status reg:statusStable .
+

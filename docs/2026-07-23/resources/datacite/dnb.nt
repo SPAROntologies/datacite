@@ -1,0 +1,9 @@
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/2004/02/skos/core#note> "A DNB catalogue number is resolvable from the following URL: https://d-nb.info/<identifier>."@en .
+<http://purl.org/spar/datacite/dnb> <http://purl.org/spar/fabio/hasURL> "https://d-nb.info/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/dnb> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:dnb ;\n                literal:hasLiteralValue \"gnd/7749153-1\" .\n        " .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/2000/01/rdf-schema#label> "dnb"@en .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/dnb> <http://www.w3.org/2000/01/rdf-schema#comment> "The Deutsche Nationalbibliothek (DNB) catalogue number is a unique identifier assigned to every entry in the DNB catalogue."@en .

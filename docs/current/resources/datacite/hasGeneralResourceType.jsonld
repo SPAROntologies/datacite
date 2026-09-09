@@ -1,0 +1,170 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/hasGeneralResourceType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:Dataset .\n    "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nAll DataCite-required general resource type terms are defined by classes in the [Dublin Core Type Vocabulary](http://purl.org/dc/dcmitype/), in [FaBiO](http://purl.org/spar/fabio) and in the [FAIR* Reviews Ontology](http://purl.org/spar/fr), with the exception of the more general `frbr:Endeavour` (mapped to \"Other\").\n\nThe following list specifies ontology classes for all the allowed general resource types in the DataCite Controlled List, with the relevant DataCite general type given alphabetically in parentheses:\n\n- `dcmitype:MovingImage` (Audiovisual);\n- `fabio:Book` (Book);\n- `fabio:BookChapter` (BookChapter);\n- `dcmitype:Collection` (Collection);\n- `fabio:LaboratoryNotebook` (ComputationalNotebook);\n- `fabio:ConferencePaper` (ConferencePaper);\n- `fabio:ConferenceProceedings` (ConferenceProceeding);\n- `fabio:ResourcePaper` (DataPaper);\n- `dcmitype:Dataset` (Dataset);\n- `fabio:Thesis` (Dissertation);\n- `dcmitype:Event` (Event);\n- `dcmitype:StillImage` (Image);\n- `dcmitype:InteractiveResource` (InteractiveResource);\n- `fabio:Journal` (Journal);\n- `fabio:JournalArticle` (JournalArticle);\n- `fabio:Model` (Model);\n- `fabio:DataManagementPlan` (OutputManagementPlan);\n- `fr:ReviewVersion` (PeerReview);\n- `dcmitype:PhysicalObject` (PhysicalObject);\n- `fabio:ConferencePoster` (Poster);\n- `fabio:Preprint` (Preprint);\n- `fabio:Presentation` (Presentation);\n- `fabio:ProjectPlan` (Project);\n- `fabio:ReportDocument` (Report);\n- `dcmitype:Service` (Service);\n- `dcmitype:Software` (Software);\n- `dcmitype:Sound` (Sound);\n- `fabio:TechnicalStandard` (Standard);\n- `fabio:Report` (StudyRegistration);\n- `dcmitype:Text` (Text);\n- `fabio:Workflow` (Workflow);\n- `frbr:Endeavour` (Other).\n\nThe value \"Award\" is modeled differently, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.\n\nThe value \"Instrument\" is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The general type of a resource, defined from the DataCite controlled list."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has general resource type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://purl.org/spar/fabio/Model"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Dataset"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Collection"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#Endeavour"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/ConferenceProceedings"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Thesis"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/StillImage"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/ResourcePaper"
+      },
+      {
+        "@id": "http://purl.org/spar/fr/ReviewVersion"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Report"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/InteractiveResource"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Software"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/MovingImage"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/ConferencePaper"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/JournalArticle"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Text"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Journal"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Workflow"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/DataManagementPlan"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/ConferencePoster"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Preprint"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Service"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/ProjectPlan"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Presentation"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/PhysicalObject"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Book"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Sound"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/ReportDocument"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/LaboratoryNotebook"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Event"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/BookChapter"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/TechnicalStandard"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/dc/terms/type"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasIdentifier"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+      }
+    ]
+  }
+]

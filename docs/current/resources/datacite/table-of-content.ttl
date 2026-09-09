@@ -1,0 +1,23 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:table-of-content a datacite:DescriptionType,
+        owl:NamedIndividual ;
+    rdfs:label "table of content"@en ;
+    vann:example """
+        :my-resource-additional-info
+                datacite:hasDescriptionType datacite:table-of-content .
+        """ ;
+    vaem:rationale """
+This is used to represent the description type "Table Of Content".
+        """@en ;
+    rdfs:comment "A table of content giving information about the content of a resource, appearing before the body text. Where the resource is a journal or magazine issue, the table of content lists the constituent items contained in that issue, typically by title, authors and first page number."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:seeAlso <http://purl.org/spar/doco/TableOfContents> ;
+    vs:term_status reg:statusStable .
+

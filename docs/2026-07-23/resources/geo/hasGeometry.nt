@@ -1,0 +1,9 @@
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/vocab/vann/example> "\n        :my-dataset-location a geo:Feature ;\n                geo:hasGeometry :my-dataset-location-point .\n        \n        :my-dataset-location-point a sf:Point ;\n                geo:asWKT \"POINT(20 45)\"^^geo:wktLiteral .\n        " .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry"@en .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to link a spatial entity to its geolocation point, which can be expressed in terms of longitude and latitude.\n\nThe point (i.e., an individual of the class `sf:Point`) defining the location of the resource under consideration. \nThe actual value of the point can be defined by means of the property geo:asWKT, which allows the specification of the coordinates of the point.\n        "@en .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial representation for a given feature."@en .

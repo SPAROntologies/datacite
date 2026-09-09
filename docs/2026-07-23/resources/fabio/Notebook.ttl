@@ -1,0 +1,10 @@
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fabio:Notebook a owl:Class ;
+    rdfs:label "notebook"@en ;
+    rdfs:comment "A book containing personal notes, typically created by writing into a physical book with blank pages."@en ;
+    rdfs:isDefinedBy fabio: ;
+    rdfs:subClassOf fabio:Book .
+

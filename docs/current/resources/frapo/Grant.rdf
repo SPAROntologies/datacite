@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/cerif/frapo/Grant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A financial award by a funding agency for a particular project or purpose, usually awarded on the basis of a competitive application.</rdfs:comment>
+    <rdfs:label xml:lang="en">grant</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/cerif/frapo/Funding"/>
+    <vaem:rationale xml:lang="en">
+This is used to specify the grant or award number associated with the funding awarded by some funder agent. 
+More specifically, a foaf:Agent awards (`frapo:awards`) a grant (`frapo:Grant`) with a certain number associated to it (`frapo:hasGrantNumber`).
+        </vaem:rationale>
+    <vann:example>
+        :european-commission
+                frapo:awards :eu-grant .
+
+        :eu-grant a frapo:Grant ;
+                frapo:hasGrantNumber "282625" .
+        </vann:example>
+  </rdf:Description>
+</rdf:RDF>

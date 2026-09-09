@@ -1,0 +1,23 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wgs1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+wgs1:lat a owl:DatatypeProperty ;
+    rdfs:label "has latitude"@en ;
+    vann:example """
+        :inner-point a geo:Geometry ;
+                wgs:lat "20" .
+        """ ;
+    vaem:rationale """
+This is used to express the WGS84 latitude of a geographical feature in decimal degrees.
+        """@en ;
+    rdfs:comment "The WGS84 latitude of a thing, expressed in decimal degrees."@en ;
+    rdfs:domain wgs1:SpatialThing ;
+    rdfs:isDefinedBy wgs1: ;
+    rdfs:range rdfs:Literal ;
+    vs:term_status reg:statusStable .
+

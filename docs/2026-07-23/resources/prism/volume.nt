@@ -1,0 +1,9 @@
+<http://prismstandard.org/namespaces/basic/2.0/volume> <http://www.w3.org/2000/01/rdf-schema#label> "has volume"@en .
+<http://prismstandard.org/namespaces/basic/2.0/volume> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://prismstandard.org/namespaces/basic/2.0/volume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://prismstandard.org/namespaces/basic/2.0/volume> <http://www.w3.org/2004/02/skos/core#note> "\nProvided for basic bibliographic citations. The content should not contain “Vol.” or other abbreviations for “Volume”; it should only be the alphanumeric volume identifier. \nThe Number portion of the issue identification is specified in the prism:number element.\n        "@en .
+<http://prismstandard.org/namespaces/basic/2.0/volume> <http://www.w3.org/2000/01/rdf-schema#comment> "Additional identifier for the publication where the resource appeared, providing the Volume portion of the common Volume, Number scheme."@en .
+<http://prismstandard.org/namespaces/basic/2.0/volume> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the volume number of a resource.\n        "@en .
+<http://prismstandard.org/namespaces/basic/2.0/volume> <http://purl.org/vocab/vann/example> "\n        :related-item\n            prism:volume \"1\" . \n        " .
+<http://prismstandard.org/namespaces/basic/2.0/volume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://prismstandard.org/namespaces/basic/2.0/> .
+<http://prismstandard.org/namespaces/basic/2.0/volume> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .

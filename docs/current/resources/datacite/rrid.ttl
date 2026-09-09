@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:rrid a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "rrid"@en ;
+    fabio:hasURL "https://scicrunch.org/resolver"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:rrid ;
+                literal:hasLiteralValue "RRID:AB_262044" .
+        """ ;
+    rdfs:comment "The Research Resource IDentifier (RRID) is a character string used to uniquely identify key inputs to an experiment including the so-called “key biological resources” as defined by the National Institutes of Health, and related tools such as core facilities and databases."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "An RRID name is divided into two parts, the authority and a local identifier, separated by an underscore."@en .
+

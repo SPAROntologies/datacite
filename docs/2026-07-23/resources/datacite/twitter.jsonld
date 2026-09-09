@@ -1,0 +1,47 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/twitter",
+    "@type": [
+      "http://purl.org/spar/datacite/AgentIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://purl.org/spar/fabio/hasURL": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://twitter.com/"
+      }
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :silvio-peroni-id ;\n                datacite:usesIdentifierScheme datacite:twitter ;\n                literal:hasLiteralValue \"@essepuntato\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Twitter handle is the unique identifier assigned to Twitter users."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "twitter"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "A Twitter handle is resolvable from the following URL: https://twitter.com/<identifier>."
+      }
+    ]
+  }
+]

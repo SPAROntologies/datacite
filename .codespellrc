@@ -1,0 +1,4 @@
+[codespell]
+skip = .git*,*.css,*.min.*,.codespellrc, ./venv, ./.venv
+check-hidden = true
+ignore-words-list = ""

@@ -1,0 +1,28 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcterms:format a owl:ObjectProperty ;
+    rdfs:label "has format" ;
+    vann:example """
+        datacite:spar
+                dcterms:format <https://w3id.org/spar/mediatype/text/turtle> .
+
+        <https://w3id.org/spar/mediatype/text/turtle> a dcterms:MediaTypeOrExtent .
+        """ ;
+    vaem:rationale """
+This should be used if the type of the relation between two resources refers to the association of metadata by one to the other.
+This allows to declare the particular format in which the metadata in the metadata document are stored. 
+The format should be defined as an individual of the class `dcterms:MediaTypeOrExtent`.
+
+Instead of creating a new media type every time, it is strongly suggested to reuse those already available in existing datasets, such as the “Media type as Linked Open Data” dataset (https://w3id.org/spar/mediatype).
+        """@en ;
+    rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
+    rdfs:isDefinedBy dcterms: ;
+    rdfs:range dcterms:MediaTypeOrExtent ;
+    vs:term_status reg:statusStable .
+

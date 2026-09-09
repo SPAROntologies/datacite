@@ -1,0 +1,8 @@
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#label> "awards"@en .
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/cerif/frapo/awards> <http://purl.org/vocab/vann/example> "\n        :european-commission\n            frapo:awards :eu-grant .\n\n        :eu-grant a frapo:Grant ;\n            frapo:hasGrantNumber \"282625\" .\n        " .
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#comment> "Something an agent awards, for example a grant awarded by a funding agency, a degree by a university, or a prize by an organization."@en .
+<http://purl.org/cerif/frapo/awards> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the grant or award number associated with the funding awarded by some funder agent. \nMore specifically, a `foaf:Agent` awards (`frapo:awards`) a grant (`frapo:Grant`) with a certain number associated to it (`frapo:hasGrantNumber`).\n        \nThis property is also used to express the fact that a related resource is an award. \nMore specifically, this is modelled using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.\n        "@en .
+<http://purl.org/cerif/frapo/awards> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .

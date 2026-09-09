@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/workpackage-leader">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ProjectRole"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">The role a person or institution has of being leader for a workpackage or sub-project within a project such as a research project, with responsibility for ensuring that the proposed work is undertaken and documented, the generated data are properly curated and archived, and the results are published and reported to the funding agency.</rdfs:comment>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given agent role type ("Workpackage Leader").
+        </vaem:rationale>
+    <rdfs:label xml:lang="en">workpackage leader</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
+    <vann:example>
+        :silvio-peroni
+                pro:holdsRoleInTime :workpackage-leader-for-my-dataset .
+        
+        :workpackage-leader-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:workpackage-leader .
+        </vann:example>
+  </rdf:Description>
+</rdf:RDF>

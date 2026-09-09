@@ -1,0 +1,23 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:methods a datacite:DescriptionType,
+        owl:NamedIndividual ;
+    rdfs:label "methods"@en ;
+    vann:example """
+        :my-resource-additional-info
+                datacite:hasDescriptionType datacite:methods .
+        """ ;
+    vaem:rationale """
+This is used to represent the description type "Methods".
+        """@en ;
+    rdfs:comment "A description in a research paper documenting the specialized methods used in the work described."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:seeAlso <http://purl.org/spar/deo/Methods> ;
+    vs:term_status reg:statusStable .
+

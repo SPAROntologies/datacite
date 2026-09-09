@@ -1,0 +1,89 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/PersonalIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :david-shotton a foaf:Person ;\n                datacite:hasIdentifier :david-shotton-id .\n\n        :david-shotton-id a datacite:PersonalIdentifier ;\n                literal:hasLiteralValue \"0000-0001-5506-523X\" .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to represent identifiers associated with people, modelled as instances of `foaf:Person`.\n\nA personal identifier belongs to a particular identifier scheme, such as ORCID, specified by an individual within the class `datacite:PersonalIdentifierScheme`.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An identifier that uniquely identifies an individual person."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "personal identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
+      },
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b24"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b24",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/PersonalIdentifierScheme"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b54",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/datacite/FunderIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/RightsIdentifier"
+          }
+        ]
+      }
+    ]
+  }
+]

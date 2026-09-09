@@ -1,0 +1,7 @@
+<http://purl.org/spar/datacite/url> <http://www.w3.org/2000/01/rdf-schema#comment> "The Uniform Resource Locator (URL) is a unique identifier for a resource retrievable on the World Wide Web."@en .
+<http://purl.org/spar/datacite/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/url> <http://purl.org/vocab/vann/example> "\n        :my-resource-id ;\n                datacite:usesIdentifierScheme datacite:url ;\n                literal:hasLiteralValue \"https://www.sparontologies.net/\" .\n        " .
+<http://purl.org/spar/datacite/url> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/url> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/url> <http://www.w3.org/2000/01/rdf-schema#label> "url"@en .

@@ -1,0 +1,26 @@
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcmitype:StillImage a owl:Class ;
+    rdfs:label "still image"@en ;
+    vann:example """
+        :my-resource
+                datacite:hasGeneralResourceType dcmitype:StillImage .        
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given general resource type ("Image").
+        """@en ;
+    rdfs:comment "A static visual representation."@en ;
+    rdfs:isDefinedBy dcmitype: ;
+    rdfs:subClassOf dcmitype:Image ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+Examples include paintings, drawings, graphic designs, plans and maps. Recommended best practice is to assign the type Text to images of textual materials. Instances of the type Still Image must also be describable as instances of the broader type Image.        
+        """@en .
+

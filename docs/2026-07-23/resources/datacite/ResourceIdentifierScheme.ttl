@@ -1,0 +1,33 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:ResourceIdentifierScheme a owl:Class ;
+    rdfs:label "resource identifier scheme"@en ;
+    vann:example """
+        :my-resource
+                datacite:hasIdentifier :my-resource-id .
+
+        :my-resource-id a datacite:ResourceIdentifier ;
+                datacite:usesIdentifierScheme datacite:doi .
+        
+        datacite:doi a datacite:ResourceIdentifierScheme .
+        """ ;
+    vaem:rationale """
+This is used to specify the identifier scheme used by a resource identifier.
+
+Individual schemes are defines as members of this class. 
+For DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier (`datacite:doi`).
+        """@en ;
+    rdfs:comment "The identifier scheme used to identify a resource."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf datacite:usesIdentifierScheme ] ;
+            owl:someValuesFrom datacite:ResourceIdentifier ],
+        datacite:IdentifierScheme ;
+    vs:term_status reg:statusStable .
+

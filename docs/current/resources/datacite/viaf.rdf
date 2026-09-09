@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/viaf">
+    <vann:example>
+        :david-shotton-id ;
+                datacite:usesIdentifierScheme datacite:viaf ;
+                literal:hasLiteralValue "7484794" .
+        </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <skos:note xml:lang="en">A VIAF identifier is resolvable from the following URL: http://viaf.org/&lt;identifier&gt;.</skos:note>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <rdfs:comment xml:lang="en">The Virtual International Authority File (VIAF) is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC). It contains information about many topics including personal names.</rdfs:comment>
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</fabio:hasURL>
+    <rdfs:label xml:lang="en">viaf</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

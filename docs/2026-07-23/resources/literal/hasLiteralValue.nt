@@ -1,0 +1,10 @@
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.essepuntato.it/2010/06/literalreification/Literal> .
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/literal/> .
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://purl.org/vocab/vann/example> "\n        :my-literal a literal:Literal ;\n                literal:hasLiteralValue \"0000-0002-0799-1527\"^^rdfs:Literal .\n        " .
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to express the actual content of a reified literal (modelled via the class `literal:Literal`).\n        "@en .
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#label> "has literal value"@en .
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value that a reified literal represents."@en .
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.essepuntato.it/2010/06/literalreification/hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .

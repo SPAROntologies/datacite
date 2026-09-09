@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:loc a datacite:IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "loc"@en ;
+    fabio:hasURL "https://id.loc.gov/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:loc ;
+                literal:hasLiteralValue "sh2010112128" .
+        """ ;
+    rdfs:comment "The Library of Congress (LoC) authority identifier is a unique identifier used for authority control in the Library of Congress."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A Library of Congress authority identifier is resolvable from the following URL: https://id.loc.gov/authorities/<identifier>."@en .
+

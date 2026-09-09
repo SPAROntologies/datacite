@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:fabio="http://purl.org/spar/fabio/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/ivoid">
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ivoa.net/documents/IVOAIdentifiers/</fabio:hasURL>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <skos:note xml:lang="en">These identifiers are RFC 3986-compliant URIs with a scheme of ivo. Thus, their generic form is: ivo://&lt;authority&gt;&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt;.</skos:note>
+    <rdfs:comment xml:lang="en">The IVOA identifier (IVOID) is the identifier of resources within the resource registry (datasets, data access services, etc.) maintained by the International Virtual Observatory Alliance (IVOA).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
+    <vann:example>
+        :my-resource-id
+                datacite:usesIdentifierScheme datacite:ivoid ;
+                literal:hasLiteralValue "ivo://org.gavo.dc/~?flashheros/data/ca92/f0065.mt." .
+        </vann:example>
+    <rdfs:label>ivoid</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:gnd a datacite:IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "gnd"@en ;
+    fabio:hasURL "https://gnd.network/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:gnd ;
+                literal:hasLiteralValue "7749153-1" .
+        """ ;
+    rdfs:comment "The Gemeinsame Normdatei (GND) identifier is a unique key assigned to authority data managed by the German National Library."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A Gemeinsame Normdatei identifier is resolvable from the following URL: https://d-nb.info/gnd/<identifier>."@en .
+

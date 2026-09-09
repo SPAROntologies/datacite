@@ -1,0 +1,10 @@
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fabio:Periodical a owl:Class ;
+    rdfs:label "periodical"@en ;
+    rdfs:comment "A publication issued on a regular and ongoing basis as a series of issues, each issue comprising separate periodical items, for example editorials, articles, news items and/or other writings."@en ;
+    rdfs:isDefinedBy fabio: ;
+    rdfs:subClassOf fabio:Book .
+

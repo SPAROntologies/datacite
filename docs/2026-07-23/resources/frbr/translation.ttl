@@ -1,0 +1,29 @@
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+frbr:translation a owl:ObjectProperty ;
+    rdfs:label "has translation"@en ;
+    vann:example """
+        :relation-dataset-article a datacite:QualifiedRelation ;
+                datacite:hasRelationCharacterization frbr:translation .
+        """ ;
+    vaem:rationale """
+This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("HasTranslation") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+        """@en ;
+    rdfs:comment """
+An expression translated in another one.
+        """@en ;
+    rdfs:isDefinedBy frbr: ;
+    rdfs:subPropertyOf frbr:relatedEndeavour ;
+    owl:inverseOf frbr:translationOf ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+It allows to refer to a literal translation, in which the intent is to render the intellectual content of the previous expression as accurately as possible.
+        """@en .
+

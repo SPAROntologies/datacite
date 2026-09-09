@@ -1,0 +1,25 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+dcterms:MediaTypeOrExtent a owl:Class ;
+    rdfs:label "media type or extent"@en ;
+    vann:example """
+        datacite:spar
+                dcterms:format <https://w3id.org/spar/mediatype/text/turtle> .
+
+        <https://w3id.org/spar/mediatype/text/turtle> a dcterms:MediaTypeOrExtent .
+    """ ;
+    vaem:rationale """
+This is used to represent the particular format in which the metadata in a metadata document are stored. 
+
+Instead of creating a new media type every time, it is strongly suggested to reuse those already available in existing datasets, such as the “Media type as Linked Open Data” dataset (https://w3id.org/spar/mediatype).
+    """ ;
+    rdfs:comment "A media type or extent."@en ;
+    rdfs:isDefinedBy dcterms: ;
+    vs:term_status reg:statusStable .
+

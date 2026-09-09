@@ -1,0 +1,26 @@
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+frapo:Grant a owl:Class ;
+    rdfs:label "grant"@en ;
+    vann:example """
+        :european-commission
+                frapo:awards :eu-grant .
+
+        :eu-grant a frapo:Grant ;
+                frapo:hasGrantNumber "282625" .
+        """ ;
+    vaem:rationale """
+This is used to specify the grant or award number associated with the funding awarded by some funder agent. 
+More specifically, a foaf:Agent awards (`frapo:awards`) a grant (`frapo:Grant`) with a certain number associated to it (`frapo:hasGrantNumber`).
+        """@en ;
+    rdfs:comment "A financial award by a funding agency for a particular project or purpose, usually awarded on the basis of a competitive application."@en ;
+    rdfs:isDefinedBy frapo: ;
+    rdfs:subClassOf frapo:Funding ;
+    vs:term_status reg:statusStable .
+

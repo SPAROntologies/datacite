@@ -1,0 +1,7 @@
+<http://purl.org/spar/fr/ReviewVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "A version of a given review, defining its content and rating, which may vary over the time."@en .
+<http://purl.org/spar/fr/ReviewVersion> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType fr:ReviewVersion .\n        " .
+<http://purl.org/spar/fr/ReviewVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fr/ReviewVersion> <http://www.w3.org/2000/01/rdf-schema#label> "review version"@en .
+<http://purl.org/spar/fr/ReviewVersion> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/fr/ReviewVersion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fr/> .
+<http://purl.org/spar/fr/ReviewVersion> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Peer Review\").\n        "@en .

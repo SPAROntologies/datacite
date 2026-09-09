@@ -1,0 +1,30 @@
+[
+  {
+    "@id": "http://www.opengis.net/ont/geosparql#Geometry",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A coherent set of direct positions in space."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "geometry"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#SpatialObject"
+      }
+    ]
+  }
+]

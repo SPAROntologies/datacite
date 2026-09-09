@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix schema: <https://schema.org/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+schema:instrument a owl:ObjectProperty ;
+    rdfs:label "instrument"@en ;
+    vann:example """
+        :my-analysis-action a schema:Action ;
+                schema:instrument :my-resource .
+        
+        :my-resource a frbr:Endeavour .
+        """ ;
+    vaem:rationale """
+This is used to model the fact that a related source is an instrument.
+More specifically, an instance of `schema:Action` is used, connected to a `frbr:Endeavour` via the property `schema:instrument`.
+        """@en ;
+    rdfs:comment """
+The object that helped the agent perform the action."""@en ;
+    rdfs:isDefinedBy schema: ;
+    rdfs:range schema:Action ;
+    vs:term_status reg:statusStable .
+

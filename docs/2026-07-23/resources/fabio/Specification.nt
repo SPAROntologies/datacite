@@ -1,0 +1,5 @@
+<http://purl.org/spar/fabio/Specification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/Specification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/Specification> <http://www.w3.org/2000/01/rdf-schema#comment> "An explicit description of, or set of requirements to be satisfied by, a material, product, resource, service or standard."@en .
+<http://purl.org/spar/fabio/Specification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> .
+<http://purl.org/spar/fabio/Specification> <http://www.w3.org/2000/01/rdf-schema#label> "specification"@en .

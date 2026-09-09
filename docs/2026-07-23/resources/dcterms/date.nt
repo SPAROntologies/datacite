@@ -1,0 +1,4 @@
+<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#comment> "A point or period of time associated with an event in the lifecycle of the resource."@en .
+<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#label> "has date"@en .
+<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .

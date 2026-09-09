@@ -1,0 +1,83 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pro:Role a owl:Class ;
+    rdfs:label "role"@en ;
+    vann:example """
+        :silvio-peroni
+                pro:holdsRoleInTime :contact-person-for-my-dataset .
+        
+        :contact-person-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:contact-person .
+
+        scoro:contact-person a pro:Role .
+        """ ;
+    vaem:rationale """
+All but three of the allowed values in the DataCite controlled list terms for contributor type are defined by individual members of the class `pro:Role` in [PRO](http://purl.org/spar/pro), or of its sub-classes in [SCORO](http://purl.org/spar/scoro):
+
+- `scoro:contact-person` (Contact Person)
+- `scoro:data-creator` (Data Collector)
+- `scoro:data-curator` (Data Curator)
+- `scoro:data-manager` (Data Manager)
+- `pro:distributor` (Distributor)
+- `pro:editor` (Editor)
+- `scoro:host-institution` (Hosting Institution)
+- `pro:producer` (Producer)
+- `scoro:project-leader` (Project Leader)
+- `scoro:project-manager` (Project Manager)
+- `scoro:project-member` (Project Member)
+- `scoro:registrar` (Registration Agency)
+- `scoro:registration-authority` (Registration Authority)
+- `scoro:researcher` (Researcher)
+- `scoro:rights-holder` (Rights Holder)
+- `scoro:sponsor` (Sponsor)
+- `scoro:supervisor` (Supervisor)
+- `pro:translator` (Translator)
+- `scoro:workpackage-leader` (Workpackage Leader)
+
+The remaining two, i.e., “RelatedPerson” and “ResearchGroup”, can be specified as a type (by means of the property `rdf:type`) of the contributor under consideration by means of the following classes respectively:
+- `foaf:Person` (Related Person)
+- `frapo:ResearchGroup` (Research Group)
+
+Note that many other individuals not required for DataCite metadata also exist within these [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) classes, e.g., `pro:copy-editor` and `scoro:principal-investigator`, and new individuals can easily be added to those ontologies, giving great flexibility.
+        """@en ;
+    rdfs:comment "A role an agent may have."@en ;
+    rdfs:isDefinedBy pro: ;
+    rdfs:seeAlso frapo:ResearchGroup,
+        pro:distributor,
+        pro:editor,
+        pro:producer,
+        pro:translator,
+        scoro:contact-person,
+        scoro:data-creator,
+        scoro:data-curator,
+        scoro:data-manager,
+        scoro:host-institution,
+        scoro:project-leader,
+        scoro:project-manager,
+        scoro:project-member,
+        scoro:registrar,
+        scoro:registration-authority,
+        scoro:researcher,
+        scoro:rights-holder,
+        scoro:sponsor,
+        scoro:supervisor,
+        scoro:workpackage-leader,
+        foaf:Person ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+Since roles have contexts and time constraints that are important to take into account (for example, a person can be author of one paper and reviewer of another, while another person will be editor of a journal only for a defined period, not for ever), the [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) ontologies permit these contexts to be specified, using the Time-indexed Value in Context ([TVC](http://www.essepuntato.it/2012/04/tvc/)) ontological design pattern.  
+
+Thus, the domain of `pro:withRole` is not `foaf:Agent`, but rather a member of the class `pro:RoleInTime`, which itself is the range of the property `pro:holdsRoleInTime`, for which the domain is `foaf:Agent` (i.e., our contributor).
+        """@en .
+

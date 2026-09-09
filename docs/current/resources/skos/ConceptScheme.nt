@@ -1,0 +1,9 @@
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core#> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2004/02/skos/core#note> "A concept scheme may be defined to include concepts from different sources."@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent subject schemes that classify subjects in some way.\n        "@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "concept scheme"@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://purl.org/vocab/vann/example> "\n        :my-scheme a skos:ConceptScheme ;\n                skos:prefLabel \"Dewey Decimal Classification\"@en .\n        " .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2004/02/skos/core#Concept> .

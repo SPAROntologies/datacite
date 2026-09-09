@@ -1,0 +1,34 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:ResourceIdentifier a owl:Class ;
+    rdfs:label "resource identifier"@en ;
+    vann:example """
+        :my-resource
+                datacite:hasIdentifier :my-resource-id .
+
+        :my-resource-id a datacite:ResourceIdentifier ;
+                literal:hasLiteralValue "10.3457/1098.a45" .
+    """ ;
+    vaem:rationale """
+This is used to represent identifiers associated with resources.
+
+An alternate resource identifier belongs to a particular scheme, such as ISBN, specified by an individual that is a member of the class `datacite:ResourceIdentifierScheme`.
+        """@en ;
+    rdfs:comment "An identifier that is used to uniquely identify a resource."@en ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom datacite:ResourceIdentifierScheme ;
+            owl:onProperty datacite:usesIdentifierScheme ],
+        datacite:Identifier ;
+    vs:term_status reg:statusStable .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( datacite:FunderIdentifier datacite:PersonalIdentifier datacite:ResourceIdentifier datacite:RightsIdentifier ) .
+

@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+pro:producer a pro:PublishingRole,
+        owl:NamedIndividual ;
+    rdfs:label "producer"@en ;
+    vann:example """
+        :silvio-peroni
+                pro:holdsRoleInTime :producer-for-my-dataset .
+        
+        :producer-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole pro:producer .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given agent role type ("Producer").
+        """@en ;
+    rdfs:comment "The role of someone who acts as a producer."@en ;
+    rdfs:isDefinedBy pro: ;
+    vs:term_status reg:statusStable .
+

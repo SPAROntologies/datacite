@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:spase a datacite:IdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "spase" ;
+    fabio:hasURL "https://spase-group.org/services/"^^xsd:anyURI ;
+    vann:example """
+        :my-object-id
+                datacite:usesIdentifierScheme datacite:spase ;
+                literal:hasLiteralValue "spase://Example/NumericalData/MagProbe-1/Mag/PT1D" .
+        """ ;
+    rdfs:comment "The SPASE resource identifier is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group." ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://<authority><path>."@en .
+

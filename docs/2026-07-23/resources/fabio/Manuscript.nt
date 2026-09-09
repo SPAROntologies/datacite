@@ -1,0 +1,5 @@
+<http://purl.org/spar/fabio/Manuscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .
+<http://purl.org/spar/fabio/Manuscript> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/Manuscript> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual work prepared \"by hand\", such as a typescript or word-processed pre-publication draft of a research paper or a report, or a work not otherwise reproduced in multiple copies."@en .
+<http://purl.org/spar/fabio/Manuscript> <http://www.w3.org/2000/01/rdf-schema#label> "manuscript"@en .
+<http://purl.org/spar/fabio/Manuscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

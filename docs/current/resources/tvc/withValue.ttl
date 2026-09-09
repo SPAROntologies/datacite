@@ -1,0 +1,10 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
+
+tvc:withValue a owl:ObjectProperty ;
+    rdfs:label "with value"@en ;
+    rdfs:comment "The value had by the entity taking part to the situation."@en ;
+    rdfs:domain tvc:ValueInTime ;
+    rdfs:isDefinedBy <http://purl.org/spar/tvc/> .
+

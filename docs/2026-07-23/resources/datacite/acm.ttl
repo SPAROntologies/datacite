@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:acm a datacite:PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "acm"@en ;
+    fabio:hasURL "https://dl.acm.org/"^^xsd:anyURI ;
+    vann:example """
+        :silvio-peroni-id 
+                datacite:usesIdentifierScheme datacite:acm ;
+                literal:hasLiteralValue "81442604750" .
+        """ ;
+    rdfs:comment "An ACM Digital Library author ID is a unique identifier found within an ACM Author Profile Page, which consolidates an researcher's publications, citations, and metadata."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "The ACM Digital Library author ID is resolvable using the following URL: https://dl.acm.org/profile/<identifier>."@en .
+

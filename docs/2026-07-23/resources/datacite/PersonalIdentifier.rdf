@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/PersonalIdentifier">
+    <rdfs:label xml:lang="en">personal identifier</rdfs:label>
+    <vaem:rationale xml:lang="en">
+This is used to represent identifiers associated with people, modelled as instances of `foaf:Person`.
+
+A personal identifier belongs to a particular identifier scheme, such as ORCID, specified by an individual within the class `datacite:PersonalIdentifierScheme`.
+        </vaem:rationale>
+    <vann:example>
+        :david-shotton a foaf:Person ;
+                datacite:hasIdentifier :david-shotton-id .
+
+        :david-shotton-id a datacite:PersonalIdentifier ;
+                literal:hasLiteralValue "0000-0001-5506-523X" .
+        </vann:example>
+    <rdfs:comment xml:lang="en">An identifier that uniquely identifies an individual person.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifier"/>
+    <rdfs:subClassOf rdf:nodeID="n16082fa6811145e08dfaeb8890637028b24"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b24">
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/datacite/PersonalIdentifierScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b58">
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/RightsIdentifier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b56">
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b57"/>
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/PersonalIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b57">
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b58"/>
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b54">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="n16082fa6811145e08dfaeb8890637028b55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b55">
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/FunderIdentifier"/>
+    <rdf:rest rdf:nodeID="n16082fa6811145e08dfaeb8890637028b56"/>
+  </rdf:Description>
+</rdf:RDF>

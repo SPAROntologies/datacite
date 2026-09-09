@@ -1,0 +1,36 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/nii",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/PersonalIdentifierScheme"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :shizumu-nomura-id\n                datacite:usesIdentifierScheme datacite:nii ;\n                literal:hasLiteralValue \"9000363887724\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The National Individual Identifier (NII) is a unique number assigned to citizens, residents and visitors for tracking and verification purposes."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "nii"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

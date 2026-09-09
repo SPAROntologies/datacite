@@ -1,0 +1,30 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+frapo:awards a owl:ObjectProperty ;
+    rdfs:label "awards"@en ;
+    vann:example """
+        :european-commission
+            frapo:awards :eu-grant .
+
+        :eu-grant a frapo:Grant ;
+            frapo:hasGrantNumber "282625" .
+        """ ;
+    vaem:rationale """
+This is used to specify the grant or award number associated with the funding awarded by some funder agent. 
+More specifically, a `foaf:Agent` awards (`frapo:awards`) a grant (`frapo:Grant`) with a certain number associated to it (`frapo:hasGrantNumber`).
+        
+This property is also used to express the fact that a related resource is an award. 
+More specifically, this is modelled using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.
+        """@en ;
+    rdfs:comment "Something an agent awards, for example a grant awarded by a funding agency, a degree by a university, or a prize by an organization."@en ;
+    rdfs:domain foaf:Agent ;
+    rdfs:isDefinedBy frapo: ;
+    vs:term_status reg:statusStable .
+

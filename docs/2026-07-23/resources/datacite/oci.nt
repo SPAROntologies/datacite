@@ -1,0 +1,8 @@
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/2000/01/rdf-schema#comment> "The Open Citation Identifier (OCI) is a persistent identifier for bibliographic citations, created and maintained by OpenCitations (http://opencitations.net)."@en .
+<http://purl.org/spar/datacite/oci> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:oci ;\n                literal:hasLiteralValue \"06101801781-06180334099\" .\n        " .
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/2000/01/rdf-schema#label> "oci"@en .
+<http://purl.org/spar/datacite/oci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/oci> <http://purl.org/spar/fabio/hasURL> "https://registry.identifiers.org/registry/oci"^^<http://www.w3.org/2001/XMLSchema#anyURI> .

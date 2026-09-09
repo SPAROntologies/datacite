@@ -1,0 +1,89 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/FunderIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-funder a foaf:Organization ;\n                datacite:hasIdentifier :my-funder-id .\n\n        :my-funder-id a datacite:FunderIdentifier ;\n                literal:hasLiteralValue \"10.13039/5011000059696\" .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to represent identifiers associated with funding agencies, modelled as instances of `foaf:Organization`.\n\nA funder identifier belongs to a particular scheme, such as FundRef, specified by an individual within the class `datacite:FunderIdentifierScheme`.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An identifier that uniquely identities a funding agency."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "funder identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b22"
+      },
+      {
+        "@id": "http://purl.org/spar/datacite/AgentIdentifier"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://purl.org/spar/datacite/FunderIdentifierScheme"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b54",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/datacite/FunderIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/RightsIdentifier"
+          }
+        ]
+      }
+    ]
+  }
+]

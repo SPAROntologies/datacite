@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/type">
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/available"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/issued"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/dateCopyrighted"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/valid"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/modified"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/temporal"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/created"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/date"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/fabio/hasRetractionDate"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/dateAccepted"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/dateSubmitted"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/fabio/hasDateCollected"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vann:example>
+        :my-dataset
+                literal:hasLiteral :my-dataset-date .
+
+        :my-dataset-date 
+                literal:hasLiteralValue "2012-07-04"^^xsd:date ;
+                dcterms:type dcterms:date .
+        </vann:example>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vaem:rationale xml:lang="en">
+In DataCite, since it is possible to attach information to dates, these must be modelled as entities themselves. 
+The date itself is a `literal:Literal`, with its actual value expressed via `literal:hasLiteralValue` and its type (represented by the property it would be used otherwise if the date were not reified) through `dcterms:type`.
+The properties that can be used in combination with OWL 2 punning to express a particular type for the date are the following:
+
+- `dcterms:dateAccepted` (Accepted)
+- `dcterms:available` (Available)
+- `dcterms:dateCopyrighted` (Copyrighted)
+- `fabio:hasDateCollected` (Collected)
+- `dcterms:temporal` (Coverage)
+- `dcterms:created` (Created)
+- `dcterms:issued` (Issued)
+- `dcterms:dateSubmitted` (Submitted)
+- `dcterms:modified` (Updated)
+- `dcterms:valid` (Valid)
+- `fabio:hasRetractionDate` (Withdrawn)
+
+The value associated with one of these data properties should be provided in conformity with one of three alternative XML Schema datatypes, i.e., `xsd:date`, `xsd:gYear` or `xsd:dateTime`.
+        </vaem:rationale>
+    <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdfs:label xml:lang="en">has type</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

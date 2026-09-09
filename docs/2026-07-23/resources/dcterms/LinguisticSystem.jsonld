@@ -1,0 +1,40 @@
+[
+  {
+    "@id": "http://purl.org/dc/terms/LinguisticSystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-dataset-en a dcterms:LinguisticSystem ;\n                dcterms:description \"en\"^^dcterms:RFC5646 .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to represent a language. \nThe language should always be specified by means of appropriate individuals belonging to the class `dcterms:LinguisticSystem`, and its value should be specified according to a standardised language code as specified in RFC 5646 (http://www.ietf.org/rfc/rfc5646.txt). \nIn particular, it is possible to specify values taken from IETF BCP 47, ISO 639-1 language codes (e.g., `en`, `it`, and `fr`). \nThe language code can be associated by means of the property `dcterms:description` typed with the `dcterms:RFC5646` datatype.\n\nIt is possible, of course, to use directly the resources specified in http://lexvo.org/id/iso639-3/ for languages (e.g., http://lexvo.org/id/iso639-3/eng for English), instead of defining new ones.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A written, spoken, sign, or computer language."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/dc/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "linguistic system"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  }
+]

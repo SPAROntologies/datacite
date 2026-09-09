@@ -1,0 +1,70 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/RightsIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource-rights \n                datacite:hasIdentifier :my-resource-rights-id .\n\n        :my-resource-rights-id a datacite:RightsIdentifier ;\n                literal:hasLiteralValue \"CC-BY-1.0\" .\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An identifier that uniquely identifies a license."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "rights identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/spar/datacite/Identifier"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to represent identifiers associated with rights.\n\nA rights identifier belongs to a particular scheme, such as SPDX, specified by an individual within the class `datacite:RightsIdentifierScheme`.\n        "
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b54",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/spar/datacite/FunderIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+          },
+          {
+            "@id": "http://purl.org/spar/datacite/RightsIdentifier"
+          }
+        ]
+      }
+    ]
+  }
+]

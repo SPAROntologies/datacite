@@ -1,0 +1,103 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix fr: <http://purl.org/spar/fr/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:hasGeneralResourceType a owl:ObjectProperty ;
+    rdfs:label "has general resource type"@en ;
+    vann:example """
+        :my-resource
+                datacite:hasGeneralResourceType dcmitype:Dataset .
+    """ ;
+    vaem:rationale """
+All DataCite-required general resource type terms are defined by classes in the [Dublin Core Type Vocabulary](http://purl.org/dc/dcmitype/), in [FaBiO](http://purl.org/spar/fabio) and in the [FAIR* Reviews Ontology](http://purl.org/spar/fr), with the exception of the more general `frbr:Endeavour` (mapped to "Other").
+
+The following list specifies ontology classes for all the allowed general resource types in the DataCite Controlled List, with the relevant DataCite general type given alphabetically in parentheses:
+
+- `dcmitype:MovingImage` (Audiovisual);
+- `fabio:Book` (Book);
+- `fabio:BookChapter` (BookChapter);
+- `dcmitype:Collection` (Collection);
+- `fabio:LaboratoryNotebook` (ComputationalNotebook);
+- `fabio:ConferencePaper` (ConferencePaper);
+- `fabio:ConferenceProceedings` (ConferenceProceeding);
+- `fabio:ResourcePaper` (DataPaper);
+- `dcmitype:Dataset` (Dataset);
+- `fabio:Thesis` (Dissertation);
+- `dcmitype:Event` (Event);
+- `dcmitype:StillImage` (Image);
+- `dcmitype:InteractiveResource` (InteractiveResource);
+- `fabio:Journal` (Journal);
+- `fabio:JournalArticle` (JournalArticle);
+- `fabio:Model` (Model);
+- `fabio:DataManagementPlan` (OutputManagementPlan);
+- `fr:ReviewVersion` (PeerReview);
+- `dcmitype:PhysicalObject` (PhysicalObject);
+- `fabio:ConferencePoster` (Poster);
+- `fabio:Preprint` (Preprint);
+- `fabio:Presentation` (Presentation);
+- `fabio:ProjectPlan` (Project);
+- `fabio:ReportDocument` (Report);
+- `dcmitype:Service` (Service);
+- `dcmitype:Software` (Software);
+- `dcmitype:Sound` (Sound);
+- `fabio:TechnicalStandard` (Standard);
+- `fabio:Report` (StudyRegistration);
+- `dcmitype:Text` (Text);
+- `fabio:Workflow` (Workflow);
+- `frbr:Endeavour` (Other).
+
+The value "Award" is modeled differently, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.
+
+The value "Instrument" is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.
+        """@en ;
+    rdfs:comment "The general type of a resource, defined from the DataCite controlled list."@en ;
+    rdfs:domain [ a owl:Restriction ;
+            owl:onProperty datacite:hasIdentifier ;
+            owl:someValuesFrom datacite:ResourceIdentifier ] ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:range skos:Concept ;
+    rdfs:seeAlso dcmitype:Collection,
+        dcmitype:Dataset,
+        dcmitype:Event,
+        dcmitype:InteractiveResource,
+        dcmitype:MovingImage,
+        dcmitype:PhysicalObject,
+        dcmitype:Service,
+        dcmitype:Software,
+        dcmitype:Sound,
+        dcmitype:StillImage,
+        dcmitype:Text,
+        fabio:Book,
+        fabio:BookChapter,
+        fabio:ConferencePaper,
+        fabio:ConferencePoster,
+        fabio:ConferenceProceedings,
+        fabio:DataManagementPlan,
+        fabio:Journal,
+        fabio:JournalArticle,
+        fabio:LaboratoryNotebook,
+        fabio:Model,
+        fabio:Preprint,
+        fabio:Presentation,
+        fabio:ProjectPlan,
+        fabio:Report,
+        fabio:ReportDocument,
+        fabio:ResourcePaper,
+        fabio:TechnicalStandard,
+        fabio:Thesis,
+        fabio:Workflow,
+        fr:ReviewVersion,
+        frbr:Endeavour ;
+    rdfs:subPropertyOf dcterms:type ;
+    vs:term_status reg:statusStable .
+

@@ -1,0 +1,8 @@
+<http://purl.org/dc/terms/extent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/terms/extent> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify a possible extent for the resource under consideration, defined as an individual of the class `dcterms:SizeOrDuration`. \nWhen possible, such an individual can be accompanied by more specific data properties depending on the actual extent we are considering (e.g. `rdf:value`, `prism:pageRange`, `fabio:hasPageCount`, etc.).\n        "@en .
+<http://purl.org/dc/terms/extent> <http://www.w3.org/2000/01/rdf-schema#label> "has extent" .
+<http://purl.org/dc/terms/extent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/SizeOrDuration> .
+<http://purl.org/dc/terms/extent> <http://www.w3.org/2000/01/rdf-schema#comment> "The size or duration of the resource."@en .
+<http://purl.org/dc/terms/extent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/extent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/extent> <http://purl.org/vocab/vann/example> "\n        :my-dataset\n            dcterms:extent :my-dataset-number-of-statements .\n\n        :my-dataset-number-of-statements a dcterms:SizeOrDuration ;\n            rdf:value 146 .\n        " .

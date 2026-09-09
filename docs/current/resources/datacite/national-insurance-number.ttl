@@ -1,0 +1,19 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:national-insurance-number a datacite:PersonalIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "national insurance number"@en ;
+    vann:example """
+        :my-person-id
+                datacite:usesIdentifierScheme datacite:national-insurance-number ;
+                literal:hasLiteralValue "QQ123456C" .
+        """ ;
+    rdfs:comment "The United Kingdom National Insurance Number is a code used to uniquely identify in the tax system, banking, social welfare, online government services and electoral registration."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

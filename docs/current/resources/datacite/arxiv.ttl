@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:arxiv a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "arxiv"@en ;
+    fabio:hasURL "http://arxiv.org/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:arxiv ;
+                literal:hasLiteralValue "2505.13276" .
+        """ ;
+    rdfs:comment "The ArXiv ID is a unique identifier for ArXiv (http://arxiv.org/), a open access repository of preprints."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "An ArXiv ID is resolvable using the following URL: https://arxiv.org/abs/<identifier>." .
+

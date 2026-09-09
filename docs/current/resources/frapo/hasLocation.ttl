@@ -1,0 +1,22 @@
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+frapo:hasLocation a owl:DatatypeProperty ;
+    rdfs:label "has location"@en ;
+    vann:example """
+        :my-dataset-location 
+            frapo:hasLocation "The common area between Tuscany and Liguria" .
+        """ ;
+    vaem:rationale """
+This is used to provide a textual description for the location under consideration.
+        """@en ;
+    rdfs:comment "A relevant location, which might be geographical (e.g. _New York City_) or local (e.g. _Freezer B, second shelf_)."@en ;
+    rdfs:isDefinedBy frapo: ;
+    rdfs:range rdfs:Literal ;
+    vs:term_status reg:statusStable .
+

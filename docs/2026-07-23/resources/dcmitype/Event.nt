@@ -1,0 +1,8 @@
+<http://purl.org/dc/dcmitype/Event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcmitype/> .
+<http://purl.org/dc/dcmitype/Event> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/dc/dcmitype/Event> <http://www.w3.org/2004/02/skos/core#note> "\nMetadata for an event provides descriptive information that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event. Examples include an exhibition, webcast, conference, workshop, open day, performance, battle, trial, wedding, tea party, conflagration.\n        "@en .
+<http://purl.org/dc/dcmitype/Event> <http://www.w3.org/2000/01/rdf-schema#label> "event"@en .
+<http://purl.org/dc/dcmitype/Event> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-persistent, time-based occurrence."@en .
+<http://purl.org/dc/dcmitype/Event> <http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:Event .\n        " .
+<http://purl.org/dc/dcmitype/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/dcmitype/Event> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given general resource type (\"Event\").        \n        "@en .

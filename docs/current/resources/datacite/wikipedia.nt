@@ -1,0 +1,9 @@
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/2000/01/rdf-schema#label> "wikipedia"@en .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/2000/01/rdf-schema#comment> "The Wikipedia page name is a unique identifier used to refer to any entity present in a Wikipedia database."@en .
+<http://purl.org/spar/datacite/wikipedia> <http://purl.org/spar/fabio/hasURL> "https://en.wikipedia.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/ResourceIdentifierScheme> .
+<http://purl.org/spar/datacite/wikipedia> <http://www.w3.org/2004/02/skos/core#note> "A Wikipedia page name is resolvable from the following URL: https://en.wikipedia.org/wiki/<identifier>."@en .
+<http://purl.org/spar/datacite/wikipedia> <http://purl.org/vocab/vann/example> "\n        :my-resource-id \n                datacite:usesIdentifierScheme datacite:wikipedia ;\n                literal:hasLiteralValue \"The_Canterbury_Tales\" .\n        " .

@@ -1,0 +1,10 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
+
+tvc:withinContext a owl:ObjectProperty ;
+    rdfs:label "within context"@en ;
+    rdfs:comment "The specific context within which the fact of the entity having the value is relevant."@en ;
+    rdfs:domain tvc:ValueInTime ;
+    rdfs:isDefinedBy <http://purl.org/spar/tvc/> .
+

@@ -1,0 +1,114 @@
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix sit: <http://www.ontologydesignpatterns.org/cp/owl/situation.owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+datacite:hasRelationCharacterization a owl:ObjectProperty ;
+    rdfs:label "has relation characterization"@en ;
+    vann:example """
+        :relation-dataset-article a datacite:QualifiedRelation ;
+                datacite:hasRelationCharacterization cito:isCitedBy .
+        """ ;
+    vaem:rationale """
+All DataCite-required relation type terms can be specified by object properties that exist within the following ontologies: [CiTO](http://purl.org/spar/cito), [DCTerms](http://purl.org/dc/terms), [FRBR](http://purl.org/vocab/frbr/core#) and [PRISM](http://prismstandard.org/namespaces/basic/2.0/). 
+The following list specifies all the allowed values but one (i.e., “IsIdenticalTo”) for the DataCite Controlled List of relation types (given within parentheses) and provides ontology object properties for each term: 
+
+- `cito:isCitedBy` (IsCitedBy);
+- `cito:cites` (Cites);
+- `frbr:supplementOf` (IsSupplementTo);
+- `frbr:supplement` (IsSupplementedBy);
+- `frbr:successor` (IsContinuedBy);
+- `frbr:successorOf` (Continues);
+- `cito:isDescribedBy` (IsDescribedBy);
+- `cito:describes` (Describes);
+- `cito:citesAsMetadataDocument` (HasMetadata);
+- `cito:isCitedAsMetadataDocumentBy` (IsMetadataFor);
+- `dcterms:hasVersion` (HasVersion);
+- `dcterms:isVersionOf` (IsVersionOf);
+- `frbr:revision` (IsPreviousVersionOf);
+- `frbr:revisionOf` (IsNewVersionOf);
+- `dcterms:isPartOf` (IsPartOf);
+- `dcterms:hasPart` (HasPart);
+- `frbr:partOf` (IsPublishedIn);
+- `cito:isCitedForInformationBy` (IsReferencedBy);
+- `cito:citesForInformation` (References);
+- `cito:isDocumentedBy` (IsDocumentedBy);
+- `cito:documents` (Documents);
+- `cito:isCompiledBy` (IsCompiledBy);
+- `cito:compiles` (Compiles);
+- `frbr:arrangementOf` (IsVariantFormOf);
+- `frbr:arrangement` (IsOriginalFormOf);
+- `cito:isReviewedBy` (IsReviewedBy);
+- `cito:reviews` (Reviews);
+- `cito:citesAsDataSource` (IsDerivedFrom);
+- `cito:isCitedAsDataSourceBy` (IsSourceOf);
+- `dcterms:isRequiredBy` (IsRequiredBy);
+- `dcterms:requires` (Requires);
+- `dcterms:isReplacedBy` (IsObsoletedBy);
+- `dcterms:replaces` (Obsoletes);
+- `cito:providesDataFor` (IsCollectedBy);
+- `cito:usesDataFrom` (Collects);
+- `frbr:translationOf` (IsTranslationOf);
+- `frbr:translation` (HasTranslation);
+- `dcterms:relation` (Other);
+
+The value “IsIdenticalTo” has a different semantics from the above object properties. 
+It is used to specify that the related identifier is actually another, non-primary, identifier for the first resource under consideration. 
+It should be linked through the `datacite:hasIdentifier` property, and neither `dcterms:relation` nor any of the other above ones should be specified.
+        """@en ;
+    rdfs:comment "The specific nature or type of the reified relation."@en ;
+    rdfs:domain datacite:QualifiedRelation ;
+    rdfs:isDefinedBy datacite: ;
+    rdfs:seeAlso dcterms:hasPart,
+        dcterms:hasVersion,
+        dcterms:isPartOf,
+        dcterms:isReplacedBy,
+        dcterms:isRequiredBy,
+        dcterms:isVersionOf,
+        dcterms:relation,
+        dcterms:replaces,
+        dcterms:requires,
+        cito:cites,
+        cito:citesAsDataSource,
+        cito:citesAsMetadataDocument,
+        cito:citesForInformation,
+        cito:compiles,
+        cito:describes,
+        cito:documents,
+        cito:isCitedAsDataSourceBy,
+        cito:isCitedAsMetadataDocumentBy,
+        cito:isCitedBy,
+        cito:isCitedForInformationBy,
+        cito:isCompiledBy,
+        cito:isDescribedBy,
+        cito:isDocumentedBy,
+        cito:isReviewedBy,
+        cito:providesDataFor,
+        cito:reviews,
+        cito:usesDataFrom,
+        frbr:arrangement,
+        frbr:arrangementOf,
+        frbr:partOf,
+        frbr:revision,
+        frbr:revisionOf,
+        frbr:successor,
+        frbr:successorOf,
+        frbr:supplement,
+        frbr:supplementOf,
+        frbr:translation,
+        frbr:translationOf ;
+    rdfs:subPropertyOf sit:isSettingFor ;
+    vs:term_status reg:statusStable ;
+    skos:note """
+This property uses as range an existing property via [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), according to which it becomes possible to use an object property as the object of an OWL assertion. 
+In such cases, the object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class `owl:Thing`.
+        """@en .
+

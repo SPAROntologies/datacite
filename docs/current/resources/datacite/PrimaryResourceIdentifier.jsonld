@@ -1,0 +1,65 @@
+[
+  {
+    "@id": "http://purl.org/spar/datacite/PrimaryResourceIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/vocab/vann/example": [
+      {
+        "@value": "\n        :my-resource\n                datacite:hasIdentifier :my-resource-id .\n\n        :my-resource-id a datacite:PrimaryResourceIdentifier ;\n                literal:hasLiteralValue \"10.1371/journal.pntd.0000228.g002.x001\" ;\n                datacite:usesIdentifierScheme datacite:doi .\n        "
+      }
+    ],
+    "http://www.linkedmodel.org/schema/vaem#rationale": [
+      {
+        "@language": "en",
+        "@value": "\nThis is used to represent primary identifiers associated with resources.\n\nThis class uses a `datacite:IdentifierScheme` that is restricted to `datacite:doi`, an individual in the `datacite:ResourceIdentifierScheme`.\n        "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.org/spar/datacite/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "primary resource identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n16082fa6811145e08dfaeb8890637028b3"
+      },
+      {
+        "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+        "@id": "http://purl.org/linked-data/registry#statusStable"
+      }
+    ]
+  },
+  {
+    "@id": "_:n16082fa6811145e08dfaeb8890637028b3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#hasValue": [
+      {
+        "@id": "http://purl.org/spar/datacite/doi"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
+      }
+    ]
+  }
+]

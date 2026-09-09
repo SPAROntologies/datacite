@@ -1,0 +1,25 @@
+[
+  {
+    "@id": "http://www.opengis.net/ont/geosparql#SpatialObject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Anything spatial (being or having a shape, position or an extent)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "spatial object"
+      }
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://purl.org/vocab/vann/example> "\n        :my-resource-id\n                datacite:usesIdentifierScheme datacite:local-organization-identifier-scheme ;\n                literal:hasLiteralValue \"GH-7775\" .\n        " .
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "local organization identifier scheme"@en .
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization identifier scheme that provides local organization identifiers that are unique in their local environment and understood by the person submitting the metadata."@en .
+<http://purl.org/spar/datacite/local-organization-identifier-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> .

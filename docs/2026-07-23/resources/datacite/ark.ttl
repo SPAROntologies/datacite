@@ -1,0 +1,22 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:ark a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "ark"@en ;
+    fabio:hasURL "https://confluence.ucop.edu/display/Curation/ARK"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:ark ;
+                literal:hasLiteralValue "ark:53355/cl010066723" .
+        """ ;
+    rdfs:comment "An Archival Resource Key (ARK) is a multi-purpose URL suited to being a persistent identifier for information objects of any type."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+

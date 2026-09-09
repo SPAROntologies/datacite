@@ -1,0 +1,9 @@
+<http://purl.org/spar/datacite/viaf> <http://purl.org/vocab/vann/example> "\n        :david-shotton-id ;\n                datacite:usesIdentifierScheme datacite:viaf ;\n                literal:hasLiteralValue \"7484794\" .\n        " .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2004/02/skos/core#note> "A VIAF identifier is resolvable from the following URL: http://viaf.org/<identifier>."@en .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#comment> "The Virtual International Authority File (VIAF) is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC). It contains information about many topics including personal names."@en .
+<http://purl.org/spar/datacite/viaf> <http://purl.org/spar/fabio/hasURL> "http://viaf.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#label> "viaf"@en .

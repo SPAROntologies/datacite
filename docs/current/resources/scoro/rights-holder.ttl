@@ -1,0 +1,29 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+scoro:rights-holder a scoro:OrganizationalRole,
+        owl:NamedIndividual ;
+    rdfs:label "rights holder"@en ;
+    vann:example """
+        :silvio-peroni
+                pro:holdsRoleInTime :rights-holder-for-my-dataset .
+        
+        :rights-holder-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:rights-holder .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given agent role type ("Rights Holder").
+        """@en ;
+    rdfs:comment "The role held by an agent who holds, owns and manages the legal rights to a project or activity and its products and outcomes, for example the exploitation, licensing and intellectual property rights."@en ;
+    rdfs:isDefinedBy scoro: ;
+    rdfs:seeAlso pro:copyright-owner,
+        scoro:patent-holder ;
+    vs:term_status reg:statusStable .
+

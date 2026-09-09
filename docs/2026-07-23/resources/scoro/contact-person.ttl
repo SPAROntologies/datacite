@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+scoro:contact-person a scoro:OrganizationalRole,
+        owl:NamedIndividual ;
+    rdfs:label "contact person"@en ;
+    vann:example """
+        :silvio-peroni
+                pro:holdsRoleInTime :contact-person-for-my-dataset .
+        
+        :contact-person-for-my-dataset a pro:RoleInTime ;
+                pro:relatesToEntity :my-dataset ;
+                pro:withRole scoro:contact-person .
+        """ ;
+    vaem:rationale """
+This is used as a controlled term to specify a given agent role type ("Contact Person").
+        """@en ;
+    rdfs:comment "The role of a person who serves as the primary contact and information provider for third parties wishing to find out more about an organization or an activity."@en ;
+    rdfs:isDefinedBy scoro: ;
+    vs:term_status reg:statusStable .
+

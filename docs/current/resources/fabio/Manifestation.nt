@@ -1,0 +1,5 @@
+<http://purl.org/spar/fabio/Manifestation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Manifestation> .
+<http://purl.org/spar/fabio/Manifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/fabio/Manifestation> <http://www.w3.org/2000/01/rdf-schema#label> "manifestation"@en .
+<http://purl.org/spar/fabio/Manifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/fabio/> .
+<http://purl.org/spar/fabio/Manifestation> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of FRBR Manifestation, restricted to manifestations of fabio:Expression. fabio:Manifestation specifically applies to electronic (digital) as well as to physical manifestations of expressions."@en .

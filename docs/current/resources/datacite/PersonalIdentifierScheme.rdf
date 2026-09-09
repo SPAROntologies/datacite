@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b50">
+    <owl:onProperty rdf:nodeID="n16082fa6811145e08dfaeb8890637028b51"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/PersonalIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n16082fa6811145e08dfaeb8890637028b51">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/PersonalIdentifierScheme">
+    <rdfs:label xml:lang="en">personal identifier scheme</rdfs:label>
+    <vaem:rationale xml:lang="en">
+This is used to specify the identifier scheme used by a personal identifier.
+
+Individual schemes are defines as members of this class.        
+        </vaem:rationale>
+    <vann:example>
+        :david-shotton a foaf:Person ;
+                datacite:hasIdentifier :david-shotton-id .
+
+        :david-shotton-id a datacite:PersonalIdentifier ;
+                datacite:usesIdentifierScheme datacite:orcid .
+
+        datacite:orcid a datacite:PersonalIdentifierScheme .
+        </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
+    <rdfs:subClassOf rdf:nodeID="n16082fa6811145e08dfaeb8890637028b50"/>
+    <rdfs:comment xml:lang="en">The identifier scheme used to identify a person.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

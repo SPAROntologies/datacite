@@ -1,0 +1,10 @@
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fabio:Specification a owl:Class ;
+    rdfs:label "specification"@en ;
+    rdfs:comment "An explicit description of, or set of requirements to be satisfied by, a material, product, resource, service or standard."@en ;
+    rdfs:isDefinedBy fabio: ;
+    rdfs:subClassOf fabio:Work .
+
