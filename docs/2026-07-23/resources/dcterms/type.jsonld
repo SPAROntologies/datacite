@@ -37,16 +37,13 @@
         "@id": "http://purl.org/dc/terms/available"
       },
       {
-        "@id": "http://purl.org/dc/terms/issued"
+        "@id": "http://purl.org/dc/terms/valid"
       },
       {
         "@id": "http://purl.org/dc/terms/dateCopyrighted"
       },
       {
-        "@id": "http://purl.org/dc/terms/valid"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/modified"
+        "@id": "http://purl.org/dc/terms/dateAccepted"
       },
       {
         "@id": "http://purl.org/dc/terms/temporal"
@@ -55,19 +52,22 @@
         "@id": "http://purl.org/dc/terms/created"
       },
       {
-        "@id": "http://purl.org/dc/terms/date"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/hasRetractionDate"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/dateAccepted"
+        "@id": "http://purl.org/spar/fabio/hasDateCollected"
       },
       {
         "@id": "http://purl.org/dc/terms/dateSubmitted"
       },
       {
-        "@id": "http://purl.org/spar/fabio/hasDateCollected"
+        "@id": "http://purl.org/dc/terms/date"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/issued"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/modified"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/hasRetractionDate"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [

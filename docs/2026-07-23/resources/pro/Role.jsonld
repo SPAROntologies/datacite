@@ -34,7 +34,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
+        "@id": "http://purl.org/spar/scoro/project-leader"
+      },
+      {
         "@id": "http://purl.org/spar/scoro/contact-person"
+      },
+      {
+        "@id": "http://purl.org/spar/scoro/host-institution"
+      },
+      {
+        "@id": "http://purl.org/spar/scoro/registrar"
       },
       {
         "@id": "http://purl.org/spar/scoro/sponsor"
@@ -43,58 +52,49 @@
         "@id": "http://purl.org/spar/pro/producer"
       },
       {
-        "@id": "http://purl.org/spar/scoro/project-leader"
-      },
-      {
-        "@id": "http://purl.org/spar/scoro/researcher"
-      },
-      {
-        "@id": "http://purl.org/spar/scoro/workpackage-leader"
-      },
-      {
-        "@id": "http://purl.org/spar/scoro/data-manager"
-      },
-      {
-        "@id": "http://purl.org/spar/scoro/data-curator"
-      },
-      {
-        "@id": "http://purl.org/spar/scoro/registrar"
+        "@id": "http://purl.org/spar/scoro/project-manager"
       },
       {
         "@id": "http://purl.org/spar/scoro/rights-holder"
       },
       {
-        "@id": "http://purl.org/spar/scoro/project-member"
-      },
-      {
-        "@id": "http://purl.org/spar/scoro/project-manager"
-      },
-      {
-        "@id": "http://purl.org/spar/scoro/host-institution"
-      },
-      {
         "@id": "http://purl.org/spar/pro/editor"
-      },
-      {
-        "@id": "http://purl.org/spar/scoro/data-creator"
-      },
-      {
-        "@id": "http://purl.org/spar/pro/distributor"
       },
       {
         "@id": "http://purl.org/spar/scoro/registration-authority"
       },
       {
+        "@id": "http://purl.org/spar/pro/distributor"
+      },
+      {
+        "@id": "http://purl.org/spar/scoro/workpackage-leader"
+      },
+      {
         "@id": "http://purl.org/cerif/frapo/ResearchGroup"
       },
       {
-        "@id": "http://xmlns.com/foaf/0.1/Person"
+        "@id": "http://purl.org/spar/scoro/data-manager"
+      },
+      {
+        "@id": "http://purl.org/spar/scoro/project-member"
+      },
+      {
+        "@id": "http://purl.org/spar/scoro/data-curator"
       },
       {
         "@id": "http://purl.org/spar/scoro/supervisor"
       },
       {
+        "@id": "http://xmlns.com/foaf/0.1/Person"
+      },
+      {
         "@id": "http://purl.org/spar/pro/translator"
+      },
+      {
+        "@id": "http://purl.org/spar/scoro/data-creator"
+      },
+      {
+        "@id": "http://purl.org/spar/scoro/researcher"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [

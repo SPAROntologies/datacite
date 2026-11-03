@@ -7,7 +7,7 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :european-commission a foaf:Agent ;\n                pro:holdsRoleInTIme :european-commission-funding .\n        \n        :european-commission-funding a pro:RoleInTime ;\n                pro:withRole scoro:funder ;\n                pro:relatesToEntity :my-dataset .\n        "
+        "@value": "\n        :european-commission a foaf:Agent ;\n                pro:holdsRoleInTime :european-commission-funding .\n        \n        :european-commission-funding a pro:RoleInTime ;\n                pro:withRole scoro:funder ;\n                pro:relatesToEntity :my-dataset .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [

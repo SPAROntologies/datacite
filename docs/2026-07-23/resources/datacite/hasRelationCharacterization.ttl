@@ -108,7 +108,7 @@ It should be linked through the `datacite:hasIdentifier` property, and neither `
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable ;
     skos:note """
-This property uses as range an existing property via [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), according to which it becomes possible to use an object property as the object of an OWL assertion. 
+This property uses as range an existing property via [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning), according to which it becomes possible to use an object property as the object of an OWL assertion. 
 In such cases, the object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class `owl:Thing`.
         """@en .
 

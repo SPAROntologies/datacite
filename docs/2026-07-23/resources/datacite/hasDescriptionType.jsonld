@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:n16082fa6811145e08dfaeb8890637028b6"
+        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab6"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -54,23 +54,31 @@
     ]
   },
   {
-    "@id": "_:n16082fa6811145e08dfaeb8890637028b6",
+    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:n16082fa6811145e08dfaeb8890637028b7"
+        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab7"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "_:n16082fa6811145e08dfaeb8890637028b8"
+        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab8"
       }
     ]
   },
   {
-    "@id": "_:n16082fa6811145e08dfaeb8890637028b7",
+    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab8",
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/spar/datacite/hasDescription"
+      }
+    ]
+  },
+  {
+    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -82,14 +90,6 @@
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
         "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
-      }
-    ]
-  },
-  {
-    "@id": "_:n16082fa6811145e08dfaeb8890637028b8",
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://purl.org/spar/datacite/hasDescription"
       }
     ]
   }
