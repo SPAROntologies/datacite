@@ -287,8 +287,7 @@ It is possible, of course, to use directly the resources specified in http://lex
 
 dcterms:license a owl:AnnotationProperty .
 
-dcterms:publisher a owl:AnnotationProperty,
-        owl:ObjectProperty ;
+dcterms:publisher a owl:ObjectProperty ;
     rdfs:label "has publisher" ;
     vann:example """
         :my-dataset 
@@ -353,7 +352,7 @@ bibo:doi a owl:AnnotationProperty .
     dc:creator "David Shotton (https://orcid.org/0000-0001-5506-523X)",
         "Sebastian Barzaghi (https://orcid.org/0000-0002-0799-1527)",
         "Silvio Peroni (https://orcid.org/0000-0003-0530-4305)" ;
-    dc:date "2022-09-15" ;
+    dc:date "2026-10-05" ;
     dc:description """
 The **_DataCite Ontology (DataCite)_** is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Schema (version 4.7)](https://datacite-metadata-schema.readthedocs.io/en/4.7/) to be described in RDF. 
 
@@ -418,7 +417,7 @@ Both subjects' and subject schemes' labels are defined through the property `sko
 
 In this pattern, the date must be expressed as a reified literal through the class `literal:Literal`, linked to the resource via the property `literal:hasLiteral`. 
 The date value is contained in the reified literal and is expressed through the data property `literal:hasLiteralValue`. 
-The type of the date is expressed via [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), a mechanism according to which an object property can be used as the object of an OWL assertion by being considered simultaneously both as a normal property and also as a named individual of the class `owl:Thing`.
+The type of the date is expressed via [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning), a mechanism according to which an object property can be used as the object of an OWL assertion by being considered simultaneously both as a normal property and also as a named individual of the class `owl:Thing`.
 In this case, the property is linked to the reified literal via `dcterms:type`.
 Additional information related to the date is expressed as a simple text string, linked to the reified literal representing the date via `dcterms:description`.
 
@@ -450,12 +449,12 @@ With the DataCite Ontology, it is possible to represent situations where a given
 This is provided by the class `datacite:QualifiedRelation`, which represents a certain relationship existing between two entities. 
 The qualified relation is linked with one entity (more specifically, the subject of the relation) via the object property `datacite:hasRelationSubject`, and with the other (the object of the relation) via the object property `datacite:hasRelationObject`.
 The type of relation itself is defined via the property `datacite:hasRelationCharacterization`, which links a qualified relation to its characterization made by using an object property such as `dcterms:relation`, `cito:cites`, or `frbr:partOf`. 
-This usage involves the [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) mechanism.
+This usage involves the [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) mechanism.
 
 ![The specific pattern involving metadata documents.](metadata_document.png)
 
 It is also possible to provide a link between a resource, such as a dataset, and the document describing its metadata by means of [CiTO](http://purl.org/spar/cito), using the property `cito:citesAsMetadataDocument`, and [FaBiO](http://purl.org/spar/fabio), by means of the class `fabio:MetadataDocument`. 
-In addition to these entities, the DataCite Ontology provides appropriate classes (i.e., `datacite:MetadataScheme`) and properties (i.e., `datacite:hasMetadataScheme`) to specify the particular scheme followed for creating the resource metadata exemplified in the metadata document.
+In addition to these entities, the DataCite Ontology provides appropriate classes (i.e., `datacite:MetadataScheme`) and properties (i.e., `datacite:usesMetadataScheme`) to specify the particular scheme followed for creating the resource metadata exemplified in the metadata document.
 
 ![The specific pattern involving geographical information.](spatial.png)
 
@@ -612,7 +611,7 @@ How many identifiers are registered for each identifier scheme?
 
 """@en ;
     dc:title "The DataCite Ontology (DataCite)"@en ;
-    dcterms:bibliographicCitation "David Shotton, Silvio Peroni. The DataCite Ontology. Revision: 2.0.0. http://purl.org/spar/datacite." ;
+    dcterms:bibliographicCitation "David Shotton, Silvio Peroni. The DataCite Ontology. Revision: 2.0.0. http://doi.org/10.25504/FAIRsharing.c06f1e." ;
     dcterms:created "2016-01-21" ;
     dcterms:issued "2016-01-21" ;
     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
@@ -621,20 +620,16 @@ How many identifiers are registered for each identifier scheme?
     dcterms:source <https://github.com/SPAROntologies/datacite/blob/master/docs/cq.md> ;
     bibo:doi "https://doi.org/10.25504/FAIRsharing.c06f1e" ;
     bibo:status <http://purl.org/ontology/bibo/status/published> ;
-    vann:changes """
-* **v2.0.0**:
-Added new documentation, including annotation properties (e.g., `bibo:doi`, `schema:codeRepository`, etc.), term properties (e.g., `vann:example`, `vs:term_status`, etc.), exemplary competency questions with their respective SPARQL queries, and a Grafoo diagram.
-Added classes and proprerties, reused from existing ontologies (e.g., `foaf:Person`, `dcterms:creator`, etc.) and previously only documented in a separate document for mapping the DataCite metadata schema properties to the DataCite Ontology patterns.
-    """@en ;
+    vann:changes <https://github.com/SPAROntologies/datacite/blob/master/CHANGELOG.md> ;
     vann:preferredNamespacePrefix "datacite"@en ;
     vann:preferredNamespaceUri "http://purl.org/spar/datacite"@en ;
     rdfs:seeAlso <http://www.sparontologies.net/ontologies/datacite> ;
-    owl:backwardCompatibleWith datacite:2026-05-05 ;
+    owl:backwardCompatibleWith datacite:2026-07-23 ;
     owl:imports literal: ;
-    owl:priorVersion datacite:2026-05-05 ;
-    owl:versionIRI datacite:2026-07-23 ;
-    owl:versionInfo "2.0.0" ;
-    foaf:logo <https://github.com/SPAROntologies/datacite/blob/master/spar.png> ;
+    owl:priorVersion datacite:2026-07-23 ;
+    owl:versionIRI datacite:2026-10-05 ;
+    owl:versionInfo "2.0.1" ;
+    foaf:logo <https://github.com/SPAROntologies/sparontologies.github.io/blob/master/static/img/spar/spar-logo.png> ;
     schema:codeRepository <https://github.com/SPAROntologies/datacite> ;
     schema:image <https://github.com/SPAROntologies/datacite/blob/master/docs/current/affiliations.png>,
         <https://github.com/SPAROntologies/datacite/blob/master/docs/current/agents.png>,
@@ -651,10 +646,13 @@ Added classes and proprerties, reused from existing ontologies (e.g., `foaf:Pers
         <https://github.com/SPAROntologies/datacite/blob/master/docs/current/spatial.png>,
         <https://github.com/SPAROntologies/datacite/blob/master/docs/current/subjects.png> ;
     schema:includedInDataCatalog <https://fairsharing.org/> ;
-    schema:keywords "DataCite metadata schema"@en,
-        "identifiers"@en,
-        "metascience"@en,
-        "open science"@en,
+    dc:language <http://id.loc.gov/vocabulary/iso639-2/eng> ;
+    schema:keywords 
+        "SPAR Ontologies"@en ,
+        "Semantic Publishing and Referencing Ontologies"@en ,
+        "DataCite metadata schema"@en,
+        "bibliometrics"@en,
+        "scientometrics"@en,
         "scholarly publishing"@en,
         "semantic publishing"@en .
 
@@ -718,6 +716,20 @@ datacite:ark a datacite:ResourceIdentifierScheme,
         """ ;
     rdfs:comment "An Archival Resource Key (ARK) is a multi-purpose URL suited to being a persistent identifier for information objects of any type."@en ;
     rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable .
+
+datacite:swhid a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "swhid"@en ;
+    fabio:hasURL "https://www.swhid.org/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:swhid ;
+                literal:hasLiteralValue "swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2" .
+        """ ;
+    rdfs:comment "A SoftWare Hash IDentifier (SWHID) is a persistent identifier for software source code artifacts such as source code files, source trees, commits, and other objects typically found in version control systems."@en ;
+    rdfs:isDefinedBy datacite: ;
+    skos:note "A SWHID consists of two separate parts, a mandatory core identifier that can point to any software artifact (or “object”) available in the Software Heritage archive, and an optional list of qualifiers that allows to specify the context where the object is meant to be seen and point to a subpart of the object itself."@en ;
     vs:term_status reg:statusStable .
 
 datacite:arxiv a datacite:ResourceIdentifierScheme,
@@ -1477,7 +1489,7 @@ datacite:openid a datacite:PersonalIdentifierScheme,
     rdfs:isDefinedBy datacite: ;
     vs:term_status reg:statusStable .
 
-datacite:orcid a datacite:AgentIdentifierScheme,
+datacite:orcid a datacite:PersonalIdentifierScheme,
         owl:NamedIndividual ;
     rdfs:label "orcid"@en ;
     fabio:hasURL "http://orcid.org/"^^xsd:anyURI ;
@@ -1802,7 +1814,7 @@ datacite:usesMetadataScheme a owl:ObjectProperty ;
         datacite:spar a datacite:MetadataScheme .
         """ ;
     vaem:rationale """
-This is used to represent the particular scheme followed for creating the resource metadata exemplified in the metadata document, via the property `datacite:hasMetadataScheme` and the class `datacite:MetadataScheme`.
+This is used to represent the particular scheme followed for creating the resource metadata exemplified in the metadata document, via the property `datacite:usesMetadataScheme` and the class `datacite:MetadataScheme`.
 
 This is also used when the relation type between two resources involves the association of metadata to one by the other.
 It is possible to specify a metadata scheme used by the particular metadata document under consideration to describe the metadata of the subject resource  or of the related resource.
@@ -1998,7 +2010,7 @@ This is used to specify the URL of a certain resource, including subject terms, 
     rdfs:range xsd:anyURI ;
     vs:term_status reg:statusStable .
 
-pro:holdsRoleInTIme a owl:ObjectProperty ;
+pro:holdsRoleInTime a owl:ObjectProperty ;
     rdfs:label "holds role in time"@en ;
     vann:example """
         :david-shotton a foaf:Agent ;
@@ -2103,7 +2115,7 @@ scoro:funder a scoro:FinancialRole,
     rdfs:label "funder"@en ;
     vann:example """
         :european-commission a foaf:Agent ;
-                pro:holdsRoleInTIme :european-commission-funding .
+                pro:holdsRoleInTime :european-commission-funding .
         
         :european-commission-funding a pro:RoleInTime ;
                 pro:withRole scoro:funder ;
@@ -2633,7 +2645,7 @@ dcterms:available a owl:DatatypeProperty ;
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Available").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "Date that the resource became or will become available."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2661,8 +2673,7 @@ This property should be accompanied by specific role descriptors if a particular
     rdfs:range foaf:Agent ;
     vs:term_status reg:statusStable .
 
-dcterms:created a owl:AnnotationProperty,
-        owl:DatatypeProperty ;
+dcterms:created a owl:DatatypeProperty ;
     rdfs:label "has date created"@en ;
     vann:example """
         :my-dataset-creation-date 
@@ -2672,7 +2683,7 @@ dcterms:created a owl:AnnotationProperty,
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Created").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "Date of creation of the resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2690,7 +2701,7 @@ dcterms:dateAccepted a owl:DatatypeProperty ;
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Accepted").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.        
         """@en ;
     rdfs:comment "Date of acceptance of the resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2708,7 +2719,7 @@ dcterms:dateCopyrighted a owl:DatatypeProperty ;
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Copyrighted").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "Date of copyright of the resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2726,7 +2737,7 @@ dcterms:dateSubmitted a owl:DatatypeProperty ;
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Submitted").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "Date of submission of the resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2741,7 +2752,7 @@ dcterms:isPartOf a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization dcterms:isPartOf .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsPartOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsPartOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
         """@en ;
     rdfs:comment "A related resource in which the described resource is physically or logically included."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2756,7 +2767,7 @@ dcterms:isVersionOf a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization dcterms:isVersionOf .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsVersionOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsVersionOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
         """@en ;
     rdfs:comment "A related resource of which the described resource is a version, edition, or adaptation."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2764,8 +2775,7 @@ This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl
     owl:inverseOf dcterms:hasVersion ;
     vs:term_status reg:statusStable .
 
-dcterms:modified a owl:AnnotationProperty,
-        owl:DatatypeProperty ;
+dcterms:modified a owl:DatatypeProperty ;
     rdfs:label "has date modified"@en ;
     vann:example """
         :my-dataset-change-date 
@@ -2775,7 +2785,7 @@ dcterms:modified a owl:AnnotationProperty,
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Updated").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "Date on which the resource was changed."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2790,7 +2800,7 @@ dcterms:replaces a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization dcterms:replaces .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Obsoletes") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Obsoletes") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
         """@en ;
     rdfs:comment "A related resource that is supplanted, displaced, or superseded by the described resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2805,7 +2815,7 @@ dcterms:requires a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization dcterms:requires .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Requires") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Requires") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
         """@en ;
     rdfs:comment "A related resource that is required by the described resource to support its function, delivery, or coherence."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2823,7 +2833,7 @@ dcterms:temporal a owl:DatatypeProperty ;
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Coverage").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "Temporal characteristics of the resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2841,7 +2851,7 @@ dcterms:valid a owl:DatatypeProperty ;
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Valid").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "Date of validity of the resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -2856,7 +2866,7 @@ cito:citesAsDataSource a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:citesAsDataSource .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsDerivedFrom") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsDerivedFrom") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity cites the cited entity as source of data."@en ;
     rdfs:isDefinedBy cito: ;
@@ -2870,7 +2880,7 @@ cito:citesForInformation a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:citesForInformation .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("References") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("References") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity cites the cited entity as a source of information on the subject under discussion."@en ;
     rdfs:isDefinedBy cito: ;
@@ -2885,7 +2895,7 @@ cito:compiles a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:compiles .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Compiles") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Compiles") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity is used to create or compile the cited entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -2900,7 +2910,7 @@ cito:describes a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:describes .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Describes") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Describes") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity describes the cited entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -2915,7 +2925,7 @@ cito:documents a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:documents .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Documents") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Documents") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity documents information about the cited entity." ;
     rdfs:isDefinedBy cito: ;
@@ -2930,7 +2940,7 @@ cito:isCitedAsDataSourceBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:isCitedAsDataSourceBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsSourceOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsSourceOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The cited entity is cited as a data source by the citing entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -2944,7 +2954,7 @@ cito:isReviewedBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:isReviewedBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsReviewedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsReviewedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The cited entity presents statements, ideas or conclusions that are reviewed by the citing entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -2959,7 +2969,7 @@ cito:providesDataFor a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:providesDataFor .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsCollectedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsCollectedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The cited entity presents data that are used in work described in the citing entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -3188,7 +3198,7 @@ It should be linked through the `datacite:hasIdentifier` property, and neither `
     rdfs:subPropertyOf sit:isSettingFor ;
     vs:term_status reg:statusStable ;
     skos:note """
-This property uses as range an existing property via [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), according to which it becomes possible to use an object property as the object of an OWL assertion. 
+This property uses as range an existing property via [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning), according to which it becomes possible to use an object property as the object of an OWL assertion. 
 In such cases, the object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class `owl:Thing`.
         """@en .
 
@@ -3493,7 +3503,7 @@ fabio:hasDateCollected a owl:DatatypeProperty ;
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Collected").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "The date on which some item has been collected, for example the data gathered by means of questionnaires."@en ;
     rdfs:isDefinedBy fabio: ;
@@ -3512,7 +3522,7 @@ fabio:hasRetractionDate a owl:DatatypeProperty,
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Withdrawn").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "The date on which something, for example a claim or a journal article, is retracted."@en ;
     rdfs:isDefinedBy fabio: ;
@@ -3938,7 +3948,7 @@ frbr:arrangement a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:arrangement .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsOriginalFormOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsOriginalFormOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 An expression arranged in another one.
@@ -3960,7 +3970,7 @@ frbr:partOf a owl:ObjectProperty,
                 datacite:hasRelationCharacterization frbr:partof .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsPublishedIn") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsPublishedIn") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 An endeavour incorporating another endeavour.
@@ -3970,7 +3980,7 @@ An endeavour incorporating another endeavour.
 
 frbr:realizationOf a owl:ObjectProperty ;
     rdfs:label "is realization of"@en ;
-    rdfs:comment "A work realized throgh an expression."@en ;
+    rdfs:comment "A work realized through an expression."@en ;
     rdfs:domain frbr:Expression ;
     rdfs:isDefinedBy frbr: ;
     rdfs:range frbr:Work ;
@@ -3983,7 +3993,7 @@ frbr:revision a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:revision .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsPreviousVersionOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsPreviousVersionOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 An expression revised in another one.
@@ -4003,7 +4013,7 @@ frbr:successor a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:successor .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsContinuedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsContinuedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 An expression work/expression having another one as successor.        
@@ -4031,7 +4041,7 @@ frbr:supplement a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:supplement .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsSupplementedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsSupplementedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 An expression work/expression having another one as supplement.
@@ -4056,7 +4066,7 @@ frbr:translation a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:translation .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("HasTranslation") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("HasTranslation") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 An expression translated in another one.
@@ -4188,7 +4198,7 @@ dcterms:hasPart a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization dcterms:hasPart .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("HasPart") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("HasPart") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
         """@en ;
     rdfs:comment "A related resource that is included either physically or logically in the described resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -4202,7 +4212,7 @@ dcterms:hasVersion a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization dcterms:hasVersion .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("HasVersion") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("HasVersion") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
         """@en ;
     rdfs:comment "A related resource that is a version, edition, or adaptation of the described resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -4216,7 +4226,7 @@ dcterms:isReplacedBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization dcterms:isReplacedBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsObsoletedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsObsoletedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
         """@en ;
     rdfs:comment "A related resource that supplants, displaces, or supersedes the described resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -4230,15 +4240,14 @@ dcterms:isRequiredBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization dcterms:isRequiredBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsRequiredBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsRequiredBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
         """@en ;
     rdfs:comment "A related resource that requires the described resource to support its function, delivery, or coherence."@en ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dcterms:relation ;
     vs:term_status reg:statusStable .
 
-dcterms:issued a owl:AnnotationProperty,
-        owl:DatatypeProperty ;
+dcterms:issued a owl:DatatypeProperty ;
     rdfs:label "has date issued"@en ;
     vann:example """
         :my-dataset-issuance-date 
@@ -4248,7 +4257,7 @@ dcterms:issued a owl:AnnotationProperty,
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Issued").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "Date of formal issuance of the resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -4322,7 +4331,7 @@ cito:citesAsMetadataDocument a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:citesAsMetadataDocument .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("HasMetadata") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("HasMetadata") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity cites the cited entity as being the container of metadata describing the citing entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -4337,7 +4346,7 @@ cito:isCitedAsMetadataDocumentBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:isCitedAsMetadataDocumentBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsMetadataFor") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsMetadataFor") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The cited entity is cited as being the container of metadata relating to the citing entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -4351,7 +4360,7 @@ cito:isCitedForInformationBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:isCitedForInformationBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsReferencedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsReferencedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The cited entity is cited as a source of information on the subject under discussion in the citing entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -4365,7 +4374,7 @@ cito:isCompiledBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:isCompiledBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsCompiledBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsCompiledBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The cited entity is the result of a compile or creation event using the citing entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -4379,7 +4388,7 @@ cito:isDescribedBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:isDescribedBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsDescribedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsDescribedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The cited entity is described by the citing entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -4393,7 +4402,7 @@ cito:isDocumentedBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:isDocumentedBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsDocumentedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsDocumentedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "Information about the cited entity is documented by the citing entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -4407,7 +4416,7 @@ cito:reviews a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:reviews .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Reviews") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Reviews") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity reviews statements, ideas or conclusions presented in the cited entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -4421,7 +4430,7 @@ cito:usesDataFrom a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:usesDataFrom .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Collects") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Collects") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity describes work that uses data presented in the cited entity."@en ;
     rdfs:isDefinedBy cito: ;
@@ -4457,12 +4466,12 @@ datacite:MetadataScheme a owl:Class ;
                 cito:citesAsMetadataDocument :my-resource-metadata .
 
         :my-resource-metadata a fabio:MetadataDocument ;
-                datacite:hasMetadataScheme datacite:spar .
+                datacite:usesMetadataScheme datacite:spar .
 
         datacite:spar a datacite:MetadataScheme .
         """ ;
     vaem:rationale """
-This is used to represent the particular scheme followed for creating the resource metadata exemplified in the metadata document, via the property `datacite:hasMetadataScheme` and the class `datacite:MetadataScheme`.
+This is used to represent the particular scheme followed for creating the resource metadata exemplified in the metadata document, via the property `datacite:usesMetadataScheme` and the class `datacite:MetadataScheme`.
 
 This is also used when the relation type between two resources involves the association of metadata to one by the other.
 It is possible to specify a metadata scheme used by the particular metadata document under consideration to describe the metadata of the subject resource  or of the related resource.
@@ -4559,7 +4568,7 @@ fabio:MetadataDocument a owl:Class ;
     vaem:rationale """
 This is used to represent a document describing the metadata of a resource (e.g., a dataset).
 The link between the resource and this document is provided using the [CiTO](http://purl.org/spar/cito) property `cito:citesAsMetadataDocument`.
-The particular scheme followed for creating the resource metadata exemplified in the metadata document is expressed via the property `datacite:hasMetadataScheme` and the class `datacite:MetadataScheme`.
+The particular scheme followed for creating the resource metadata exemplified in the metadata document is expressed via the property `datacite:usesMetadataScheme` and the class `datacite:MetadataScheme`.
 
 This is also used when the relation type between two resources involves the association of metadata to one by the other.
 It is possible to specify a metadata scheme used by the particular metadata document under consideration to describe the metadata of the subject resource  or of the related resource.
@@ -4619,7 +4628,7 @@ frbr:arrangementOf a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:arrangementOf .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsVariantFormOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsVariantFormOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 The original expression of an arranged one.
@@ -4635,7 +4644,7 @@ frbr:revisionOf a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:revisionOf .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsNewVersionOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsNewVersionOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 It identifies the previous expression of a revised one.
@@ -4651,7 +4660,7 @@ frbr:successorOf a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:successorOf .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Continues") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Continues") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 It identifies the previous work/expression of a succeeded one.
@@ -4667,7 +4676,7 @@ frbr:supplementOf a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:supplementOf .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsSupplementTo") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsSupplementTo") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 The work/expression of a particular supplement of it.
@@ -4683,7 +4692,7 @@ frbr:translationOf a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization frbr:translationOf .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsTranslationOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsTranslationOf") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment """
 The original expression of a translated one.
@@ -5091,7 +5100,7 @@ Thus, the domain of `pro:withRole` is not `foaf:Agent`, but rather a member of t
 frbr:Expression a owl:Class ;
     rdfs:label "expression"@en ;
     rdfs:comment """
-The intellectual or artistic realization of a work in the form of alpha-numeric, musical, or choreographic notation, sound, image, object, movement, etc., or any combination of such forms.
+The intellectual or artistic realization of a work in the form of alphanumeric, musical, or choreographic notation, sound, image, object, movement, etc., or any combination of such forms.
 
 An expression is the specific intellectual or artistic form that a work takes each time it is "realized". 
 Expression encompasses, for example, the specific words, sentences, paragraphs, etc. that result from the realization of a work in the form of a text, or the particular sounds, phrasing, etc. resulting from the realization of a musical work.
@@ -5138,7 +5147,7 @@ dcterms:relation a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization dcterms:relation .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Other") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Other") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.        
         """@en ;
     rdfs:comment "A related resource."@en ;
     rdfs:isDefinedBy dcterms: ;
@@ -5151,7 +5160,7 @@ cito:cites a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:cites .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Cites") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Cites") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en ;
     rdfs:isDefinedBy cito: ;
@@ -5201,7 +5210,7 @@ cito:isCitedBy a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:isCitedBy .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("IsCitedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsCitedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The cited entity (the subject of the RDF triple) is cited by the citing entity (the object of the triple)."@en ;
     rdfs:isDefinedBy cito: ;

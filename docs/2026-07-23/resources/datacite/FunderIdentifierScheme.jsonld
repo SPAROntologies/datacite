@@ -34,10 +34,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://purl.org/spar/datacite/AgentIdentifierScheme"
+        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab26"
       },
       {
-        "@id": "_:n16082fa6811145e08dfaeb8890637028b26"
+        "@id": "http://purl.org/spar/datacite/AgentIdentifierScheme"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -47,13 +47,13 @@
     ]
   },
   {
-    "@id": "_:n16082fa6811145e08dfaeb8890637028b26",
+    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab26",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "_:n16082fa6811145e08dfaeb8890637028b27"
+        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab27"
       }
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
@@ -63,7 +63,7 @@
     ]
   },
   {
-    "@id": "_:n16082fa6811145e08dfaeb8890637028b27",
+    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab27",
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
         "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"

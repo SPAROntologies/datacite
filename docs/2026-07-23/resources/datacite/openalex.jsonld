@@ -2,8 +2,8 @@
   {
     "@id": "http://purl.org/spar/datacite/openalex",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/IdentifierScheme"
+      "http://purl.org/spar/datacite/IdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {

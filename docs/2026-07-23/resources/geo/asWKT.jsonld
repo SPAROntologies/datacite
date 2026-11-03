@@ -37,11 +37,6 @@
         "@value": "as WKT"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#wktLiteral"
-      }
-    ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
       {
         "@id": "http://purl.org/linked-data/registry#statusStable"

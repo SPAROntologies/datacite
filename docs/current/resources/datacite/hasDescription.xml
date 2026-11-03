@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/datacite/hasDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab4"/>
+    <vaem:rationale xml:lang="en">
+This is used to allow the specification of another resource that provides additional information about the resource under consideration.
+        </vaem:rationale>
+    <vann:example>
+        :my-resource
+                datacite:hasDescription :my-resource-additional-info .
+
+        :my-resource-additional-info
+                literal:hasLiteralValue "This dataset contains data about stuff." .
+        </vann:example>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <rdfs:comment xml:lang="en">An entity used to describe a resource.</rdfs:comment>
+    <rdfs:range rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab5"/>
+    <rdfs:label xml:lang="en">has description</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab4">
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab5">
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasDescriptionType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+</rdf:RDF>

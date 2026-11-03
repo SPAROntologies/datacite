@@ -15,12 +15,12 @@ datacite:MetadataScheme a owl:Class ;
                 cito:citesAsMetadataDocument :my-resource-metadata .
 
         :my-resource-metadata a fabio:MetadataDocument ;
-                datacite:hasMetadataScheme datacite:spar .
+                datacite:usesMetadataScheme datacite:spar .
 
         datacite:spar a datacite:MetadataScheme .
         """ ;
     vaem:rationale """
-This is used to represent the particular scheme followed for creating the resource metadata exemplified in the metadata document, via the property `datacite:hasMetadataScheme` and the class `datacite:MetadataScheme`.
+This is used to represent the particular scheme followed for creating the resource metadata exemplified in the metadata document, via the property `datacite:usesMetadataScheme` and the class `datacite:MetadataScheme`.
 
 This is also used when the relation type between two resources involves the association of metadata to one by the other.
 It is possible to specify a metadata scheme used by the particular metadata document under consideration to describe the metadata of the subject resource  or of the related resource.

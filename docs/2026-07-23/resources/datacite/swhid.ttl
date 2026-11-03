@@ -1,0 +1,24 @@
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+datacite:swhid a datacite:ResourceIdentifierScheme,
+        owl:NamedIndividual ;
+    rdfs:label "swhid"@en ;
+    fabio:hasURL "https://www.swhid.org/"^^xsd:anyURI ;
+    vann:example """
+        :my-resource-id 
+                datacite:usesIdentifierScheme datacite:swhid ;
+                literal:hasLiteralValue "swh:1:cnt:94a9ed024d3859793618152ea559a168bbcbb5e2" .
+        """ ;
+    rdfs:comment "A SoftWare Hash IDentifier (SWHID) is a persistent identifier for software source code artifacts such as source code files, source trees, commits, and other objects typically found in version control systems."@en ;
+    rdfs:isDefinedBy datacite: ;
+    vs:term_status reg:statusStable ;
+    skos:note "A SWHID consists of two separate parts, a mandatory core identifier that can point to any software artifact (or “object”) available in the Software Heritage archive, and an optional list of qualifiers that allows to specify the context where the object is meant to be seen and point to a subpart of the object itself."@en .
+

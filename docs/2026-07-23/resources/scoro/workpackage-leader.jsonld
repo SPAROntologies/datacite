@@ -2,8 +2,8 @@
   {
     "@id": "http://purl.org/spar/scoro/workpackage-leader",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/scoro/ProjectRole"
+      "http://purl.org/spar/scoro/ProjectRole",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/vocab/vann/example": [
       {

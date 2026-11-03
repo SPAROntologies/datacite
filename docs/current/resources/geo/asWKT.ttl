@@ -21,6 +21,5 @@ This is used to express actual value of a point by specifying its coordinates in
     rdfs:comment "The WKT serialization of a geometry."@en ;
     rdfs:domain geo:Geometry ;
     rdfs:isDefinedBy geo: ;
-    rdfs:range geo:wktLiteral ;
     vs:term_status reg:statusStable .
 

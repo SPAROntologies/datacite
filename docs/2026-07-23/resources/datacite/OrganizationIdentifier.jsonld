@@ -34,7 +34,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n16082fa6811145e08dfaeb8890637028b23"
+        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab23"
       },
       {
         "@id": "http://purl.org/spar/datacite/AgentIdentifier"
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "@id": "_:n16082fa6811145e08dfaeb8890637028b23",
+    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab23",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

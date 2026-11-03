@@ -2,8 +2,8 @@
   {
     "@id": "http://purl.org/spar/datacite/lattes",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/datacite/AgentIdentifierScheme"
+      "http://purl.org/spar/datacite/AgentIdentifierScheme",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {

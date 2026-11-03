@@ -6,10 +6,10 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-resource\n                datacite:hasGeneralResourceType fabio:Book .\n        "
+        "@value": "\n        :my-resource a fabio:Book ;\n                fabio:hasSequenceIdentifier \"3\" .\n        "
       },
       {
-        "@value": "\n        :my-resource a fabio:Book ;\n                fabio:hasSequenceIdentifier \"3\" .\n        "
+        "@value": "\n        :my-resource\n                datacite:hasGeneralResourceType fabio:Book .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: The DataCite Ontology (DataCite)
+message: >-
+If you use this software, please cite it using the
+metadata from this file.
+type: software
+authors:
+- given-names: Silvio
+  family-names: Peroni
+  orcid: 'https://orcid.org/0000-0003-0530-4305'
+- given-names: David
+  family-names: Shotton
+  orcid: 'https://orcid.org/0000-0001-5506-523X'
+- given-names: Sebastian
+  family-names: Barzaghi
+  orcid: 'https://orcid.org/0000-0002-0799-1527'
+identifiers:
+- type: doi
+  value: 10.25504/FAIRsharing.c06f1e
+repository-code: 'https://github.com/SPAROntologies/datacite'
+url: 'http://www.sparontologies.net/ontologies/datacite'
+abstract: The DataCite Ontology (DataCite) is an ontology that enables the metadata properties of the DataCite Metadata Schema Specification (i.e., a list of metadata properties for the accurate and consistent identification of a resource for citation and retrieval purposes) to be described in RDF.
+keywords:
+- DataCite metadata schema
+- bibliometrics
+- scholarly publishing
+- scientometrics
+- semantic publishing
+license: CC-BY-4.0
+version: 2.0.1
+date-released: '2026-07-23'

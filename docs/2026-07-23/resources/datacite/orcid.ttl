@@ -8,7 +8,7 @@
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-datacite:orcid a datacite:AgentIdentifierScheme,
+datacite:orcid a datacite:PersonalIdentifierScheme,
         owl:NamedIndividual ;
     rdfs:label "orcid"@en ;
     fabio:hasURL "http://orcid.org/"^^xsd:anyURI ;
