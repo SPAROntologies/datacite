@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab6"
+        "@id": "_:neb497a3c135447b499699cacff5876e0b6"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -54,23 +54,23 @@
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab6",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab7"
+        "@id": "_:neb497a3c135447b499699cacff5876e0b7"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab8"
+        "@id": "_:neb497a3c135447b499699cacff5876e0b8"
       }
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab8",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b8",
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
         "@id": "http://purl.org/spar/datacite/hasDescription"
@@ -78,7 +78,7 @@
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab7",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

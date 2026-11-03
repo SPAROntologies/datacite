@@ -8,21 +8,21 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/dcmitype/StillImage">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Image"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
     <vaem:rationale xml:lang="en">
 This is used as a controlled term to specify a given general resource type ("Image").
         </vaem:rationale>
-    <skos:note xml:lang="en">
-Examples include paintings, drawings, graphic designs, plans and maps. Recommended best practice is to assign the type Text to images of textual materials. Instances of the type Still Image must also be describable as instances of the broader type Image.        
-        </skos:note>
+    <rdfs:label xml:lang="en">still image</rdfs:label>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:comment xml:lang="en">A static visual representation.</rdfs:comment>
     <vann:example>
         :my-resource
                 datacite:hasGeneralResourceType dcmitype:StillImage .        
         </vann:example>
-    <rdfs:comment xml:lang="en">A static visual representation.</rdfs:comment>
-    <rdfs:label xml:lang="en">still image</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Image"/>
+    <skos:note xml:lang="en">
+Examples include paintings, drawings, graphic designs, plans and maps. Recommended best practice is to assign the type Text to images of textual materials. Instances of the type Still Image must also be describable as instances of the broader type Image.        
+        </skos:note>
   </rdf:Description>
 </rdf:RDF>

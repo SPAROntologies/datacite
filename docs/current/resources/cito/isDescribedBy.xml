@@ -7,18 +7,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/cito/isDescribedBy">
-    <rdfs:comment xml:lang="en">The cited entity is described by the citing entity.</rdfs:comment>
-    <rdfs:label xml:lang="en">is described by</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
     <vaem:rationale xml:lang="en">
 This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsDescribedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         </vaem:rationale>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:label xml:lang="en">is described by</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
     <vann:example>
         :relation-dataset-article a datacite:QualifiedRelation ;
                 datacite:hasRelationCharacterization cito:isDescribedBy .
         </vann:example>
+    <rdfs:comment xml:lang="en">The cited entity is described by the citing entity.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/isCitedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
 </rdf:RDF>

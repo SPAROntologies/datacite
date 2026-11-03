@@ -474,67 +474,67 @@ Thus, the domain of `pro:withRole` is not `foaf:Agent`, but rather a member of t
         ],
         "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
           {
-            "@id": "http://purl.org/spar/scoro/project-leader"
-          },
-          {
-            "@id": "http://purl.org/spar/scoro/contact-person"
-          },
-          {
-            "@id": "http://purl.org/spar/scoro/host-institution"
-          },
-          {
-            "@id": "http://purl.org/spar/scoro/registrar"
-          },
-          {
-            "@id": "http://purl.org/spar/scoro/sponsor"
-          },
-          {
-            "@id": "http://purl.org/spar/pro/producer"
-          },
-          {
-            "@id": "http://purl.org/spar/scoro/project-manager"
-          },
-          {
-            "@id": "http://purl.org/spar/scoro/rights-holder"
-          },
-          {
-            "@id": "http://purl.org/spar/pro/editor"
-          },
-          {
-            "@id": "http://purl.org/spar/scoro/registration-authority"
-          },
-          {
-            "@id": "http://purl.org/spar/pro/distributor"
-          },
-          {
-            "@id": "http://purl.org/spar/scoro/workpackage-leader"
-          },
-          {
-            "@id": "http://purl.org/cerif/frapo/ResearchGroup"
-          },
-          {
-            "@id": "http://purl.org/spar/scoro/data-manager"
+            "@id": "http://xmlns.com/foaf/0.1/Person"
           },
           {
             "@id": "http://purl.org/spar/scoro/project-member"
           },
           {
-            "@id": "http://purl.org/spar/scoro/data-curator"
+            "@id": "http://purl.org/spar/scoro/data-manager"
           },
           {
             "@id": "http://purl.org/spar/scoro/supervisor"
           },
           {
-            "@id": "http://xmlns.com/foaf/0.1/Person"
+            "@id": "http://purl.org/spar/scoro/rights-holder"
           },
           {
-            "@id": "http://purl.org/spar/pro/translator"
+            "@id": "http://purl.org/spar/scoro/project-manager"
+          },
+          {
+            "@id": "http://purl.org/spar/scoro/sponsor"
+          },
+          {
+            "@id": "http://purl.org/spar/scoro/researcher"
+          },
+          {
+            "@id": "http://purl.org/spar/scoro/workpackage-leader"
+          },
+          {
+            "@id": "http://purl.org/spar/scoro/host-institution"
           },
           {
             "@id": "http://purl.org/spar/scoro/data-creator"
           },
           {
-            "@id": "http://purl.org/spar/scoro/researcher"
+            "@id": "http://purl.org/cerif/frapo/ResearchGroup"
+          },
+          {
+            "@id": "http://purl.org/spar/pro/editor"
+          },
+          {
+            "@id": "http://purl.org/spar/scoro/registrar"
+          },
+          {
+            "@id": "http://purl.org/spar/pro/translator"
+          },
+          {
+            "@id": "http://purl.org/spar/scoro/data-curator"
+          },
+          {
+            "@id": "http://purl.org/spar/scoro/project-leader"
+          },
+          {
+            "@id": "http://purl.org/spar/pro/distributor"
+          },
+          {
+            "@id": "http://purl.org/spar/scoro/contact-person"
+          },
+          {
+            "@id": "http://purl.org/spar/scoro/registration-authority"
+          },
+          {
+            "@id": "http://purl.org/spar/pro/producer"
           }
         ],
         "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -552,35 +552,35 @@ Thus, the domain of `pro:withRole` is not `foaf:Agent`, but rather a member of t
     ],
     "@id": "http://purl.org/spar/datacite"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_41cf9cdccde37542b47defab93283cf9_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/project-leader> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/contact-person> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/host-institution> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/registrar> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/sponsor> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2004/02/skos/core#note> "\nSince roles have contexts and time constraints that are important to take into account (for example, a person can be author of one paper and reviewer of another, while another person will be editor of a journal only for a defined period, not for ever), the [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) ontologies permit these contexts to be specified, using the Time-indexed Value in Context ([TVC](http://www.essepuntato.it/2012/04/tvc/)) ontological design pattern.  \n\nThus, the domain of `pro:withRole` is not `foaf:Agent`, but rather a member of the class `pro:RoleInTime`, which itself is the range of the property `pro:holdsRoleInTime`, for which the domain is `foaf:Agent` (i.e., our contributor).\n        "@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/pro/producer> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/project-manager> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/pro/editor> &lt;http://purl.org/spar/datacite> .
+]</code></pre></div><div class="tab-pane fade" id=id_41cf9cdccde37542b47defab93283cf9_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://xmlns.com/foaf/0.1/Person> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/project-member> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/data-manager> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/supervisor> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "A role an agent may have."@en &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/rights-holder> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/registration-authority> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/pro/distributor> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/workpackage-leader> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/researcher> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/cerif/frapo/ResearchGroup> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://purl.org/vocab/vann/example> "\n        :silvio-peroni\n                pro:holdsRoleInTime :contact-person-for-my-dataset .\n        \n        :contact-person-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:contact-person .\n\n        scoro:contact-person a pro:Role .\n        " &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/project-member> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/data-curator> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#label> "role"@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/supervisor> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://xmlns.com/foaf/0.1/Person> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nAll but three of the allowed values in the DataCite controlled list terms for contributor type are defined by individual members of the class `pro:Role` in [PRO](http://purl.org/spar/pro), or of its sub-classes in [SCORO](http://purl.org/spar/scoro):\n\n- `scoro:contact-person` (Contact Person)\n- `scoro:data-creator` (Data Collector)\n- `scoro:data-curator` (Data Curator)\n- `scoro:data-manager` (Data Manager)\n- `pro:distributor` (Distributor)\n- `pro:editor` (Editor)\n- `scoro:host-institution` (Hosting Institution)\n- `pro:producer` (Producer)\n- `scoro:project-leader` (Project Leader)\n- `scoro:project-manager` (Project Manager)\n- `scoro:project-member` (Project Member)\n- `scoro:registrar` (Registration Agency)\n- `scoro:registration-authority` (Registration Authority)\n- `scoro:researcher` (Researcher)\n- `scoro:rights-holder` (Rights Holder)\n- `scoro:sponsor` (Sponsor)\n- `scoro:supervisor` (Supervisor)\n- `pro:translator` (Translator)\n- `scoro:workpackage-leader` (Workpackage Leader)\n\nThe remaining two, i.e., “RelatedPerson” and “ResearchGroup”, can be specified as a type (by means of the property `rdf:type`) of the contributor under consideration by means of the following classes respectively:\n- `foaf:Person` (Related Person)\n- `frapo:ResearchGroup` (Research Group)\n\nNote that many other individuals not required for DataCite metadata also exist within these [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) classes, e.g., `pro:copy-editor` and `scoro:principal-investigator`, and new individuals can easily be added to those ontologies, giving great flexibility.\n        "@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/pro/> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/pro/translator> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/project-manager> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/researcher> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/sponsor> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/host-institution> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/workpackage-leader> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/data-creator> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/data-manager> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/cerif/frapo/ResearchGroup> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/pro/editor> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/pro/> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/registrar> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/pro/translator> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/data-curator> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/project-leader> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/pro/distributor> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/contact-person> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2004/02/skos/core#note> "\nSince roles have contexts and time constraints that are important to take into account (for example, a person can be author of one paper and reviewer of another, while another person will be editor of a journal only for a defined period, not for ever), the [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) ontologies permit these contexts to be specified, using the Time-indexed Value in Context ([TVC](http://www.essepuntato.it/2012/04/tvc/)) ontological design pattern.  \n\nThus, the domain of `pro:withRole` is not `foaf:Agent`, but rather a member of the class `pro:RoleInTime`, which itself is the range of the property `pro:holdsRoleInTime`, for which the domain is `foaf:Agent` (i.e., our contributor).\n        "@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nAll but three of the allowed values in the DataCite controlled list terms for contributor type are defined by individual members of the class `pro:Role` in [PRO](http://purl.org/spar/pro), or of its sub-classes in [SCORO](http://purl.org/spar/scoro):\n\n- `scoro:contact-person` (Contact Person)\n- `scoro:data-creator` (Data Collector)\n- `scoro:data-curator` (Data Curator)\n- `scoro:data-manager` (Data Manager)\n- `pro:distributor` (Distributor)\n- `pro:editor` (Editor)\n- `scoro:host-institution` (Hosting Institution)\n- `pro:producer` (Producer)\n- `scoro:project-leader` (Project Leader)\n- `scoro:project-manager` (Project Manager)\n- `scoro:project-member` (Project Member)\n- `scoro:registrar` (Registration Agency)\n- `scoro:registration-authority` (Registration Authority)\n- `scoro:researcher` (Researcher)\n- `scoro:rights-holder` (Rights Holder)\n- `scoro:sponsor` (Sponsor)\n- `scoro:supervisor` (Supervisor)\n- `pro:translator` (Translator)\n- `scoro:workpackage-leader` (Workpackage Leader)\n\nThe remaining two, i.e., “RelatedPerson” and “ResearchGroup”, can be specified as a type (by means of the property `rdf:type`) of the contributor under consideration by means of the following classes respectively:\n- `foaf:Person` (Related Person)\n- `frapo:ResearchGroup` (Research Group)\n\nNote that many other individuals not required for DataCite metadata also exist within these [PRO](http://port.org/spar/pro) and [SCoRO](http://purl.org/spar/scoro) classes, e.g., `pro:copy-editor` and `scoro:principal-investigator`, and new individuals can easily be added to those ontologies, giving great flexibility.\n        "@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/scoro/registration-authority> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/pro/producer> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/pro/Role> &lt;http://purl.org/vocab/vann/example> "\n        :silvio-peroni\n                pro:holdsRoleInTime :contact-person-for-my-dataset .\n        \n        :contact-person-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:contact-person .\n\n        scoro:contact-person a pro:Role .\n        " &lt;http://purl.org/spar/datacite> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../datacite.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

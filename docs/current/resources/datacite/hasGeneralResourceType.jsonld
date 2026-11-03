@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab2"
+        "@id": "_:neb497a3c135447b499699cacff5876e0b2"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -44,85 +44,49 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
-        "@id": "http://purl.org/spar/fabio/Thesis"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/Preprint"
-      },
-      {
-        "@id": "http://purl.org/spar/fr/ReviewVersion"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/ConferenceProceedings"
-      },
-      {
-        "@id": "http://purl.org/dc/dcmitype/StillImage"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/Journal"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/Model"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/ConferencePaper"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/Book"
-      },
-      {
-        "@id": "http://purl.org/dc/dcmitype/Event"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/Workflow"
-      },
-      {
-        "@id": "http://purl.org/dc/dcmitype/Collection"
-      },
-      {
-        "@id": "http://purl.org/vocab/frbr/core#Endeavour"
-      },
-      {
-        "@id": "http://purl.org/dc/dcmitype/Dataset"
-      },
-      {
-        "@id": "http://purl.org/dc/dcmitype/PhysicalObject"
-      },
-      {
-        "@id": "http://purl.org/spar/fabio/TechnicalStandard"
-      },
-      {
-        "@id": "http://purl.org/dc/dcmitype/Text"
+        "@id": "http://purl.org/dc/dcmitype/Sound"
       },
       {
         "@id": "http://purl.org/spar/fabio/Presentation"
       },
       {
-        "@id": "http://purl.org/spar/fabio/ResourcePaper"
+        "@id": "http://purl.org/spar/fabio/ConferenceProceedings"
       },
       {
-        "@id": "http://purl.org/spar/fabio/DataManagementPlan"
+        "@id": "http://purl.org/spar/fabio/ConferencePaper"
       },
       {
-        "@id": "http://purl.org/dc/dcmitype/Service"
+        "@id": "http://purl.org/dc/dcmitype/StillImage"
       },
       {
-        "@id": "http://purl.org/spar/fabio/ConferencePoster"
+        "@id": "http://purl.org/spar/fabio/Thesis"
       },
       {
-        "@id": "http://purl.org/spar/fabio/Report"
+        "@id": "http://purl.org/dc/dcmitype/Collection"
       },
       {
-        "@id": "http://purl.org/dc/dcmitype/Software"
-      },
-      {
-        "@id": "http://purl.org/dc/dcmitype/InteractiveResource"
+        "@id": "http://purl.org/spar/fabio/Workflow"
       },
       {
         "@id": "http://purl.org/dc/dcmitype/MovingImage"
       },
       {
-        "@id": "http://purl.org/spar/fabio/ProjectPlan"
+        "@id": "http://purl.org/spar/fr/ReviewVersion"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/TechnicalStandard"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/LaboratoryNotebook"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/InteractiveResource"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/DataManagementPlan"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/ConferencePoster"
       },
       {
         "@id": "http://purl.org/spar/fabio/BookChapter"
@@ -131,13 +95,49 @@
         "@id": "http://purl.org/spar/fabio/ReportDocument"
       },
       {
-        "@id": "http://purl.org/spar/fabio/LaboratoryNotebook"
-      },
-      {
-        "@id": "http://purl.org/dc/dcmitype/Sound"
+        "@id": "http://purl.org/spar/fabio/Model"
       },
       {
         "@id": "http://purl.org/spar/fabio/JournalArticle"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Software"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Event"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/ResourcePaper"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Book"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Report"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/PhysicalObject"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Preprint"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/Journal"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Text"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Dataset"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#Endeavour"
+      },
+      {
+        "@id": "http://purl.org/spar/fabio/ProjectPlan"
+      },
+      {
+        "@id": "http://purl.org/dc/dcmitype/Service"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
@@ -152,7 +152,7 @@
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab2",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

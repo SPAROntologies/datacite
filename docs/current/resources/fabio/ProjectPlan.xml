@@ -7,18 +7,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/fabio/ProjectPlan">
-    <rdfs:comment xml:lang="en">A document used to guide project planning, execution and control, specifying the project's goal and objectives and the activities and resources required to achieve these, setting out the project schedule, and identifying the major workpackages, milestones and deliverables. A project plan will typically contain a Gantt chart.</rdfs:comment>
-    <vaem:rationale xml:lang="en">
-This is used as a controlled term to specify a given general resource type ("Project").
-        </vaem:rationale>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <vann:example>
         :my-project-plan
                 datacite:hasGeneralResourceType fabio:ProjectPlan .
         </vann:example>
-    <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Expression"/>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/fabio/"/>
-    <rdfs:label xml:lang="en">project plan</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Expression"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vaem:rationale xml:lang="en">
+This is used as a controlled term to specify a given general resource type ("Project").
+        </vaem:rationale>
+    <rdfs:comment xml:lang="en">A document used to guide project planning, execution and control, specifying the project's goal and objectives and the activities and resources required to achieve these, setting out the project schedule, and identifying the major workpackages, milestones and deliverables. A project plan will typically contain a Gantt chart.</rdfs:comment>
+    <rdfs:label xml:lang="en">project plan</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

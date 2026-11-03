@@ -417,7 +417,7 @@ The value "Award" is modeled differently, using an instance of `frbr:Endeavour` 
 The value "Instrument" is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.
         """@en ;
         rdfs:comment "The general type of a resource, defined from the DataCite controlled list."@en ;
-        rdfs:domain _:n51c9fdc1e17a44869cf90e575182370ab2 ;
+        rdfs:domain _:neb497a3c135447b499699cacff5876e0b2 ;
         rdfs:isDefinedBy datacite: ;
         rdfs:range skos:Concept ;
         rdfs:seeAlso dcmitype:Collection,
@@ -455,7 +455,7 @@ The value "Instrument" is modeled differently, using an instance of `schema:Acti
         rdfs:subPropertyOf dcterms:type ;
         vs:term_status reg:statusStable .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab2 a owl:Restriction ;
+    _:neb497a3c135447b499699cacff5876e0b2 a owl:Restriction ;
         owl:onProperty datacite:hasIdentifier ;
         owl:someValuesFrom datacite:ResourceIdentifier .
 }
@@ -487,7 +487,7 @@ The value "Instrument" is modeled differently, using an instance of `schema:Acti
         ],
         "http://www.w3.org/2000/01/rdf-schema#domain": [
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab2"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b2"
           }
         ],
         "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -508,85 +508,49 @@ The value "Instrument" is modeled differently, using an instance of `schema:Acti
         ],
         "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
           {
-            "@id": "http://purl.org/spar/fabio/Thesis"
-          },
-          {
-            "@id": "http://purl.org/spar/fabio/Preprint"
-          },
-          {
-            "@id": "http://purl.org/spar/fr/ReviewVersion"
-          },
-          {
-            "@id": "http://purl.org/spar/fabio/ConferenceProceedings"
-          },
-          {
-            "@id": "http://purl.org/dc/dcmitype/StillImage"
-          },
-          {
-            "@id": "http://purl.org/spar/fabio/Journal"
-          },
-          {
-            "@id": "http://purl.org/spar/fabio/Model"
-          },
-          {
-            "@id": "http://purl.org/spar/fabio/ConferencePaper"
-          },
-          {
-            "@id": "http://purl.org/spar/fabio/Book"
-          },
-          {
-            "@id": "http://purl.org/dc/dcmitype/Event"
-          },
-          {
-            "@id": "http://purl.org/spar/fabio/Workflow"
-          },
-          {
-            "@id": "http://purl.org/dc/dcmitype/Collection"
-          },
-          {
-            "@id": "http://purl.org/vocab/frbr/core#Endeavour"
-          },
-          {
-            "@id": "http://purl.org/dc/dcmitype/Dataset"
-          },
-          {
-            "@id": "http://purl.org/dc/dcmitype/PhysicalObject"
-          },
-          {
-            "@id": "http://purl.org/spar/fabio/TechnicalStandard"
-          },
-          {
-            "@id": "http://purl.org/dc/dcmitype/Text"
+            "@id": "http://purl.org/dc/dcmitype/Sound"
           },
           {
             "@id": "http://purl.org/spar/fabio/Presentation"
           },
           {
-            "@id": "http://purl.org/spar/fabio/ResourcePaper"
+            "@id": "http://purl.org/spar/fabio/ConferenceProceedings"
           },
           {
-            "@id": "http://purl.org/spar/fabio/DataManagementPlan"
+            "@id": "http://purl.org/spar/fabio/ConferencePaper"
           },
           {
-            "@id": "http://purl.org/dc/dcmitype/Service"
+            "@id": "http://purl.org/dc/dcmitype/StillImage"
           },
           {
-            "@id": "http://purl.org/spar/fabio/ConferencePoster"
+            "@id": "http://purl.org/spar/fabio/Thesis"
           },
           {
-            "@id": "http://purl.org/spar/fabio/Report"
+            "@id": "http://purl.org/dc/dcmitype/Collection"
           },
           {
-            "@id": "http://purl.org/dc/dcmitype/Software"
-          },
-          {
-            "@id": "http://purl.org/dc/dcmitype/InteractiveResource"
+            "@id": "http://purl.org/spar/fabio/Workflow"
           },
           {
             "@id": "http://purl.org/dc/dcmitype/MovingImage"
           },
           {
-            "@id": "http://purl.org/spar/fabio/ProjectPlan"
+            "@id": "http://purl.org/spar/fr/ReviewVersion"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/TechnicalStandard"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/LaboratoryNotebook"
+          },
+          {
+            "@id": "http://purl.org/dc/dcmitype/InteractiveResource"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/DataManagementPlan"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/ConferencePoster"
           },
           {
             "@id": "http://purl.org/spar/fabio/BookChapter"
@@ -595,13 +559,49 @@ The value "Instrument" is modeled differently, using an instance of `schema:Acti
             "@id": "http://purl.org/spar/fabio/ReportDocument"
           },
           {
-            "@id": "http://purl.org/spar/fabio/LaboratoryNotebook"
-          },
-          {
-            "@id": "http://purl.org/dc/dcmitype/Sound"
+            "@id": "http://purl.org/spar/fabio/Model"
           },
           {
             "@id": "http://purl.org/spar/fabio/JournalArticle"
+          },
+          {
+            "@id": "http://purl.org/dc/dcmitype/Software"
+          },
+          {
+            "@id": "http://purl.org/dc/dcmitype/Event"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/ResourcePaper"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/Book"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/Report"
+          },
+          {
+            "@id": "http://purl.org/dc/dcmitype/PhysicalObject"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/Preprint"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/Journal"
+          },
+          {
+            "@id": "http://purl.org/dc/dcmitype/Text"
+          },
+          {
+            "@id": "http://purl.org/dc/dcmitype/Dataset"
+          },
+          {
+            "@id": "http://purl.org/vocab/frbr/core#Endeavour"
+          },
+          {
+            "@id": "http://purl.org/spar/fabio/ProjectPlan"
+          },
+          {
+            "@id": "http://purl.org/dc/dcmitype/Service"
           }
         ],
         "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
@@ -616,7 +616,7 @@ The value "Instrument" is modeled differently, using an instance of `schema:Acti
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab2",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b2",
         "@type": [
           "http://www.w3.org/2002/07/owl#Restriction"
         ],
@@ -634,51 +634,51 @@ The value "Instrument" is modeled differently, using an instance of `schema:Acti
     ],
     "@id": "http://purl.org/spar/datacite"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_427586b3b074a61ea50cbccb3ce0a357_Relation_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#ObjectProperty> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab2 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Preprint> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Thesis> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fr/ReviewVersion> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ConferenceProceedings> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/StillImage> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "The general type of a resource, defined from the DataCite controlled list."@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Journal> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Model> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ConferencePaper> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Book> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nAll DataCite-required general resource type terms are defined by classes in the [Dublin Core Type Vocabulary](http://purl.org/dc/dcmitype/), in [FaBiO](http://purl.org/spar/fabio) and in the [FAIR* Reviews Ontology](http://purl.org/spar/fr), with the exception of the more general `frbr:Endeavour` (mapped to \"Other\").\n\nThe following list specifies ontology classes for all the allowed general resource types in the DataCite Controlled List, with the relevant DataCite general type given alphabetically in parentheses:\n\n- `dcmitype:MovingImage` (Audiovisual);\n- `fabio:Book` (Book);\n- `fabio:BookChapter` (BookChapter);\n- `dcmitype:Collection` (Collection);\n- `fabio:LaboratoryNotebook` (ComputationalNotebook);\n- `fabio:ConferencePaper` (ConferencePaper);\n- `fabio:ConferenceProceedings` (ConferenceProceeding);\n- `fabio:ResourcePaper` (DataPaper);\n- `dcmitype:Dataset` (Dataset);\n- `fabio:Thesis` (Dissertation);\n- `dcmitype:Event` (Event);\n- `dcmitype:StillImage` (Image);\n- `dcmitype:InteractiveResource` (InteractiveResource);\n- `fabio:Journal` (Journal);\n- `fabio:JournalArticle` (JournalArticle);\n- `fabio:Model` (Model);\n- `fabio:DataManagementPlan` (OutputManagementPlan);\n- `fr:ReviewVersion` (PeerReview);\n- `dcmitype:PhysicalObject` (PhysicalObject);\n- `fabio:ConferencePoster` (Poster);\n- `fabio:Preprint` (Preprint);\n- `fabio:Presentation` (Presentation);\n- `fabio:ProjectPlan` (Project);\n- `fabio:ReportDocument` (Report);\n- `dcmitype:Service` (Service);\n- `dcmitype:Software` (Software);\n- `dcmitype:Sound` (Sound);\n- `fabio:TechnicalStandard` (Standard);\n- `fabio:Report` (StudyRegistration);\n- `dcmitype:Text` (Text);\n- `fabio:Workflow` (Workflow);\n- `frbr:Endeavour` (Other).\n\nThe value \"Award\" is modeled differently, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.\n\nThe value \"Instrument\" is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.\n        "@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Event> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Workflow> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Collection> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/vocab/frbr/core#Endeavour> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Dataset> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/PhysicalObject> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/TechnicalStandard> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Text> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:Dataset .\n    " &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Presentation> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ResourcePaper> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/DataManagementPlan> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#domain> _:n51c9fdc1e17a44869cf90e575182370ab2 &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Service> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/LaboratoryNotebook> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ConferencePoster> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab2 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/datacite/hasIdentifier> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#subPropertyOf> &lt;http://purl.org/dc/terms/type> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Report> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Software> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#label> "has general resource type"@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/InteractiveResource> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ProjectPlan> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#range> &lt;http://www.w3.org/2004/02/skos/core#Concept> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/BookChapter> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ReportDocument> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/MovingImage> &lt;http://purl.org/spar/datacite> .
+]</code></pre></div><div class="tab-pane fade" id=id_427586b3b074a61ea50cbccb3ce0a357_Relation_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#range> &lt;http://www.w3.org/2004/02/skos/core#Concept> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Sound> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Presentation> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nAll DataCite-required general resource type terms are defined by classes in the [Dublin Core Type Vocabulary](http://purl.org/dc/dcmitype/), in [FaBiO](http://purl.org/spar/fabio) and in the [FAIR* Reviews Ontology](http://purl.org/spar/fr), with the exception of the more general `frbr:Endeavour` (mapped to \"Other\").\n\nThe following list specifies ontology classes for all the allowed general resource types in the DataCite Controlled List, with the relevant DataCite general type given alphabetically in parentheses:\n\n- `dcmitype:MovingImage` (Audiovisual);\n- `fabio:Book` (Book);\n- `fabio:BookChapter` (BookChapter);\n- `dcmitype:Collection` (Collection);\n- `fabio:LaboratoryNotebook` (ComputationalNotebook);\n- `fabio:ConferencePaper` (ConferencePaper);\n- `fabio:ConferenceProceedings` (ConferenceProceeding);\n- `fabio:ResourcePaper` (DataPaper);\n- `dcmitype:Dataset` (Dataset);\n- `fabio:Thesis` (Dissertation);\n- `dcmitype:Event` (Event);\n- `dcmitype:StillImage` (Image);\n- `dcmitype:InteractiveResource` (InteractiveResource);\n- `fabio:Journal` (Journal);\n- `fabio:JournalArticle` (JournalArticle);\n- `fabio:Model` (Model);\n- `fabio:DataManagementPlan` (OutputManagementPlan);\n- `fr:ReviewVersion` (PeerReview);\n- `dcmitype:PhysicalObject` (PhysicalObject);\n- `fabio:ConferencePoster` (Poster);\n- `fabio:Preprint` (Preprint);\n- `fabio:Presentation` (Presentation);\n- `fabio:ProjectPlan` (Project);\n- `fabio:ReportDocument` (Report);\n- `dcmitype:Service` (Service);\n- `dcmitype:Software` (Software);\n- `dcmitype:Sound` (Sound);\n- `fabio:TechnicalStandard` (Standard);\n- `fabio:Report` (StudyRegistration);\n- `dcmitype:Text` (Text);\n- `fabio:Workflow` (Workflow);\n- `frbr:Endeavour` (Other).\n\nThe value \"Award\" is modeled differently, using an instance of `frbr:Endeavour` and a `foaf:Agent` connected to it via the property `frapo:awards`.\n\nThe value \"Instrument\" is modeled differently, using an instance of `schema:Action` connected to a `frbr:Endeavour` via the property `schema:instrument`.\n        "@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ConferenceProceedings> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ConferencePaper> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/StillImage> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b2 &lt;http://www.w3.org/2002/07/owl#someValuesFrom> &lt;http://purl.org/spar/datacite/ResourceIdentifier> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Thesis> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Collection> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Workflow> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/MovingImage> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fr/ReviewVersion> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/TechnicalStandard> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/LaboratoryNotebook> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/InteractiveResource> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "The general type of a resource, defined from the DataCite controlled list."@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/DataManagementPlan> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#label> "has general resource type"@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasGeneralResourceType dcmitype:Dataset .\n    " &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ConferencePoster> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/BookChapter> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b2 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/datacite/hasIdentifier> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ReportDocument> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Model> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b2 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/JournalArticle> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab2 &lt;http://www.w3.org/2002/07/owl#someValuesFrom> &lt;http://purl.org/spar/datacite/ResourceIdentifier> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Software> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Event> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ResourcePaper> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Book> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Report> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/PhysicalObject> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Preprint> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#domain> _:neb497a3c135447b499699cacff5876e0b2 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/Journal> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Text> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#subPropertyOf> &lt;http://purl.org/dc/terms/type> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#ObjectProperty> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Dataset> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/vocab/frbr/core#Endeavour> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/spar/fabio/ProjectPlan> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/hasGeneralResourceType> &lt;http://www.w3.org/2000/01/rdf-schema#seeAlso> &lt;http://purl.org/dc/dcmitype/Service> &lt;http://purl.org/spar/datacite> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../datacite.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

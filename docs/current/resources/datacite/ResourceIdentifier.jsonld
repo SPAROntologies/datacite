@@ -34,7 +34,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab49"
+        "@id": "_:neb497a3c135447b499699cacff5876e0b49"
       },
       {
         "@id": "http://purl.org/spar/datacite/Identifier"
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab49",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b49",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -63,7 +63,7 @@
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab54",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b54",
     "@type": [
       "http://www.w3.org/2002/07/owl#AllDisjointClasses"
     ],

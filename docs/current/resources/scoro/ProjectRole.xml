@@ -7,7 +7,7 @@
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/scoro/"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
-    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to a project. Individual members of this class are used to specify particular roles.</rdfs:comment>
     <rdfs:label xml:lang="en">project role</rdfs:label>
+    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to a project. Individual members of this class are used to specify particular roles.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

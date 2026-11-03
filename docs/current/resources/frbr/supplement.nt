@@ -1,24 +1,24 @@
-<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#range> _:n51c9fdc1e17a44869cf90e575182370ab19 .
-_:n51c9fdc1e17a44869cf90e575182370ab20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n51c9fdc1e17a44869cf90e575182370ab21 .
-<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
-_:n51c9fdc1e17a44869cf90e575182370ab19 <http://www.w3.org/2002/07/owl#unionOf> _:n51c9fdc1e17a44869cf90e575182370ab20 .
-<http://purl.org/vocab/frbr/core#supplement> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation (\"IsSupplementedBy\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "@en .
-_:n51c9fdc1e17a44869cf90e575182370ab20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
-_:n51c9fdc1e17a44869cf90e575182370ab21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:n51c9fdc1e17a44869cf90e575182370ab16 <http://www.w3.org/2002/07/owl#unionOf> _:n51c9fdc1e17a44869cf90e575182370ab17 .
-_:n51c9fdc1e17a44869cf90e575182370ab18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://purl.org/vocab/frbr/core#supplement> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationCharacterization frbr:supplement .\n        " .
-_:n51c9fdc1e17a44869cf90e575182370ab19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n51c9fdc1e17a44869cf90e575182370ab18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
-<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core#> .
-_:n51c9fdc1e17a44869cf90e575182370ab21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
-_:n51c9fdc1e17a44869cf90e575182370ab17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
-<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#comment> "\nAn expression work/expression having another one as supplement.\n        "@en .
-<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
-<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#supplementOf> .
-<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2004/02/skos/core#note> "\nThe supplement relationship type involves works/expressions that are intended to be used in conjunction with another work/expression. \nSome of these, such as indices, concordances, teachers' guides, glosses, and instruction manuals for electronic resources will be so closely associated with the content of the related work/expression that they are useless without the other work/expression.\n        "@en .
-_:n51c9fdc1e17a44869cf90e575182370ab16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#label> "has supplement"@en .
-<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#domain> _:n51c9fdc1e17a44869cf90e575182370ab16 .
-_:n51c9fdc1e17a44869cf90e575182370ab17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n51c9fdc1e17a44869cf90e575182370ab18 .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/core#> .
+_:neb497a3c135447b499699cacff5876e0b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2004/02/skos/core#note> "\nThe supplement relationship type involves works/expressions that are intended to be used in conjunction with another work/expression. \nSome of these, such as indices, concordances, teachers' guides, glosses, and instruction manuals for electronic resources will be so closely associated with the content of the related work/expression that they are useless without the other work/expression.\n        "@en .
+_:neb497a3c135447b499699cacff5876e0b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .
+_:neb497a3c135447b499699cacff5876e0b16 <http://www.w3.org/2002/07/owl#unionOf> _:neb497a3c135447b499699cacff5876e0b17 .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#domain> _:neb497a3c135447b499699cacff5876e0b16 .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/frbr/core#supplement> <http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationCharacterization frbr:supplement .\n        " .
+_:neb497a3c135447b499699cacff5876e0b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:neb497a3c135447b499699cacff5876e0b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Expression> .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocab/frbr/core#supplementOf> .
+_:neb497a3c135447b499699cacff5876e0b19 <http://www.w3.org/2002/07/owl#unionOf> _:neb497a3c135447b499699cacff5876e0b20 .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:neb497a3c135447b499699cacff5876e0b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#range> _:neb497a3c135447b499699cacff5876e0b19 .
+_:neb497a3c135447b499699cacff5876e0b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:neb497a3c135447b499699cacff5876e0b21 .
+_:neb497a3c135447b499699cacff5876e0b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.w3.org/2000/01/rdf-schema#comment> "\nAn expression work/expression having another one as supplement.\n        "@en .
+_:neb497a3c135447b499699cacff5876e0b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:neb497a3c135447b499699cacff5876e0b18 .
+<http://purl.org/vocab/frbr/core#supplement> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation (\"IsSupplementedBy\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "@en .
+_:neb497a3c135447b499699cacff5876e0b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:neb497a3c135447b499699cacff5876e0b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/vocab/frbr/core#Work> .

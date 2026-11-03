@@ -7,16 +7,16 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/terms/MediaTypeOrExtent">
-    <rdfs:label xml:lang="en">media type or extent</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdfs:comment xml:lang="en">A media type or extent.</rdfs:comment>
+    <rdfs:label xml:lang="en">media type or extent</rdfs:label>
     <vann:example>
         datacite:spar
                 dcterms:format &lt;https://w3id.org/spar/mediatype/text/turtle&gt; .
 
         &lt;https://w3id.org/spar/mediatype/text/turtle&gt; a dcterms:MediaTypeOrExtent .
     </vann:example>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A media type or extent.</rdfs:comment>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vaem:rationale>
 This is used to represent the particular format in which the metadata in a metadata document are stored. 

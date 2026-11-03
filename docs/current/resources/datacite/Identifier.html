@@ -312,21 +312,21 @@ An identifier belongs to a particular scheme, such as those specified by individ
         """@en ;
         rdfs:comment "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."@en ;
         rdfs:isDefinedBy datacite: ;
-        rdfs:subClassOf _:n51c9fdc1e17a44869cf90e575182370ab36,
-            _:n51c9fdc1e17a44869cf90e575182370ab37,
+        rdfs:subClassOf _:neb497a3c135447b499699cacff5876e0b36,
+            _:neb497a3c135447b499699cacff5876e0b37,
             literal:Literal ;
         vs:term_status reg:statusStable .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab36 a owl:Restriction ;
+    _:neb497a3c135447b499699cacff5876e0b36 a owl:Restriction ;
         owl:onClass datacite:IdentifierScheme ;
         owl:onProperty datacite:usesIdentifierScheme ;
         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab37 a owl:Restriction ;
+    _:neb497a3c135447b499699cacff5876e0b37 a owl:Restriction ;
         owl:cardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onProperty _:n51c9fdc1e17a44869cf90e575182370ab38 .
+        owl:onProperty _:neb497a3c135447b499699cacff5876e0b38 .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab38 owl:inverseOf datacite:hasIdentifier .
+    _:neb497a3c135447b499699cacff5876e0b38 owl:inverseOf datacite:hasIdentifier .
 }
 
 </code></pre></div><div class="tab-pane fade" id=id_95c00027594a9f73219369313ac7d7d1_Concept_prov_2 role=tabpanel><pre class="mb-0 small"><code>[
@@ -367,13 +367,13 @@ An identifier belongs to a particular scheme, such as those specified by individ
         ],
         "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab36"
-          },
-          {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab37"
-          },
-          {
             "@id": "http://www.essepuntato.it/2010/06/literalreification/Literal"
+          },
+          {
+            "@id": "_:neb497a3c135447b499699cacff5876e0b36"
+          },
+          {
+            "@id": "_:neb497a3c135447b499699cacff5876e0b37"
           }
         ],
         "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -383,7 +383,7 @@ An identifier belongs to a particular scheme, such as those specified by individ
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab36",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b36",
         "@type": [
           "http://www.w3.org/2002/07/owl#Restriction"
         ],
@@ -405,7 +405,7 @@ An identifier belongs to a particular scheme, such as those specified by individ
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab37",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b37",
         "@type": [
           "http://www.w3.org/2002/07/owl#Restriction"
         ],
@@ -417,12 +417,12 @@ An identifier belongs to a particular scheme, such as those specified by individ
         ],
         "http://www.w3.org/2002/07/owl#onProperty": [
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab38"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b38"
           }
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab38",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b38",
         "http://www.w3.org/2002/07/owl#inverseOf": [
           {
             "@id": "http://purl.org/spar/datacite/hasIdentifier"
@@ -432,24 +432,24 @@ An identifier belongs to a particular scheme, such as those specified by individ
     ],
     "@id": "http://purl.org/spar/datacite"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_95c00027594a9f73219369313ac7d7d1_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>_:n51c9fdc1e17a44869cf90e575182370ab38 &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/spar/datacite/hasIdentifier> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n51c9fdc1e17a44869cf90e575182370ab36 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab37 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab37 &lt;http://www.w3.org/2002/07/owl#cardinality> "1"^^&lt;http://www.w3.org/2001/XMLSchema#nonNegativeInteger> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n51c9fdc1e17a44869cf90e575182370ab37 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab36 &lt;http://www.w3.org/2002/07/owl#onClass> &lt;http://purl.org/spar/datacite/IdentifierScheme> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
+]</code></pre></div><div class="tab-pane fade" id=id_95c00027594a9f73219369313ac7d7d1_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://www.essepuntato.it/2010/06/literalreification/Literal> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b37 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b36 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent identifiers in the most generic conceptualization possible.\n\nAn identifier belongs to a particular scheme, such as those specified by individuals of the class `datacite:IdentifierScheme`.\n        "@en &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b36 &lt;http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^&lt;http://www.w3.org/2001/XMLSchema#nonNegativeInteger> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an entity, such as a funding agency, a person or a resource."@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://www.essepuntato.it/2010/06/literalreification/Literal> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab36 &lt;http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^&lt;http://www.w3.org/2001/XMLSchema#nonNegativeInteger> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab36 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b36 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b37 &lt;http://www.w3.org/2002/07/owl#cardinality> "1"^^&lt;http://www.w3.org/2001/XMLSchema#nonNegativeInteger> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b37 &lt;http://www.w3.org/2002/07/owl#onProperty> _:neb497a3c135447b499699cacff5876e0b38 &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b36 &lt;http://www.w3.org/2002/07/owl#onClass> &lt;http://purl.org/spar/datacite/IdentifierScheme> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b38 &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/spar/datacite/hasIdentifier> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:neb497a3c135447b499699cacff5876e0b36 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/Identifier> &lt;http://purl.org/vocab/vann/example> "\n        :my-resource\n            datacite:hasIdentifier :my-resource-id .\n        \n        :my-resource-id a datacite:Identifier ;\n            literal:hasLiteralValue \"0000-2221-4444\" .\n        " &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab36 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab37 &lt;http://www.w3.org/2002/07/owl#onProperty> _:n51c9fdc1e17a44869cf90e575182370ab38 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:neb497a3c135447b499699cacff5876e0b37 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/Identifier> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../datacite.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

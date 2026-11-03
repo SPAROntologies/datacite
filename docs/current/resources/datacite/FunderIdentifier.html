@@ -311,57 +311,33 @@ A funder identifier belongs to a particular scheme, such as FundRef, specified b
         """@en ;
         rdfs:comment "An identifier that uniquely identities a funding agency."@en ;
         rdfs:isDefinedBy datacite: ;
-        rdfs:subClassOf _:n51c9fdc1e17a44869cf90e575182370ab22,
+        rdfs:subClassOf _:neb497a3c135447b499699cacff5876e0b22,
             datacite:AgentIdentifier ;
         vs:term_status reg:statusStable .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab54 a owl:AllDisjointClasses ;
-        owl:members _:n51c9fdc1e17a44869cf90e575182370ab55 .
+    _:neb497a3c135447b499699cacff5876e0b54 a owl:AllDisjointClasses ;
+        owl:members _:neb497a3c135447b499699cacff5876e0b55 .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab22 a owl:Restriction ;
+    _:neb497a3c135447b499699cacff5876e0b22 a owl:Restriction ;
         owl:allValuesFrom datacite:FunderIdentifierScheme ;
         owl:onProperty datacite:usesIdentifierScheme .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab55 rdf:first datacite:FunderIdentifier ;
-        rdf:rest _:n51c9fdc1e17a44869cf90e575182370ab56 .
+    _:neb497a3c135447b499699cacff5876e0b55 rdf:first datacite:FunderIdentifier ;
+        rdf:rest _:neb497a3c135447b499699cacff5876e0b56 .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab56 rdf:first datacite:PersonalIdentifier ;
-        rdf:rest _:n51c9fdc1e17a44869cf90e575182370ab57 .
+    _:neb497a3c135447b499699cacff5876e0b56 rdf:first datacite:PersonalIdentifier ;
+        rdf:rest _:neb497a3c135447b499699cacff5876e0b57 .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab57 rdf:first datacite:ResourceIdentifier ;
-        rdf:rest _:n51c9fdc1e17a44869cf90e575182370ab58 .
+    _:neb497a3c135447b499699cacff5876e0b57 rdf:first datacite:ResourceIdentifier ;
+        rdf:rest _:neb497a3c135447b499699cacff5876e0b58 .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab58 rdf:first datacite:RightsIdentifier ;
+    _:neb497a3c135447b499699cacff5876e0b58 rdf:first datacite:RightsIdentifier ;
         rdf:rest () .
 }
 
 </code></pre></div><div class="tab-pane fade" id=id_ad8a6a3070463bae504ae768ce585032_Concept_prov_2 role=tabpanel><pre class="mb-0 small"><code>[
   {
     "@graph": [
-      {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab54",
-        "@type": [
-          "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-        ],
-        "http://www.w3.org/2002/07/owl#members": [
-          {
-            "@list": [
-              {
-                "@id": "http://purl.org/spar/datacite/FunderIdentifier"
-              },
-              {
-                "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
-              },
-              {
-                "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
-              },
-              {
-                "@id": "http://purl.org/spar/datacite/RightsIdentifier"
-              }
-            ]
-          }
-        ]
-      },
       {
         "@id": "http://purl.org/spar/datacite/FunderIdentifier",
         "@type": [
@@ -397,10 +373,10 @@ A funder identifier belongs to a particular scheme, such as FundRef, specified b
         ],
         "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
           {
-            "@id": "http://purl.org/spar/datacite/AgentIdentifier"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b22"
           },
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab22"
+            "@id": "http://purl.org/spar/datacite/AgentIdentifier"
           }
         ],
         "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -410,7 +386,7 @@ A funder identifier belongs to a particular scheme, such as FundRef, specified b
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab22",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b22",
         "@type": [
           "http://www.w3.org/2002/07/owl#Restriction"
         ],
@@ -424,32 +400,56 @@ A funder identifier belongs to a particular scheme, such as FundRef, specified b
             "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
           }
         ]
+      },
+      {
+        "@id": "_:neb497a3c135447b499699cacff5876e0b54",
+        "@type": [
+          "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+        ],
+        "http://www.w3.org/2002/07/owl#members": [
+          {
+            "@list": [
+              {
+                "@id": "http://purl.org/spar/datacite/FunderIdentifier"
+              },
+              {
+                "@id": "http://purl.org/spar/datacite/PersonalIdentifier"
+              },
+              {
+                "@id": "http://purl.org/spar/datacite/ResourceIdentifier"
+              },
+              {
+                "@id": "http://purl.org/spar/datacite/RightsIdentifier"
+              }
+            ]
+          }
+        ]
       }
     ],
     "@id": "http://purl.org/spar/datacite"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_ad8a6a3070463bae504ae768ce585032_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>_:n51c9fdc1e17a44869cf90e575182370ab55 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab56 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/datacite/PersonalIdentifier> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab22 &lt;http://www.w3.org/2002/07/owl#allValuesFrom> &lt;http://purl.org/spar/datacite/FunderIdentifierScheme> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab54 &lt;http://www.w3.org/2002/07/owl#members> _:n51c9fdc1e17a44869cf90e575182370ab55 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab58 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://purl.org/spar/datacite/AgentIdentifier> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab22 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab22 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab57 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/datacite/ResourceIdentifier> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab56 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n51c9fdc1e17a44869cf90e575182370ab57 &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://purl.org/vocab/vann/example> "\n        :my-funder a foaf:Organization ;\n                datacite:hasIdentifier :my-funder-id .\n\n        :my-funder-id a datacite:FunderIdentifier ;\n                literal:hasLiteralValue \"10.13039/5011000059696\" .\n        " &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab57 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n51c9fdc1e17a44869cf90e575182370ab58 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab54 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#AllDisjointClasses> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab58 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/datacite/RightsIdentifier> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent identifiers associated with funding agencies, modelled as instances of `foaf:Organization`.\n\nA funder identifier belongs to a particular scheme, such as FundRef, specified by an individual within the class `datacite:FunderIdentifierScheme`.\n        "@en &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab55 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n51c9fdc1e17a44869cf90e575182370ab56 &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#label> "funder identifier"@en &lt;http://purl.org/spar/datacite> .
+]</code></pre></div><div class="tab-pane fade" id=id_ad8a6a3070463bae504ae768ce585032_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>_:neb497a3c135447b499699cacff5876e0b58 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/datacite/RightsIdentifier> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b22 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b54 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#AllDisjointClasses> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b57 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:neb497a3c135447b499699cacff5876e0b58 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:neb497a3c135447b499699cacff5876e0b22 &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b55 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b55 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:neb497a3c135447b499699cacff5876e0b56 &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities a funding agency."@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n51c9fdc1e17a44869cf90e575182370ab22 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://purl.org/vocab/vann/example> "\n        :my-funder a foaf:Organization ;\n                datacite:hasIdentifier :my-funder-id .\n\n        :my-funder-id a datacite:FunderIdentifier ;\n                literal:hasLiteralValue \"10.13039/5011000059696\" .\n        " &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b56 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:neb497a3c135447b499699cacff5876e0b57 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent identifiers associated with funding agencies, modelled as instances of `foaf:Organization`.\n\nA funder identifier belongs to a particular scheme, such as FundRef, specified by an individual within the class `datacite:FunderIdentifierScheme`.\n        "@en &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b54 &lt;http://www.w3.org/2002/07/owl#members> _:neb497a3c135447b499699cacff5876e0b55 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://purl.org/spar/datacite/AgentIdentifier> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#label> "funder identifier"@en &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b56 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/datacite/PersonalIdentifier> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b58 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b22 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/FunderIdentifier> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b57 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/spar/datacite/ResourceIdentifier> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b22 &lt;http://www.w3.org/2002/07/owl#allValuesFrom> &lt;http://purl.org/spar/datacite/FunderIdentifierScheme> &lt;http://purl.org/spar/datacite> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../datacite.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

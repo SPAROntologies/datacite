@@ -7,56 +7,56 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab43">
-    <rdf:rest rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab44"/>
-    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab45">
-    <rdf:rest rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab46"/>
-    <rdf:first rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab41"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab42">
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b40">
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasRelationCharacterization"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasRelationSubject"/>
     <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b45">
+    <rdf:rest rdf:nodeID="neb497a3c135447b499699cacff5876e0b46"/>
+    <rdf:first rdf:nodeID="neb497a3c135447b499699cacff5876e0b41"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/datacite/QualifiedRelation">
-    <rdfs:label xml:lang="en">qualified relation</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab39"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A class representing a reified relation between two resources, allowing the assignment of a specific role or type to the relationship.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vaem:rationale xml:lang="en">
+This is used to represent qualified relations between two resources, which can be described using various properties (e.g., `dcterms:description`).
+        </vaem:rationale>
+    <owl:equivalentClass rdf:nodeID="neb497a3c135447b499699cacff5876e0b39"/>
     <vann:example>
         :relation-dataset-article a datacite:QualifiedRelation ;
                 datacite:hasRelationSubject :my-resource ;
                 datacite:hasRelationObject :my-article ;
                 datacite:hasRelationCharacterization cito:isCitedBy .
         </vann:example>
-    <vaem:rationale xml:lang="en">
-This is used to represent qualified relations between two resources, which can be described using various properties (e.g., `dcterms:description`).
-        </vaem:rationale>
-    <rdfs:comment xml:lang="en">A class representing a reified relation between two resources, allowing the assignment of a specific role or type to the relationship.</rdfs:comment>
+    <rdfs:label xml:lang="en">qualified relation</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab41">
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b44">
+    <rdf:rest rdf:nodeID="neb497a3c135447b499699cacff5876e0b45"/>
+    <rdf:first rdf:nodeID="neb497a3c135447b499699cacff5876e0b40"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b42">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasRelationSubject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b41">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
     <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasRelationObject"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab40">
-    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/hasRelationCharacterization"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab44">
-    <rdf:first rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab40"/>
-    <rdf:rest rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab45"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab46">
-    <rdf:first rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab42"/>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b46">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="neb497a3c135447b499699cacff5876e0b42"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab39">
-    <owl:intersectionOf rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab43"/>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b39">
+    <owl:intersectionOf rdf:nodeID="neb497a3c135447b499699cacff5876e0b43"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b43">
+    <rdf:rest rdf:nodeID="neb497a3c135447b499699cacff5876e0b44"/>
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
   </rdf:Description>
 </rdf:RDF>

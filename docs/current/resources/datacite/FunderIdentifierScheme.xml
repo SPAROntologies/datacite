@@ -7,17 +7,13 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b27">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/datacite/FunderIdentifierScheme">
-    <rdfs:subClassOf rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab26"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
-    <vaem:rationale xml:lang="en">
-This is used to specify the identifier scheme used by a funding agency identifier.
-
-Individual schemes are defined as members of this class. 
-        </vaem:rationale>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdfs:label xml:lang="en">funder identifier scheme</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">The identifier scheme used to identify a funding agency.</rdfs:comment>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <vann:example>
         :my-funder a foaf:Organization ;
                 datacite:hasIdentifier :my-funder-id .
@@ -27,15 +23,19 @@ Individual schemes are defined as members of this class.
 
         datacite:fundref a datacite:FunderIdentifierScheme .
         </vann:example>
+    <rdfs:label xml:lang="en">funder identifier scheme</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vaem:rationale xml:lang="en">
+This is used to specify the identifier scheme used by a funding agency identifier.
+
+Individual schemes are defined as members of this class. 
+        </vaem:rationale>
+    <rdfs:subClassOf rdf:nodeID="neb497a3c135447b499699cacff5876e0b26"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/AgentIdentifierScheme"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab27">
-    <owl:inverseOf rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab26">
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b26">
     <owl:someValuesFrom rdf:resource="http://purl.org/spar/datacite/FunderIdentifier"/>
+    <owl:onProperty rdf:nodeID="neb497a3c135447b499699cacff5876e0b27"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab27"/>
   </rdf:Description>
 </rdf:RDF>

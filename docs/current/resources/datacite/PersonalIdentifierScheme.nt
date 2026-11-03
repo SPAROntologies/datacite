@@ -1,13 +1,13 @@
-<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "personal identifier scheme"@en .
 <http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/datacite/> .
-_:n51c9fdc1e17a44869cf90e575182370ab50 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/PersonalIdentifier> .
-<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n51c9fdc1e17a44869cf90e575182370ab51 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+_:neb497a3c135447b499699cacff5876e0b51 <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/datacite/usesIdentifierScheme> .
+<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:neb497a3c135447b499699cacff5876e0b50 .
 <http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the identifier scheme used by a personal identifier.\n\nIndividual schemes are defines as members of this class.        \n        "@en .
-<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
 <http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/datacite/AgentIdentifierScheme> .
-<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n51c9fdc1e17a44869cf90e575182370ab50 .
-_:n51c9fdc1e17a44869cf90e575182370ab50 <http://www.w3.org/2002/07/owl#onProperty> _:n51c9fdc1e17a44869cf90e575182370ab51 .
-_:n51c9fdc1e17a44869cf90e575182370ab50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a person."@en .
+<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://purl.org/vocab/vann/example> "\n        :david-shotton a foaf:Person ;\n                datacite:hasIdentifier :david-shotton-id .\n\n        :david-shotton-id a datacite:PersonalIdentifier ;\n                datacite:usesIdentifierScheme datacite:orcid .\n\n        datacite:orcid a datacite:PersonalIdentifierScheme .\n        " .
+<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "personal identifier scheme"@en .
+<http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/linked-data/registry#statusStable> .
+_:neb497a3c135447b499699cacff5876e0b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:neb497a3c135447b499699cacff5876e0b50 <http://www.w3.org/2002/07/owl#onProperty> _:neb497a3c135447b499699cacff5876e0b51 .
+_:neb497a3c135447b499699cacff5876e0b50 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/spar/datacite/PersonalIdentifier> .

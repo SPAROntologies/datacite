@@ -316,15 +316,15 @@ Individual schemes are defines as members of this class.
         """@en ;
         rdfs:comment "The identifier scheme used to identify a person."@en ;
         rdfs:isDefinedBy datacite: ;
-        rdfs:subClassOf _:n51c9fdc1e17a44869cf90e575182370ab50,
+        rdfs:subClassOf _:neb497a3c135447b499699cacff5876e0b50,
             datacite:AgentIdentifierScheme ;
         vs:term_status reg:statusStable .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab50 a owl:Restriction ;
-        owl:onProperty _:n51c9fdc1e17a44869cf90e575182370ab51 ;
+    _:neb497a3c135447b499699cacff5876e0b50 a owl:Restriction ;
+        owl:onProperty _:neb497a3c135447b499699cacff5876e0b51 ;
         owl:someValuesFrom datacite:PersonalIdentifier .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab51 owl:inverseOf datacite:usesIdentifierScheme .
+    _:neb497a3c135447b499699cacff5876e0b51 owl:inverseOf datacite:usesIdentifierScheme .
 }
 
 </code></pre></div><div class="tab-pane fade" id=id_0f731fa2ea395387e4b6f81d881226bc_Concept_prov_2 role=tabpanel><pre class="mb-0 small"><code>[
@@ -365,10 +365,10 @@ Individual schemes are defines as members of this class.
         ],
         "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
           {
-            "@id": "http://purl.org/spar/datacite/AgentIdentifierScheme"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b50"
           },
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab50"
+            "@id": "http://purl.org/spar/datacite/AgentIdentifierScheme"
           }
         ],
         "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -378,13 +378,13 @@ Individual schemes are defines as members of this class.
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab50",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b50",
         "@type": [
           "http://www.w3.org/2002/07/owl#Restriction"
         ],
         "http://www.w3.org/2002/07/owl#onProperty": [
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab51"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b51"
           }
         ],
         "http://www.w3.org/2002/07/owl#someValuesFrom": [
@@ -394,7 +394,7 @@ Individual schemes are defines as members of this class.
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab51",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b51",
         "http://www.w3.org/2002/07/owl#inverseOf": [
           {
             "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
@@ -404,19 +404,19 @@ Individual schemes are defines as members of this class.
     ],
     "@id": "http://purl.org/spar/datacite"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_0f731fa2ea395387e4b6f81d881226bc_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#label> "personal identifier scheme"@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab50 &lt;http://www.w3.org/2002/07/owl#someValuesFrom> &lt;http://purl.org/spar/datacite/PersonalIdentifier> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab51 &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
+]</code></pre></div><div class="tab-pane fade" id=id_0f731fa2ea395387e4b6f81d881226bc_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b51 &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:neb497a3c135447b499699cacff5876e0b50 &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the identifier scheme used by a personal identifier.\n\nIndividual schemes are defines as members of this class.        \n        "@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://purl.org/spar/datacite/AgentIdentifierScheme> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n51c9fdc1e17a44869cf90e575182370ab50 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab50 &lt;http://www.w3.org/2002/07/owl#onProperty> _:n51c9fdc1e17a44869cf90e575182370ab51 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab50 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a person."@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://purl.org/vocab/vann/example> "\n        :david-shotton a foaf:Person ;\n                datacite:hasIdentifier :david-shotton-id .\n\n        :david-shotton-id a datacite:PersonalIdentifier ;\n                datacite:usesIdentifierScheme datacite:orcid .\n\n        datacite:orcid a datacite:PersonalIdentifierScheme .\n        " &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#label> "personal identifier scheme"@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/PersonalIdentifierScheme> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b50 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b50 &lt;http://www.w3.org/2002/07/owl#onProperty> _:neb497a3c135447b499699cacff5876e0b51 &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b50 &lt;http://www.w3.org/2002/07/owl#someValuesFrom> &lt;http://purl.org/spar/datacite/PersonalIdentifier> &lt;http://purl.org/spar/datacite> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../datacite.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

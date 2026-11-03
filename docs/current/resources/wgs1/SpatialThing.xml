@@ -6,7 +6,7 @@
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
     <rdfs:label xml:lang="en">spatial thing</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Anything with spatial extent.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>

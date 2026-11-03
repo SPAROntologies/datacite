@@ -7,15 +7,15 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/cerif/frapo/hasGrantNumber">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
-    <rdfs:comment xml:lang="en">A data property specifying the grant number of a grant provided by a funding agency.</rdfs:comment>
     <rdfs:domain rdf:resource="http://purl.org/cerif/frapo/Grant"/>
     <vaem:rationale xml:lang="en">
 This is used to specify  the grant or award number associated with the funding awarded by some funder agent. 
 More specifically, a `foaf:Agent` awards (`frapo:awards`) a grant (`frapo:Grant`) with a certain number associated to it (`frapo:hasGrantNumber`).
         </vaem:rationale>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
+    <rdfs:comment xml:lang="en">A data property specifying the grant number of a grant provided by a funding agency.</rdfs:comment>
     <rdfs:label xml:lang="en">has grant number</rdfs:label>
     <vann:example>
         :european-commission

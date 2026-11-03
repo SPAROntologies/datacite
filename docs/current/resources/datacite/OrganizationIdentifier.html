@@ -310,11 +310,11 @@ An organization identifier belongs to a particular identifier scheme, such as IS
         """@en ;
         rdfs:comment "An identifier that uniquely identities an individual organization."@en ;
         rdfs:isDefinedBy datacite: ;
-        rdfs:subClassOf _:n51c9fdc1e17a44869cf90e575182370ab23,
+        rdfs:subClassOf _:neb497a3c135447b499699cacff5876e0b23,
             datacite:AgentIdentifier ;
         vs:term_status reg:statusStable .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab23 a owl:Restriction ;
+    _:neb497a3c135447b499699cacff5876e0b23 a owl:Restriction ;
         owl:allValuesFrom datacite:OrganizationIdentifier ;
         owl:onProperty datacite:usesIdentifierScheme .
 }
@@ -357,7 +357,7 @@ An organization identifier belongs to a particular identifier scheme, such as IS
         ],
         "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab23"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b23"
           },
           {
             "@id": "http://purl.org/spar/datacite/AgentIdentifier"
@@ -370,7 +370,7 @@ An organization identifier belongs to a particular identifier scheme, such as IS
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab23",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b23",
         "@type": [
           "http://www.w3.org/2002/07/owl#Restriction"
         ],
@@ -388,18 +388,18 @@ An organization identifier belongs to a particular identifier scheme, such as IS
     ],
     "@id": "http://purl.org/spar/datacite"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_f1572ac13e0556cee9643090c01de8fa_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent identifiers associated with organizations, modelled as instances of `foaf:Organization`.\n\nAn organization identifier belongs to a particular identifier scheme, such as ISNI, specified by an individual within the class `datacite:OrganizationIdentifierScheme`.\n        "@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://purl.org/vocab/vann/example> "\n        :my-organization a foaf:Organization ;\n                datacite:hasIdentifier :my-organization-id .\n\n        :my-organization-id a datacite:OrganizationIdentifier ;\n                literal:hasLiteralValue \"00wb4mk85\" .\n        " &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n51c9fdc1e17a44869cf90e575182370ab23 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab23 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#label> "organization identifier"@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://purl.org/spar/datacite/AgentIdentifier> &lt;http://purl.org/spar/datacite> .
+]</code></pre></div><div class="tab-pane fade" id=id_f1572ac13e0556cee9643090c01de8fa_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent identifiers associated with organizations, modelled as instances of `foaf:Organization`.\n\nAn organization identifier belongs to a particular identifier scheme, such as ISNI, specified by an individual within the class `datacite:OrganizationIdentifierScheme`.\n        "@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:neb497a3c135447b499699cacff5876e0b23 &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b23 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab23 &lt;http://www.w3.org/2002/07/owl#onProperty> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b23 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b23 &lt;http://www.w3.org/2002/07/owl#allValuesFrom> &lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#label> "organization identifier"@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://purl.org/spar/datacite/AgentIdentifier> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://purl.org/vocab/vann/example> "\n        :my-organization a foaf:Organization ;\n                datacite:hasIdentifier :my-organization-id .\n\n        :my-organization-id a datacite:OrganizationIdentifier ;\n                literal:hasLiteralValue \"00wb4mk85\" .\n        " &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely identities an individual organization."@en &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab23 &lt;http://www.w3.org/2002/07/owl#allValuesFrom> &lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/OrganizationIdentifier> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../datacite.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 
