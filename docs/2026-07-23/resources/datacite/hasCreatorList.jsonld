@@ -23,7 +23,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab1"
+        "@id": "_:neb497a3c135447b499699cacff5876e0b1"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab1",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

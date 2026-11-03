@@ -8,18 +8,18 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/spar/datacite/spase">
+    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spase-group.org/services/</fabio:hasURL>
+    <rdfs:label>spase</rdfs:label>
     <rdf:type rdf:resource="http://purl.org/spar/datacite/IdentifierScheme"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:label>spase</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <rdfs:comment>The SPASE resource identifier is the identifier of resources included in the resource registry (datasets, instruments, observatories, etc) maintained by the Space Physics Archive Search and Extract (SPASE) group.</rdfs:comment>
+    <skos:note xml:lang="en">Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://&lt;authority&gt;&lt;path&gt;.</skos:note>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
     <vann:example>
         :my-object-id
                 datacite:usesIdentifierScheme datacite:spase ;
                 literal:hasLiteralValue "spase://Example/NumericalData/MagProbe-1/Mag/PT1D" .
         </vann:example>
-    <skos:note xml:lang="en">Such identifiers are RFC 3986-compliant URIs with a scheme of spase, and only implementing the authority and path parts of the specification. Thus, their generic form is: spase://&lt;authority&gt;&lt;path&gt;.</skos:note>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <fabio:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spase-group.org/services/</fabio:hasURL>
   </rdf:Description>
 </rdf:RDF>

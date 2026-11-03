@@ -354,11 +354,11 @@ Instead of creating a new media type every time, it is strongly suggested to reu
     ],
     "@id": "http://purl.org/spar/datacite"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_3f5c5a4bac3fb8256daeb28e393a96f6_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://www.w3.org/2000/01/rdf-schema#label> "media type or extent"@en &lt;http://purl.org/spar/datacite> .
+]</code></pre></div><div class="tab-pane fade" id=id_3f5c5a4bac3fb8256daeb28e393a96f6_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/dc/terms/> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://purl.org/vocab/vann/example> "\n        datacite:spar\n                dcterms:format &lt;https://w3id.org/spar/mediatype/text/turtle> .\n\n        &lt;https://w3id.org/spar/mediatype/text/turtle> a dcterms:MediaTypeOrExtent .\n    " &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "A media type or extent."@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://www.w3.org/2000/01/rdf-schema#label> "media type or extent"@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://purl.org/vocab/vann/example> "\n        datacite:spar\n                dcterms:format &lt;https://w3id.org/spar/mediatype/text/turtle> .\n\n        &lt;https://w3id.org/spar/mediatype/text/turtle> a dcterms:MediaTypeOrExtent .\n    " &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/dc/terms/MediaTypeOrExtent> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to represent the particular format in which the metadata in a metadata document are stored. \n\nInstead of creating a new media type every time, it is strongly suggested to reuse those already available in existing datasets, such as the “Media type as Linked Open Data” dataset (https://w3id.org/spar/mediatype).\n    " &lt;http://purl.org/spar/datacite> .
 

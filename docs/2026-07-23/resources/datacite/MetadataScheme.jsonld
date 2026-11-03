@@ -34,10 +34,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
-        "@id": "http://purl.org/spar/fabio/MetadataDocument"
+        "@id": "http://purl.org/spar/cito/citesAsMetadataDocument"
       },
       {
-        "@id": "http://purl.org/spar/cito/citesAsMetadataDocument"
+        "@id": "http://purl.org/spar/fabio/MetadataDocument"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [

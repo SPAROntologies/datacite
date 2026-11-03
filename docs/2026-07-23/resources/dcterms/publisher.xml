@@ -11,16 +11,16 @@
     <vaem:rationale xml:lang="en">
 According to this property, a publisher is a proper agent (`foaf:Agent`) related to the resource it is published on (`dcterms:publisher`). 
         </vaem:rationale>
+    <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    <rdfs:label>has publisher</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <vann:example>
         :my-dataset 
                 dcterms:publisher :my-dataset-publisher .
 
         :my-dataset-publisher a foaf:Agent .
         </vann:example>
-    <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>has publisher</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

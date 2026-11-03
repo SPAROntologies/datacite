@@ -7,15 +7,34 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab55">
-    <rdf:first rdf:resource="http://purl.org/spar/datacite/FunderIdentifier"/>
-    <rdf:rest rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab56"/>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b58">
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/RightsIdentifier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab56">
-    <rdf:first rdf:resource="http://purl.org/spar/datacite/PersonalIdentifier"/>
-    <rdf:rest rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab57"/>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b54">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="neb497a3c135447b499699cacff5876e0b55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b57">
+    <rdf:rest rdf:nodeID="neb497a3c135447b499699cacff5876e0b58"/>
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b55">
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/FunderIdentifier"/>
+    <rdf:rest rdf:nodeID="neb497a3c135447b499699cacff5876e0b56"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/datacite/ResourceIdentifier">
+    <vaem:rationale xml:lang="en">
+This is used to represent identifiers associated with resources.
+
+An alternate resource identifier belongs to a particular scheme, such as ISBN, specified by an individual that is a member of the class `datacite:ResourceIdentifierScheme`.
+        </vaem:rationale>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
+    <rdfs:subClassOf rdf:nodeID="neb497a3c135447b499699cacff5876e0b49"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/Identifier"/>
+    <rdfs:label xml:lang="en">resource identifier</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <vann:example>
         :my-resource
                 datacite:hasIdentifier :my-resource-id .
@@ -23,34 +42,15 @@
         :my-resource-id a datacite:ResourceIdentifier ;
                 literal:hasLiteralValue "10.3457/1098.a45" .
     </vann:example>
-    <rdfs:subClassOf rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab49"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/spar/datacite/Identifier"/>
-    <vaem:rationale xml:lang="en">
-This is used to represent identifiers associated with resources.
-
-An alternate resource identifier belongs to a particular scheme, such as ISBN, specified by an individual that is a member of the class `datacite:ResourceIdentifierScheme`.
-        </vaem:rationale>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/datacite/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
     <rdfs:comment xml:lang="en">An identifier that is used to uniquely identify a resource.</rdfs:comment>
-    <rdfs:label xml:lang="en">resource identifier</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab49">
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b56">
+    <rdf:rest rdf:nodeID="neb497a3c135447b499699cacff5876e0b57"/>
+    <rdf:first rdf:resource="http://purl.org/spar/datacite/PersonalIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b49">
+    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
     <owl:allValuesFrom rdf:resource="http://purl.org/spar/datacite/ResourceIdentifierScheme"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/spar/datacite/usesIdentifierScheme"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab54">
-    <owl:members rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab55"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab58">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://purl.org/spar/datacite/RightsIdentifier"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab57">
-    <rdf:first rdf:resource="http://purl.org/spar/datacite/ResourceIdentifier"/>
-    <rdf:rest rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab58"/>
   </rdf:Description>
 </rdf:RDF>

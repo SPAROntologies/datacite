@@ -2,8 +2,8 @@
   {
     "@id": "http://purl.org/spar/pro/producer",
     "@type": [
-      "http://www.w3.org/2002/07/owl#NamedIndividual",
-      "http://purl.org/spar/pro/PublishingRole"
+      "http://purl.org/spar/pro/PublishingRole",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
     ],
     "http://purl.org/vocab/vann/example": [
       {

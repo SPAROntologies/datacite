@@ -8,25 +8,16 @@
    xmlns:vann="http://purl.org/vocab/vann/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b11">
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+    <rdf:rest rdf:nodeID="neb497a3c135447b499699cacff5876e0b12"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#successor">
-    <vaem:rationale xml:lang="en">
-This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsContinuedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
-        </vaem:rationale>
-    <rdfs:label xml:lang="en">has successor</rdfs:label>
     <rdfs:comment xml:lang="en">
 An expression work/expression having another one as successor.        
         </rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
-    <rdfs:domain rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab10"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab13"/>
-    <vann:example>
-        :relation-dataset-article a datacite:QualifiedRelation ;
-                datacite:hasRelationCharacterization frbr:successor .
-        </vann:example>
-    <owl:inverseOf rdf:resource="http://purl.org/vocab/frbr/core#successorOf"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:domain rdf:nodeID="neb497a3c135447b499699cacff5876e0b10"/>
     <skos:note xml:lang="en">
 The successor type of relationship involves a kind of linear progression of content from one work/expression to the other. 
 In some cases, the content of the successor may be closely connected to the content of the preceding work, which would result in a work that is referential. 
@@ -34,29 +25,38 @@ In others, such as with loosely connected parts of a trilogy, the successor will
 Serial publications that result from the merger or split of their predecessors and stand on their own without requiring reference to the predecessor are also examples of autonomous works that fall within the successor relationship type. 
 If there exists a relation of this kind among two different expressions, then they always refer to different works.        
         </skos:note>
+    <vaem:rationale xml:lang="en">
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("IsContinuedBy") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+        </vaem:rationale>
+    <rdfs:label xml:lang="en">has successor</rdfs:label>
+    <rdfs:range rdf:nodeID="neb497a3c135447b499699cacff5876e0b13"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/frbr/core#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#relatedEndeavour"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://purl.org/vocab/frbr/core#successorOf"/>
+    <vann:example>
+        :relation-dataset-article a datacite:QualifiedRelation ;
+                datacite:hasRelationCharacterization frbr:successor .
+        </vann:example>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab12">
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b13">
+    <owl:unionOf rdf:nodeID="neb497a3c135447b499699cacff5876e0b14"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b15">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab15">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="neb497a3c135447b499699cacff5876e0b11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b14">
+    <rdf:rest rdf:nodeID="neb497a3c135447b499699cacff5876e0b15"/>
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="neb497a3c135447b499699cacff5876e0b12">
     <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab10">
-    <owl:unionOf rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab11"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab13">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab14"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab11">
-    <rdf:rest rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab12"/>
-    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab14">
-    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-    <rdf:rest rdf:nodeID="n51c9fdc1e17a44869cf90e575182370ab15"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
 </rdf:RDF>

@@ -6,10 +6,10 @@
     ],
     "http://purl.org/vocab/vann/example": [
       {
-        "@value": "\n        :my-report-document a fabio:ReportDocument ;\n                fabio:hasSequenceIdentifier \"3\" .\n        "
+        "@value": "\n        :my-resource \n                datacite:hasGeneralResourceType fabio:ReportDocument .\n        "
       },
       {
-        "@value": "\n        :my-resource \n                datacite:hasGeneralResourceType fabio:ReportDocument .\n        "
+        "@value": "\n        :my-report-document a fabio:ReportDocument ;\n                fabio:hasSequenceIdentifier \"3\" .\n        "
       }
     ],
     "http://www.linkedmodel.org/schema/vaem#rationale": [
@@ -37,7 +37,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab9"
+        "@id": "_:neb497a3c135447b499699cacff5876e0b9"
       },
       {
         "@id": "http://purl.org/spar/fabio/Expression"
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab9",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],

@@ -34,13 +34,13 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab36"
-      },
-      {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab37"
-      },
-      {
         "@id": "http://www.essepuntato.it/2010/06/literalreification/Literal"
+      },
+      {
+        "@id": "_:neb497a3c135447b499699cacff5876e0b36"
+      },
+      {
+        "@id": "_:neb497a3c135447b499699cacff5876e0b37"
       }
     ],
     "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab36",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b36",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab37",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b37",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -84,12 +84,12 @@
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab38"
+        "@id": "_:neb497a3c135447b499699cacff5876e0b38"
       }
     ]
   },
   {
-    "@id": "_:n51c9fdc1e17a44869cf90e575182370ab38",
+    "@id": "_:neb497a3c135447b499699cacff5876e0b38",
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
         "@id": "http://purl.org/spar/datacite/hasIdentifier"

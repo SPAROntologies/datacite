@@ -319,15 +319,15 @@ For DataCite, the only permitted identifier scheme for the primary resource iden
         """@en ;
         rdfs:comment "The identifier scheme used to identify a resource."@en ;
         rdfs:isDefinedBy datacite: ;
-        rdfs:subClassOf _:n51c9fdc1e17a44869cf90e575182370ab52,
+        rdfs:subClassOf _:neb497a3c135447b499699cacff5876e0b52,
             datacite:IdentifierScheme ;
         vs:term_status reg:statusStable .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab52 a owl:Restriction ;
-        owl:onProperty _:n51c9fdc1e17a44869cf90e575182370ab53 ;
+    _:neb497a3c135447b499699cacff5876e0b52 a owl:Restriction ;
+        owl:onProperty _:neb497a3c135447b499699cacff5876e0b53 ;
         owl:someValuesFrom datacite:ResourceIdentifier .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab53 owl:inverseOf datacite:usesIdentifierScheme .
+    _:neb497a3c135447b499699cacff5876e0b53 owl:inverseOf datacite:usesIdentifierScheme .
 }
 
 </code></pre></div><div class="tab-pane fade" id=id_fd5ba7a7b09c17c36a99156e6b9dc480_Concept_prov_2 role=tabpanel><pre class="mb-0 small"><code>[
@@ -368,7 +368,7 @@ For DataCite, the only permitted identifier scheme for the primary resource iden
         ],
         "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab52"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b52"
           },
           {
             "@id": "http://purl.org/spar/datacite/IdentifierScheme"
@@ -381,13 +381,13 @@ For DataCite, the only permitted identifier scheme for the primary resource iden
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab52",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b52",
         "@type": [
           "http://www.w3.org/2002/07/owl#Restriction"
         ],
         "http://www.w3.org/2002/07/owl#onProperty": [
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab53"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b53"
           }
         ],
         "http://www.w3.org/2002/07/owl#someValuesFrom": [
@@ -397,7 +397,7 @@ For DataCite, the only permitted identifier scheme for the primary resource iden
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab53",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b53",
         "http://www.w3.org/2002/07/owl#inverseOf": [
           {
             "@id": "http://purl.org/spar/datacite/usesIdentifierScheme"
@@ -407,19 +407,19 @@ For DataCite, the only permitted identifier scheme for the primary resource iden
     ],
     "@id": "http://purl.org/spar/datacite"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_fd5ba7a7b09c17c36a99156e6b9dc480_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n51c9fdc1e17a44869cf90e575182370ab52 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab52 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
+]</code></pre></div><div class="tab-pane fade" id=id_fd5ba7a7b09c17c36a99156e6b9dc480_Concept_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the identifier scheme used by a resource identifier.\n\nIndividual schemes are defines as members of this class. \nFor DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier (`datacite:doi`).\n        "@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a resource."@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> _:neb497a3c135447b499699cacff5876e0b52 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b52 &lt;http://www.w3.org/2002/07/owl#someValuesFrom> &lt;http://purl.org/spar/datacite/ResourceIdentifier> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#label> "resource identifier scheme"@en &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://purl.org/vocab/vann/example> "\n        :my-resource\n                datacite:hasIdentifier :my-resource-id .\n\n        :my-resource-id a datacite:ResourceIdentifier ;\n                datacite:usesIdentifierScheme datacite:doi .\n        \n        datacite:doi a datacite:ResourceIdentifierScheme .\n        " &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab52 &lt;http://www.w3.org/2002/07/owl#someValuesFrom> &lt;http://purl.org/spar/datacite/ResourceIdentifier> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab53 &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/datacite/> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "The identifier scheme used to identify a resource."@en &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b53 &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/spar/datacite/usesIdentifierScheme> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2000/01/rdf-schema#subClassOf> &lt;http://purl.org/spar/datacite/IdentifierScheme> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used to specify the identifier scheme used by a resource identifier.\n\nIndividual schemes are defines as members of this class. \nFor DataCite, the only permitted identifier scheme for the primary resource identifier is the Digital Object Identifier (`datacite:doi`).\n        "@en &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab52 &lt;http://www.w3.org/2002/07/owl#onProperty> _:n51c9fdc1e17a44869cf90e575182370ab53 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/datacite/ResourceIdentifierScheme> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b52 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Restriction> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b52 &lt;http://www.w3.org/2002/07/owl#onProperty> _:neb497a3c135447b499699cacff5876e0b53 &lt;http://purl.org/spar/datacite> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../datacite.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

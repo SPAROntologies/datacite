@@ -7,16 +7,7 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/dc/terms/subject">
-    <vaem:rationale xml:lang="en">
-This property should always be used with a [SKOS](http://www.w3.org/2004/02/skos/core#) concept. 
-If possible, one could specify a more specific property rather than the general `dcterms:subject`, such as `fabio:hasSubjectTerm` and `fabio:hasSubjectDiscipline`. 
-Instead of creating a new concept every time, one could reuse concepts already available in existing SKOS-based models.
-        </vaem:rationale>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdfs:comment xml:lang="en">A topic of the resource.</rdfs:comment>
-    <rdfs:label>has subject</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <vann:example>
         :my-dataset 
                 dcterms:subject :my-concept .
@@ -24,5 +15,14 @@ Instead of creating a new concept every time, one could reuse concepts already a
         :my-concept a skos:Concept ;
                 skos:prefLabel "Knowledge"@en . 
         </vann:example>
+    <vaem:rationale xml:lang="en">
+This property should always be used with a [SKOS](http://www.w3.org/2004/02/skos/core#) concept. 
+If possible, one could specify a more specific property rather than the general `dcterms:subject`, such as `fabio:hasSubjectTerm` and `fabio:hasSubjectDiscipline`. 
+Instead of creating a new concept every time, one could reuse concepts already available in existing SKOS-based models.
+        </vaem:rationale>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdfs:comment xml:lang="en">A topic of the resource.</rdfs:comment>
+    <rdfs:label>has subject</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

@@ -7,11 +7,9 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/cerif/frapo/Grant">
-    <rdfs:comment xml:lang="en">A financial award by a funding agency for a particular project or purpose, usually awarded on the basis of a competitive application.</rdfs:comment>
-    <vaem:rationale xml:lang="en">
-This is used to specify the grant or award number associated with the funding awarded by some funder agent. 
-More specifically, a foaf:Agent awards (`frapo:awards`) a grant (`frapo:Grant`) with a certain number associated to it (`frapo:hasGrantNumber`).
-        </vaem:rationale>
+    <rdfs:subClassOf rdf:resource="http://purl.org/cerif/frapo/Funding"/>
+    <rdfs:label xml:lang="en">grant</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <vann:example>
         :european-commission
                 frapo:awards :eu-grant .
@@ -19,10 +17,12 @@ More specifically, a foaf:Agent awards (`frapo:awards`) a grant (`frapo:Grant`) 
         :eu-grant a frapo:Grant ;
                 frapo:hasGrantNumber "282625" .
         </vann:example>
-    <rdfs:subClassOf rdf:resource="http://purl.org/cerif/frapo/Funding"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdfs:label xml:lang="en">grant</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
+    <rdfs:comment xml:lang="en">A financial award by a funding agency for a particular project or purpose, usually awarded on the basis of a competitive application.</rdfs:comment>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <vaem:rationale xml:lang="en">
+This is used to specify the grant or award number associated with the funding awarded by some funder agent. 
+More specifically, a foaf:Agent awards (`frapo:awards`) a grant (`frapo:Grant`) with a certain number associated to it (`frapo:hasGrantNumber`).
+        </vaem:rationale>
   </rdf:Description>
 </rdf:RDF>

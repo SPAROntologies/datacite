@@ -7,7 +7,6 @@
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
 >
   <rdf:Description rdf:about="http://purl.org/cerif/frapo/awards">
-    <rdfs:label xml:lang="en">awards</rdfs:label>
     <vaem:rationale xml:lang="en">
 This is used to specify the grant or award number associated with the funding awarded by some funder agent. 
 More specifically, a `foaf:Agent` awards (`frapo:awards`) a grant (`frapo:Grant`) with a certain number associated to it (`frapo:hasGrantNumber`).
@@ -17,8 +16,6 @@ More specifically, this is modelled using an instance of `frbr:Endeavour` and a 
         </vaem:rationale>
     <rdfs:comment xml:lang="en">Something an agent awards, for example a grant awarded by a funding agency, a degree by a university, or a prize by an organization.</rdfs:comment>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
     <vann:example>
         :european-commission
             frapo:awards :eu-grant .
@@ -27,5 +24,8 @@ More specifically, this is modelled using an instance of `frbr:Endeavour` and a 
             frapo:hasGrantNumber "282625" .
         </vann:example>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">awards</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/cerif/frapo/"/>
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
   </rdf:Description>
 </rdf:RDF>

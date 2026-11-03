@@ -318,9 +318,9 @@ This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-f
         rdfs:comment """
 An expression work/expression having another one as successor.        
         """@en ;
-        rdfs:domain _:n51c9fdc1e17a44869cf90e575182370ab10 ;
+        rdfs:domain _:neb497a3c135447b499699cacff5876e0b10 ;
         rdfs:isDefinedBy frbr: ;
-        rdfs:range _:n51c9fdc1e17a44869cf90e575182370ab13 ;
+        rdfs:range _:neb497a3c135447b499699cacff5876e0b13 ;
         rdfs:subPropertyOf frbr:relatedEndeavour ;
         owl:inverseOf frbr:successorOf ;
         vs:term_status reg:statusStable ;
@@ -332,22 +332,22 @@ Serial publications that result from the merger or split of their predecessors a
 If there exists a relation of this kind among two different expressions, then they always refer to different works.        
         """@en .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab10 a owl:Class ;
-        owl:unionOf _:n51c9fdc1e17a44869cf90e575182370ab11 .
+    _:neb497a3c135447b499699cacff5876e0b10 a owl:Class ;
+        owl:unionOf _:neb497a3c135447b499699cacff5876e0b11 .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab11 rdf:first frbr:Expression ;
-        rdf:rest _:n51c9fdc1e17a44869cf90e575182370ab12 .
+    _:neb497a3c135447b499699cacff5876e0b11 rdf:first frbr:Expression ;
+        rdf:rest _:neb497a3c135447b499699cacff5876e0b12 .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab12 rdf:first frbr:Work ;
+    _:neb497a3c135447b499699cacff5876e0b12 rdf:first frbr:Work ;
         rdf:rest () .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab13 a owl:Class ;
-        owl:unionOf _:n51c9fdc1e17a44869cf90e575182370ab14 .
+    _:neb497a3c135447b499699cacff5876e0b13 a owl:Class ;
+        owl:unionOf _:neb497a3c135447b499699cacff5876e0b14 .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab14 rdf:first frbr:Expression ;
-        rdf:rest _:n51c9fdc1e17a44869cf90e575182370ab15 .
+    _:neb497a3c135447b499699cacff5876e0b14 rdf:first frbr:Expression ;
+        rdf:rest _:neb497a3c135447b499699cacff5876e0b15 .
 
-    _:n51c9fdc1e17a44869cf90e575182370ab15 rdf:first frbr:Work ;
+    _:neb497a3c135447b499699cacff5876e0b15 rdf:first frbr:Work ;
         rdf:rest () .
 }
 
@@ -378,7 +378,7 @@ If there exists a relation of this kind among two different expressions, then th
         ],
         "http://www.w3.org/2000/01/rdf-schema#domain": [
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab10"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b10"
           }
         ],
         "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -394,7 +394,7 @@ If there exists a relation of this kind among two different expressions, then th
         ],
         "http://www.w3.org/2000/01/rdf-schema#range": [
           {
-            "@id": "_:n51c9fdc1e17a44869cf90e575182370ab13"
+            "@id": "_:neb497a3c135447b499699cacff5876e0b13"
           }
         ],
         "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
@@ -420,7 +420,7 @@ If there exists a relation of this kind among two different expressions, then th
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab10",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b10",
         "@type": [
           "http://www.w3.org/2002/07/owl#Class"
         ],
@@ -438,7 +438,7 @@ If there exists a relation of this kind among two different expressions, then th
         ]
       },
       {
-        "@id": "_:n51c9fdc1e17a44869cf90e575182370ab13",
+        "@id": "_:neb497a3c135447b499699cacff5876e0b13",
         "@type": [
           "http://www.w3.org/2002/07/owl#Class"
         ],
@@ -458,30 +458,30 @@ If there exists a relation of this kind among two different expressions, then th
     ],
     "@id": "http://purl.org/spar/datacite"
   }
-]</code></pre></div><div class="tab-pane fade" id=id_0136a2cb37206f183e09e9d33873fec4_Relation_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation (\"IsContinuedBy\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "@en &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#label> "has successor"@en &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab12 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab15 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab10 &lt;http://www.w3.org/2002/07/owl#unionOf> _:n51c9fdc1e17a44869cf90e575182370ab11 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab13 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
+]</code></pre></div><div class="tab-pane fade" id=id_0136a2cb37206f183e09e9d33873fec4_Relation_prov_3 role=tabpanel><pre class="mb-0 small"><code>_:neb497a3c135447b499699cacff5876e0b11 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:neb497a3c135447b499699cacff5876e0b12 &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "\nAn expression work/expression having another one as successor.        \n        "@en &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab13 &lt;http://www.w3.org/2002/07/owl#unionOf> _:n51c9fdc1e17a44869cf90e575182370ab14 &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/vocab/frbr/core#> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab11 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n51c9fdc1e17a44869cf90e575182370ab12 &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#subPropertyOf> &lt;http://purl.org/vocab/frbr/core#relatedEndeavour> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab15 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/vocab/frbr/core#Work> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#domain> _:n51c9fdc1e17a44869cf90e575182370ab10 &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#ObjectProperty> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab14 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/vocab/frbr/core#Expression> &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab12 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/vocab/frbr/core#Work> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#range> _:n51c9fdc1e17a44869cf90e575182370ab13 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab14 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n51c9fdc1e17a44869cf90e575182370ab15 &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab10 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationCharacterization frbr:successor .\n        " &lt;http://purl.org/spar/datacite> .
-_:n51c9fdc1e17a44869cf90e575182370ab11 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/vocab/frbr/core#Expression> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/vocab/frbr/core#successorOf> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b13 &lt;http://www.w3.org/2002/07/owl#unionOf> _:neb497a3c135447b499699cacff5876e0b14 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#domain> _:neb497a3c135447b499699cacff5876e0b10 &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b15 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b11 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/vocab/frbr/core#Expression> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2004/02/skos/core#note> "\nThe successor type of relationship involves a kind of linear progression of content from one work/expression to the other. \nIn some cases, the content of the successor may be closely connected to the content of the preceding work, which would result in a work that is referential. \nIn others, such as with loosely connected parts of a trilogy, the successor will be autonomous. \nSerial publications that result from the merger or split of their predecessors and stand on their own without requiring reference to the predecessor are also examples of autonomous works that fall within the successor relationship type. \nIf there exists a relation of this kind among two different expressions, then they always refer to different works.        \n        "@en &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b10 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation (\"IsContinuedBy\") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.\n        "@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#label> "has successor"@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#range> _:neb497a3c135447b499699cacff5876e0b13 &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b14 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:neb497a3c135447b499699cacff5876e0b15 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/vocab/frbr/core#> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b12 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b14 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/vocab/frbr/core#Expression> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b15 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/vocab/frbr/core#Work> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b10 &lt;http://www.w3.org/2002/07/owl#unionOf> _:neb497a3c135447b499699cacff5876e0b11 &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2000/01/rdf-schema#subPropertyOf> &lt;http://purl.org/vocab/frbr/core#relatedEndeavour> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#ObjectProperty> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://www.w3.org/2002/07/owl#inverseOf> &lt;http://purl.org/vocab/frbr/core#successorOf> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/vocab/frbr/core#successor> &lt;http://purl.org/vocab/vann/example> "\n        :relation-dataset-article a datacite:QualifiedRelation ;\n                datacite:hasRelationCharacterization frbr:successor .\n        " &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b13 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#Class> &lt;http://purl.org/spar/datacite> .
+_:neb497a3c135447b499699cacff5876e0b12 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first> &lt;http://purl.org/vocab/frbr/core#Work> &lt;http://purl.org/spar/datacite> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../datacite.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

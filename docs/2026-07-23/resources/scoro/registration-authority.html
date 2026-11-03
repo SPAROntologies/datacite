@@ -317,8 +317,8 @@ This is used as a controlled term to specify a given agent role type ("Registrat
       {
         "@id": "http://purl.org/spar/scoro/registration-authority",
         "@type": [
-          "http://purl.org/spar/scoro/OrganizationalRole",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
+          "http://www.w3.org/2002/07/owl#NamedIndividual",
+          "http://purl.org/spar/scoro/OrganizationalRole"
         ],
         "http://purl.org/vocab/vann/example": [
           {
@@ -359,12 +359,12 @@ This is used as a controlled term to specify a given agent role type ("Registrat
   }
 ]</code></pre></div><div class="tab-pane fade" id=id_50d746eb34eea0ecca61a50177f103c5_Individual_prov_3 role=tabpanel><pre class="mb-0 small"><code>&lt;http://purl.org/spar/scoro/registration-authority> &lt;http://www.w3.org/2000/01/rdf-schema#comment> "The role of an agent with responsibility for registering and maintaining international standards, internet domain names, patents, controlled vocabularies and other similar entities required for reliable international cooperatative activities.  For example, the International DOI Foundation (IDF) is the Registration Authority for DOIs."@en &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/scoro/registration-authority> &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> &lt;http://purl.org/linked-data/registry#statusStable> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/scoro/registration-authority> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type (\"Registration Authority\").\n        "@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/scoro/registration-authority> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#NamedIndividual> &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/scoro/registration-authority> &lt;http://purl.org/vocab/vann/example> "\n        :international-doi-foundation\n                pro:holdsRoleInTime :registration-authority-for-my-dataset .\n        \n        :registration-authority-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:registration-authority .\n        " &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/scoro/registration-authority> &lt;http://www.w3.org/2000/01/rdf-schema#label> "registration authority"@en &lt;http://purl.org/spar/datacite> .
+&lt;http://purl.org/spar/scoro/registration-authority> &lt;http://www.linkedmodel.org/schema/vaem#rationale> "\nThis is used as a controlled term to specify a given agent role type (\"Registration Authority\").\n        "@en &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/scoro/registration-authority> &lt;http://www.w3.org/2000/01/rdf-schema#isDefinedBy> &lt;http://purl.org/spar/scoro/> &lt;http://purl.org/spar/datacite> .
 &lt;http://purl.org/spar/scoro/registration-authority> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://purl.org/spar/scoro/OrganizationalRole> &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/scoro/registration-authority> &lt;http://purl.org/vocab/vann/example> "\n        :international-doi-foundation\n                pro:holdsRoleInTime :registration-authority-for-my-dataset .\n        \n        :registration-authority-for-my-dataset a pro:RoleInTime ;\n                pro:relatesToEntity :my-dataset ;\n                pro:withRole scoro:registration-authority .\n        " &lt;http://purl.org/spar/datacite> .
-&lt;http://purl.org/spar/scoro/registration-authority> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type> &lt;http://www.w3.org/2002/07/owl#NamedIndividual> &lt;http://purl.org/spar/datacite> .
 
 </code></pre></div></div></div></div></div></div></div></div></div></div><div><a class="btn btn-outline-secondary" href=../../datacite.html>← Back to full documentation</a></div><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script><script src=https://cdn.jsdelivr.net/npm/marked/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js></script><script>document.addEventListener("DOMContentLoaded", function() {
 

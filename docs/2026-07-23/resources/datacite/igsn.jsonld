@@ -2,8 +2,8 @@
   {
     "@id": "http://purl.org/spar/datacite/igsn",
     "@type": [
-      "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "http://www.w3.org/2002/07/owl#NamedIndividual"
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "http://purl.org/spar/datacite/ResourceIdentifierScheme"
     ],
     "http://purl.org/spar/fabio/hasURL": [
       {

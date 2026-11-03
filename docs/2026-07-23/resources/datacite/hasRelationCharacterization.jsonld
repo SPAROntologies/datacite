@@ -39,109 +39,70 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
       {
-        "@id": "http://purl.org/spar/cito/isDocumentedBy"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/hasPart"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/requires"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/replaces"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/isCitedAsDataSourceBy"
-      },
-      {
-        "@id": "http://purl.org/vocab/frbr/core#revision"
-      },
-      {
-        "@id": "http://purl.org/vocab/frbr/core#translationOf"
-      },
-      {
-        "@id": "http://purl.org/vocab/frbr/core#revisionOf"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/providesDataFor"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/isCitedForInformationBy"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/cites"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/isDescribedBy"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/hasVersion"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/compiles"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/isRequiredBy"
+        "@id": "http://purl.org/spar/cito/reviews"
       },
       {
         "@id": "http://purl.org/dc/terms/relation"
       },
       {
-        "@id": "http://purl.org/spar/cito/isCompiledBy"
-      },
-      {
-        "@id": "http://purl.org/vocab/frbr/core#partOf"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/isCitedAsMetadataDocumentBy"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/isReplacedBy"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/reviews"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/citesAsMetadataDocument"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/isVersionOf"
+        "@id": "http://purl.org/vocab/frbr/core#revisionOf"
       },
       {
         "@id": "http://purl.org/spar/cito/documents"
       },
       {
-        "@id": "http://purl.org/dc/terms/isPartOf"
-      },
-      {
-        "@id": "http://purl.org/spar/cito/citesForInformation"
-      },
-      {
         "@id": "http://purl.org/spar/cito/isReviewedBy"
       },
       {
-        "@id": "http://purl.org/vocab/frbr/core#arrangement"
+        "@id": "http://purl.org/spar/cito/compiles"
       },
       {
-        "@id": "http://purl.org/vocab/frbr/core#successorOf"
+        "@id": "http://purl.org/dc/terms/hasVersion"
       },
       {
-        "@id": "http://purl.org/vocab/frbr/core#supplementOf"
-      },
-      {
-        "@id": "http://purl.org/vocab/frbr/core#translation"
-      },
-      {
-        "@id": "http://purl.org/vocab/frbr/core#arrangementOf"
+        "@id": "http://purl.org/spar/cito/citesAsMetadataDocument"
       },
       {
         "@id": "http://purl.org/spar/cito/isCitedBy"
       },
       {
+        "@id": "http://purl.org/dc/terms/requires"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#arrangementOf"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#revision"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#supplement"
+      },
+      {
         "@id": "http://purl.org/spar/cito/describes"
       },
       {
-        "@id": "http://purl.org/spar/cito/citesAsDataSource"
+        "@id": "http://purl.org/spar/cito/isDescribedBy"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#partOf"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#translation"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isDocumentedBy"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isCitedAsMetadataDocumentBy"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#arrangement"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/isPartOf"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/replaces"
       },
       {
         "@id": "http://purl.org/spar/cito/usesDataFrom"
@@ -150,7 +111,46 @@
         "@id": "http://purl.org/vocab/frbr/core#successor"
       },
       {
-        "@id": "http://purl.org/vocab/frbr/core#supplement"
+        "@id": "http://purl.org/spar/cito/providesDataFor"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/isRequiredBy"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#translationOf"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isCitedAsDataSourceBy"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/citesAsDataSource"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#supplementOf"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/citesForInformation"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/isReplacedBy"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/hasPart"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/cites"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isCitedForInformationBy"
+      },
+      {
+        "@id": "http://purl.org/vocab/frbr/core#successorOf"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/isVersionOf"
+      },
+      {
+        "@id": "http://purl.org/spar/cito/isCompiledBy"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
