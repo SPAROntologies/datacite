@@ -2,8 +2,8 @@
   {
     "@id": "http://purl.org/spar/fabio/hasRetractionDate",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+      "http://www.w3.org/2002/07/owl#FunctionalProperty",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://purl.org/vocab/vann/example": [
       {
@@ -13,7 +13,7 @@
     "http://www.linkedmodel.org/schema/vaem#rationale": [
       {
         "@language": "en",
-        "@value": "\nThis is used as a controlled term to specify a given date type (\"Withdrawn\").\n\nThis is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.\n        "
+        "@value": "\nThis is used as a controlled term to specify a given date type (\"Withdrawn\").\n\nThis is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.\n        "
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [

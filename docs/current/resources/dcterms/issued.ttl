@@ -6,8 +6,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
-dcterms:issued a owl:AnnotationProperty,
-        owl:DatatypeProperty ;
+dcterms:issued a owl:DatatypeProperty ;
     rdfs:label "has date issued"@en ;
     vann:example """
         :my-dataset-issuance-date 
@@ -17,7 +16,7 @@ dcterms:issued a owl:AnnotationProperty,
     vaem:rationale """
 This is used as a controlled term to specify a given date type ("Issued").
 
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a date (modelled as an instance of `literal:Literal`) via the property `dcterms:type`.
         """@en ;
     rdfs:comment "Date of formal issuance of the resource."@en ;
     rdfs:isDefinedBy dcterms: ;

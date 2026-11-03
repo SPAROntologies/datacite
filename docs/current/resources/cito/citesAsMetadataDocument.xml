@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/cito/citesAsMetadataDocument">
+    <vs:term_status rdf:resource="http://purl.org/linked-data/registry#statusStable"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/cito/cites"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/cito/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">cites as metadata document</rdfs:label>
+    <rdfs:comment xml:lang="en">The citing entity cites the cited entity as being the container of metadata describing the citing entity.</rdfs:comment>
+    <vaem:rationale xml:lang="en">
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("HasMetadata") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+        </vaem:rationale>
+    <vann:example>
+        :relation-dataset-article a datacite:QualifiedRelation ;
+                datacite:hasRelationCharacterization cito:citesAsMetadataDocument .
+        </vann:example>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/cito/isCitedAsMetadataDocumentBy"/>
+  </rdf:Description>
+</rdf:RDF>

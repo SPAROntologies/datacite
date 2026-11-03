@@ -2,8 +2,7 @@
   {
     "@id": "http://purl.org/dc/terms/publisher",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://purl.org/vocab/vann/example": [
       {

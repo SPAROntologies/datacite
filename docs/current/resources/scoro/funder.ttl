@@ -11,7 +11,7 @@ scoro:funder a scoro:FinancialRole,
     rdfs:label "funder"@en ;
     vann:example """
         :european-commission a foaf:Agent ;
-                pro:holdsRoleInTIme :european-commission-funding .
+                pro:holdsRoleInTime :european-commission-funding .
         
         :european-commission-funding a pro:RoleInTime ;
                 pro:withRole scoro:funder ;

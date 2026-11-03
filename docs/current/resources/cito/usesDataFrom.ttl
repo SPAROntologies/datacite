@@ -13,7 +13,7 @@ cito:usesDataFrom a owl:ObjectProperty ;
                 datacite:hasRelationCharacterization cito:usesDataFrom .
         """ ;
     vaem:rationale """
-This is used in combination with [OWL2 punning](http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning) to characterise the type of a relation ("Collects") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
+This is used in combination with [OWL2 punning](https://www.w3.org/TR/owl2-new-features/#F12:_Punning) to characterise the type of a relation ("Collects") as an instance of `datacite:QualifiedRelation` via the property `datacite:hasRelationCharacterization`.
         """@en ;
     rdfs:comment "The citing entity describes work that uses data presented in the cited entity."@en ;
     rdfs:isDefinedBy cito: ;
